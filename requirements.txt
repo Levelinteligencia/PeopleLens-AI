@@ -1,0 +1,7 @@
+# PeopleLens - dependências do projeto
+#
+# Ainda não definidas. As bibliotecas serão adicionadas conforme a
+# especificação detalhada do dataset, das regras de qualidade, do modelo
+# analítico, do MCP e da interface for fechada.
+#
+# Nada foi fixado aqui de propósito, para não antecipar decisões técnicas.
