@@ -103,7 +103,11 @@ CAPACIDADES: tuple[Capacidade, ...] = (
                 "period": _PERIODO,
                 "compare_to": {"enum": ["periodo_anterior",
                                         "mesmo_periodo_ano_anterior",
-                                        "media_da_populacao"]},
+                                        "media_da_populacao",
+                                        "periodo_declarado"]},
+                # Obrigatorio quando `compare_to` e `periodo_declarado`: a base
+                # declarada e um periodo, nao um rotulo a derivar (RF-02).
+                "compare_period": _PERIODO,
                 "filters": _FILTROS,
                 "kpi_version": {"type": "string"},
                 "request_id": {"type": "string"},

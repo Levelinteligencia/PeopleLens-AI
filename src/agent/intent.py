@@ -68,6 +68,12 @@ class Intent:
     dimensions: list[str] = field(default_factory=list)
     requested_level: str = "FACT"
     compare_to: str | None = None
+    # Base de comparação **declarada** (RF-02, decisão B). Vale só com
+    # `compare_to = "periodo_declarado"`: a pergunta nomeou os dois períodos, e
+    # este carrega o segundo. Nunca é preenchido por inferência, nem aqui nem
+    # no `PLAN` — se a pergunta não o declarou, ele fica nulo e a ausência vira
+    # ambiguidade, que é visível, em vez de virar o período anterior, que não é.
+    compare_period: dict | None = None
     ambiguity: list[Ambiguity] = field(default_factory=list)
     premissa: str | None = None          # ex.: a pergunta afirma que "aumentou"
     referencia_anterior: bool = False    # "compare com...", "esse número"
@@ -93,6 +99,7 @@ class Intent:
             "dimensions": list(self.dimensions),
             "requested_level": self.requested_level,
             "compare_to": self.compare_to,
+            "compare_period": self.compare_period,
             "ambiguity": [a.to_dict() for a in self.ambiguity],
             "premissa": self.premissa,
         }
@@ -167,6 +174,12 @@ def resolve(intent: Intent, contexto) -> Intent:
                     "o período pedido está fora dessa janela",
                     contexto.periodos_sugeridos(kpi["kpi_id"])))
 
+    # 2.2 Base de comparação (RF-02) ------------------------------------------
+    # Preservar, nunca inferir. Um `Intent` incoerente vira ambiguidade, e a
+    # ausência de base numa pergunta de comparação **não** vira `periodo_anterior`.
+    if kpi is not None and intent.question_type == COMPARACAO:
+        amb.extend(_ambiguidades_de_comparacao(intent, kpi, contexto))
+
     # 3. Termos de filtro -----------------------------------------------------
     # Termo fora do vocabulário NUNCA vira o termo mais parecido (A-02).
     for f in intent.filters:
@@ -195,6 +208,95 @@ def resolve(intent: Intent, contexto) -> Intent:
 
     intent.ambiguity = amb
     return intent
+
+
+# --------------------------------------------------------------------------- #
+# Base de comparação (RF-02, decisão B)
+# --------------------------------------------------------------------------- #
+PERIODO_DECLARADO = "periodo_declarado"
+
+
+def _ambiguidades_de_comparacao(intent: "Intent", kpi: dict,
+                                contexto) -> list[Ambiguity]:
+    """Coerência entre `compare_to` e `compare_period`. Sem inferir nada.
+
+    Três incoerências, e cada uma vira pergunta de volta:
+
+    1. comparação **sem base**. Antes o `PLAN` preenchia `periodo_anterior` por
+       default, e foi assim que "mudou entre 2024 e 2025" virou 2024 contra
+       2023: o default converteu uma lacuna em resposta plausível. Agora a
+       lacuna aparece;
+    2. base **declarada sem o período**, que é um `Intent` pela metade;
+    3. período declarado **com base relativa**, que é um `Intent` que se
+       contradiz: a base relativa deriva o período, e ter os dois significa que
+       alguém mandou um valor que não vai ser usado.
+
+    O período declarado também passa pelas mesmas checagens do período
+    principal, grain e cobertura, porque comparar com um período que o KPI não
+    responde é comparar com um número que não existe.
+    """
+    amb: list[Ambiguity] = []
+    bases = contexto.comparacoes_declaradas()
+
+    if not intent.compare_to:
+        amb.append(Ambiguity(
+            "compare_to",
+            "a pergunta pede comparação e não diz contra qual base; escolher "
+            "uma por conta própria mudaria o que foi perguntado",
+            bases))
+        return amb
+
+    if intent.compare_to not in bases:
+        amb.append(Ambiguity(
+            "compare_to",
+            f"não existe base de comparação declarada chamada "
+            f"{intent.compare_to!r}",
+            bases))
+        return amb
+
+    if intent.compare_to == PERIODO_DECLARADO and not intent.compare_period:
+        amb.append(Ambiguity(
+            "compare_period",
+            "a comparação é contra um período declarado, e o período não veio",
+            contexto.periodos_sugeridos(kpi["kpi_id"])))
+        return amb
+
+    if intent.compare_to != PERIODO_DECLARADO and intent.compare_period:
+        amb.append(Ambiguity(
+            "compare_period",
+            f"a base {intent.compare_to!r} deriva o período da própria "
+            "pergunta; um período declarado junto seria ignorado em silêncio",
+            bases))
+        return amb
+
+    if intent.compare_period:
+        amb.extend(_periodo_respondivel(intent.compare_period, kpi, contexto,
+                                        "compare_period"))
+    return amb
+
+
+def _periodo_respondivel(period: dict, kpi: dict, contexto,
+                         campo: str) -> list[Ambiguity]:
+    """As mesmas duas checagens do período principal: grain e cobertura."""
+    amb: list[Ambiguity] = []
+    pedido = period.get("grain")
+    aceitos = contexto.grains_aceitos(kpi["kpi_id"])
+    if pedido and aceitos and pedido not in aceitos:
+        amb.append(Ambiguity(
+            f"{campo}.grain",
+            f"{kpi['kpi_id']} é apurado por {kpi.get('period_grain')}; "
+            f"não existe versão por {pedido}",
+            contexto.periodos_sugeridos(kpi["kpi_id"])))
+        return amb
+    if period.get("from"):
+        fora = contexto.fora_da_cobertura(kpi["kpi_id"], period)
+        if fora:
+            amb.append(Ambiguity(
+                campo,
+                f"{kpi['kpi_id']} tem dado de {fora[0]} a {fora[1]}; "
+                "o período de comparação está fora dessa janela",
+                contexto.periodos_sugeridos(kpi["kpi_id"])))
+    return amb
 
 
 # --------------------------------------------------------------------------- #

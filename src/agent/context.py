@@ -40,6 +40,7 @@ class Contexto:
     vocabulario: dict[str, list[str]] = field(default_factory=dict)  # dim -> termos
     grupos: dict[str, list[str]] = field(default_factory=dict)       # dim -> grupos
     relativos: dict[str, dict] = field(default_factory=dict)  # termo -> resolução
+    comparacoes: dict[str, dict] = field(default_factory=dict)  # base -> spec
     politica: dict = field(default_factory=dict)
 
     # ----------------------------------------------------------------- catálogo
@@ -133,6 +134,10 @@ class Contexto:
                 return t
         return None
 
+    def comparacoes_declaradas(self) -> list[str]:
+        """As bases de comparação do vocabulário governado, e nada além."""
+        return sorted(self.comparacoes)
+
     def termo_relativo(self, termo: str | None) -> dict | None:
         """A resolução **declarada** de um termo relativo, ou nada.
 
@@ -188,12 +193,13 @@ def construir(servidor, ator, cfg, politica: dict | None = None) -> Contexto:
         if env.ok:
             catalogo[item["kpi_id"]] = env.data
 
-    vocab, grupos, relativos = _vocabulario(cfg, servidor)
+    vocab, grupos, relativos, comparacoes = _vocabulario(cfg, servidor)
     return Contexto(catalogo=catalogo, vocabulario=vocab, grupos=grupos,
-                    relativos=relativos, politica=dict(politica or {}))
+                    relativos=relativos, comparacoes=comparacoes,
+                    politica=dict(politica or {}))
 
 
-def _vocabulario(cfg, servidor) -> tuple[dict, dict, dict]:
+def _vocabulario(cfg, servidor) -> tuple[dict, dict, dict, dict]:
     """Termos por dimensão, do vocabulário governado da F7.
 
     Inclui os membros declarados, seus sinônimos aprovados e os membros que a
@@ -236,9 +242,13 @@ def _vocabulario(cfg, servidor) -> tuple[dict, dict, dict]:
     # feita, e a reprodutibilidade que AA-11 exige cairia.
     relativos = dict((doc.get("periods") or {}).get("relative_terms") or {})
 
+    # Bases de comparação declaradas. O agente não inventa base: a lista é a do
+    # vocabulário governado, e uma base fora dela vira ambiguidade.
+    comparacoes = dict(doc.get("comparisons") or {})
+
     return ({d: sorted(set(v)) for d, v in termos.items()},
             {d: sorted(set(v)) for d, v in grupos.items()},
-            relativos)
+            relativos, comparacoes)
 
 
 def _membros_governados(servidor, dimensao: str) -> list[str]:

@@ -275,6 +275,10 @@ def _comparar(eng: Engine, q: SemanticQuery, kpi, valor):
 def _periodo_anterior(q: SemanticQuery):
     from .query import Period
     g, ini = q.period.grain, q.period.inicio
+    # Base DECLARADA: o periodo veio na consulta, e nao ha nada a derivar.
+    # E o unico ramo que nao calcula o periodo a partir do pedido (RF-02).
+    if q.compare == "periodo_declarado":
+        return q.compare_period
     if q.compare == "mesmo_periodo_ano_anterior":
         if g == "mes":
             v = f"{int(ini[:4]) - 1}-{ini[5:7]}"

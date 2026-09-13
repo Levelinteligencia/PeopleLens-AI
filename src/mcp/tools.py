@@ -137,7 +137,8 @@ def _erro_de_periodo(tool: str, ctx: Contexto, grain: str, ini: str,
 
 
 def _consulta(kpi: str, period: dict, filters, nivel: str,
-              dimensions=None, compare=None, kpi_version=None) -> dict:
+              dimensions=None, compare=None, compare_period=None,
+              kpi_version=None) -> dict:
     """Monta o dicionário que a F7 vai validar.
 
     Só campos que o `SemanticQuery` conhece. Se o chamador mandou algo a mais,
@@ -151,6 +152,8 @@ def _consulta(kpi: str, period: dict, filters, nivel: str,
         c["dimensions"] = dimensions
     if compare:
         c["compare"] = compare
+    if compare_period:
+        c["compare_period"] = compare_period
     if kpi_version:
         c["kpi_version"] = kpi_version
     return c
@@ -249,6 +252,7 @@ def get_kpi(ctx: Contexto, *, kpi: str, period: dict, filters=None,
 # 2. compare_kpi
 # --------------------------------------------------------------------------- #
 def compare_kpi(ctx: Contexto, *, kpi: str, period: dict, compare_to: str,
+                compare_period: dict | None = None,
                 filters=None, kpi_version: str | None = None):
     """O mesmo KPI, no mesmo recorte, em duas janelas.
 
@@ -256,6 +260,15 @@ def compare_kpi(ctx: Contexto, *, kpi: str, period: dict, compare_to: str,
     é feita pela Semantic Layer, que exige que a base seja ela própria
     respondível — comparar com um número que não existe é pior do que não
     comparar.
+
+    Duas famílias de base, e a diferença é de onde vem o período:
+
+    - **relativa** (`periodo_anterior`, `mesmo_periodo_ano_anterior`,
+      `media_da_populacao`): a Semantic Layer **deriva** o período da base a
+      partir do período pedido;
+    - **declarada** (`periodo_declarado`): a pergunta nomeou os dois períodos,
+      e o segundo chega em `compare_period`. Sem ele a comparação é recusada,
+      e **não** cai para uma base relativa parecida (RF-02).
     """
     pedido = "CONTEXT"
     # Se foi o teto do ATOR que impediu CONTEXT, a recusa diz isso e nao culpa a
@@ -279,11 +292,31 @@ def compare_kpi(ctx: Contexto, *, kpi: str, period: dict, compare_to: str,
     if erro:
         return erro, None, 0
 
+    if compare_to == "periodo_declarado" and not compare_period:
+        return env.refusal(
+            "compare_kpi", ctx.request_id, semtrace.novo_trace_id(),
+            classe="COMPARACAO_NAO_RESPONDIVEL",
+            mensagem="`periodo_declarado` exige `compare_period`: a base "
+                     "declarada e um periodo, e nao ha o que derivar.",
+            o_que_resolveria="declarar o periodo de comparacao, ou escolher "
+                             "uma base relativa",
+            detalhe={"compare_to": compare_to},
+            limits=limits.aplicados()), None, 0
+
+    if compare_period:
+        erro = _erro_de_periodo(
+            "compare_kpi", ctx, compare_period.get("grain"),
+            str(compare_period.get("from")),
+            str(compare_period.get("to") or compare_period.get("from")))
+        if erro:
+            return erro, None, 0
+
     nivel_para_f7 = act.teto_composto(pedido, ctx.actor.max_response_level)
     envelope, ans, kpi_obj, dur = _executa(
         "compare_kpi", ctx,
         _consulta(kpi, period, filters, nivel_para_f7, compare=compare_to,
-                  kpi_version=kpi_version), pedido)
+                  compare_period=compare_period, kpi_version=kpi_version),
+        pedido)
     if envelope is not None:
         return envelope, ans, dur
 

@@ -24,6 +24,7 @@ import yaml
 from agent import limits as alim
 from agent import llm_client as cli
 from agent import llm_eval, llm_prompt, llm_schema
+from agent import loop as L
 from agent.harness import Harness
 from agent.intent import TIPOS, Intent, resolve
 from agent.interpreter import DIMENSOES_DE_FILTRO, RuleInterpreter
@@ -72,6 +73,7 @@ def payload(**over):
         "dimensions": [],
         "requested_level": "FACT",
         "compare_to": None,
+        "compare_period": None,
         "ambiguity": [],
         "premissa": None,
         "referencia_anterior": False,
@@ -580,8 +582,8 @@ def test_nome_do_structured_output_e_aceito_pela_api():
     """
     import re as _re
 
-    assert llm_schema.SCHEMA_VERSION == "intent/1.0"
-    assert cli.nome_do_schema() == "intent_1_0"
+    assert llm_schema.SCHEMA_VERSION == "intent/1.1"
+    assert cli.nome_do_schema() == "intent_1_1"
     assert "." not in cli.nome_do_schema() and "/" not in cli.nome_do_schema()
     assert _re.fullmatch(r"[a-zA-Z0-9_-]+", cli.nome_do_schema())
 
@@ -602,7 +604,7 @@ def test_nome_do_structured_output_e_aceito_pela_api():
         c.completar([{"role": "user", "content": "x"}])
 
     nome = capturado["response_format"]["json_schema"]["name"]
-    assert nome == "intent_1_0"
+    assert nome == "intent_1_1"
     assert _re.fullmatch(r"[a-zA-Z0-9_-]+", nome)
     # schema e strict permanecem intactos
     assert capturado["response_format"]["json_schema"]["strict"] is True
@@ -667,3 +669,158 @@ def test_avaliacao_com_llm_real_esta_pendente():
     import os
     assert os.environ.get(cli.VARIAVEL_DA_CHAVE) is None, (
         "ha credencial no ambiente: rode a avaliacao real e atualize P-03")
+
+
+# ========================================================================== #
+# RF-02 — comparacao entre dois periodos declarados (decisao B)
+# ========================================================================== #
+def _harness_com(cfg, payloads):
+    """Harness real, MCP real, LLM mockado. O unico mock e o provedor."""
+    li = interpretador(payloads)
+    return Harness.start(cfg, interpreter=li), li
+
+
+def _comparacao(**over):
+    base = dict(
+        question_type="COMPARACAO", requested_level="CONTEXT",
+        period={"grain": "ano", "from": "2025", "to": "2025"},
+        compare_to="periodo_declarado",
+        compare_period={"grain": "ano", "from": "2024", "to": "2024"},
+        filters=[{"dimension": "departamento",
+                  "terms": [termo("Customer Service")]}])
+    base.update(over)
+    return payload(**base)
+
+
+PERGUNTA_RF02 = "Como o turnover de Customer Service mudou entre 2024 e 2025?"
+
+
+def test_rf02_o_par_declarado_chega_intacto_ao_mcp(cfg):
+    """2024 vs 2025 vira exatamente 2025 vs 2024, e nada mais.
+
+    Era este o caso que virava 2024 contra 2023: o `PLAN` preenchia
+    `periodo_anterior` por default e a Semantic Layer derivava o terceiro ano.
+    """
+    h, li = _harness_com(cfg, [_comparacao()])
+    try:
+        e = h.run(PERGUNTA_RF02, registrar=False)
+    finally:
+        h.close()
+
+    assert li.registro.interpreter_used == LLM
+    assert e.state.intent.compare_to == "periodo_declarado"
+    assert e.state.intent.compare_period == {"grain": "ano", "from": "2024",
+                                             "to": "2024"}
+    assert not e.state.intent.ambiguity
+
+    # uma chamada, a capacidade certa, e nenhum fallback A-05 no meio
+    assert e.state.plano.capacidades == ["compare_kpi"]
+    assert e.state.chamadas_efetivas == 1
+    args = e.state.chamadas[0].args
+    assert args["compare_to"] == "periodo_declarado"
+    assert args["period"]["from"] == "2025"
+    assert args["compare_period"]["from"] == "2024"
+    assert "2023" not in json.dumps(args)
+
+    # e a base que voltou do MCP e 2024, nao um periodo derivado
+    env = e.state.observacoes[-1].envelope
+    assert env["outcome"] == "ANSWER"
+    assert env["data"]["baseline"]["period"]["from"] == "2024"
+    assert env["data"]["current"]["period"]["from"] == "2025"
+
+
+def test_rf02_o_delta_vem_da_semantic_layer_e_nao_do_agente(cfg):
+    """O agente nunca subtrai: o delta chega pronto no envelope."""
+    h, _ = _harness_com(cfg, [_comparacao()])
+    try:
+        e = h.run(PERGUNTA_RF02, registrar=False)
+    finally:
+        h.close()
+    d = e.state.observacoes[-1].envelope["data"]
+    assert d["delta"] is not None and d["statement_kind"] == "ASSOCIACAO"
+    # o numero da resposta veio de envelope, e a resposta cita o trace
+    assert e.resposta.trace_ids and all(e.resposta.trace_ids)
+    assert e.stop_reason == L.SUFICIENTE
+
+
+def test_rf02_ausencia_de_base_nao_vira_periodo_anterior(cfg):
+    """O default silencioso morreu: sem base, o RESOLVE pergunta de volta."""
+    h, _ = _harness_com(cfg, [_comparacao(compare_to=None, compare_period=None)])
+    try:
+        e = h.run(PERGUNTA_RF02, registrar=False)
+    finally:
+        h.close()
+    assert e.stop_reason == L.AMBIGUIDADE
+    assert e.state.chamadas_efetivas == 0            # A-01: nenhuma chamada
+    campos = {a.campo for a in e.state.intent.ambiguity}
+    assert "compare_to" in campos
+    # e as opcoes oferecidas sao as bases governadas, nao um palpite
+    amb = next(a for a in e.state.intent.ambiguity if a.campo == "compare_to")
+    assert set(amb.opcoes) == set(llm_schema.COMPARACOES)
+
+
+def test_rf02_base_declarada_sem_periodo_vira_ambiguidade(contexto):
+    li = interpretador([_comparacao(compare_period=None)])
+    intent = li.understand(PERGUNTA_RF02, contexto)
+    assert intent.compare_period is None
+    r = resolve(intent, contexto)
+    assert any(a.campo == "compare_period" for a in r.ambiguity)
+
+
+def test_rf02_periodo_declarado_com_base_relativa_vira_ambiguidade(contexto):
+    """Intent que se contradiz: a base relativa deriva, e o periodo seria ignorado."""
+    li = interpretador([_comparacao(compare_to="periodo_anterior")])
+    intent = li.understand(PERGUNTA_RF02, contexto)
+    r = resolve(intent, contexto)
+    assert any(a.campo == "compare_period" for a in r.ambiguity)
+
+
+def test_rf02_comparacoes_relativas_continuam_funcionando(cfg):
+    """Compatibilidade: as tres bases anteriores nao mudaram de comportamento."""
+    p = _comparacao(compare_to="periodo_anterior", compare_period=None)
+    h, _ = _harness_com(cfg, [p])
+    try:
+        e = h.run("Compare o turnover de Customer Service com o ano anterior.",
+                  registrar=False)
+    finally:
+        h.close()
+    assert e.stop_reason == L.SUFICIENTE
+    args = e.state.chamadas[0].args
+    assert args["compare_to"] == "periodo_anterior"
+    assert "compare_period" not in args               # derivada, nao declarada
+    base = e.state.observacoes[-1].envelope["data"]["baseline"]
+    assert base["period"]["from"] == "2024"           # derivado de 2025
+
+
+def test_rf02_o_mcp_recusa_base_declarada_sem_periodo(cfg):
+    """A guarda existe tambem na fronteira, e nao so no agente."""
+    from mcp.server import Server
+    srv = Server.start(cfg)
+    try:
+        env = srv.call("compare_kpi",
+                       {"kpi": "turnover_rate",
+                        "period": {"grain": "ano", "from": "2025"},
+                        "compare_to": "periodo_declarado"},
+                       registrar=False)
+        assert env.outcome == "REFUSAL"
+        assert env.refusal["classe"] == "COMPARACAO_NAO_RESPONDIVEL"
+
+        # e o caminho feliz, direto na fronteira
+        ok = srv.call("compare_kpi",
+                      {"kpi": "turnover_rate",
+                       "period": {"grain": "ano", "from": "2025"},
+                       "compare_to": "periodo_declarado",
+                       "compare_period": {"grain": "ano", "from": "2024"}},
+                      registrar=False)
+        assert ok.outcome == "ANSWER"
+        assert ok.data["baseline"]["period"]["from"] == "2024"
+        assert ok.data["current"]["period"]["from"] == "2025"
+    finally:
+        srv.close()
+
+
+def test_rf02_a_base_declarada_esta_no_vocabulario_governado():
+    doc = yaml.safe_load(
+        (ROOT / "config" / "semantic" / "vocabulary.yaml").read_text(encoding="utf-8"))
+    assert "periodo_declarado" in doc["comparisons"]
+    assert set(llm_schema.COMPARACOES) == set(doc["comparisons"])

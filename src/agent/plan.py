@@ -77,6 +77,19 @@ def _periodo_args(intent: Intent) -> dict:
     return p
 
 
+# A base que a pergunta CAUSAL usa para conferir a premissa. É escolha do
+# plano, e não do usuário: quem pergunta "por que caiu?" não pediu comparação.
+BASE_DA_CAUSAL = "periodo_anterior"
+
+
+def _periodo_declarado(p: dict) -> dict:
+    """O período-base, na forma do MCP. Copiado, nunca derivado."""
+    saida = {"grain": p["grain"], "from": p["from"]}
+    if p.get("to") and p["to"] != p["from"]:
+        saida["to"] = p["to"]
+    return saida
+
+
 def _filtros_args(intent: Intent, contexto) -> list[dict]:
     """Filtros no formato do MCP, com o termo canônico do vocabulário.
 
@@ -109,10 +122,28 @@ def montar(intent: Intent, contexto) -> Plan:
             motivo = "pergunta de valor, sem quebra por dimensão"
             objetivo = f"obter o valor governado de {kpi}"
         elif cap == COMPARE_KPI:
-            args.update(period=periodo,
-                        compare_to=intent.compare_to or "periodo_anterior")
+            # Numa COMPARACAO, a base é do usuário: `compare_to` vazio **não**
+            # vira `periodo_anterior`, porque o `RESOLVE` já barrou a ausência
+            # como ambiguidade. Era esse default que fazia "mudou entre 2024 e
+            # 2025" virar 2024 contra 2023 (RF-02).
+            #
+            # Numa CAUSAL a base é do **plano**: a pessoa perguntou "por quê",
+            # não pediu comparação nenhuma, e é o agente que vai buscar o
+            # período anterior para poder conferir a premissa. Isso é decisão
+            # da matriz, declarada aqui e visível no `motivo`, e não uma lacuna
+            # preenchida em silêncio.
+            base = intent.compare_to or (
+                BASE_DA_CAUSAL if intent.question_type == CAUSAL else None)
+            args.update(period=periodo, compare_to=base)
+            if intent.compare_period:
+                # Base declarada: o segundo período viaja como valor, e não
+                # como rótulo a ser derivado do primeiro.
+                args["compare_period"] = _periodo_declarado(intent.compare_period)
             motivo = ("comparação é capacidade própria; subtrair dois get_kpi "
                       "seria o agente calculando")
+            if base == BASE_DA_CAUSAL and not intent.compare_to:
+                motivo += "; base do período anterior escolhida pelo plano, "\
+                          "para conferir a premissa da pergunta"
             objetivo = f"obter a variação governada de {kpi}"
         elif cap == BREAKDOWN_KPI:
             dims = intent.dimensions or ["departamento"]

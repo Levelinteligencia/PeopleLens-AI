@@ -147,3 +147,10 @@ comparisons:
   periodo_anterior:   {label: "periodo imediatamente anterior"}
   mesmo_periodo_ano_anterior: {label: "mesmo periodo do ano anterior"}
   media_da_populacao: {label: "media da populacao no mesmo periodo"}
+  # As tres acima sao RELATIVAS: a base e derivada do periodo pedido. Esta e
+  # DECLARADA: a pergunta nomeou os dois periodos, e o segundo viaja no campo
+  # `compare_period`. Existe porque "mudou entre 2024 e 2025" nao e nenhuma das
+  # relativas, e escolher a mais parecida comparava 2024 com 2023 (RF-02).
+  # Aprovada por Sam em 2026-09-13, decisao B: o par e declarado, nunca inferido.
+  periodo_declarado:  {label: "periodo declarado explicitamente na pergunta",
+                       requires: compare_period}

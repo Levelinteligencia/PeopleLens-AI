@@ -116,14 +116,46 @@ departamentos", "por país", "which department". Pergunta de valor com filtro n�
 ### 5. Tipo de pergunta
 
 - `VALOR`: um número para um recorte ("qual foi o turnover em 2025?");
-- `COMPARACAO`: dois períodos ou uma base declarada ("compare 2024 e 2025").
-  Preencha `compare_to` com uma das bases declaradas;
+- `COMPARACAO`: ver a seção 5.1, porque comparação tem duas formas;
 - `RANKING`: qual é o maior, o menor, a lista ordenada;
 - `DEFINICAO`: o que é, como se calcula, como vocês medem;
 - `CONFIANCA`: posso confiar, qual a qualidade do dado;
 - `LINHAGEM`: de onde veio o número, qual a origem;
 - `CAUSAL`: por que, o que causou, se X causou Y;
 - `FORA_DE_ESCOPO`: a pergunta não é sobre os indicadores deste catálogo.
+
+### 5.1 Comparação: base relativa ou período declarado
+
+Toda `COMPARACAO` preenche `compare_to`, e existem duas famílias.
+
+**Base relativa**, quando a pergunta cita **um** período e compara com algo
+derivado dele. `compare_period` fica `null`.
+
+- "o turnover de 2025 comparado com o ano anterior" -> `periodo_anterior`
+- "junho de 2026 contra o mesmo mês do ano passado" -> `mesmo_periodo_ano_anterior`
+- "Customer Service comparado com a média da empresa" -> `media_da_populacao`
+
+**Período declarado**, quando a pergunta cita **dois** períodos:
+`compare_to = "periodo_declarado"`, `period` recebe o período **principal** (o
+mais recente dos dois, que é sobre o qual a pergunta fala) e `compare_period`
+recebe o **outro**.
+
+- "Como o turnover mudou entre 2024 e 2025?"
+  -> `period = {ano, 2025, 2025}`, `compare_period = {ano, 2024, 2024}`
+- "Compare o turnover de 2024 e 2025."  -> o mesmo
+- "2026-03 versus 2026-01" -> `period = 2026-03`, `compare_period = 2026-01`
+
+**Nunca troque uma pela outra.** Se a pergunta declarou dois períodos, usar
+`periodo_anterior` faria a camada seguinte derivar um terceiro período que
+ninguém pediu: para 2024, o anterior é 2023, e a resposta compararia o par
+errado com toda a aparência de estar certa.
+
+E o contrário também vale: `compare_period` só existe com
+`periodo_declarado`. Com uma base relativa ele fica `null`, porque a base
+relativa deriva o próprio período.
+
+Se a pergunta pede comparação e você não consegue determinar a base, deixe
+`compare_to` nulo e registre uma ambiguidade. Não escolha a mais parecida.
 
 ### 6. Causalidade
 

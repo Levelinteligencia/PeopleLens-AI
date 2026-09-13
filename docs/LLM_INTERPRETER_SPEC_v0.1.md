@@ -102,7 +102,8 @@ define é quais campos o LLM preenche e com que regras.
 | `dimensions` | **sim** | só quando a pergunta pede quebra explícita |
 | `requested_level` | **sim** | derivado do tipo de pergunta, não da vontade de quem pergunta |
 | `ambiguity` | **sim, como indício** | o `RESOLVE` recalcula e substitui; serve para observabilidade |
-| `compare_to` | **sim, restrito** | só os três valores declarados no vocabulário |
+| `compare_to` | **sim, restrito** | só os valores declarados no vocabulário: três relativos e `periodo_declarado` |
+| `compare_period` | **sim, restrito** | o período da base **declarada**; nulo com base relativa, que deriva o próprio (RF-02) |
 | `premissa` | **sim** | `AUMENTO`/`QUEDA`/null — é leitura da **pergunta**, não do dado |
 | `referencia_anterior` | **sim** | booleano: a pergunta usa dêixis ("esse número", "compare com") |
 
@@ -568,7 +569,7 @@ garantia está na tabela acima.
 
 | Parâmetro | Valor | Por quê |
 |---|---|---|
-| `schema_version` | `intent/1.0` | muda quando o contrato do `Intent` muda; versão antiga é rejeitada, não adaptada |
+| `schema_version` | `intent/1.1` | muda quando o contrato do `Intent` muda; versão antiga é rejeitada, não adaptada. `1.1` acrescentou `compare_period` (RF-02, decisão B) |
 | `interpreter_version` | semântico | permite comparar comportamento entre versões |
 | `model` | **PENDENTE** (P-03, mantida pendente por decisão de 2026-09-13) | depende de disponibilidade de ambiente/API; não se escolhe fornecedor por preferência |
 | `temperature` | **0** | a mesma pergunta deve produzir o mesmo `Intent` |
@@ -703,6 +704,7 @@ Critério por categoria: **exatidão de campo**, não similaridade de texto.
 | **EV-08** | saída malformada | JSON inválido, campo extra, enum inválido |
 | **EV-09** | KPI alucinado | um `kpi_id` fora do catálogo é rejeitado no schema |
 | **EV-10** | dimensão alucinada | dimensão fora de `allowed_dimensions` |
+| **EV-16** | comparação entre **dois períodos declarados** | `compare_to = periodo_declarado` com `compare_period`; nunca uma base relativa (RF-02) |
 | **EV-11** | dimensão **inferida** | o caso `Customer Service` / `Customer` da seção 8, e os demais pares de contenção do vocabulário |
 | **EV-12** | período inventado | "deste ano" não vira `2026` no LLM |
 | **EV-13** | mapeamento inventado | nenhum `base` fora dos três valores |

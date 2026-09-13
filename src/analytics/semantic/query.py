@@ -29,7 +29,7 @@ from generator.config import Config
 from .catalog import Catalog, Kpi, ORDEM_NIVEL, NIVEIS
 
 CAMPOS = {"kpi", "kpi_version", "period", "dimensions", "filters", "compare",
-          "requested_level", "pergunta"}
+          "compare_period", "requested_level", "pergunta"}
 CAMPOS_PERIODO = {"grain", "from", "to"}
 CAMPOS_FILTRO = {"dimension", "in"}
 
@@ -106,6 +106,9 @@ class SemanticQuery:
     dimensions: tuple[str, ...] = ()
     filters: tuple[Filter, ...] = ()
     compare: str | None = None
+    # Periodo da base quando a comparacao e DECLARADA. Nas bases relativas a
+    # base e derivada, e este campo fica vazio (RF-02).
+    compare_period: "Period | None" = None
     requested_level: str = "FACT"
     kpi_version: str | None = None
     pergunta: str | None = None
@@ -134,15 +137,12 @@ class SemanticQuery:
         p = bruto.get("period")
         if not isinstance(p, dict):
             raise QueryShapeError("consulta semantica exige `period`")
-        extras_p = set(p) - CAMPOS_PERIODO
-        if extras_p:
-            raise QueryShapeError(f"campos desconhecidos em `period`: {sorted(extras_p)}")
-        grain = p.get("grain")
-        if grain not in GRAINS:
-            raise QueryShapeError(f"grain de periodo desconhecido: {grain!r}")
-        inicio, fim = str(p.get("from") or ""), str(p.get("to") or p.get("from") or "")
-        if not inicio:
-            raise QueryShapeError("`period.from` e obrigatorio")
+        grain, inicio, fim = _periodo(p, "period")
+        base = bruto.get("compare_period")
+        periodo_base = None
+        if base is not None:
+            g2, i2, f2 = _periodo(base, "compare_period")
+            periodo_base = Period(g2, i2, f2)
 
         dims = tuple(bruto.get("dimensions") or ())
         if any(not isinstance(d, str) for d in dims):
@@ -170,7 +170,8 @@ class SemanticQuery:
 
         return cls(kpi=bruto["kpi"], period=Period(grain, inicio, fim),
                    dimensions=dims, filters=tuple(filtros),
-                   compare=bruto.get("compare"), requested_level=nivel,
+                   compare=bruto.get("compare"), compare_period=periodo_base,
+                   requested_level=nivel,
                    kpi_version=bruto.get("kpi_version"),
                    pergunta=bruto.get("pergunta"))
 
@@ -181,8 +182,34 @@ class SemanticQuery:
                     "to": self.period.fim},
             dimensions=list(self.dimensions),
             filters=[{"dimension": f.dimension, "in": list(f.valores)} for f in self.filters],
-            compare=self.compare, requested_level=self.requested_level,
+            compare=self.compare,
+            compare_period=(None if self.compare_period is None else {
+                "grain": self.compare_period.grain,
+                "from": self.compare_period.inicio,
+                "to": self.compare_period.fim}),
+            requested_level=self.requested_level,
             pergunta=self.pergunta)
+
+
+def _periodo(p: dict, onde: str) -> tuple[str, str, str]:
+    """A mesma validacao de forma para `period` e `compare_period`.
+
+    Uma funcao so, de proposito: duas copias divergiriam, e a base de
+    comparacao precisa ser tao valida quanto o periodo principal.
+    """
+    if not isinstance(p, dict):
+        raise QueryShapeError(f"`{onde}` precisa ser um objeto")
+    extras = set(p) - CAMPOS_PERIODO
+    if extras:
+        raise QueryShapeError(f"campos desconhecidos em `{onde}`: {sorted(extras)}")
+    grain = p.get("grain")
+    if grain not in GRAINS:
+        raise QueryShapeError(f"grain de periodo desconhecido: {grain!r}")
+    inicio = str(p.get("from") or "")
+    fim = str(p.get("to") or p.get("from") or "")
+    if not inicio:
+        raise QueryShapeError(f"`{onde}.from` e obrigatorio")
+    return grain, inicio, fim
 
 
 # --------------------------------------------------------------------------- #
@@ -448,6 +475,21 @@ def validate(q: SemanticQuery, cat: Catalog, vocab: Vocabulary,
             f"{q.requested_level} nao esta sustentado para {q.kpi}: o teto e {teto}.",
             f"para responder em {q.requested_level} seria necessario {falta}.",
             {"pedido": q.requested_level, "teto": teto, "status": kpi.status},
+        ), resolvido
+
+    # base DECLARADA exige o periodo; nao ha o que derivar (RF-02)
+    if q.compare == "periodo_declarado" and q.compare_period is None:
+        return Refusal(
+            "COMPARACAO_NAO_RESPONDIVEL",
+            "a base `periodo_declarado` exige `compare_period`",
+            "declarar o periodo de comparacao, ou usar uma base relativa",
+        ), resolvido
+    if q.compare_period is not None and q.compare != "periodo_declarado":
+        return Refusal(
+            "COMPARACAO_NAO_RESPONDIVEL",
+            f"a base {q.compare!r} deriva o proprio periodo; um "
+            "`compare_period` junto seria ignorado em silencio",
+            "usar `periodo_declarado`, ou remover `compare_period`",
         ), resolvido
 
     # comparacao declarada precisa existir no vocabulario

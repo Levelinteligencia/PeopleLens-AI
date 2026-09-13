@@ -24,7 +24,10 @@ from .context import PADRAO_PERIODO
 from .intent import TIPOS, Ambiguity, Intent
 from .interpreter import DIMENSOES_DE_FILTRO
 
-SCHEMA_VERSION = "intent/1.0"
+# intent/1.1 acrescentou `compare_period` (RF-02, decisao B). Versao
+# anterior e REJEITADA, nunca adaptada: adaptar seria reinterpretar
+# contrato, e um `Intent` 1.0 nao sabe declarar o par de periodos.
+SCHEMA_VERSION = "intent/1.1"
 
 # Derivado, nunca redigitado.
 CAMPOS_DO_INTENT: tuple[str, ...] = tuple(f.name for f in campos_de(Intent))
@@ -39,7 +42,10 @@ BASES = (EXATO, SINONIMO_DECLARADO, NAO_RESOLVIDO)
 # Bases de comparação declaradas em `config/semantic/vocabulary.yaml`.
 # Um teste confere que esta tupla e o arquivo não divergiram.
 COMPARACOES = ("periodo_anterior", "mesmo_periodo_ano_anterior",
-               "media_da_populacao")
+               "media_da_populacao", "periodo_declarado")
+
+# A unica base que exige `compare_period`. As outras tres derivam o periodo.
+PERIODO_DECLARADO = "periodo_declarado"
 
 PREMISSAS = ("AUMENTO", "QUEDA")
 GRAINS = tuple(PADRAO_PERIODO)
@@ -153,6 +159,9 @@ def json_schema() -> dict:
                                      "enum": list(DIMENSOES_DE_FILTRO)}},
             "requested_level": {"type": "string", "enum": list(NIVEIS)},
             "compare_to": {"type": ["string", "null"], "enum": [*COMPARACOES, None]},
+            # Mesma forma do `period`: o par declarado e dois periodos, e nao
+            # um periodo e um rotulo (RF-02).
+            "compare_period": periodo,
             "ambiguity": {"type": "array", "items": ambiguidade},
             "premissa": {"type": ["string", "null"], "enum": [*PREMISSAS, None]},
             "referencia_anterior": {"type": "boolean"},
@@ -192,6 +201,7 @@ def validar(payload) -> dict:
 
     if payload["compare_to"] is not None:
         _enum(payload["compare_to"], COMPARACOES, "compare_to")
+    _periodo(payload["compare_period"], "compare_period")
     if payload["premissa"] is not None:
         _enum(payload["premissa"], PREMISSAS, "premissa")
 
@@ -240,14 +250,14 @@ def _campos(obj, obrigatorios, opcionais, onde: str) -> None:
                            f"{onde}.{','.join(sorted(faltando))}")
 
 
-def _periodo(p) -> None:
+def _periodo(p, onde: str = "period") -> None:
     if p is None:
         return
-    _campos(p, ("grain",), ("from", "to", "relativo"), "period")
-    _enum(p["grain"], GRAINS, "period.grain")
+    _campos(p, ("grain",), ("from", "to", "relativo"), onde)
+    _enum(p["grain"], GRAINS, f"{onde}.grain")
     for chave in ("from", "to", "relativo"):
         if p.get(chave) is not None and not isinstance(p[chave], str):
-            raise ErroDeSchema(TIPO_INVALIDO, f"period.{chave}")
+            raise ErroDeSchema(TIPO_INVALIDO, f"{onde}.{chave}")
 
 
 def _filtro(f) -> None:
@@ -302,6 +312,7 @@ def para_intent(payload: dict) -> Intent:
         dimensions=list(payload["dimensions"]),
         requested_level=payload["requested_level"],
         compare_to=payload["compare_to"],
+        compare_period=_periodo_do_intent(payload["compare_period"]),
         ambiguity=[Ambiguity(a["campo"], a["motivo"], list(a.get("opcoes") or []))
                    for a in payload["ambiguity"]],
         premissa=payload["premissa"],
