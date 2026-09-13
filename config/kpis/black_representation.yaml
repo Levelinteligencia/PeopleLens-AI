@@ -1,0 +1,71 @@
+# Contrato do KPI `black_representation` (ADR-0011).
+#
+# `depends_on_checks` NAO e digitado: e derivado de `consumed_by_kpis` no
+# catalogo de checks, e o teste test_contrato_de_kpi_bate_com_o_catalogo
+# reprova se as duas pontas divergirem.
+#
+# `minimum_n` e a supressao do ADR-0007: abaixo dele o recorte nao responde,
+# e a recusa e por privacidade, nao por qualidade.
+#
+# --- F7 ---------------------------------------------------------------------
+# `status` e `certification` NAO sao calculaveis a partir do trust score
+# (ADR-0029). CERTIFIED e aprovacao humana registrada, com dono e data.
+# Promover porque o dado melhorou e o mesmo erro que a F4 proibe na promocao
+# automatica de mapeamento.
+#
+# `interpretation_rules` vazio significa INTERPRETACAO BLOQUEADA. Nao preencher
+# para destravar o nivel: sem banda ou meta assinada, nao ha o que interpretar.
+kpi_id: black_representation
+name: Representatividade de pessoas pretas e pardas
+description: Share de pessoas pretas e pardas entre quem declarou.
+business_definition: Share de pessoas negras (pretas e pardas) sobre o total que declarou
+  raca/cor.
+formula: share sobre o total de DECLARANTES, nunca sobre o total da populacao
+grain: mes x nivel
+population: pessoas que declararam raca/cor
+period_grain: mes
+period_rollup: ultimo_periodo
+period_coverage: null
+allowed_dimensions:
+- pais
+- business_unit
+- departamento
+- nivel
+filters: []
+exclusions: []
+source_tables:
+- fact_headcount_snapshot
+- dim_employee
+- dim_organization
+- dim_calendar
+coverage: null
+owner: people-analytics
+version: 1.0.0
+status: BLOCKED
+certification:
+  approved_by: null
+  approved_at: null
+  blockers:
+  - motivo: 'race_ethnicity nao tem DE/PARA aprovado: os valores chegam em quatro idiomas
+      e vocabularios (Parda, Preta, Branca, Afrodescendiente, Afrocolombiana, Indigena, Blanca,
+      No informado). Agrupar ''Parda'' com ''Afrodescendiente'' hoje seria mapeamento por
+      similaridade, proibido pelo ADR-0020, e definiria por conta propria quem e negro em
+      cinco paises.'
+    resolvido_por: ref_race_mapping governado, aprovado por People Analytics com responsavel
+      e justificativa, por pais
+depends_on_checks:
+- DQ_COMP_001
+- DQ_COMP_008
+- DQ_CONS_003
+- DQ_UNIQ_004
+- DQ_VALID_007
+depends_on_mappings:
+- ref_country_mapping
+minimum_n: 20
+response_levels:
+  FATO: liberado
+  CONTEXTO: liberado; associacao e sempre nomeada como associacao
+  INTERPRETACAO: bloqueado ate haver regra registrada no contrato, com dono
+  CAUSALIDADE: negado por padrao (ADR-0015); sem estudo registrado nao ha resposta causal
+interpretation_rules: []
+causal_studies: []

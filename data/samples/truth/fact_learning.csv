@@ -1,0 +1,1001 @@
+employee_id,course_id,course_category,enrollment_date,completion_date,completion_status,learning_hours,mandatory_flag,country,department,job_level
+3,CRS-COM-031,Compliance,2018-03-03,2018-03-06,Completed,3.5,true,BR,Distribution Centers,IC1
+8,CRS-MAN-015,Management,2018-03-22,,In Progress,9.7,false,BR,Digital Marketing,M2
+8,CRS-MAN-035,Management,2018-03-01,2018-03-24,Completed,6.4,false,BR,Digital Marketing,M2
+12,CRS-FUN-017,Functional Skills,2018-03-16,,In Progress,23.1,false,BR,Regional Operations,IC3
+13,CRS-FUN-018,Functional Skills,2018-03-27,2018-05-11,Completed,21.3,false,BR,Regional Operations,IC1
+14,CRS-TEC-035,Technology,2018-03-10,2018-03-28,Completed,45.0,false,BR,Marketing,M3
+16,CRS-FUN-022,Functional Skills,2018-03-17,,In Progress,15.3,false,BR,Customer Experience,IC1
+16,CRS-CUS-038,Customer,2018-03-16,,In Progress,4.4,false,BR,Customer Experience,IC1
+17,CRS-SAF-024,Safety,2018-03-25,2018-04-12,Completed,2.0,true,BR,Sales,IC1
+30,CRS-FUN-016,Functional Skills,2018-03-27,,In Progress,14.9,false,BR,Customer Operations,IC1
+32,CRS-COM-021,Compliance,2018-03-13,2018-03-27,Completed,2.2,true,BR,Visual Merchandising,IC2
+32,CRS-CUS-025,Customer,2018-03-28,,In Progress,4.5,false,BR,Visual Merchandising,IC2
+36,CRS-COM-030,Compliance,2018-03-14,2018-05-07,Completed,1.3,true,BR,Distribution Centers,IC1
+36,CRS-COM-008,Compliance,2018-03-19,2018-04-05,Completed,2.0,true,BR,Distribution Centers,IC1
+42,CRS-FUN-011,Functional Skills,2018-03-27,2018-04-17,Completed,2.1,false,BR,Sales,IC2
+46,CRS-FUN-016,Functional Skills,2018-03-21,2018-05-14,Completed,21.2,false,BR,Procurement,IC1
+48,CRS-COM-034,Compliance,2018-03-16,2018-03-28,Completed,3.3,true,BR,Distribution Centers,IC3
+55,CRS-TEC-035,Technology,2018-03-06,2018-04-24,Completed,21.4,false,BR,Legal,IC2
+57,CRS-COM-034,Compliance,2018-03-28,2018-04-14,Completed,1.7,true,BR,People,IC2
+59,CRS-FUN-022,Functional Skills,2018-03-27,2018-05-11,Completed,21.4,false,BR,Strategy,IC1
+60,CRS-TEC-022,Technology,2018-03-22,2018-04-04,Completed,35.7,false,BR,Marketing,IC4
+63,CRS-COM-038,Compliance,2018-03-02,2018-03-19,Completed,2.7,true,BR,Distribution Centers,IC1
+64,CRS-COM-003,Compliance,2018-03-10,2018-05-16,Completed,2.2,true,BR,Sales,IC1
+66,CRS-CUS-005,Customer,2018-03-14,2018-04-14,Completed,6.1,false,BR,Store Operations,IC2
+69,CRS-COM-023,Compliance,2018-03-11,2018-04-17,Completed,1.1,true,BR,Logistics,IC2
+72,CRS-COM-017,Compliance,2018-03-27,2018-05-12,Completed,1.4,true,BR,Risk,IC1
+76,CRS-COM-025,Compliance,2018-03-15,2018-04-04,Completed,2.4,true,BR,People,IC1
+77,CRS-SAF-035,Safety,2018-03-14,,In Progress,4.2,true,BR,Store Operations,IC2
+89,CRS-TEC-018,Technology,2018-03-09,,In Progress,46.4,false,BR,Finance,IC3
+105,CRS-COM-015,Compliance,2018-03-16,2018-03-24,Completed,2.1,true,BR,Finance,IC1
+106,CRS-TEC-039,Technology,2018-03-06,,In Progress,28.6,false,BR,E-commerce,IC2
+115,CRS-COM-014,Compliance,2018-03-21,2018-04-09,Completed,1.8,true,BR,Regional Operations,IC2
+117,CRS-FUN-038,Functional Skills,2018-03-28,2018-04-24,Completed,15.5,false,BR,Risk,IC2
+128,CRS-SAF-026,Safety,2018-03-05,2018-04-07,Completed,3.2,true,BR,Sales,IC2
+138,CRS-COM-031,Compliance,2018-03-16,2018-04-29,Completed,3.9,true,BR,Procurement,IC3
+148,CRS-SAF-018,Safety,2018-03-19,2018-05-02,Completed,3.7,true,BR,Planning,IC1
+150,CRS-FUN-008,Functional Skills,2018-03-15,2018-04-22,Completed,14.8,false,BR,Customer Service,IC1
+153,CRS-TEC-009,Technology,2018-03-27,2018-04-05,Completed,34.7,false,BR,Data,M1
+160,CRS-FUN-039,Functional Skills,2018-03-17,2018-04-15,Completed,7.6,false,BR,Sales,IC2
+162,CRS-FUN-007,Functional Skills,2018-03-09,,In Progress,12.5,false,BR,Sales,IC5
+166,CRS-SAF-022,Safety,2018-03-23,2018-05-02,Completed,4.4,true,BR,Distribution Centers,IC2
+182,CRS-CUS-023,Customer,2018-03-03,2018-03-23,Completed,9.7,false,BR,Store Operations,IC1
+182,CRS-FUN-032,Functional Skills,2018-03-03,,In Progress,10.2,false,BR,Store Operations,IC1
+183,CRS-TEC-018,Technology,2018-03-15,2018-05-19,Completed,27.5,false,BR,People,IC4
+186,CRS-SAF-029,Safety,2018-03-03,2018-03-08,Completed,2.8,true,BR,Sales,IC1
+192,CRS-TEC-014,Technology,2018-03-11,2018-04-28,Completed,44.7,false,BR,Product,IC5
+197,CRS-COM-012,Compliance,2018-03-02,2018-03-13,Completed,2.0,true,BR,Data,IC4
+201,CRS-FUN-034,Functional Skills,2018-03-16,2018-05-01,Completed,6.1,false,BR,Sales,IC2
+205,CRS-FUN-032,Functional Skills,2018-03-21,2018-04-30,Completed,9.1,false,BR,UX,IC4
+208,CRS-LEA-010,Leadership,2018-03-16,,In Progress,15.0,false,BR,Regional Operations,M2
+208,CRS-COM-004,Compliance,2018-03-26,2018-05-19,Completed,1.0,true,BR,Regional Operations,M2
+214,CRS-COM-029,Compliance,2018-03-03,,In Progress,1.2,true,BR,Engineering,IC1
+217,CRS-FUN-012,Functional Skills,2018-03-02,2018-03-15,Completed,18.6,false,BR,Visual Merchandising,IC1
+223,CRS-CUS-014,Customer,2018-03-12,,In Progress,3.0,false,BR,Visual Merchandising,IC2
+241,CRS-COM-019,Compliance,2018-03-15,2018-04-09,Completed,2.6,true,BR,Customer Operations,IC1
+245,CRS-TEC-030,Technology,2018-03-01,,In Progress,31.8,false,BR,E-commerce,IC2
+250,CRS-COM-020,Compliance,2018-03-11,,In Progress,3.3,true,BR,Sales,IC1
+251,CRS-FUN-008,Functional Skills,2018-03-11,2018-03-14,Completed,9.1,false,BR,Regional Operations,IC2
+251,CRS-COM-011,Compliance,2018-03-18,2018-05-04,Completed,3.0,true,BR,Regional Operations,IC2
+252,CRS-FUN-038,Functional Skills,2018-03-10,,In Progress,9.7,false,BR,Customer Operations,M1
+254,CRS-COM-018,Compliance,2018-03-10,,In Progress,2.2,true,BR,Finance,IC3
+261,CRS-COM-001,Compliance,2018-03-18,2018-04-14,Completed,3.5,true,BR,Risk,M2
+262,CRS-COM-007,Compliance,2018-03-13,2018-04-28,Completed,2.4,true,BR,Store Operations,IC1
+263,CRS-COM-024,Compliance,2018-03-26,2018-04-25,Completed,1.5,true,BR,Customer Operations,IC1
+279,CRS-CUS-016,Customer,2018-03-25,2018-05-29,Completed,3.1,false,BR,Visual Merchandising,IC1
+279,CRS-FUN-004,Functional Skills,2018-03-09,,In Progress,16.6,false,BR,Visual Merchandising,IC1
+281,CRS-TEC-029,Technology,2018-03-27,2018-05-04,Completed,7.9,false,BR,E-commerce,M2
+282,CRS-CUS-022,Customer,2018-03-14,,In Progress,3.2,false,BR,Regional Operations,IC2
+286,CRS-COM-005,Compliance,2018-03-24,2018-05-29,Completed,2.3,true,BR,Procurement,IC4
+288,CRS-CUS-024,Customer,2018-03-04,,In Progress,11.2,false,BR,Customer Operations,IC2
+288,CRS-CUS-008,Customer,2018-03-07,2018-04-12,Completed,2.3,false,BR,Customer Operations,IC2
+288,CRS-COM-004,Compliance,2018-03-14,2018-05-09,Completed,2.8,true,BR,Customer Operations,IC2
+294,CRS-SAF-026,Safety,2018-03-15,2018-05-03,Completed,5.3,true,BR,Visual Merchandising,IC3
+295,CRS-COM-012,Compliance,2018-03-02,,In Progress,1.3,true,BR,Procurement,M1
+307,CRS-CUS-032,Customer,2018-03-17,,In Progress,4.2,false,BR,Visual Merchandising,M2
+310,CRS-MAN-014,Management,2018-03-10,2018-04-13,Completed,6.8,false,BR,Customer Service,M1
+313,CRS-FUN-034,Functional Skills,2018-03-19,,In Progress,7.8,false,BR,Procurement,IC2
+318,CRS-COM-002,Compliance,2018-03-21,2018-04-19,Completed,2.8,true,BR,Procurement,IC2
+319,CRS-SAF-014,Safety,2018-03-22,2018-04-25,Completed,5.5,true,BR,Procurement,IC3
+322,CRS-COM-038,Compliance,2018-03-05,2018-03-15,Completed,3.5,true,BR,Store Operations,IC1
+322,CRS-SAF-032,Safety,2018-03-03,2018-03-28,Completed,2.9,true,BR,Store Operations,IC1
+324,CRS-COM-014,Compliance,2018-03-01,2018-03-20,Completed,2.0,true,BR,Finance,IC2
+324,CRS-FUN-022,Functional Skills,2018-03-18,2018-04-06,Completed,17.2,false,BR,Finance,IC2
+327,CRS-FUN-032,Functional Skills,2018-03-24,,In Progress,16.7,false,BR,People,M1
+328,CRS-TEC-015,Technology,2018-03-08,2018-04-10,Completed,25.5,false,BR,UX,IC1
+335,CRS-LEA-008,Leadership,2018-03-07,,In Progress,27.8,false,BR,Planning,M1
+337,CRS-CUS-018,Customer,2018-03-23,,In Progress,8.2,false,AR,Customer Service,IC1
+344,CRS-SAF-034,Safety,2018-03-03,2018-04-02,Completed,2.8,true,AR,Planning,IC2
+344,CRS-COM-004,Compliance,2018-03-25,2018-04-28,Completed,2.1,true,AR,Planning,IC2
+346,CRS-SAF-011,Safety,2018-03-03,2018-04-04,Completed,4.6,true,AR,Sales,IC1
+347,CRS-FUN-038,Functional Skills,2018-03-27,2018-04-21,Completed,2.4,false,AR,Customer Service,IC1
+349,CRS-COM-015,Compliance,2018-03-05,2018-04-16,Completed,2.8,true,AR,Regional Operations,IC1
+355,CRS-FUN-036,Functional Skills,2018-03-28,2018-05-09,Completed,11.3,false,AR,Planning,IC2
+355,CRS-FUN-024,Functional Skills,2018-03-07,2018-03-18,Completed,13.6,false,AR,Planning,IC2
+360,CRS-CUS-018,Customer,2018-03-25,2018-05-30,Completed,5.6,false,AR,Sales,IC1
+366,CRS-CUS-039,Customer,2018-03-04,2018-04-23,Completed,6.9,false,AR,Sales,IC1
+366,CRS-COM-035,Compliance,2018-03-17,2018-05-07,Completed,3.7,true,AR,Sales,IC1
+379,CRS-SAF-026,Safety,2018-03-03,2018-03-19,Completed,3.4,true,AR,Sales,IC3
+392,CRS-COM-015,Compliance,2018-03-21,2018-05-17,Completed,2.1,true,BR,Risk,IC1
+393,CRS-COM-010,Compliance,2018-03-15,2018-03-20,Completed,1.2,true,BR,Regional Operations,IC1
+395,CRS-SAF-015,Safety,2018-03-02,2018-03-24,Completed,5.9,true,BR,Regional Operations,IC2
+395,CRS-SAF-026,Safety,2018-03-19,2018-04-22,Completed,4.0,true,BR,Regional Operations,IC2
+399,CRS-FUN-008,Functional Skills,2018-03-10,2018-04-17,Completed,3.4,false,BR,Sales,IC2
+403,CRS-FUN-031,Functional Skills,2018-03-27,2018-06-02,Completed,4.8,false,BR,Legal,IC3
+404,CRS-FUN-033,Functional Skills,2018-03-11,2018-03-22,Completed,13.3,false,BR,Product,IC4
+404,CRS-FUN-032,Functional Skills,2018-03-16,2018-04-30,Completed,22.5,false,BR,Product,IC4
+404,CRS-TEC-018,Technology,2018-03-08,2018-04-21,Completed,46.3,false,BR,Product,IC4
+405,CRS-SAF-011,Safety,2018-03-21,2018-03-31,Completed,2.2,true,BR,Procurement,IC1
+420,CRS-FUN-030,Functional Skills,2018-03-03,,In Progress,3.9,false,BR,Digital Marketing,IC3
+422,CRS-CUS-020,Customer,2018-03-26,2018-03-29,Completed,4.7,false,BR,Visual Merchandising,IC1
+425,CRS-SAF-038,Safety,2018-03-17,2018-05-11,Completed,3.1,true,BR,Planning,IC1
+433,CRS-CUS-023,Customer,2018-03-10,2018-05-17,Completed,5.6,false,BR,Customer Experience,M1
+433,CRS-CUS-002,Customer,2018-03-08,,In Progress,9.0,false,BR,Customer Experience,M1
+433,CRS-CUS-002,Customer,2018-03-26,2018-05-31,Completed,4.6,false,BR,Customer Experience,M1
+440,CRS-COM-013,Compliance,2018-03-23,2018-04-28,Completed,2.5,true,BR,Marketing,M2
+461,CRS-CUS-035,Customer,2018-03-08,,In Progress,4.8,false,BR,Customer Service,IC2
+473,CRS-SAF-027,Safety,2018-03-11,2018-03-16,Completed,4.7,true,BR,Sales,IC2
+474,CRS-COM-028,Compliance,2018-03-06,2018-04-24,Completed,1.3,true,BR,Planning,IC3
+475,CRS-TEC-010,Technology,2018-03-01,,In Progress,46.8,false,BR,Finance,IC1
+479,CRS-CUS-001,Customer,2018-03-12,2018-05-02,Completed,10.2,false,BR,Visual Merchandising,IC2
+484,CRS-CUS-023,Customer,2018-03-01,,In Progress,8.0,false,BR,Visual Merchandising,IC1
+484,CRS-CUS-033,Customer,2018-03-14,2018-05-08,Completed,11.9,false,BR,Visual Merchandising,IC1
+493,CRS-FUN-023,Functional Skills,2018-03-25,2018-03-28,Completed,16.9,false,BR,Visual Merchandising,M1
+494,CRS-TEC-038,Technology,2018-03-07,2018-03-25,Completed,9.2,false,BR,Strategy,IC3
+494,CRS-FUN-019,Functional Skills,2018-03-06,2018-03-22,Completed,15.3,false,BR,Strategy,IC3
+502,CRS-CUS-032,Customer,2018-03-25,2018-04-20,Completed,11.4,false,BR,Visual Merchandising,IC2
+504,CRS-COM-010,Compliance,2018-03-09,2018-05-15,Completed,1.2,true,BR,Data & Analytics,IC1
+505,CRS-SAF-037,Safety,2018-03-20,2018-05-03,Completed,2.7,true,BR,Planning,IC2
+507,CRS-FUN-005,Functional Skills,2018-03-12,,In Progress,22.7,false,AR,Sales,IC1
+509,CRS-TEC-001,Technology,2018-03-04,2018-03-10,Completed,19.6,false,BR,Data & Analytics,M2
+510,CRS-FUN-003,Functional Skills,2018-03-21,2018-04-13,Completed,23.8,false,AR,Customer Service,IC2
+516,CRS-TEC-020,Technology,2018-03-14,,In Progress,52.0,false,BR,Data,IC3
+518,CRS-SAF-031,Safety,2018-03-17,2018-04-22,Completed,2.8,true,BR,Regional Operations,IC3
+518,CRS-FUN-022,Functional Skills,2018-03-16,,In Progress,13.9,false,BR,Regional Operations,IC3
+530,CRS-COM-027,Compliance,2018-03-16,2018-05-11,Completed,1.1,true,AR,Customer Service,IC2
+534,CRS-FUN-035,Functional Skills,2018-03-16,2018-04-05,Completed,13.5,false,BR,Engineering,IC1
+542,CRS-CUS-004,Customer,2018-03-22,2018-05-03,Completed,11.2,false,AR,Regional Operations,IC1
+544,CRS-COM-036,Compliance,2018-03-28,,In Progress,2.3,true,BR,Visual Merchandising,IC1
+549,CRS-COM-028,Compliance,2018-03-23,2018-04-19,Completed,2.3,true,BR,Sales,IC1
+551,CRS-COM-038,Compliance,2018-03-14,2018-03-25,Completed,3.2,true,BR,Procurement,IC3
+552,CRS-MAN-015,Management,2018-03-24,,In Progress,12.7,false,BR,Customer Experience,M1
+556,CRS-SAF-014,Safety,2018-03-11,2018-04-18,Completed,3.0,true,BR,Planning,IC2
+556,CRS-COM-021,Compliance,2018-03-27,,In Progress,2.7,true,BR,Planning,IC2
+561,CRS-COM-010,Compliance,2018-03-05,2018-05-13,Completed,3.8,true,BR,Procurement,IC1
+566,CRS-COM-018,Compliance,2018-03-14,2018-04-13,Completed,3.2,true,BR,Digital Marketing,IC4
+566,CRS-COM-017,Compliance,2018-03-18,2018-05-20,Completed,3.1,true,BR,Digital Marketing,IC4
+568,CRS-COM-006,Compliance,2018-03-16,2018-03-26,Completed,1.1,true,BR,Logistics,IC2
+578,CRS-LEA-027,Leadership,2018-03-01,2018-03-09,Completed,30.7,false,BR,Sales,M3
+579,CRS-SAF-011,Safety,2018-03-09,2018-04-26,Completed,5.9,true,BR,Regional Operations,IC1
+582,CRS-FUN-020,Functional Skills,2018-03-13,,In Progress,8.5,false,BR,Sales,IC1
+582,CRS-FUN-014,Functional Skills,2018-03-08,,In Progress,3.4,false,BR,Sales,IC1
+589,CRS-FUN-016,Functional Skills,2018-03-27,2018-04-06,Completed,3.1,false,BR,Sales,IC1
+598,CRS-COM-014,Compliance,2018-03-22,2018-04-10,Completed,3.8,true,BR,People,IC4
+598,CRS-COM-025,Compliance,2018-03-09,2018-04-08,Completed,2.1,true,BR,People,IC4
+605,CRS-TEC-024,Technology,2018-03-03,2018-05-04,Completed,7.1,false,BR,Finance,IC2
+606,CRS-SAF-021,Safety,2018-03-22,2018-04-02,Completed,5.7,true,BR,Regional Operations,IC1
+607,CRS-TEC-003,Technology,2018-03-28,2018-06-05,Completed,4.2,false,BR,Legal,IC3
+607,CRS-TEC-006,Technology,2018-03-07,2018-04-16,Completed,51.6,false,BR,Legal,IC3
+613,CRS-FUN-017,Functional Skills,2018-03-18,,In Progress,2.2,false,BR,Customer Service,IC1
+614,CRS-FUN-022,Functional Skills,2018-03-07,,In Progress,13.9,false,BR,Regional Operations,IC2
+616,CRS-CUS-003,Customer,2018-03-17,2018-03-20,Completed,6.7,false,BR,Store Operations,IC1
+618,CRS-TEC-008,Technology,2018-03-22,,In Progress,10.6,false,BR,Data,IC4
+619,CRS-FUN-034,Functional Skills,2018-03-03,,In Progress,16.0,false,BR,Store Operations,IC1
+619,CRS-FUN-001,Functional Skills,2018-03-19,,In Progress,15.4,false,BR,Store Operations,IC1
+620,CRS-CUS-027,Customer,2018-03-02,,In Progress,6.4,false,BR,Customer Experience,IC2
+629,CRS-FUN-023,Functional Skills,2018-03-06,2018-04-18,Completed,20.3,false,BR,Product,IC1
+630,CRS-TEC-030,Technology,2018-03-16,2018-04-29,Completed,18.6,false,BR,Finance,IC3
+631,CRS-COM-015,Compliance,2018-03-26,2018-04-11,Completed,1.7,true,BR,Regional Operations,IC2
+638,CRS-TEC-015,Technology,2018-03-20,2018-05-13,Completed,46.9,false,BR,People,IC2
+644,CRS-FUN-006,Functional Skills,2018-03-12,2018-03-29,Completed,15.1,false,AR,Planning,IC4
+648,CRS-FUN-018,Functional Skills,2018-03-23,,In Progress,18.4,false,BR,Distribution Centers,M2
+649,CRS-SAF-007,Safety,2018-03-10,2018-03-24,Completed,3.0,true,BR,Store Operations,IC2
+653,CRS-COM-020,Compliance,2018-03-11,2018-04-26,Completed,2.3,true,BR,Finance,IC4
+656,CRS-CUS-024,Customer,2018-03-08,,In Progress,4.1,false,BR,Visual Merchandising,IC2
+656,CRS-SAF-004,Safety,2018-03-06,2018-04-30,Completed,4.6,true,BR,Visual Merchandising,IC2
+657,CRS-TEC-013,Technology,2018-03-14,2018-04-02,Completed,33.4,false,BR,Engineering,IC2
+658,CRS-FUN-030,Functional Skills,2018-03-09,2018-05-16,Completed,13.5,false,BR,Store Operations,IC2
+664,CRS-COM-035,Compliance,2018-03-08,,In Progress,1.2,true,BR,Customer Service,IC1
+665,CRS-COM-011,Compliance,2018-03-19,2018-03-23,Completed,2.4,true,BR,Distribution Centers,IC3
+669,CRS-SAF-025,Safety,2018-03-27,2018-05-13,Completed,3.5,true,BR,Visual Merchandising,IC1
+675,CRS-COM-030,Compliance,2018-03-05,2018-04-25,Completed,3.1,true,BR,UX,IC3
+680,CRS-COM-016,Compliance,2018-03-12,2018-05-04,Completed,1.4,true,BR,Customer Service,IC1
+695,CRS-FUN-024,Functional Skills,2018-03-05,2018-05-13,Completed,3.9,false,BR,Logistics,IC1
+700,CRS-CUS-004,Customer,2018-03-05,,In Progress,9.1,false,BR,Visual Merchandising,M4
+701,CRS-COM-006,Compliance,2018-03-08,2018-04-01,Completed,2.7,true,BR,Sales,IC1
+709,CRS-CUS-015,Customer,2018-03-25,,In Progress,10.1,false,BR,Customer Experience,IC1
+709,CRS-CUS-012,Customer,2018-03-21,2018-05-19,Completed,10.7,false,BR,Customer Experience,IC1
+716,CRS-COM-026,Compliance,2018-03-04,2018-03-22,Completed,1.8,true,AR,Customer Service,IC1
+717,CRS-COM-024,Compliance,2018-03-07,,In Progress,2.8,true,BR,Regional Operations,IC1
+717,CRS-COM-006,Compliance,2018-03-15,2018-04-29,Completed,3.5,true,BR,Regional Operations,IC1
+718,CRS-FUN-019,Functional Skills,2018-03-16,2018-03-27,Completed,19.3,false,BR,Customer Experience,IC1
+720,CRS-CUS-006,Customer,2018-03-13,2018-03-28,Completed,7.7,false,BR,Regional Operations,IC1
+729,CRS-SAF-010,Safety,2018-03-09,2018-05-12,Completed,2.7,true,BR,Logistics,IC2
+730,CRS-COM-012,Compliance,2018-03-13,,In Progress,1.6,true,BR,E-commerce,IC4
+734,CRS-COM-035,Compliance,2018-03-20,2018-04-24,Completed,3.9,true,BR,Visual Merchandising,IC1
+735,CRS-FUN-034,Functional Skills,2018-03-26,,In Progress,12.2,false,BR,Data & Analytics,IC2
+742,CRS-COM-032,Compliance,2018-03-08,2018-05-09,Completed,4.0,true,BR,Visual Merchandising,IC1
+743,CRS-FUN-027,Functional Skills,2018-03-17,2018-05-21,Completed,16.9,false,CL,Customer Experience,IC2
+743,CRS-FUN-030,Functional Skills,2018-03-28,2018-05-17,Completed,9.4,false,CL,Customer Experience,IC2
+744,CRS-SAF-039,Safety,2018-03-27,2018-05-19,Completed,2.5,true,BR,Planning,IC5
+746,CRS-FUN-019,Functional Skills,2018-03-05,2018-03-31,Completed,2.2,false,BR,Customer Operations,IC1
+748,CRS-COM-005,Compliance,2018-03-22,2018-04-01,Completed,3.3,true,BR,Legal,M3
+748,CRS-TEC-019,Technology,2018-03-13,,In Progress,8.1,false,BR,Legal,M3
+9,CRS-SAF-017,Safety,2018-04-08,,In Progress,2.3,true,BR,Planning,IC3
+10,CRS-MAN-027,Management,2018-04-07,,In Progress,8.4,false,BR,Procurement,M4
+16,CRS-COM-020,Compliance,2018-04-09,2018-04-30,Completed,3.0,true,BR,Customer Experience,IC1
+17,CRS-FUN-018,Functional Skills,2018-04-10,2018-05-15,Completed,23.8,false,BR,Sales,IC1
+34,CRS-SAF-027,Safety,2018-04-12,2018-04-27,Completed,5.8,true,BR,Regional Operations,M1
+36,CRS-SAF-007,Safety,2018-04-08,2018-04-20,Completed,3.2,true,BR,Distribution Centers,IC1
+42,CRS-COM-026,Compliance,2018-04-11,2018-06-03,Completed,1.1,true,BR,Sales,IC2
+43,CRS-FUN-018,Functional Skills,2018-04-14,2018-05-11,Completed,20.1,false,BR,Distribution Centers,IC2
+57,CRS-FUN-003,Functional Skills,2018-04-20,,In Progress,23.8,false,BR,People,IC2
+64,CRS-SAF-022,Safety,2018-04-20,2018-06-08,Completed,2.7,true,BR,Sales,IC1
+65,CRS-SAF-015,Safety,2018-04-13,,In Progress,3.7,true,BR,Sales,M2
+66,CRS-COM-015,Compliance,2018-04-24,2018-05-18,Completed,2.6,true,BR,Store Operations,IC2
+70,CRS-MAN-014,Management,2018-04-01,2018-04-04,Completed,10.4,false,BR,Customer Operations,M2
+70,CRS-CUS-009,Customer,2018-04-01,2018-05-15,Completed,5.3,false,BR,Customer Operations,M2
+75,CRS-FUN-020,Functional Skills,2018-04-06,2018-05-01,Completed,6.1,false,BR,Legal,IC1
+75,CRS-FUN-023,Functional Skills,2018-04-28,2018-05-10,Completed,10.6,false,BR,Legal,IC1
+81,CRS-COM-017,Compliance,2018-04-25,2018-05-31,Completed,3.1,true,BR,Procurement,M1
+85,CRS-FUN-018,Functional Skills,2018-04-28,,In Progress,6.3,false,BR,Sales,IC1
+85,CRS-SAF-017,Safety,2018-04-13,2018-04-17,Completed,4.0,true,BR,Sales,IC1
+92,CRS-FUN-024,Functional Skills,2018-04-02,,In Progress,6.1,false,BR,Data & Analytics,M1
+98,CRS-CUS-035,Customer,2018-04-13,2018-06-06,Completed,5.4,false,BR,Regional Operations,M1
+101,CRS-FUN-034,Functional Skills,2018-04-25,,In Progress,15.1,false,BR,Customer Operations,IC1
+106,CRS-TEC-028,Technology,2018-04-01,,In Progress,58.8,false,BR,E-commerce,IC2
+106,CRS-TEC-013,Technology,2018-04-13,,In Progress,37.1,false,BR,E-commerce,IC2
+106,CRS-COM-038,Compliance,2018-04-26,2018-07-04,Completed,1.8,true,BR,E-commerce,IC2
+117,CRS-TEC-024,Technology,2018-04-07,,In Progress,32.1,false,BR,Risk,IC2
+118,CRS-FUN-020,Functional Skills,2018-04-06,2018-04-21,Completed,12.6,false,BR,Product,IC2
+121,CRS-COM-033,Compliance,2018-04-23,2018-05-29,Completed,2.8,true,BR,Sales,M4
+133,CRS-COM-014,Compliance,2018-04-02,2018-05-11,Completed,2.5,true,BR,Customer Experience,IC1
+134,CRS-COM-025,Compliance,2018-04-13,2018-05-02,Completed,3.9,true,BR,Customer Service,IC1
+134,CRS-CUS-008,Customer,2018-04-07,2018-05-10,Completed,9.6,false,BR,Customer Service,IC1
+141,CRS-FUN-025,Functional Skills,2018-04-13,,In Progress,12.5,false,BR,Sales,M1
+142,CRS-SAF-032,Safety,2018-04-13,2018-05-26,Completed,3.1,true,BR,Sales,IC2
+142,CRS-FUN-039,Functional Skills,2018-04-23,,In Progress,10.7,false,BR,Sales,IC2
+146,CRS-COM-024,Compliance,2018-04-12,2018-05-01,Completed,3.4,true,BR,Regional Operations,IC2
+149,CRS-COM-034,Compliance,2018-04-06,2018-05-15,Completed,3.8,true,BR,Distribution Centers,IC1
+153,CRS-MAN-017,Management,2018-04-06,2018-05-06,Completed,14.3,false,BR,Data,M1
+160,CRS-COM-016,Compliance,2018-04-07,,In Progress,2.3,true,BR,Sales,IC2
+162,CRS-COM-003,Compliance,2018-04-12,,In Progress,3.2,true,BR,Sales,IC5
+166,CRS-FUN-001,Functional Skills,2018-04-14,,In Progress,4.5,false,BR,Distribution Centers,IC2
+167,CRS-FUN-027,Functional Skills,2018-04-03,2018-04-29,Completed,6.4,false,BR,Store Operations,IC2
+174,CRS-SAF-035,Safety,2018-04-09,2018-04-22,Completed,2.9,true,BR,Regional Operations,IC2
+175,CRS-FUN-008,Functional Skills,2018-04-12,2018-06-10,Completed,11.5,false,BR,Procurement,IC2
+182,CRS-SAF-018,Safety,2018-04-13,2018-05-24,Completed,2.4,true,BR,Store Operations,IC1
+183,CRS-COM-038,Compliance,2018-04-12,2018-04-29,Completed,2.9,true,BR,People,IC4
+188,CRS-FUN-036,Functional Skills,2018-04-13,,In Progress,23.8,false,BR,Logistics,IC1
+197,CRS-FUN-035,Functional Skills,2018-04-01,,In Progress,2.7,false,BR,Data,IC4
+206,CRS-COM-013,Compliance,2018-04-18,2018-04-27,Completed,2.3,true,BR,Logistics,IC1
+207,CRS-CUS-035,Customer,2018-04-22,2018-06-21,Completed,2.8,false,BR,Visual Merchandising,IC1
+208,CRS-LEA-001,Leadership,2018-04-03,2018-04-17,Completed,38.4,false,BR,Regional Operations,M2
+210,CRS-TEC-011,Technology,2018-04-04,,In Progress,20.3,false,BR,Engineering,IC4
+214,CRS-FUN-037,Functional Skills,2018-04-03,2018-04-25,Completed,10.3,false,BR,Engineering,IC1
+218,CRS-TEC-005,Technology,2018-04-09,,In Progress,6.0,false,BR,Strategy,IC4
+223,CRS-SAF-036,Safety,2018-04-19,2018-06-25,Completed,5.2,true,BR,Visual Merchandising,IC2
+224,CRS-CUS-012,Customer,2018-04-18,2018-05-15,Completed,10.1,false,BR,Visual Merchandising,IC2
+232,CRS-FUN-010,Functional Skills,2018-04-05,,In Progress,20.7,false,BR,Data & Analytics,IC3
+241,CRS-COM-037,Compliance,2018-04-25,2018-05-18,Completed,1.4,true,BR,Customer Operations,IC1
+241,CRS-FUN-016,Functional Skills,2018-04-15,,In Progress,7.6,false,BR,Customer Operations,IC1
+242,CRS-FUN-037,Functional Skills,2018-04-18,2018-06-25,Completed,9.8,false,BR,Customer Service,IC2
+243,CRS-FUN-014,Functional Skills,2018-04-11,,In Progress,15.9,false,BR,Customer Service,IC3
+262,CRS-CUS-024,Customer,2018-04-26,2018-06-10,Completed,7.2,false,BR,Store Operations,IC1
+264,CRS-SAF-017,Safety,2018-04-16,2018-06-19,Completed,2.5,true,BR,Visual Merchandising,M2
+272,CRS-COM-002,Compliance,2018-04-19,2018-06-27,Completed,1.8,true,BR,Visual Merchandising,IC1
+276,CRS-SAF-037,Safety,2018-04-20,,In Progress,2.7,true,BR,Logistics,IC2
+278,CRS-COM-011,Compliance,2018-04-03,2018-05-26,Completed,1.7,true,BR,People,IC3
+278,CRS-TEC-035,Technology,2018-04-09,,In Progress,33.6,false,BR,People,IC3
+280,CRS-FUN-020,Functional Skills,2018-04-06,2018-05-27,Completed,11.2,false,BR,Store Operations,IC3
+280,CRS-COM-021,Compliance,2018-04-23,,In Progress,1.2,true,BR,Store Operations,IC3
+281,CRS-LEA-024,Leadership,2018-04-07,2018-04-17,Completed,28.4,false,BR,E-commerce,M2
+283,CRS-COM-016,Compliance,2018-04-09,2018-04-26,Completed,3.4,true,BR,Engineering,IC3
+298,CRS-TEC-035,Technology,2018-04-08,2018-05-10,Completed,26.7,false,BR,People,IC3
+305,CRS-SAF-019,Safety,2018-04-02,2018-05-19,Completed,2.7,true,BR,Planning,IC3
+316,CRS-COM-010,Compliance,2018-04-27,2018-06-22,Completed,2.7,true,BR,Store Operations,IC3
+318,CRS-COM-036,Compliance,2018-04-09,2018-05-18,Completed,2.2,true,BR,Procurement,IC2
+322,CRS-SAF-033,Safety,2018-04-19,2018-06-23,Completed,3.0,true,BR,Store Operations,IC1
+323,CRS-COM-026,Compliance,2018-04-09,2018-06-12,Completed,1.1,true,BR,Customer Operations,IC1
+323,CRS-FUN-004,Functional Skills,2018-04-01,2018-04-13,Completed,16.1,false,BR,Customer Operations,IC1
+327,CRS-MAN-029,Management,2018-04-17,,In Progress,15.5,false,BR,People,M1
+333,CRS-FUN-019,Functional Skills,2018-04-03,,In Progress,17.5,false,BR,Sales,IC2
+335,CRS-MAN-039,Management,2018-04-28,,In Progress,18.6,false,BR,Planning,M1
+337,CRS-CUS-033,Customer,2018-04-01,2018-04-08,Completed,8.9,false,AR,Customer Service,IC1
+341,CRS-LEA-038,Leadership,2018-04-17,2018-05-13,Completed,15.3,false,AR,Sales,M1
+360,CRS-CUS-021,Customer,2018-04-16,2018-05-13,Completed,3.9,false,AR,Sales,IC1
+363,CRS-COM-034,Compliance,2018-04-21,2018-05-26,Completed,2.8,true,AR,Visual Merchandising,M1
+368,CRS-SAF-020,Safety,2018-04-23,,In Progress,5.3,true,AR,Logistics,IC2
+373,CRS-FUN-006,Functional Skills,2018-04-22,,In Progress,3.0,false,AR,Planning,IC2
+378,CRS-SAF-019,Safety,2018-04-02,2018-06-07,Completed,5.8,true,AR,Regional Operations,IC1
+378,CRS-COM-004,Compliance,2018-04-07,2018-06-07,Completed,3.7,true,AR,Regional Operations,IC1
+384,CRS-TEC-022,Technology,2018-04-01,2018-04-13,Completed,52.6,false,BR,Data & Analytics,IC2
+391,CRS-CUS-038,Customer,2018-04-20,2018-06-18,Completed,8.3,false,BR,Sales,IC2
+393,CRS-COM-002,Compliance,2018-04-17,2018-06-23,Completed,3.9,true,BR,Regional Operations,IC1
+399,CRS-FUN-035,Functional Skills,2018-04-11,2018-04-15,Completed,23.2,false,BR,Sales,IC2
+405,CRS-FUN-010,Functional Skills,2018-04-03,,In Progress,23.2,false,BR,Procurement,IC1
+406,CRS-SAF-005,Safety,2018-04-12,2018-05-30,Completed,2.9,true,BR,Regional Operations,IC4
+411,CRS-CUS-010,Customer,2018-04-19,2018-05-09,Completed,9.2,false,BR,Customer Experience,IC1
+414,CRS-COM-013,Compliance,2018-04-02,2018-05-04,Completed,2.7,true,BR,Visual Merchandising,IC1
+423,CRS-FUN-009,Functional Skills,2018-04-22,2018-05-07,Completed,21.1,false,BR,Customer Service,IC1
+430,CRS-SAF-037,Safety,2018-04-03,2018-05-23,Completed,2.3,true,BR,Procurement,IC2
+430,CRS-FUN-006,Functional Skills,2018-04-20,,In Progress,13.4,false,BR,Procurement,IC2
+433,CRS-MAN-033,Management,2018-04-09,2018-04-16,Completed,13.1,false,BR,Customer Experience,M1
+433,CRS-CUS-008,Customer,2018-04-06,2018-05-29,Completed,2.3,false,BR,Customer Experience,M1
+438,CRS-FUN-037,Functional Skills,2018-04-14,,In Progress,24.0,false,AR,Visual Merchandising,M2
+438,CRS-COM-012,Compliance,2018-04-13,2018-05-28,Completed,3.7,true,AR,Visual Merchandising,M2
+452,CRS-COM-039,Compliance,2018-04-08,2018-05-25,Completed,2.0,true,AR,Planning,IC1
+461,CRS-CUS-039,Customer,2018-04-17,2018-06-08,Completed,7.5,false,BR,Customer Service,IC2
+468,CRS-CUS-014,Customer,2018-04-07,2018-05-11,Completed,7.4,false,BR,Store Operations,IC1
+468,CRS-SAF-030,Safety,2018-04-08,2018-05-08,Completed,2.7,true,BR,Store Operations,IC1
+469,CRS-COM-012,Compliance,2018-04-09,2018-05-24,Completed,1.1,true,BR,Store Operations,IC1
+469,CRS-SAF-002,Safety,2018-04-27,2018-05-05,Completed,4.4,true,BR,Store Operations,IC1
+475,CRS-COM-005,Compliance,2018-04-26,2018-07-01,Completed,1.1,true,BR,Finance,IC1
+476,CRS-COM-003,Compliance,2018-04-14,2018-04-29,Completed,3.1,true,BR,Sales,IC1
+488,CRS-SAF-036,Safety,2018-04-07,2018-05-06,Completed,2.3,true,BR,Sales,IC1
+490,CRS-CUS-001,Customer,2018-04-13,2018-05-04,Completed,6.1,false,BR,Sales,IC1
+499,CRS-CUS-032,Customer,2018-04-03,,In Progress,6.5,false,AR,Customer Operations,IC2
+501,CRS-FUN-009,Functional Skills,2018-04-23,2018-06-16,Completed,16.5,false,BR,Data,IC1
+502,CRS-CUS-031,Customer,2018-04-07,,In Progress,3.6,false,BR,Visual Merchandising,IC2
+504,CRS-TEC-028,Technology,2018-04-13,,In Progress,24.9,false,BR,Data & Analytics,IC1
+504,CRS-TEC-009,Technology,2018-04-25,,In Progress,25.8,false,BR,Data & Analytics,IC1
+505,CRS-FUN-029,Functional Skills,2018-04-24,2018-05-07,Completed,3.5,false,BR,Planning,IC2
+522,CRS-COM-023,Compliance,2018-04-19,2018-06-22,Completed,1.4,true,BR,Engineering,IC2
+528,CRS-COM-008,Compliance,2018-04-23,,In Progress,2.0,true,BR,Engineering,M1
+528,CRS-MAN-012,Management,2018-04-10,2018-06-10,Completed,5.2,false,BR,Engineering,M1
+530,CRS-COM-028,Compliance,2018-04-16,2018-05-04,Completed,2.3,true,AR,Customer Service,IC2
+537,CRS-TEC-012,Technology,2018-04-15,,In Progress,22.2,false,BR,Marketing,IC5
+541,CRS-FUN-001,Functional Skills,2018-04-22,2018-05-26,Completed,19.1,false,CL,Logistics,IC3
+542,CRS-FUN-032,Functional Skills,2018-04-28,2018-06-24,Completed,15.3,false,AR,Regional Operations,IC1
+549,CRS-CUS-007,Customer,2018-04-02,2018-06-07,Completed,9.3,false,BR,Sales,IC1
+552,CRS-COM-009,Compliance,2018-04-06,2018-05-20,Completed,1.1,true,BR,Customer Experience,M1
+553,CRS-CUS-031,Customer,2018-04-14,2018-05-07,Completed,6.3,false,BR,Customer Operations,IC2
+553,CRS-COM-028,Compliance,2018-04-03,2018-05-13,Completed,2.0,true,BR,Customer Operations,IC2
+553,CRS-CUS-018,Customer,2018-04-14,2018-06-17,Completed,2.4,false,BR,Customer Operations,IC2
+556,CRS-COM-024,Compliance,2018-04-04,2018-05-17,Completed,2.3,true,BR,Planning,IC2
+556,CRS-SAF-028,Safety,2018-04-09,2018-05-06,Completed,4.8,true,BR,Planning,IC2
+557,CRS-FUN-036,Functional Skills,2018-04-20,2018-06-07,Completed,17.1,false,BR,Data & Analytics,IC2
+558,CRS-COM-034,Compliance,2018-04-11,,In Progress,2.2,true,BR,Sales,IC1
+577,CRS-SAF-008,Safety,2018-04-16,2018-05-05,Completed,2.5,true,BR,Visual Merchandising,IC1
+586,CRS-SAF-014,Safety,2018-04-01,2018-04-30,Completed,2.5,true,BR,Visual Merchandising,IC3
+588,CRS-TEC-039,Technology,2018-04-12,,In Progress,44.2,false,BR,Digital Marketing,IC2
+594,CRS-FUN-017,Functional Skills,2018-04-09,2018-04-20,Completed,14.7,false,BR,Data & Analytics,IC1
+609,CRS-CUS-014,Customer,2018-04-08,2018-04-26,Completed,9.7,false,BR,Regional Operations,IC3
+610,CRS-FUN-019,Functional Skills,2018-04-26,2018-06-07,Completed,13.2,false,BR,Procurement,IC2
+615,CRS-FUN-011,Functional Skills,2018-04-06,2018-05-03,Completed,14.0,false,BR,Logistics,IC1
+616,CRS-CUS-028,Customer,2018-04-11,2018-06-10,Completed,6.4,false,BR,Store Operations,IC1
+618,CRS-TEC-017,Technology,2018-04-01,2018-05-09,Completed,43.6,false,BR,Data,IC4
+623,CRS-COM-039,Compliance,2018-04-19,2018-05-09,Completed,2.6,true,BR,Logistics,IC4
+628,CRS-CUS-007,Customer,2018-04-11,2018-05-10,Completed,2.1,false,BR,Visual Merchandising,IC1
+629,CRS-TEC-002,Technology,2018-04-14,,In Progress,40.6,false,BR,Product,IC1
+630,CRS-COM-036,Compliance,2018-04-02,2018-05-11,Completed,1.1,true,BR,Sales,IC3
+632,CRS-FUN-001,Functional Skills,2018-04-06,,In Progress,16.8,false,BR,Visual Merchandising,IC2
+644,CRS-COM-033,Compliance,2018-04-26,2018-05-17,Completed,3.2,true,AR,Planning,IC4
+648,CRS-MAN-025,Management,2018-04-26,2018-06-27,Completed,7.6,false,BR,Distribution Centers,M2
+652,CRS-FUN-026,Functional Skills,2018-04-01,2018-05-27,Completed,6.7,false,BR,Customer Experience,IC2
+657,CRS-FUN-036,Functional Skills,2018-04-21,2018-05-02,Completed,21.1,false,BR,Engineering,IC2
+664,CRS-COM-032,Compliance,2018-04-02,2018-05-31,Completed,3.8,true,BR,Customer Service,IC1
+665,CRS-FUN-013,Functional Skills,2018-04-03,,In Progress,22.2,false,BR,Distribution Centers,IC3
+668,CRS-SAF-034,Safety,2018-04-10,2018-05-28,Completed,4.7,true,BR,Store Operations,IC2
+673,CRS-FUN-009,Functional Skills,2018-04-23,2018-05-26,Completed,2.3,false,BR,Customer Operations,M3
+674,CRS-SAF-029,Safety,2018-04-12,2018-05-22,Completed,4.3,true,AR,Logistics,IC3
+677,CRS-FUN-029,Functional Skills,2018-04-04,2018-05-15,Completed,23.2,false,BR,Sales,IC2
+679,CRS-COM-030,Compliance,2018-04-26,2018-07-02,Completed,1.0,true,BR,Store Operations,IC1
+680,CRS-FUN-006,Functional Skills,2018-04-21,2018-04-24,Completed,7.5,false,BR,Customer Service,IC1
+680,CRS-CUS-009,Customer,2018-04-25,2018-06-13,Completed,3.7,false,BR,Customer Service,IC1
+686,CRS-TEC-022,Technology,2018-04-24,2018-06-14,Completed,14.2,false,BR,Strategy,IC2
+692,CRS-MAN-011,Management,2018-04-13,,In Progress,18.0,false,BR,Procurement,M4
+701,CRS-CUS-039,Customer,2018-04-01,2018-04-05,Completed,3.5,false,BR,Sales,IC1
+705,CRS-CUS-037,Customer,2018-04-05,2018-05-12,Completed,5.0,false,AR,Store Operations,IC1
+705,CRS-FUN-017,Functional Skills,2018-04-01,,In Progress,5.8,false,AR,Store Operations,IC1
+707,CRS-TEC-039,Technology,2018-04-13,,In Progress,49.5,false,BR,Digital Marketing,IC3
+712,CRS-COM-005,Compliance,2018-04-23,2018-04-26,Completed,2.9,true,BR,Data,IC3
+713,CRS-COM-007,Compliance,2018-04-28,2018-05-13,Completed,1.6,true,BR,Customer Experience,IC1
+713,CRS-CUS-036,Customer,2018-04-12,2018-05-08,Completed,3.2,false,BR,Customer Experience,IC1
+716,CRS-FUN-001,Functional Skills,2018-04-05,,In Progress,12.8,false,AR,Customer Service,IC1
+717,CRS-SAF-031,Safety,2018-04-18,2018-06-14,Completed,3.2,true,BR,Regional Operations,IC1
+719,CRS-COM-023,Compliance,2018-04-12,,In Progress,2.2,true,BR,Procurement,IC4
+720,CRS-SAF-008,Safety,2018-04-02,2018-04-07,Completed,4.8,true,BR,Regional Operations,IC1
+728,CRS-SAF-007,Safety,2018-04-13,2018-06-04,Completed,2.6,true,BR,Procurement,IC1
+728,CRS-FUN-039,Functional Skills,2018-04-06,2018-06-11,Completed,10.5,false,BR,Procurement,IC1
+729,CRS-COM-036,Compliance,2018-04-14,2018-05-21,Completed,1.9,true,BR,Logistics,IC2
+735,CRS-TEC-016,Technology,2018-04-08,,In Progress,46.8,false,BR,Data & Analytics,IC2
+736,CRS-CUS-034,Customer,2018-04-26,,In Progress,11.0,false,BR,Visual Merchandising,IC2
+738,CRS-CUS-016,Customer,2018-04-27,,In Progress,6.7,false,BR,Customer Operations,IC1
+739,CRS-SAF-009,Safety,2018-04-21,2018-05-12,Completed,3.4,true,BR,Distribution Centers,IC1
+740,CRS-TEC-034,Technology,2018-04-05,,In Progress,40.3,false,BR,Data,IC2
+740,CRS-TEC-006,Technology,2018-04-05,,In Progress,20.1,false,BR,Data,IC2
+743,CRS-CUS-001,Customer,2018-04-05,,In Progress,5.1,false,CL,Customer Experience,IC2
+747,CRS-CUS-029,Customer,2018-04-08,2018-04-14,Completed,4.9,false,BR,Visual Merchandising,IC1
+750,CRS-COM-034,Compliance,2018-04-22,2018-04-25,Completed,1.2,true,BR,Data,M1
+752,CRS-CUS-012,Customer,2018-04-28,2018-06-29,Completed,8.7,false,BR,Customer Operations,IC1
+754,CRS-FUN-003,Functional Skills,2018-04-09,2018-06-05,Completed,10.0,false,BR,Sales,IC1
+755,CRS-COM-009,Compliance,2018-04-28,2018-06-12,Completed,2.4,true,BR,Marketing,IC1
+756,CRS-SAF-021,Safety,2018-04-27,2018-05-13,Completed,5.7,true,MX,Regional Operations,IC2
+758,CRS-COM-001,Compliance,2018-04-18,,In Progress,1.9,true,BR,Procurement,IC1
+759,CRS-FUN-017,Functional Skills,2018-04-04,2018-04-15,Completed,4.2,false,AR,Distribution Centers,IC1
+759,CRS-COM-035,Compliance,2018-04-04,2018-04-28,Completed,1.9,true,AR,Distribution Centers,IC1
+760,CRS-COM-039,Compliance,2018-04-09,2018-04-12,Completed,3.2,true,BR,Digital Marketing,IC2
+761,CRS-LEA-018,Leadership,2018-04-13,2018-04-20,Completed,38.3,false,BR,Finance,M3
+762,CRS-CUS-031,Customer,2018-04-09,2018-05-30,Completed,10.7,false,BR,Sales,IC1
+767,CRS-COM-021,Compliance,2018-04-23,2018-05-29,Completed,2.2,true,BR,Sales,IC1
+767,CRS-COM-028,Compliance,2018-04-18,2018-05-09,Completed,2.9,true,BR,Sales,IC1
+768,CRS-LEA-002,Leadership,2018-04-03,2018-04-13,Completed,37.3,false,BR,Logistics,M1
+772,CRS-SAF-033,Safety,2018-04-12,2018-05-21,Completed,4.5,true,BR,Planning,IC1
+774,CRS-COM-011,Compliance,2018-04-16,2018-06-06,Completed,2.8,true,AR,Sales,IC1
+774,CRS-COM-025,Compliance,2018-04-16,2018-05-09,Completed,3.5,true,AR,Sales,IC1
+11,CRS-COM-038,Compliance,2018-05-17,2018-06-19,Completed,2.0,true,BR,Visual Merchandising,IC2
+12,CRS-SAF-010,Safety,2018-05-03,2018-06-21,Completed,2.7,true,BR,Regional Operations,IC3
+14,CRS-TEC-038,Technology,2018-05-22,,In Progress,20.8,false,BR,Marketing,M3
+16,CRS-FUN-008,Functional Skills,2018-05-09,2018-05-31,Completed,12.5,false,BR,Customer Experience,IC1
+17,CRS-COM-001,Compliance,2018-05-11,2018-06-22,Completed,3.0,true,BR,Sales,IC1
+18,CRS-CUS-020,Customer,2018-05-24,2018-06-18,Completed,2.1,false,BR,Regional Operations,IC3
+27,CRS-CUS-039,Customer,2018-05-23,,In Progress,11.5,false,BR,Regional Operations,IC3
+28,CRS-TEC-039,Technology,2018-05-02,2018-07-10,Completed,32.3,false,BR,Finance,IC2
+31,CRS-SAF-010,Safety,2018-05-16,2018-07-05,Completed,3.7,true,BR,Regional Operations,IC2
+32,CRS-SAF-031,Safety,2018-05-20,2018-07-15,Completed,2.5,true,BR,Visual Merchandising,IC2
+34,CRS-CUS-009,Customer,2018-05-24,,In Progress,11.8,false,BR,Regional Operations,M1
+36,CRS-COM-006,Compliance,2018-05-26,2018-05-31,Completed,1.4,true,BR,Distribution Centers,IC1
+45,CRS-SAF-023,Safety,2018-05-10,2018-06-27,Completed,4.9,true,BR,Planning,IC4
+46,CRS-FUN-034,Functional Skills,2018-05-27,,In Progress,13.8,false,BR,Procurement,IC1
+59,CRS-TEC-024,Technology,2018-05-23,2018-06-26,Completed,34.3,false,BR,Strategy,IC1
+61,CRS-CUS-010,Customer,2018-05-16,2018-07-05,Completed,3.5,false,BR,Sales,IC2
+63,CRS-COM-033,Compliance,2018-05-03,2018-05-21,Completed,1.7,true,BR,Distribution Centers,IC1
+64,CRS-SAF-029,Safety,2018-05-14,2018-06-25,Completed,2.4,true,BR,Sales,IC1
+69,CRS-COM-034,Compliance,2018-05-03,2018-07-10,Completed,2.7,true,BR,Logistics,IC2
+70,CRS-FUN-007,Functional Skills,2018-05-17,,In Progress,19.0,false,BR,Customer Operations,M2
+72,CRS-TEC-022,Technology,2018-05-24,2018-06-08,Completed,16.3,false,BR,Risk,IC1
+73,CRS-TEC-024,Technology,2018-05-12,,In Progress,26.7,false,BR,Risk,IC2
+74,CRS-COM-003,Compliance,2018-05-03,2018-05-23,Completed,2.1,true,BR,Sales,IC1
+74,CRS-COM-013,Compliance,2018-05-01,2018-05-21,Completed,2.9,true,BR,Sales,IC1
+81,CRS-FUN-018,Functional Skills,2018-05-18,,In Progress,6.2,false,BR,Procurement,M1
+81,CRS-TEC-005,Technology,2018-05-20,2018-07-26,Completed,23.8,false,BR,Procurement,M1
+82,CRS-TEC-009,Technology,2018-05-17,2018-06-27,Completed,37.5,false,BR,Procurement,IC4
+83,CRS-SAF-026,Safety,2018-05-16,2018-05-23,Completed,4.4,true,BR,Planning,IC1
+86,CRS-COM-016,Compliance,2018-05-25,2018-06-19,Completed,4.0,true,BR,Engineering,IC4
+90,CRS-COM-031,Compliance,2018-05-06,2018-05-10,Completed,3.7,true,BR,Customer Experience,IC2
+90,CRS-FUN-034,Functional Skills,2018-05-25,,In Progress,4.9,false,BR,Customer Experience,IC2
+91,CRS-CUS-039,Customer,2018-05-19,,In Progress,5.2,false,BR,Store Operations,IC1
+98,CRS-CUS-032,Customer,2018-05-09,,In Progress,8.8,false,BR,Regional Operations,M1
+105,CRS-FUN-025,Functional Skills,2018-05-24,2018-06-03,Completed,2.6,false,BR,Finance,IC1
+113,CRS-FUN-016,Functional Skills,2018-05-15,2018-05-22,Completed,15.7,false,BR,People,IC2
+113,CRS-TEC-032,Technology,2018-05-27,,In Progress,49.9,false,BR,People,IC2
+115,CRS-SAF-017,Safety,2018-05-20,2018-07-27,Completed,5.9,true,BR,Regional Operations,IC2
+116,CRS-TEC-005,Technology,2018-05-04,,In Progress,30.7,false,BR,Product,IC2
+132,CRS-COM-011,Compliance,2018-05-22,2018-06-16,Completed,2.9,true,BR,Strategy,IC1
+132,CRS-FUN-016,Functional Skills,2018-05-24,,In Progress,18.0,false,BR,Strategy,IC1
+134,CRS-CUS-037,Customer,2018-05-08,,In Progress,10.6,false,BR,Customer Service,IC1
+138,CRS-TEC-002,Technology,2018-05-14,2018-06-28,Completed,27.7,false,BR,Procurement,IC3
+139,CRS-SAF-031,Safety,2018-05-18,2018-07-16,Completed,5.9,true,BR,Sales,IC2
+139,CRS-COM-007,Compliance,2018-05-02,2018-06-30,Completed,2.5,true,BR,Sales,IC2
+149,CRS-SAF-022,Safety,2018-05-12,2018-06-13,Completed,5.6,true,BR,Distribution Centers,IC1
+158,CRS-SAF-024,Safety,2018-05-28,2018-07-24,Completed,5.9,true,BR,Procurement,IC1
+160,CRS-FUN-021,Functional Skills,2018-05-12,2018-06-09,Completed,10.6,false,BR,Sales,IC2
+171,CRS-COM-003,Compliance,2018-05-28,2018-07-30,Completed,1.3,true,BR,Customer Service,IC4
+175,CRS-FUN-021,Functional Skills,2018-05-16,2018-07-05,Completed,16.8,false,BR,Procurement,IC2
+177,CRS-FUN-022,Functional Skills,2018-05-05,2018-06-19,Completed,21.1,false,BR,UX,IC5
+177,CRS-FUN-018,Functional Skills,2018-05-04,2018-05-09,Completed,2.5,false,BR,UX,IC5
+179,CRS-FUN-022,Functional Skills,2018-05-19,2018-06-26,Completed,2.7,false,BR,Planning,IC1
+186,CRS-COM-022,Compliance,2018-05-14,2018-07-08,Completed,1.9,true,BR,Sales,IC1
+192,CRS-FUN-011,Functional Skills,2018-05-06,2018-06-04,Completed,15.5,false,BR,Product,IC5
+193,CRS-COM-039,Compliance,2018-05-17,2018-06-03,Completed,1.4,true,BR,Strategy,M1
+196,CRS-TEC-004,Technology,2018-05-20,,In Progress,46.9,false,BR,Legal,M3
+197,CRS-FUN-014,Functional Skills,2018-05-09,2018-06-07,Completed,4.3,false,BR,Data,IC4
+199,CRS-TEC-016,Technology,2018-05-16,,In Progress,46.7,false,BR,E-commerce,IC3
+199,CRS-TEC-026,Technology,2018-05-09,,In Progress,53.3,false,BR,E-commerce,IC3
+200,CRS-FUN-033,Functional Skills,2018-05-12,,In Progress,2.4,false,BR,Visual Merchandising,IC2
+206,CRS-FUN-006,Functional Skills,2018-05-10,2018-06-13,Completed,22.8,false,BR,Logistics,IC1
+210,CRS-COM-029,Compliance,2018-05-04,2018-06-14,Completed,2.0,true,BR,Engineering,IC4
+214,CRS-COM-009,Compliance,2018-05-07,2018-06-01,Completed,2.5,true,BR,Engineering,IC1
+223,CRS-CUS-006,Customer,2018-05-11,2018-05-27,Completed,4.2,false,BR,Visual Merchandising,IC2
+223,CRS-COM-029,Compliance,2018-05-27,2018-07-10,Completed,1.9,true,BR,Visual Merchandising,IC2
+224,CRS-COM-027,Compliance,2018-05-17,2018-07-13,Completed,1.5,true,BR,Visual Merchandising,IC2
+224,CRS-COM-010,Compliance,2018-05-27,2018-06-12,Completed,2.2,true,BR,Visual Merchandising,IC2
+243,CRS-FUN-023,Functional Skills,2018-05-15,2018-07-16,Completed,10.3,false,BR,Customer Service,IC3
+246,CRS-COM-031,Compliance,2018-05-07,2018-06-23,Completed,1.1,true,BR,Planning,M2
+251,CRS-SAF-003,Safety,2018-05-07,2018-06-16,Completed,4.4,true,BR,Regional Operations,IC2
+269,CRS-SAF-020,Safety,2018-05-27,2018-07-10,Completed,4.0,true,BR,Store Operations,IC1
+272,CRS-FUN-010,Functional Skills,2018-05-01,2018-05-04,Completed,23.7,false,BR,Visual Merchandising,IC1
+273,CRS-COM-003,Compliance,2018-05-21,2018-06-05,Completed,3.8,true,BR,Visual Merchandising,IC3
+282,CRS-CUS-027,Customer,2018-05-25,,In Progress,6.3,false,BR,Regional Operations,IC2
+285,CRS-FUN-031,Functional Skills,2018-05-02,2018-06-15,Completed,2.4,false,BR,Digital Marketing,IC3
+286,CRS-FUN-002,Functional Skills,2018-05-08,2018-05-25,Completed,10.9,false,BR,Procurement,IC4
+290,CRS-COM-013,Compliance,2018-05-21,2018-07-27,Completed,2.0,true,BR,Sales,IC1
+292,CRS-CUS-019,Customer,2018-05-23,,In Progress,11.1,false,BR,Sales,M2
+295,CRS-SAF-017,Safety,2018-05-01,2018-05-24,Completed,2.4,true,BR,Procurement,M1
+297,CRS-FUN-033,Functional Skills,2018-05-18,2018-06-14,Completed,23.0,false,BR,Procurement,IC4
+297,CRS-SAF-011,Safety,2018-05-26,2018-07-25,Completed,2.0,true,BR,Procurement,IC4
+302,CRS-SAF-028,Safety,2018-05-20,2018-06-19,Completed,5.5,true,BR,Procurement,IC2
+305,CRS-COM-011,Compliance,2018-05-02,2018-06-24,Completed,1.3,true,BR,Planning,IC3
+307,CRS-COM-033,Compliance,2018-05-03,2018-05-26,Completed,3.4,true,BR,Visual Merchandising,M2
+308,CRS-COM-038,Compliance,2018-05-14,2018-06-05,Completed,1.2,true,BR,Legal,IC3
+309,CRS-TEC-012,Technology,2018-05-04,2018-05-13,Completed,29.3,false,BR,People,M5
+313,CRS-COM-006,Compliance,2018-05-14,,In Progress,2.7,true,BR,Procurement,IC2
+315,CRS-SAF-030,Safety,2018-05-10,2018-05-25,Completed,2.2,true,CL,Logistics,IC1
+318,CRS-COM-009,Compliance,2018-05-18,2018-07-23,Completed,1.4,true,BR,Procurement,IC2
+321,CRS-FUN-029,Functional Skills,2018-05-10,,In Progress,12.8,false,BR,Marketing,M4
+324,CRS-COM-037,Compliance,2018-05-04,2018-05-15,Completed,2.2,true,BR,Finance,IC2
+324,CRS-FUN-025,Functional Skills,2018-05-08,2018-05-28,Completed,5.5,false,BR,Finance,IC2
+326,CRS-COM-014,Compliance,2018-05-04,2018-05-12,Completed,2.8,true,BR,Sales,IC2
+333,CRS-FUN-029,Functional Skills,2018-05-12,,In Progress,14.1,false,BR,Sales,IC2
+341,CRS-MAN-012,Management,2018-05-05,2018-06-13,Completed,4.1,false,AR,Sales,M1
+345,CRS-SAF-025,Safety,2018-05-09,2018-07-17,Completed,4.4,true,AR,Logistics,IC1
+346,CRS-CUS-013,Customer,2018-05-06,2018-06-28,Completed,9.9,false,AR,Sales,IC1
+346,CRS-SAF-012,Safety,2018-05-05,2018-05-09,Completed,5.5,true,AR,Sales,IC1
+347,CRS-COM-020,Compliance,2018-05-11,2018-06-01,Completed,3.0,true,AR,Customer Service,IC1
+347,CRS-CUS-014,Customer,2018-05-12,2018-06-02,Completed,2.8,false,AR,Customer Service,IC1
+352,CRS-FUN-016,Functional Skills,2018-05-21,,In Progress,5.5,false,AR,Marketing,IC4
+373,CRS-COM-036,Compliance,2018-05-08,2018-06-14,Completed,3.5,true,AR,Planning,IC2
+375,CRS-SAF-024,Safety,2018-05-16,2018-05-26,Completed,2.2,true,AR,Store Operations,IC3
+379,CRS-COM-008,Compliance,2018-05-06,2018-06-24,Completed,3.9,true,AR,Sales,IC3
+380,CRS-SAF-028,Safety,2018-05-19,2018-06-19,Completed,5.4,true,AR,Store Operations,IC1
+386,CRS-FUN-023,Functional Skills,2018-05-15,,In Progress,19.1,false,BR,Visual Merchandising,IC1
+393,CRS-COM-025,Compliance,2018-05-20,2018-06-30,Completed,1.3,true,BR,Regional Operations,IC1
+404,CRS-COM-014,Compliance,2018-05-20,,In Progress,4.0,true,BR,Product,IC4
+404,CRS-TEC-031,Technology,2018-05-14,2018-06-21,Completed,12.3,false,BR,Product,IC4
+405,CRS-FUN-016,Functional Skills,2018-05-15,2018-06-12,Completed,15.6,false,BR,Procurement,IC1
+406,CRS-FUN-007,Functional Skills,2018-05-02,,In Progress,8.5,false,BR,Regional Operations,IC4
+420,CRS-FUN-033,Functional Skills,2018-05-05,2018-05-14,Completed,23.0,false,BR,Digital Marketing,IC3
+430,CRS-SAF-008,Safety,2018-05-17,2018-05-23,Completed,5.5,true,BR,Procurement,IC2
+440,CRS-FUN-019,Functional Skills,2018-05-14,,In Progress,4.4,false,BR,Marketing,M2
+448,CRS-CUS-001,Customer,2018-05-21,2018-05-28,Completed,10.7,false,BR,Customer Operations,IC3
+452,CRS-SAF-027,Safety,2018-05-22,2018-07-19,Completed,5.1,true,AR,Planning,IC1
+452,CRS-FUN-031,Functional Skills,2018-05-18,,In Progress,17.2,false,AR,Planning,IC1
+458,CRS-COM-032,Compliance,2018-05-15,2018-06-30,Completed,2.5,true,BR,Store Operations,IC1
+461,CRS-FUN-004,Functional Skills,2018-05-13,2018-06-20,Completed,22.3,false,BR,Customer Service,IC2
+467,CRS-CUS-005,Customer,2018-05-20,2018-05-26,Completed,2.8,false,BR,Store Operations,M1
+468,CRS-FUN-020,Functional Skills,2018-05-05,,In Progress,17.3,false,BR,Store Operations,IC1
+468,CRS-CUS-006,Customer,2018-05-18,,In Progress,2.2,false,BR,Store Operations,IC1
+473,CRS-FUN-037,Functional Skills,2018-05-25,,In Progress,7.9,false,BR,Sales,IC2
+479,CRS-FUN-029,Functional Skills,2018-05-04,2018-05-15,Completed,8.9,false,BR,Visual Merchandising,IC2
+484,CRS-SAF-024,Safety,2018-05-07,2018-05-24,Completed,3.7,true,BR,Visual Merchandising,IC1
+484,CRS-CUS-016,Customer,2018-05-27,2018-08-02,Completed,6.9,false,BR,Visual Merchandising,IC1
+486,CRS-CUS-024,Customer,2018-05-07,,In Progress,7.8,false,BR,Customer Service,IC1
+488,CRS-COM-024,Compliance,2018-05-23,2018-06-24,Completed,1.2,true,BR,Sales,IC1
+490,CRS-FUN-005,Functional Skills,2018-05-27,,In Progress,5.1,false,BR,Sales,IC1
+494,CRS-FUN-014,Functional Skills,2018-05-27,2018-06-09,Completed,16.2,false,BR,Strategy,IC3
+494,CRS-TEC-005,Technology,2018-05-10,2018-05-23,Completed,8.2,false,BR,Strategy,IC3
+503,CRS-LEA-025,Leadership,2018-05-03,2018-05-27,Completed,12.0,false,BR,Store Operations,M2
+503,CRS-COM-014,Compliance,2018-05-22,2018-06-01,Completed,2.5,true,BR,Store Operations,M2
+520,CRS-COM-037,Compliance,2018-05-04,2018-05-14,Completed,2.5,true,BR,Customer Experience,IC1
+526,CRS-SAF-007,Safety,2018-05-15,2018-07-06,Completed,5.1,true,AR,Planning,IC1
+530,CRS-FUN-015,Functional Skills,2018-05-02,2018-05-05,Completed,10.8,false,AR,Customer Service,IC2
+534,CRS-COM-025,Compliance,2018-05-16,2018-07-01,Completed,3.6,true,BR,Engineering,IC1
+538,CRS-CUS-011,Customer,2018-05-03,,In Progress,10.6,false,BR,Visual Merchandising,IC1
+539,CRS-LEA-010,Leadership,2018-05-09,2018-05-27,Completed,14.9,false,BR,Strategy,M2
+539,CRS-COM-003,Compliance,2018-05-05,2018-06-05,Completed,3.0,true,BR,Strategy,M2
+541,CRS-COM-001,Compliance,2018-05-10,2018-07-09,Completed,1.1,true,CL,Logistics,IC3
+541,CRS-COM-015,Compliance,2018-05-09,2018-05-24,Completed,3.5,true,CL,Logistics,IC3
+542,CRS-COM-037,Compliance,2018-05-07,2018-05-12,Completed,3.2,true,AR,Regional Operations,IC1
+546,CRS-FUN-019,Functional Skills,2018-05-27,,In Progress,23.7,false,BR,Store Operations,IC1
+546,CRS-COM-027,Compliance,2018-05-17,2018-06-30,Completed,1.1,true,BR,Store Operations,IC1
+551,CRS-SAF-028,Safety,2018-05-08,2018-06-16,Completed,4.1,true,BR,Procurement,IC3
+551,CRS-COM-023,Compliance,2018-05-05,2018-06-03,Completed,3.7,true,BR,Procurement,IC3
+557,CRS-COM-031,Compliance,2018-05-26,2018-06-03,Completed,2.5,true,BR,Data & Analytics,IC2
+562,CRS-TEC-013,Technology,2018-05-05,2018-07-08,Completed,44.4,false,BR,Data & Analytics,IC2
+568,CRS-COM-009,Compliance,2018-05-25,2018-06-17,Completed,3.2,true,BR,Logistics,IC2
+572,CRS-CUS-036,Customer,2018-05-23,,In Progress,8.2,false,AR,Visual Merchandising,IC1
+574,CRS-COM-029,Compliance,2018-05-26,2018-07-13,Completed,1.5,true,AR,Sales,IC1
+575,CRS-SAF-022,Safety,2018-05-06,2018-06-13,Completed,2.0,true,AR,Sales,IC1
+579,CRS-CUS-012,Customer,2018-05-04,2018-06-13,Completed,3.6,false,BR,Regional Operations,IC1
+583,CRS-FUN-030,Functional Skills,2018-05-24,2018-07-02,Completed,23.6,false,BR,Visual Merchandising,IC2
+584,CRS-CUS-039,Customer,2018-05-26,2018-07-29,Completed,9.9,false,BR,Visual Merchandising,IC2
+589,CRS-SAF-025,Safety,2018-05-05,2018-05-14,Completed,2.9,true,BR,Sales,IC1
+594,CRS-TEC-026,Technology,2018-05-09,,In Progress,10.3,false,BR,Data & Analytics,IC1
+596,CRS-CUS-011,Customer,2018-05-27,2018-08-01,Completed,8.4,false,BR,Customer Service,IC1
+601,CRS-COM-003,Compliance,2018-05-18,2018-07-07,Completed,1.0,true,AR,Customer Operations,IC1
+601,CRS-FUN-037,Functional Skills,2018-05-09,,In Progress,13.0,false,AR,Customer Operations,IC1
+608,CRS-CUS-022,Customer,2018-05-21,2018-07-28,Completed,11.2,false,BR,Customer Experience,IC1
+611,CRS-COM-019,Compliance,2018-05-01,2018-06-30,Completed,2.2,true,AR,Planning,IC1
+611,CRS-COM-028,Compliance,2018-05-24,2018-06-13,Completed,1.8,true,AR,Planning,IC1
+616,CRS-SAF-034,Safety,2018-05-04,2018-06-21,Completed,5.0,true,BR,Store Operations,IC1
+618,CRS-TEC-029,Technology,2018-05-14,,In Progress,26.4,false,BR,Data,IC4
+619,CRS-CUS-033,Customer,2018-05-16,2018-06-05,Completed,10.1,false,BR,Store Operations,IC1
+629,CRS-TEC-025,Technology,2018-05-22,2018-07-28,Completed,30.9,false,BR,Product,IC1
+629,CRS-TEC-003,Technology,2018-05-11,2018-07-07,Completed,57.4,false,BR,Product,IC1
+631,CRS-CUS-018,Customer,2018-05-11,2018-05-17,Completed,11.4,false,BR,Regional Operations,IC2
+636,CRS-FUN-020,Functional Skills,2018-05-10,,In Progress,6.6,false,BR,Marketing,IC4
+638,CRS-TEC-024,Technology,2018-05-24,2018-07-20,Completed,16.5,false,BR,People,IC2
+642,CRS-FUN-035,Functional Skills,2018-05-24,2018-06-26,Completed,16.5,false,BR,Distribution Centers,IC1
+644,CRS-COM-028,Compliance,2018-05-20,2018-06-25,Completed,1.7,true,AR,Planning,IC4
+645,CRS-FUN-027,Functional Skills,2018-05-26,2018-07-23,Completed,20.4,false,BR,Customer Experience,IC2
+649,CRS-COM-008,Compliance,2018-05-02,2018-05-17,Completed,3.7,true,BR,Store Operations,IC2
+650,CRS-COM-007,Compliance,2018-05-20,2018-06-06,Completed,3.6,true,BR,Visual Merchandising,IC1
+652,CRS-FUN-001,Functional Skills,2018-05-09,,In Progress,4.9,false,BR,Customer Experience,IC2
+652,CRS-COM-028,Compliance,2018-05-05,2018-07-04,Completed,3.2,true,BR,Customer Experience,IC2
+652,CRS-COM-012,Compliance,2018-05-13,2018-07-08,Completed,2.4,true,BR,Customer Experience,IC2
+653,CRS-COM-028,Compliance,2018-05-05,2018-07-11,Completed,2.4,true,BR,Finance,IC4
+654,CRS-SAF-020,Safety,2018-05-14,2018-07-15,Completed,5.5,true,BR,Sales,IC1
+654,CRS-SAF-015,Safety,2018-05-19,2018-07-16,Completed,4.5,true,BR,Sales,IC1
+656,CRS-SAF-006,Safety,2018-05-13,2018-05-26,Completed,2.0,true,BR,Visual Merchandising,IC2
+658,CRS-COM-036,Compliance,2018-05-11,2018-05-18,Completed,1.8,true,BR,Store Operations,IC2
+659,CRS-FUN-004,Functional Skills,2018-05-08,,In Progress,11.7,false,BR,Marketing,IC2
+659,CRS-COM-013,Compliance,2018-05-08,2018-06-13,Completed,3.1,true,BR,Marketing,IC2
+660,CRS-CUS-033,Customer,2018-05-18,2018-06-28,Completed,7.0,false,BR,Sales,IC1
+674,CRS-COM-003,Compliance,2018-05-23,2018-07-27,Completed,1.9,true,AR,Logistics,IC3
+674,CRS-FUN-003,Functional Skills,2018-05-08,2018-06-12,Completed,19.6,false,AR,Logistics,IC3
+675,CRS-FUN-028,Functional Skills,2018-05-22,2018-06-24,Completed,7.9,false,BR,UX,IC3
+677,CRS-COM-024,Compliance,2018-05-10,2018-07-08,Completed,2.8,true,BR,Sales,IC2
+677,CRS-CUS-030,Customer,2018-05-06,2018-05-19,Completed,4.6,false,BR,Sales,IC2
+679,CRS-COM-011,Compliance,2018-05-08,2018-06-08,Completed,2.1,true,BR,Store Operations,IC1
+681,CRS-COM-001,Compliance,2018-05-10,2018-05-20,Completed,3.2,true,BR,Procurement,IC1
+683,CRS-CUS-022,Customer,2018-05-02,2018-05-06,Completed,5.8,false,BR,Visual Merchandising,IC1
+686,CRS-TEC-036,Technology,2018-05-14,2018-07-05,Completed,36.3,false,BR,Strategy,IC2
+687,CRS-TEC-037,Technology,2018-05-19,,In Progress,32.1,false,BR,Data & Analytics,M3
+688,CRS-FUN-010,Functional Skills,2018-05-27,2018-07-23,Completed,8.6,false,BR,Store Operations,IC1
+690,CRS-CUS-034,Customer,2018-05-04,,In Progress,8.6,false,BR,Sales,IC2
+696,CRS-CUS-029,Customer,2018-05-21,2018-06-17,Completed,4.0,false,BR,Sales,IC2
+699,CRS-LEA-012,Leadership,2018-05-27,2018-07-25,Completed,37.5,false,BR,UX,M1
+700,CRS-MAN-004,Management,2018-05-04,2018-05-17,Completed,14.3,false,BR,Visual Merchandising,M4
+701,CRS-CUS-009,Customer,2018-05-01,2018-07-01,Completed,8.2,false,BR,Sales,IC1
+704,CRS-COM-013,Compliance,2018-05-19,2018-06-04,Completed,1.7,true,BR,Customer Service,IC1
+704,CRS-CUS-002,Customer,2018-05-06,2018-06-03,Completed,4.9,false,BR,Customer Service,IC1
+705,CRS-SAF-004,Safety,2018-05-12,2018-07-17,Completed,4.3,true,AR,Store Operations,IC1
+707,CRS-COM-027,Compliance,2018-05-13,2018-06-21,Completed,1.4,true,BR,Digital Marketing,IC3
+711,CRS-COM-012,Compliance,2018-05-16,2018-07-07,Completed,1.7,true,BR,Risk,D2
+711,CRS-LEA-026,Leadership,2018-05-03,2018-05-21,Completed,37.7,false,BR,Risk,D2
+711,CRS-TEC-009,Technology,2018-05-15,2018-05-18,Completed,49.7,false,BR,Risk,D2
+719,CRS-COM-020,Compliance,2018-05-12,2018-07-18,Completed,2.8,true,BR,Procurement,IC4
+719,CRS-FUN-028,Functional Skills,2018-05-26,2018-06-26,Completed,17.4,false,BR,Procurement,IC4
+724,CRS-COM-029,Compliance,2018-05-15,,In Progress,1.9,true,AR,Customer Experience,IC1
+724,CRS-COM-016,Compliance,2018-05-24,2018-07-28,Completed,1.6,true,AR,Customer Experience,IC1
+731,CRS-SAF-017,Safety,2018-05-18,2018-05-29,Completed,5.5,true,BR,Sales,IC1
+731,CRS-FUN-005,Functional Skills,2018-05-19,,In Progress,14.5,false,BR,Sales,IC1
+733,CRS-CUS-017,Customer,2018-05-16,2018-05-30,Completed,6.5,false,BR,Sales,IC1
+740,CRS-FUN-037,Functional Skills,2018-05-03,2018-07-09,Completed,8.6,false,BR,Data,IC2
+742,CRS-COM-031,Compliance,2018-05-16,2018-07-08,Completed,3.0,true,BR,Visual Merchandising,IC1
+746,CRS-FUN-028,Functional Skills,2018-05-10,2018-07-01,Completed,9.2,false,BR,Customer Operations,IC1
+746,CRS-COM-001,Compliance,2018-05-22,2018-06-23,Completed,3.6,true,BR,Customer Operations,IC1
+749,CRS-FUN-012,Functional Skills,2018-05-19,2018-06-30,Completed,13.9,false,BR,Customer Experience,IC1
+753,CRS-SAF-031,Safety,2018-05-26,2018-06-27,Completed,5.8,true,BR,Store Operations,IC1
+755,CRS-COM-015,Compliance,2018-05-25,2018-07-14,Completed,3.5,true,BR,Marketing,IC1
+757,CRS-SAF-003,Safety,2018-05-23,2018-07-23,Completed,2.8,true,BR,Sales,IC1
+758,CRS-FUN-030,Functional Skills,2018-05-05,2018-07-08,Completed,5.4,false,BR,Procurement,IC1
+759,CRS-SAF-038,Safety,2018-05-15,2018-06-08,Completed,2.1,true,AR,Distribution Centers,IC1
+760,CRS-TEC-037,Technology,2018-05-28,,In Progress,27.9,false,BR,Digital Marketing,IC2
+763,CRS-COM-031,Compliance,2018-05-26,,In Progress,2.4,true,BR,Legal,IC4
+769,CRS-SAF-012,Safety,2018-05-09,2018-05-31,Completed,2.2,true,BR,Sales,IC1
+771,CRS-MAN-025,Management,2018-05-23,2018-07-08,Completed,12.4,false,BR,Distribution Centers,M1
+773,CRS-FUN-015,Functional Skills,2018-05-12,2018-07-11,Completed,3.0,false,BR,Planning,IC3
+774,CRS-COM-003,Compliance,2018-05-12,2018-05-15,Completed,2.5,true,AR,Sales,IC1
+776,CRS-FUN-037,Functional Skills,2018-05-13,,In Progress,11.1,false,BR,Sales,IC1
+776,CRS-CUS-020,Customer,2018-05-12,,In Progress,11.9,false,BR,Sales,IC1
+777,CRS-TEC-005,Technology,2018-05-22,,In Progress,15.5,false,BR,Procurement,IC3
+778,CRS-COM-006,Compliance,2018-05-10,2018-07-12,Completed,2.6,true,BR,Regional Operations,IC2
+778,CRS-COM-036,Compliance,2018-05-04,2018-06-19,Completed,2.0,true,BR,Regional Operations,IC2
+781,CRS-SAF-019,Safety,2018-05-17,2018-06-05,Completed,4.0,true,BR,Visual Merchandising,IC1
+781,CRS-SAF-026,Safety,2018-05-26,2018-05-30,Completed,4.5,true,BR,Visual Merchandising,IC1
+782,CRS-FUN-021,Functional Skills,2018-05-05,2018-06-28,Completed,23.0,false,BR,Regional Operations,M2
+782,CRS-LEA-039,Leadership,2018-05-24,,In Progress,24.3,false,BR,Regional Operations,M2
+782,CRS-FUN-020,Functional Skills,2018-05-22,2018-07-17,Completed,9.7,false,BR,Regional Operations,M2
+784,CRS-TEC-003,Technology,2018-05-20,2018-05-26,Completed,46.0,false,MX,People,IC1
+784,CRS-TEC-019,Technology,2018-05-19,2018-06-20,Completed,17.1,false,MX,People,IC1
+787,CRS-FUN-031,Functional Skills,2018-05-21,2018-06-02,Completed,19.6,false,BR,E-commerce,IC3
+787,CRS-FUN-023,Functional Skills,2018-05-18,,In Progress,14.3,false,BR,E-commerce,IC3
+791,CRS-COM-018,Compliance,2018-05-20,2018-07-15,Completed,2.4,true,BR,Logistics,IC1
+791,CRS-SAF-028,Safety,2018-05-20,2018-06-24,Completed,4.0,true,BR,Logistics,IC1
+795,CRS-SAF-021,Safety,2018-05-17,2018-06-07,Completed,5.4,true,BR,Regional Operations,IC1
+795,CRS-COM-018,Compliance,2018-05-17,2018-06-11,Completed,2.2,true,BR,Regional Operations,IC1
+796,CRS-CUS-013,Customer,2018-05-15,2018-06-18,Completed,8.9,false,BR,Visual Merchandising,IC1
+12,CRS-FUN-031,Functional Skills,2018-06-11,,In Progress,4.8,false,BR,Regional Operations,IC3
+16,CRS-CUS-009,Customer,2018-06-04,2018-06-30,Completed,3.5,false,BR,Customer Experience,IC1
+16,CRS-COM-008,Compliance,2018-06-21,2018-07-14,Completed,2.5,true,BR,Customer Experience,IC1
+17,CRS-CUS-014,Customer,2018-06-09,2018-07-06,Completed,10.4,false,BR,Sales,IC1
+17,CRS-FUN-009,Functional Skills,2018-06-26,2018-07-29,Completed,19.3,false,BR,Sales,IC1
+28,CRS-TEC-020,Technology,2018-06-15,,In Progress,21.4,false,BR,Finance,IC2
+29,CRS-TEC-024,Technology,2018-06-17,2018-06-28,Completed,43.1,false,BR,Procurement,IC5
+31,CRS-COM-003,Compliance,2018-06-25,2018-07-08,Completed,1.2,true,BR,Regional Operations,IC2
+32,CRS-SAF-022,Safety,2018-06-14,2018-06-22,Completed,5.6,true,BR,Visual Merchandising,IC2
+34,CRS-SAF-013,Safety,2018-06-18,2018-07-15,Completed,3.0,true,BR,Regional Operations,M1
+34,CRS-FUN-002,Functional Skills,2018-06-17,2018-08-22,Completed,11.2,false,BR,Regional Operations,M1
+36,CRS-COM-026,Compliance,2018-06-26,2018-07-25,Completed,3.2,true,BR,Distribution Centers,IC1
+46,CRS-SAF-032,Safety,2018-06-23,2018-06-28,Completed,4.6,true,BR,Procurement,IC1
+57,CRS-TEC-006,Technology,2018-06-22,,In Progress,18.5,false,BR,People,IC2
+57,CRS-FUN-028,Functional Skills,2018-06-07,,In Progress,2.6,false,BR,People,IC2
+60,CRS-COM-027,Compliance,2018-06-05,2018-07-31,Completed,2.7,true,BR,Marketing,IC4
+69,CRS-FUN-004,Functional Skills,2018-06-20,,In Progress,17.4,false,BR,Logistics,IC2
+70,CRS-COM-013,Compliance,2018-06-09,2018-08-12,Completed,2.3,true,BR,Customer Operations,M2
+73,CRS-TEC-021,Technology,2018-06-08,,In Progress,53.3,false,BR,Risk,IC2
+75,CRS-FUN-032,Functional Skills,2018-06-26,,In Progress,21.9,false,BR,Legal,IC1
+77,CRS-CUS-017,Customer,2018-06-16,,In Progress,4.4,false,BR,Store Operations,IC2
+84,CRS-SAF-016,Safety,2018-06-22,2018-07-10,Completed,5.6,true,BR,Procurement,IC1
+94,CRS-FUN-011,Functional Skills,2018-06-18,2018-07-15,Completed,10.7,false,BR,Store Operations,IC1
+94,CRS-CUS-016,Customer,2018-06-10,2018-07-11,Completed,8.5,false,BR,Store Operations,IC1
+96,CRS-FUN-029,Functional Skills,2018-06-18,2018-08-15,Completed,8.4,false,BR,Visual Merchandising,IC1
+98,CRS-MAN-036,Management,2018-06-02,2018-07-04,Completed,13.7,false,BR,Regional Operations,M1
+101,CRS-CUS-039,Customer,2018-06-03,,In Progress,10.2,false,BR,Customer Operations,IC1
+105,CRS-FUN-017,Functional Skills,2018-06-07,2018-07-16,Completed,18.6,false,BR,Finance,IC1
+109,CRS-FUN-018,Functional Skills,2018-06-27,,In Progress,8.2,false,BR,Distribution Centers,IC2
+113,CRS-FUN-020,Functional Skills,2018-06-27,,In Progress,6.4,false,BR,People,IC2
+113,CRS-TEC-013,Technology,2018-06-27,2018-08-25,Completed,32.7,false,BR,People,IC2
+118,CRS-FUN-018,Functional Skills,2018-06-11,2018-06-20,Completed,10.1,false,BR,Product,IC2
+118,CRS-COM-005,Compliance,2018-06-10,,In Progress,1.2,true,BR,Product,IC2
+131,CRS-SAF-024,Safety,2018-06-16,2018-07-13,Completed,5.3,true,BR,Store Operations,IC1
+132,CRS-FUN-017,Functional Skills,2018-06-09,2018-07-11,Completed,11.6,false,BR,Strategy,IC1
+134,CRS-FUN-012,Functional Skills,2018-06-07,2018-08-14,Completed,11.7,false,BR,Customer Service,IC1
+141,CRS-MAN-033,Management,2018-06-26,2018-07-22,Completed,15.0,false,BR,Sales,M1
+143,CRS-SAF-009,Safety,2018-06-22,2018-06-27,Completed,5.9,true,BR,Procurement,IC1
+148,CRS-COM-035,Compliance,2018-06-06,2018-07-12,Completed,4.0,true,BR,Planning,IC1
+149,CRS-COM-030,Compliance,2018-06-17,2018-07-29,Completed,3.5,true,BR,Distribution Centers,IC1
+153,CRS-COM-021,Compliance,2018-06-12,2018-07-26,Completed,2.0,true,BR,Data,M1
+155,CRS-FUN-016,Functional Skills,2018-06-15,2018-07-20,Completed,22.5,false,BR,Legal,IC2
+155,CRS-COM-005,Compliance,2018-06-02,2018-07-21,Completed,1.7,true,BR,Legal,IC2
+156,CRS-FUN-028,Functional Skills,2018-06-09,,In Progress,2.3,false,BR,People,IC2
+158,CRS-COM-006,Compliance,2018-06-06,2018-07-17,Completed,2.7,true,BR,Procurement,IC1
+160,CRS-FUN-009,Functional Skills,2018-06-06,2018-07-13,Completed,7.3,false,BR,Sales,IC2
+167,CRS-COM-006,Compliance,2018-06-20,2018-06-27,Completed,2.8,true,BR,Store Operations,IC2
+174,CRS-CUS-003,Customer,2018-06-25,2018-07-26,Completed,9.2,false,BR,Regional Operations,IC2
+186,CRS-SAF-029,Safety,2018-06-22,2018-08-30,Completed,4.8,true,BR,Sales,IC1
+193,CRS-MAN-031,Management,2018-06-18,2018-07-08,Completed,19.0,false,BR,Strategy,M1
+207,CRS-CUS-021,Customer,2018-06-28,2018-09-03,Completed,8.9,false,BR,Visual Merchandising,IC1
+210,CRS-TEC-010,Technology,2018-06-18,2018-08-20,Completed,56.8,false,BR,Engineering,IC4
+220,CRS-FUN-002,Functional Skills,2018-06-15,,In Progress,13.3,false,BR,Regional Operations,IC1
+232,CRS-FUN-006,Functional Skills,2018-06-11,2018-08-07,Completed,12.1,false,BR,Data & Analytics,IC3
+245,CRS-FUN-038,Functional Skills,2018-06-13,2018-07-11,Completed,22.2,false,BR,E-commerce,IC2
+246,CRS-FUN-022,Functional Skills,2018-06-01,2018-07-12,Completed,15.2,false,BR,Planning,M2
+252,CRS-MAN-006,Management,2018-06-23,2018-08-31,Completed,19.4,false,BR,Customer Operations,M1
+261,CRS-MAN-002,Management,2018-06-24,2018-07-20,Completed,13.5,false,BR,Risk,M2
+262,CRS-COM-013,Compliance,2018-06-05,,In Progress,2.2,true,BR,Store Operations,IC1
+264,CRS-COM-009,Compliance,2018-06-10,2018-06-24,Completed,3.5,true,BR,Visual Merchandising,M2
+269,CRS-CUS-004,Customer,2018-06-22,,In Progress,7.7,false,BR,Store Operations,IC1
+270,CRS-FUN-004,Functional Skills,2018-06-19,2018-08-14,Completed,13.8,false,BR,Visual Merchandising,IC2
+273,CRS-SAF-013,Safety,2018-06-22,2018-07-17,Completed,4.8,true,BR,Visual Merchandising,IC3
+274,CRS-FUN-001,Functional Skills,2018-06-15,2018-07-22,Completed,21.1,false,BR,Regional Operations,IC1
+279,CRS-SAF-009,Safety,2018-06-21,2018-07-31,Completed,5.3,true,BR,Visual Merchandising,IC1
+280,CRS-FUN-006,Functional Skills,2018-06-16,,In Progress,19.0,false,BR,Store Operations,IC3
+282,CRS-CUS-014,Customer,2018-06-13,,In Progress,11.1,false,BR,Regional Operations,IC2
+283,CRS-COM-007,Compliance,2018-06-07,2018-07-22,Completed,2.6,true,BR,Engineering,IC3
+287,CRS-CUS-007,Customer,2018-06-28,,In Progress,5.6,false,BR,Store Operations,IC2
+292,CRS-MAN-019,Management,2018-06-20,,In Progress,17.7,false,BR,Sales,M2
+295,CRS-FUN-037,Functional Skills,2018-06-27,2018-07-03,Completed,23.7,false,BR,Procurement,M1
+303,CRS-FUN-017,Functional Skills,2018-06-03,2018-06-10,Completed,13.1,false,BR,Logistics,M2
+305,CRS-FUN-019,Functional Skills,2018-06-09,,In Progress,3.6,false,BR,Planning,IC3
+307,CRS-FUN-008,Functional Skills,2018-06-22,2018-08-04,Completed,22.6,false,BR,Visual Merchandising,M2
+319,CRS-SAF-010,Safety,2018-06-09,2018-07-22,Completed,4.0,true,BR,Procurement,IC3
+320,CRS-COM-003,Compliance,2018-06-26,2018-07-12,Completed,1.7,true,BR,Customer Experience,IC1
+321,CRS-LEA-019,Leadership,2018-06-13,,In Progress,19.9,false,BR,Marketing,M4
+322,CRS-CUS-016,Customer,2018-06-15,2018-08-20,Completed,2.5,false,BR,Store Operations,IC1
+327,CRS-COM-030,Compliance,2018-06-06,2018-07-04,Completed,3.3,true,BR,People,M1
+330,CRS-FUN-023,Functional Skills,2018-06-14,,In Progress,16.9,false,BR,Logistics,IC1
+335,CRS-SAF-014,Safety,2018-06-21,2018-08-29,Completed,4.4,true,BR,Planning,M1
+342,CRS-COM-011,Compliance,2018-06-15,2018-08-11,Completed,3.0,true,BR,Customer Operations,IC1
+342,CRS-CUS-008,Customer,2018-06-22,,In Progress,10.7,false,BR,Customer Operations,IC1
+344,CRS-COM-021,Compliance,2018-06-21,2018-07-18,Completed,1.4,true,AR,Planning,IC2
+345,CRS-COM-020,Compliance,2018-06-13,2018-07-18,Completed,1.6,true,AR,Logistics,IC1
+355,CRS-SAF-001,Safety,2018-06-16,2018-07-18,Completed,2.4,true,AR,Planning,IC2
+363,CRS-LEA-032,Leadership,2018-06-13,2018-06-25,Completed,33.4,false,AR,Visual Merchandising,M1
+363,CRS-CUS-017,Customer,2018-06-11,,In Progress,5.5,false,AR,Visual Merchandising,M1
+363,CRS-COM-027,Compliance,2018-06-02,2018-06-27,Completed,3.7,true,AR,Visual Merchandising,M1
+368,CRS-SAF-001,Safety,2018-06-03,2018-07-29,Completed,3.4,true,AR,Logistics,IC2
+378,CRS-SAF-018,Safety,2018-06-18,2018-08-01,Completed,3.4,true,AR,Regional Operations,IC1
+378,CRS-CUS-014,Customer,2018-06-26,2018-08-29,Completed,4.3,false,AR,Regional Operations,IC1
+380,CRS-FUN-038,Functional Skills,2018-06-02,2018-08-05,Completed,19.2,false,AR,Store Operations,IC1
+386,CRS-CUS-002,Customer,2018-06-14,,In Progress,3.9,false,BR,Visual Merchandising,IC1
+386,CRS-FUN-001,Functional Skills,2018-06-01,,In Progress,3.5,false,BR,Visual Merchandising,IC1
+392,CRS-FUN-018,Functional Skills,2018-06-17,,In Progress,17.8,false,BR,Risk,IC1
+395,CRS-FUN-036,Functional Skills,2018-06-20,,In Progress,15.6,false,BR,Regional Operations,IC2
+406,CRS-FUN-026,Functional Skills,2018-06-14,,In Progress,14.8,false,BR,Regional Operations,IC4
+416,CRS-TEC-029,Technology,2018-06-14,2018-07-07,Completed,4.4,false,BR,Engineering,IC5
+433,CRS-COM-003,Compliance,2018-06-17,2018-07-08,Completed,3.9,true,BR,Customer Experience,M1
+433,CRS-MAN-037,Management,2018-06-11,,In Progress,15.8,false,BR,Customer Experience,M1
+440,CRS-FUN-023,Functional Skills,2018-06-11,2018-07-18,Completed,8.8,false,BR,Marketing,M2
+441,CRS-FUN-009,Functional Skills,2018-06-07,2018-08-12,Completed,18.6,false,BR,Legal,IC3
+441,CRS-FUN-021,Functional Skills,2018-06-11,2018-06-30,Completed,14.3,false,BR,Legal,IC3
+452,CRS-SAF-037,Safety,2018-06-12,2018-08-07,Completed,4.6,true,AR,Planning,IC1
+452,CRS-FUN-015,Functional Skills,2018-06-17,2018-06-25,Completed,12.2,false,AR,Planning,IC1
+464,CRS-FUN-001,Functional Skills,2018-06-22,,In Progress,7.1,false,BR,Legal,IC2
+466,CRS-CUS-021,Customer,2018-06-19,2018-06-25,Completed,2.6,false,BR,Regional Operations,IC2
+473,CRS-FUN-012,Functional Skills,2018-06-17,2018-08-15,Completed,18.3,false,BR,Sales,IC2
+475,CRS-TEC-011,Technology,2018-06-24,,In Progress,14.2,false,BR,Finance,IC1
+475,CRS-FUN-008,Functional Skills,2018-06-27,2018-08-02,Completed,4.4,false,BR,Finance,IC1
+477,CRS-FUN-017,Functional Skills,2018-06-06,2018-07-11,Completed,15.3,false,BR,Regional Operations,IC3
+479,CRS-COM-024,Compliance,2018-06-03,2018-07-01,Completed,1.4,true,BR,Visual Merchandising,IC2
+490,CRS-SAF-026,Safety,2018-06-26,2018-07-20,Completed,5.6,true,BR,Sales,IC1
+504,CRS-COM-017,Compliance,2018-06-10,2018-07-02,Completed,1.9,true,BR,Data & Analytics,IC1
+506,CRS-FUN-033,Functional Skills,2018-06-05,,In Progress,18.7,false,AR,Regional Operations,IC2
+509,CRS-LEA-013,Leadership,2018-06-10,2018-07-03,Completed,19.0,false,BR,Data & Analytics,M2
+520,CRS-COM-021,Compliance,2018-06-17,2018-07-05,Completed,1.3,true,BR,Customer Experience,IC1
+532,CRS-CUS-038,Customer,2018-06-08,2018-06-28,Completed,5.8,false,BR,Visual Merchandising,IC1
+547,CRS-FUN-027,Functional Skills,2018-06-16,2018-08-06,Completed,14.9,false,BR,Strategy,IC1
+553,CRS-FUN-008,Functional Skills,2018-06-22,2018-07-23,Completed,17.6,false,BR,Customer Operations,IC2
+556,CRS-FUN-002,Functional Skills,2018-06-04,2018-06-20,Completed,22.5,false,BR,Planning,IC2
+562,CRS-TEC-038,Technology,2018-06-24,2018-07-22,Completed,54.3,false,BR,Data & Analytics,IC2
+568,CRS-SAF-029,Safety,2018-06-09,2018-07-22,Completed,5.4,true,BR,Logistics,IC2
+570,CRS-TEC-037,Technology,2018-06-18,2018-08-02,Completed,43.4,false,BR,Product,IC4
+573,CRS-FUN-033,Functional Skills,2018-06-07,,In Progress,14.5,false,BR,Regional Operations,IC1
+576,CRS-COM-010,Compliance,2018-06-02,2018-07-24,Completed,3.4,true,BR,Finance,IC3
+576,CRS-TEC-027,Technology,2018-06-16,,In Progress,56.4,false,BR,Finance,IC3
+582,CRS-CUS-033,Customer,2018-06-19,2018-07-31,Completed,6.0,false,BR,Sales,IC1
+592,CRS-FUN-033,Functional Skills,2018-06-23,,In Progress,16.5,false,BR,Customer Service,IC2
+593,CRS-COM-006,Compliance,2018-06-19,2018-08-05,Completed,1.5,true,BR,Legal,IC1
+601,CRS-FUN-033,Functional Skills,2018-06-12,2018-08-16,Completed,10.7,false,AR,Customer Operations,IC1
+609,CRS-CUS-029,Customer,2018-06-04,2018-08-10,Completed,8.1,false,BR,Regional Operations,IC3
+611,CRS-COM-028,Compliance,2018-06-13,2018-07-15,Completed,2.8,true,AR,Planning,IC1
+611,CRS-SAF-022,Safety,2018-06-27,2018-08-06,Completed,5.6,true,AR,Planning,IC1
+614,CRS-SAF-033,Safety,2018-06-22,2018-07-15,Completed,6.0,true,BR,Regional Operations,IC2
+618,CRS-COM-004,Compliance,2018-06-10,2018-07-15,Completed,3.0,true,BR,Data,IC4
+618,CRS-COM-009,Compliance,2018-06-25,2018-07-31,Completed,1.3,true,BR,Data,IC4
+624,CRS-CUS-011,Customer,2018-06-08,,In Progress,4.5,false,BR,Customer Operations,IC2
+629,CRS-TEC-023,Technology,2018-06-19,,In Progress,28.5,false,BR,Product,IC1
+643,CRS-SAF-013,Safety,2018-06-06,2018-07-25,Completed,4.0,true,BR,Regional Operations,IC1
+644,CRS-COM-038,Compliance,2018-06-26,2018-07-23,Completed,2.2,true,AR,Planning,IC4
+644,CRS-SAF-025,Safety,2018-06-23,2018-07-07,Completed,4.0,true,AR,Planning,IC4
+645,CRS-COM-026,Compliance,2018-06-04,2018-07-24,Completed,1.3,true,BR,Customer Experience,IC2
+649,CRS-FUN-001,Functional Skills,2018-06-22,,In Progress,15.4,false,BR,Store Operations,IC2
+650,CRS-CUS-037,Customer,2018-06-10,2018-08-09,Completed,3.8,false,BR,Visual Merchandising,IC1
+650,CRS-COM-027,Compliance,2018-06-14,2018-06-18,Completed,3.0,true,BR,Visual Merchandising,IC1
+656,CRS-CUS-034,Customer,2018-06-12,2018-07-02,Completed,5.7,false,BR,Visual Merchandising,IC2
+669,CRS-COM-009,Compliance,2018-06-09,,In Progress,3.5,true,BR,Visual Merchandising,IC1
+680,CRS-CUS-009,Customer,2018-06-05,2018-06-25,Completed,11.5,false,BR,Customer Service,IC1
+690,CRS-SAF-028,Safety,2018-06-19,2018-07-28,Completed,2.4,true,BR,Sales,IC2
+691,CRS-COM-025,Compliance,2018-06-16,2018-07-03,Completed,2.4,true,BR,Store Operations,IC3
+699,CRS-FUN-034,Functional Skills,2018-06-22,2018-08-30,Completed,9.7,false,BR,UX,M1
+700,CRS-MAN-031,Management,2018-06-21,,In Progress,4.1,false,BR,Visual Merchandising,M4
+700,CRS-CUS-014,Customer,2018-06-22,2018-08-11,Completed,3.5,false,BR,Visual Merchandising,M4
+701,CRS-CUS-007,Customer,2018-06-14,,In Progress,11.4,false,BR,Sales,IC1
+702,CRS-FUN-017,Functional Skills,2018-06-09,2018-06-26,Completed,17.7,false,BR,Customer Service,IC5
+702,CRS-COM-006,Compliance,2018-06-18,2018-07-18,Completed,3.5,true,BR,Customer Service,IC5
+711,CRS-TEC-019,Technology,2018-06-07,2018-07-09,Completed,4.8,false,BR,Risk,D2
+712,CRS-FUN-019,Functional Skills,2018-06-02,,In Progress,15.4,false,BR,Data,IC3
+713,CRS-COM-019,Compliance,2018-06-21,2018-08-04,Completed,1.1,true,BR,Customer Experience,IC1
+714,CRS-CUS-028,Customer,2018-06-03,,In Progress,4.5,false,BR,Visual Merchandising,IC1
+714,CRS-FUN-039,Functional Skills,2018-06-17,2018-07-02,Completed,10.3,false,BR,Visual Merchandising,IC1
+716,CRS-COM-026,Compliance,2018-06-18,2018-07-02,Completed,3.6,true,AR,Customer Service,IC1
+725,CRS-FUN-039,Functional Skills,2018-06-08,2018-08-10,Completed,16.0,false,BR,Strategy,IC3
+725,CRS-COM-016,Compliance,2018-06-15,2018-08-14,Completed,1.3,true,BR,Strategy,IC3
+739,CRS-COM-038,Compliance,2018-06-19,2018-08-04,Completed,1.0,true,BR,Distribution Centers,IC1
+741,CRS-FUN-028,Functional Skills,2018-06-06,2018-07-30,Completed,3.3,false,BR,Distribution Centers,IC4
+742,CRS-FUN-034,Functional Skills,2018-06-03,,In Progress,21.0,false,BR,Visual Merchandising,IC1
+743,CRS-CUS-031,Customer,2018-06-25,,In Progress,8.6,false,CL,Customer Experience,IC2
+744,CRS-FUN-007,Functional Skills,2018-06-16,,In Progress,8.0,false,BR,Planning,IC5
+744,CRS-SAF-004,Safety,2018-06-25,2018-07-25,Completed,5.9,true,BR,Planning,IC5
+746,CRS-CUS-016,Customer,2018-06-26,2018-07-06,Completed,9.4,false,BR,Customer Operations,IC1
+753,CRS-FUN-023,Functional Skills,2018-06-17,2018-08-09,Completed,16.4,false,BR,Store Operations,IC1
+758,CRS-SAF-013,Safety,2018-06-16,2018-08-18,Completed,4.0,true,BR,Procurement,IC1
+759,CRS-FUN-024,Functional Skills,2018-06-08,2018-06-16,Completed,16.5,false,AR,Distribution Centers,IC1
+759,CRS-SAF-017,Safety,2018-06-10,2018-08-01,Completed,3.4,true,AR,Distribution Centers,IC1
+760,CRS-FUN-030,Functional Skills,2018-06-20,2018-07-14,Completed,12.0,false,BR,Digital Marketing,IC2
+768,CRS-FUN-029,Functional Skills,2018-06-09,2018-08-06,Completed,18.1,false,BR,Logistics,M1
+768,CRS-COM-002,Compliance,2018-06-22,2018-07-29,Completed,1.9,true,BR,Logistics,M1
+769,CRS-COM-004,Compliance,2018-06-18,2018-07-04,Completed,1.3,true,BR,Sales,IC1
+770,CRS-SAF-006,Safety,2018-06-14,2018-06-19,Completed,2.1,true,BR,Distribution Centers,IC2
+773,CRS-FUN-034,Functional Skills,2018-06-03,2018-06-29,Completed,18.0,false,BR,Planning,IC3
+773,CRS-COM-039,Compliance,2018-06-17,,In Progress,3.1,true,BR,Planning,IC3
+774,CRS-FUN-003,Functional Skills,2018-06-07,2018-07-16,Completed,22.3,false,AR,Sales,IC1
+775,CRS-SAF-021,Safety,2018-06-08,,In Progress,5.1,true,BR,Sales,IC1
+775,CRS-COM-008,Compliance,2018-06-26,2018-08-15,Completed,3.9,true,BR,Sales,IC1
+776,CRS-CUS-038,Customer,2018-06-14,2018-06-25,Completed,6.1,false,BR,Sales,IC1
+778,CRS-FUN-004,Functional Skills,2018-06-08,2018-08-03,Completed,17.6,false,BR,Regional Operations,IC2
+779,CRS-FUN-002,Functional Skills,2018-06-08,2018-07-01,Completed,4.1,false,BR,Distribution Centers,IC1
+781,CRS-SAF-034,Safety,2018-06-07,2018-07-05,Completed,2.6,true,BR,Visual Merchandising,IC1
+783,CRS-FUN-038,Functional Skills,2018-06-11,,In Progress,17.4,false,BR,Data & Analytics,IC3
+783,CRS-FUN-001,Functional Skills,2018-06-05,2018-08-05,Completed,15.1,false,BR,Data & Analytics,IC3
+784,CRS-TEC-002,Technology,2018-06-20,2018-08-15,Completed,18.1,false,MX,People,IC1
+788,CRS-COM-008,Compliance,2018-06-25,2018-08-04,Completed,2.7,true,MX,Risk,IC2
+788,CRS-FUN-017,Functional Skills,2018-06-03,,In Progress,14.2,false,MX,Risk,IC2
+793,CRS-COM-021,Compliance,2018-06-03,2018-07-08,Completed,1.2,true,BR,Sales,IC2
+793,CRS-CUS-028,Customer,2018-06-19,,In Progress,7.4,false,BR,Sales,IC2
+795,CRS-FUN-038,Functional Skills,2018-06-22,,In Progress,20.3,false,BR,Regional Operations,IC1
+795,CRS-COM-008,Compliance,2018-06-28,2018-08-19,Completed,2.6,true,BR,Regional Operations,IC1
+798,CRS-FUN-019,Functional Skills,2018-06-14,,In Progress,4.5,false,BR,Procurement,IC2
+803,CRS-FUN-036,Functional Skills,2018-06-23,,In Progress,10.6,false,MX,Visual Merchandising,IC1
+803,CRS-CUS-039,Customer,2018-06-09,,In Progress,11.6,false,MX,Visual Merchandising,IC1
+804,CRS-FUN-008,Functional Skills,2018-06-25,2018-07-18,Completed,15.5,false,BR,Procurement,IC2
+804,CRS-FUN-018,Functional Skills,2018-06-24,,In Progress,20.3,false,BR,Procurement,IC2
+807,CRS-CUS-015,Customer,2018-06-20,2018-07-06,Completed,5.3,false,AR,Visual Merchandising,IC1
+808,CRS-COM-011,Compliance,2018-06-09,2018-08-12,Completed,1.9,true,BR,Planning,IC2
+809,CRS-SAF-001,Safety,2018-06-13,2018-08-04,Completed,5.9,true,BR,Regional Operations,IC1
+8,CRS-MAN-002,Management,2018-07-06,,In Progress,11.4,false,BR,Digital Marketing,M2
+11,CRS-SAF-022,Safety,2018-07-13,2018-08-07,Completed,4.9,true,BR,Visual Merchandising,IC2
+12,CRS-CUS-015,Customer,2018-07-23,,In Progress,9.5,false,BR,Regional Operations,IC3
+13,CRS-FUN-014,Functional Skills,2018-07-27,2018-08-21,Completed,8.1,false,BR,Regional Operations,IC1
+14,CRS-LEA-006,Leadership,2018-07-26,,In Progress,39.5,false,BR,Marketing,M3
+14,CRS-COM-016,Compliance,2018-07-27,2018-09-11,Completed,2.3,true,BR,Marketing,M3
+16,CRS-FUN-025,Functional Skills,2018-07-20,,In Progress,4.1,false,BR,Customer Experience,IC1
+20,CRS-COM-002,Compliance,2018-07-18,2018-08-10,Completed,1.5,true,BR,Distribution Centers,IC1
+20,CRS-SAF-034,Safety,2018-07-26,2018-08-16,Completed,2.7,true,BR,Distribution Centers,IC1
+24,CRS-CUS-026,Customer,2018-07-17,2018-09-01,Completed,6.2,false,BR,Sales,IC2
+28,CRS-TEC-027,Technology,2018-07-26,2018-08-08,Completed,38.9,false,BR,Finance,IC2
+32,CRS-SAF-017,Safety,2018-07-25,2018-07-29,Completed,5.7,true,BR,Visual Merchandising,IC2
+34,CRS-CUS-006,Customer,2018-07-14,2018-09-12,Completed,9.5,false,BR,Regional Operations,M1
+36,CRS-COM-029,Compliance,2018-07-24,2018-09-08,Completed,1.2,true,BR,Distribution Centers,IC1
+50,CRS-FUN-038,Functional Skills,2018-07-10,2018-09-05,Completed,13.4,false,BR,Data & Analytics,IC1
+60,CRS-TEC-036,Technology,2018-07-27,2018-09-16,Completed,45.4,false,BR,Marketing,IC4
+64,CRS-FUN-018,Functional Skills,2018-07-22,,In Progress,22.2,false,BR,Sales,IC1
+74,CRS-CUS-021,Customer,2018-07-02,,In Progress,2.2,false,BR,Sales,IC1
+81,CRS-MAN-011,Management,2018-07-09,2018-07-24,Completed,11.4,false,BR,Procurement,M1
+81,CRS-LEA-012,Leadership,2018-07-24,2018-09-21,Completed,13.7,false,BR,Procurement,M1
+82,CRS-TEC-038,Technology,2018-07-04,,In Progress,36.5,false,BR,Procurement,IC4
+83,CRS-COM-038,Compliance,2018-07-08,2018-09-06,Completed,3.6,true,BR,Planning,IC1
+86,CRS-FUN-005,Functional Skills,2018-07-23,2018-09-18,Completed,17.8,false,BR,Engineering,IC4
+89,CRS-COM-003,Compliance,2018-07-09,2018-08-05,Completed,2.1,true,BR,Finance,IC3
+91,CRS-SAF-005,Safety,2018-07-14,2018-08-26,Completed,4.4,true,BR,Store Operations,IC1
+92,CRS-MAN-031,Management,2018-07-14,2018-07-26,Completed,18.5,false,BR,Data & Analytics,M1
+92,CRS-MAN-032,Management,2018-07-14,2018-08-21,Completed,7.1,false,BR,Data & Analytics,M1
+94,CRS-SAF-033,Safety,2018-07-06,2018-08-16,Completed,5.7,true,BR,Store Operations,IC1
+98,CRS-LEA-029,Leadership,2018-07-09,,In Progress,34.8,false,BR,Regional Operations,M1
+98,CRS-MAN-036,Management,2018-07-09,,In Progress,11.1,false,BR,Regional Operations,M1
+100,CRS-TEC-012,Technology,2018-07-16,2018-07-20,Completed,35.5,false,BR,Finance,IC2
+100,CRS-COM-017,Compliance,2018-07-09,,In Progress,3.5,true,BR,Finance,IC2
+101,CRS-FUN-037,Functional Skills,2018-07-20,,In Progress,12.9,false,BR,Customer Operations,IC1
+101,CRS-FUN-002,Functional Skills,2018-07-06,2018-07-09,Completed,3.5,false,BR,Customer Operations,IC1
+101,CRS-FUN-010,Functional Skills,2018-07-24,2018-09-05,Completed,21.7,false,BR,Customer Operations,IC1
+102,CRS-CUS-025,Customer,2018-07-21,2018-09-27,Completed,6.8,false,BR,Customer Experience,IC1
+102,CRS-CUS-009,Customer,2018-07-05,2018-08-31,Completed,6.2,false,BR,Customer Experience,IC1
+118,CRS-FUN-019,Functional Skills,2018-07-27,2018-08-09,Completed,15.9,false,BR,Product,IC2
+138,CRS-FUN-029,Functional Skills,2018-07-14,2018-07-30,Completed,13.1,false,BR,Procurement,IC3
+139,CRS-CUS-032,Customer,2018-07-02,2018-07-07,Completed,7.8,false,BR,Sales,IC2
+146,CRS-CUS-005,Customer,2018-07-07,,In Progress,11.7,false,BR,Regional Operations,IC2
+150,CRS-FUN-032,Functional Skills,2018-07-14,,In Progress,9.3,false,BR,Customer Service,IC1
+158,CRS-COM-007,Compliance,2018-07-18,2018-09-08,Completed,1.5,true,BR,Procurement,IC1
+160,CRS-FUN-012,Functional Skills,2018-07-08,,In Progress,8.5,false,BR,Sales,IC2
+165,CRS-FUN-038,Functional Skills,2018-07-02,2018-07-26,Completed,7.9,false,BR,Customer Operations,IC2
+167,CRS-SAF-012,Safety,2018-07-17,2018-07-28,Completed,4.8,true,BR,Store Operations,IC2
+174,CRS-COM-029,Compliance,2018-07-16,2018-08-30,Completed,3.0,true,BR,Regional Operations,IC2
+179,CRS-FUN-020,Functional Skills,2018-07-06,2018-08-30,Completed,8.8,false,BR,Planning,IC1
+187,CRS-FUN-012,Functional Skills,2018-07-04,2018-08-27,Completed,12.9,false,BR,Sales,M2
+189,CRS-FUN-014,Functional Skills,2018-07-01,2018-09-07,Completed,10.5,false,BR,Customer Service,IC2
+191,CRS-COM-012,Compliance,2018-07-26,2018-08-09,Completed,3.5,true,BR,Sales,IC1
+191,CRS-CUS-004,Customer,2018-07-09,,In Progress,6.1,false,BR,Sales,IC1
+193,CRS-LEA-013,Leadership,2018-07-08,,In Progress,25.6,false,BR,Strategy,M1
+193,CRS-LEA-037,Leadership,2018-07-10,2018-07-21,Completed,16.3,false,BR,Strategy,M1
+195,CRS-TEC-039,Technology,2018-07-04,2018-08-09,Completed,13.0,false,BR,Procurement,IC1
+195,CRS-FUN-030,Functional Skills,2018-07-24,,In Progress,23.3,false,BR,Procurement,IC1
+207,CRS-FUN-020,Functional Skills,2018-07-08,2018-09-14,Completed,2.4,false,BR,Visual Merchandising,IC1
+207,CRS-CUS-004,Customer,2018-07-05,2018-09-01,Completed,2.5,false,BR,Visual Merchandising,IC1
+223,CRS-FUN-011,Functional Skills,2018-07-11,,In Progress,13.1,false,BR,Visual Merchandising,IC2
+227,CRS-COM-029,Compliance,2018-07-17,2018-07-22,Completed,1.5,true,BR,Data & Analytics,IC3
+229,CRS-CUS-002,Customer,2018-07-14,2018-09-18,Completed,6.0,false,BR,Regional Operations,IC1
+232,CRS-COM-019,Compliance,2018-07-03,2018-07-30,Completed,1.4,true,BR,Data & Analytics,IC3
+244,CRS-TEC-008,Technology,2018-07-02,2018-07-21,Completed,48.4,false,BR,Digital Marketing,IC1
+262,CRS-CUS-022,Customer,2018-07-22,2018-09-17,Completed,9.4,false,BR,Store Operations,IC1
+272,CRS-FUN-021,Functional Skills,2018-07-04,2018-07-28,Completed,14.2,false,BR,Visual Merchandising,IC1
+278,CRS-COM-021,Compliance,2018-07-14,,In Progress,3.1,true,BR,People,IC3
+281,CRS-FUN-026,Functional Skills,2018-07-16,,In Progress,23.2,false,BR,E-commerce,M2
+281,CRS-COM-010,Compliance,2018-07-05,2018-09-07,Completed,3.4,true,BR,E-commerce,M2
+283,CRS-COM-003,Compliance,2018-07-06,2018-07-10,Completed,3.5,true,BR,Engineering,IC3
+287,CRS-SAF-033,Safety,2018-07-06,2018-08-02,Completed,2.1,true,BR,Store Operations,IC2
+287,CRS-COM-015,Compliance,2018-07-17,2018-09-20,Completed,3.5,true,BR,Store Operations,IC2
+294,CRS-FUN-027,Functional Skills,2018-07-20,2018-08-15,Completed,4.0,false,BR,Visual Merchandising,IC3
+295,CRS-COM-021,Compliance,2018-07-26,2018-09-18,Completed,2.4,true,BR,Procurement,M1
+301,CRS-COM-023,Compliance,2018-07-08,2018-08-06,Completed,2.3,true,BR,Customer Experience,IC1
+302,CRS-SAF-029,Safety,2018-07-28,2018-10-02,Completed,4.7,true,BR,Procurement,IC2
+308,CRS-FUN-016,Functional Skills,2018-07-15,,In Progress,3.6,false,BR,Legal,IC3
+312,CRS-FUN-033,Functional Skills,2018-07-02,,In Progress,10.7,false,BR,Sales,IC1
+313,CRS-TEC-008,Technology,2018-07-19,2018-09-11,Completed,8.9,false,BR,Procurement,IC2
+315,CRS-FUN-039,Functional Skills,2018-07-07,,In Progress,11.5,false,CL,Logistics,IC1
+324,CRS-TEC-030,Technology,2018-07-27,2018-09-05,Completed,43.8,false,BR,Finance,IC2
+328,CRS-TEC-007,Technology,2018-07-20,,In Progress,15.7,false,BR,UX,IC1
+328,CRS-TEC-037,Technology,2018-07-15,2018-08-10,Completed,22.9,false,BR,UX,IC1
+330,CRS-COM-004,Compliance,2018-07-07,,In Progress,1.6,true,BR,Logistics,IC1
+346,CRS-FUN-036,Functional Skills,2018-07-21,,In Progress,6.5,false,AR,Sales,IC1
+349,CRS-SAF-018,Safety,2018-07-09,2018-07-29,Completed,3.2,true,AR,Regional Operations,IC1
+349,CRS-CUS-030,Customer,2018-07-02,,In Progress,6.4,false,AR,Regional Operations,IC1
+352,CRS-COM-006,Compliance,2018-07-08,2018-07-14,Completed,3.8,true,AR,Marketing,IC4
+357,CRS-SAF-003,Safety,2018-07-21,2018-08-10,Completed,5.4,true,AR,Distribution Centers,IC3
+363,CRS-LEA-002,Leadership,2018-07-26,,In Progress,35.2,false,AR,Visual Merchandising,M1
+368,CRS-FUN-031,Functional Skills,2018-07-06,,In Progress,22.8,false,AR,Logistics,IC2
+375,CRS-FUN-026,Functional Skills,2018-07-11,,In Progress,10.2,false,AR,Store Operations,IC3
+380,CRS-CUS-034,Customer,2018-07-26,,In Progress,3.5,false,AR,Store Operations,IC1
+384,CRS-COM-033,Compliance,2018-07-16,2018-08-04,Completed,1.3,true,BR,Data & Analytics,IC2
+386,CRS-CUS-032,Customer,2018-07-18,2018-08-23,Completed,2.1,false,BR,Visual Merchandising,IC1
+391,CRS-FUN-036,Functional Skills,2018-07-18,,In Progress,15.2,false,BR,Sales,IC2
+391,CRS-SAF-004,Safety,2018-07-06,,In Progress,5.1,true,BR,Sales,IC2
+395,CRS-CUS-011,Customer,2018-07-11,2018-09-07,Completed,3.1,false,BR,Regional Operations,IC2
+403,CRS-COM-014,Compliance,2018-07-11,2018-09-08,Completed,3.8,true,BR,Legal,IC3
+405,CRS-COM-010,Compliance,2018-07-27,,In Progress,3.0,true,BR,Procurement,IC1
+416,CRS-FUN-002,Functional Skills,2018-07-13,2018-07-31,Completed,17.3,false,BR,Engineering,IC5
+420,CRS-FUN-029,Functional Skills,2018-07-25,2018-09-28,Completed,10.2,false,BR,Digital Marketing,IC3
+425,CRS-COM-014,Compliance,2018-07-07,2018-08-29,Completed,3.4,true,BR,Planning,IC1
+433,CRS-LEA-037,Leadership,2018-07-05,2018-09-04,Completed,28.2,false,BR,Customer Experience,M1
+438,CRS-MAN-035,Management,2018-07-01,2018-07-16,Completed,16.0,false,AR,Visual Merchandising,M2
+440,CRS-MAN-035,Management,2018-07-04,,In Progress,13.4,false,BR,Marketing,M2
+441,CRS-COM-032,Compliance,2018-07-26,,In Progress,2.2,true,BR,Legal,IC3
+441,CRS-FUN-032,Functional Skills,2018-07-24,2018-08-29,Completed,20.6,false,BR,Legal,IC3
+461,CRS-CUS-025,Customer,2018-07-11,,In Progress,6.7,false,BR,Customer Service,IC2
+466,CRS-CUS-028,Customer,2018-07-05,2018-09-03,Completed,8.5,false,BR,Regional Operations,IC2
+473,CRS-COM-020,Compliance,2018-07-03,2018-08-21,Completed,1.6,true,BR,Sales,IC2
+474,CRS-FUN-037,Functional Skills,2018-07-17,2018-09-11,Completed,12.5,false,BR,Planning,IC3
+477,CRS-CUS-021,Customer,2018-07-19,2018-09-06,Completed,6.5,false,BR,Regional Operations,IC3
+484,CRS-FUN-030,Functional Skills,2018-07-09,,In Progress,6.9,false,BR,Visual Merchandising,IC1
+495,CRS-FUN-014,Functional Skills,2018-07-02,,In Progress,13.7,false,BR,Regional Operations,IC1
+502,CRS-SAF-016,Safety,2018-07-14,2018-08-31,Completed,5.3,true,BR,Visual Merchandising,IC2
+504,CRS-COM-011,Compliance,2018-07-10,2018-07-13,Completed,1.8,true,BR,Data & Analytics,IC1
+505,CRS-COM-011,Compliance,2018-07-28,2018-08-31,Completed,4.0,true,BR,Planning,IC2
+509,CRS-FUN-010,Functional Skills,2018-07-15,2018-07-21,Completed,5.3,false,BR,Data & Analytics,M2
+509,CRS-COM-013,Compliance,2018-07-18,2018-08-19,Completed,2.2,true,BR,Data & Analytics,M2
+517,CRS-SAF-009,Safety,2018-07-23,2018-08-10,Completed,4.8,true,BR,Distribution Centers,IC3
+517,CRS-COM-004,Compliance,2018-07-17,,In Progress,3.0,true,BR,Distribution Centers,IC3
+521,CRS-FUN-006,Functional Skills,2018-07-13,2018-07-20,Completed,10.4,false,BR,Customer Service,IC1
+522,CRS-COM-002,Compliance,2018-07-26,2018-08-10,Completed,2.1,true,BR,Engineering,IC2
+526,CRS-COM-022,Compliance,2018-07-25,2018-09-09,Completed,1.8,true,AR,Planning,IC1
+529,CRS-FUN-034,Functional Skills,2018-07-03,2018-08-28,Completed,9.1,false,BR,Logistics,IC1
+537,CRS-COM-034,Compliance,2018-07-18,2018-08-25,Completed,3.6,true,BR,Marketing,IC5
+538,CRS-CUS-032,Customer,2018-07-20,2018-07-27,Completed,6.2,false,BR,Visual Merchandising,IC1
+541,CRS-FUN-015,Functional Skills,2018-07-20,2018-09-15,Completed,10.6,false,CL,Logistics,IC3
+544,CRS-CUS-020,Customer,2018-07-14,2018-07-23,Completed,3.1,false,BR,Visual Merchandising,IC1
+555,CRS-COM-034,Compliance,2018-07-02,2018-07-15,Completed,3.1,true,BR,Distribution Centers,IC5
+558,CRS-COM-010,Compliance,2018-07-21,2018-09-21,Completed,1.0,true,BR,Sales,IC1
+562,CRS-TEC-035,Technology,2018-07-17,,In Progress,18.0,false,BR,Data & Analytics,IC2
+566,CRS-FUN-020,Functional Skills,2018-07-10,2018-08-02,Completed,3.8,false,BR,Finance,IC4

@@ -1,0 +1,1416 @@
+# =============================================================================
+# PeopleLens AI  ::  NOVAORA
+# config/quality_checks.yaml
+#
+# Catalogo de checks de Data Quality. Runner proprio (ADR-0013), checks
+# declarados aqui e nunca em codigo.
+#
+# Tres atributos governam cada check, e eles respondem perguntas diferentes:
+#
+#   threshold       QUANDO o check reprova
+#   severity        O QUE acontece com a linha reprovada (ADR-0010)
+#   finding_class   QUE NATUREZA tem o problema encontrado (ADR-0022)
+#
+# A terceira e a novidade da F5, e existe porque "fail" nao e uma coisa so. Um
+# salario negativo e um departamento sem mapeamento aprovado sao os dois fail, e
+# sao problemas de natureza diferente: o primeiro e dado errado, o segundo e
+# decisao pendente. Somar os dois num numero de confianca apaga justamente a
+# distincao que quem usa o numero precisa para saber o que fazer.
+#
+#   severity: BLOCKER   linha vai para quarentena e nao entra no analitico
+#             CRITICAL  linha entra e o check derruba o trust score do KPI
+#             WARNING   registra e monitora, nao afeta trust score
+#             INFO      apenas observabilidade
+#
+# `threshold_basis` diz DE ONDE veio o limiar. Limiar sem base declarada e
+# palpite, e palpite que ninguem marcou como palpite vira fato em tres meses.
+#
+#   invariante  0.0 estrutural: chave duplicada, saida antes da entrada
+#   derivado    calculado de defects.yaml, sources.yaml ou generation.yaml
+#   provisional palpite fundamentado, a calibrar na F7 junto com o trust score
+#
+# `consumed_by_kpis` e o campo que o ADR-0011 exige. Na F5 ele passa a ser
+# consumido de verdade: os contratos em `config/kpis/` declaram
+# `depends_on_checks` e o teste de check orfao esta ativo.
+#
+# Status: F5. Catalogo completo dos sistemas da onda 1.
+# =============================================================================
+
+meta:
+  config_version: "0.2"
+  phase: F5
+  scope: "catalogo completo da onda 1; a onda 2 entra com os sistemas dela"
+  thresholds_status: PROVISIONAL
+  threshold_calibration_phase: F7
+  thresholds_decision: "DQ-02, aprovada no fechamento da F5"
+  note: >
+    Os limiares marcados como `provisional` nao foram ajustados para fazer
+    check passar. Varios reprovam de proposito, e a lista de reprovados e
+    entrega da fase, nao defeito dela.
+
+    DQ-02 (fechamento da F5): os 20 limiares provisionais NAO sao congelados
+    nesta fase. A calibragem definitiva acontece na F7, usando o comportamento
+    dos KPIs e a distribuicao de trust score como criterio de validacao de
+    negocio, e nao a taxa de aprovacao dos checks. Congelar agora fixaria
+    palpite como norma antes de existir evidencia para julga-lo.
+
+severity_effects:
+  BLOCKER:  "quarentena"
+  CRITICAL: "entra, derruba trust score"
+  WARNING:  "monitora"
+  INFO:     "observabilidade"
+
+# -----------------------------------------------------------------------------
+# Classes de achado (ADR-0022). Taxonomia OFICIAL do PeopleLens.
+#
+# As cinco primeiras vieram do principio que a Sam fixou na abertura da F5.
+# `DESATUALIZADO` e `DIVERGENCIA` foram propostas durante a implementacao,
+# porque os checks de Timeliness e de Reconciliation nao cabiam nas cinco sem
+# distorcao, e foram aprovadas em DQ-03 no fechamento da fase.
+#
+# A regra que as separa: nem tudo que nao esta resolvido esta errado. Um valor
+# sem mapeamento aprovado nao e invalido; e um valor legitimo na origem
+# esperando uma decisao. Confundir os dois faz o sistema tratar fila de
+# trabalho como defeito de dado, e leva a "corrigir" o que nao esta quebrado.
+# -----------------------------------------------------------------------------
+finding_classes:
+  INVALIDO:
+    description: "o valor viola uma regra e esta errado"
+    is_pendency: false
+    example: "salario negativo, desligamento anterior a admissao, chave duplicada"
+  NAO_MAPEADO:
+    description: "valor legitimo na origem, sem mapeamento aprovado no dominio corporativo"
+    is_pendency: true
+    example: "`Mktg` no cadastro legado, sem linha aprovada em ref_department_mapping"
+  DECISAO_PENDENTE:
+    description: "existe decisao de negocio em aberto; nao ha resposta tecnica correta"
+    is_pendency: true
+    example: "`N4` da VivaMarket, que cobre IC4 e M1 da NOVAORA"
+  IDENTIDADE_NAO_RESOLVIDA:
+    description: "a pessoa existe, o vinculo entre sistemas nao foi estabelecido"
+    is_pendency: true
+    example: "pessoa da folha sem contraparte confirmada no HRIS corporativo"
+  AUSENCIA_LEGITIMA:
+    description: "o campo nao existia na epoca, ou nao declarar e opcao da pessoa"
+    is_pendency: true
+    example: "raca e cor antes de jun/2019, ou nao declaracao depois"
+  DIVERGENCIA:
+    approved_in: "DQ-03, fechamento da F5"
+    description: "duas leituras ou duas fontes discordam; nenhuma esta necessariamente errada"
+    is_pendency: false
+    example: "HRIS e folha com headcount diferente, por definicao diferente de ativo"
+  DESATUALIZADO:
+    approved_in: "DQ-03, fechamento da F5"
+    description: "o dado existe na fonte e nao chegou, ou chegou com atraso"
+    is_pendency: true
+    example: "snapshot mensal com buraco de tres meses no meio da serie"
+
+checks:
+
+  # ===========================================================================
+  # COMPLETENESS
+  # ===========================================================================
+  - check_id: DQ_COMP_001
+    name: "employee_id presente no cadastro do HRIS corporativo"
+    dimension: Completeness
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_values_to_not_be_null
+    column: employee_id
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D05]
+    consumed_by_kpis: [headcount, fte, turnover_rate, gender_representation,
+                       black_representation, pcd_representation]
+
+  - check_id: DQ_COMP_002
+    name: "identificador de origem presente na aquisicao"
+    dimension: Completeness
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: VIVAMARKET_LEGACY.employee_master
+    expectation: expect_column_values_to_not_be_null
+    column: COD_FUNC
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D05]
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_COMP_003
+    name: "data de admissao presente no cadastro legado"
+    dimension: Completeness
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_column_values_to_not_be_null
+    column: DT_ADMISSAO
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [headcount, turnover_rate, tenure]
+
+  - check_id: DQ_COMP_004
+    name: "data de admissao presente no HRIS corporativo"
+    dimension: Completeness
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_values_to_not_be_null
+    column: hire_date
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [headcount, turnover_rate, tenure]
+
+  - check_id: DQ_COMP_005
+    name: "matricula presente no cadastro legado"
+    dimension: Completeness
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_column_values_to_not_be_null
+    column: MATRICULA
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_COMP_006
+    name: "employee_id presente em todo snapshot corporativo"
+    dimension: Completeness
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.headcount_snapshot
+    expectation: expect_column_values_to_not_be_null
+    column: employee_id
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [headcount, fte]
+
+  - check_id: DQ_COMP_007
+    name: "departamento presente no cadastro corporativo"
+    dimension: Completeness
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_values_to_not_be_null
+    column: department
+    threshold: {max_failure_rate: 0.02}
+    threshold_basis: provisional
+    detects_defects: [D04]
+    consumed_by_kpis: [headcount, turnover_rate, internal_mobility_rate]
+
+  - check_id: DQ_COMP_008
+    name: "taxa de nao declaracao de raca e cor dentro do esperado"
+    dimension: Completeness
+    severity: WARNING
+    finding_class: AUSENCIA_LEGITIMA
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_values_to_not_be_null
+    column: race_ethnicity
+    threshold: {max_failure_rate: 0.45}
+    threshold_basis: derivado
+    detects_defects: [D02, D03]
+    note: >
+      Nao declarar e opcao legitima, nao erro, e antes de jun/2019 o campo nem
+      existia. O check existe para que a taxa seja acompanhada e reportada
+      junto do KPI, nunca para forcar preenchimento. Limiar derivado das taxas
+      de nao declaracao por pais em generation.yaml.
+    consumed_by_kpis: [black_representation, pcd_representation]
+
+  - check_id: DQ_COMP_009
+    name: "taxa de nao declaracao de deficiencia dentro do esperado"
+    dimension: Completeness
+    severity: WARNING
+    finding_class: AUSENCIA_LEGITIMA
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_values_to_not_be_null
+    column: disability_flag
+    threshold: {max_failure_rate: 0.45}
+    threshold_basis: derivado
+    detects_defects: [D02, D03]
+    consumed_by_kpis: [pcd_representation]
+
+  - check_id: DQ_COMP_010
+    name: "nome presente no cadastro legado"
+    dimension: Completeness
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_column_values_to_not_be_null
+    column: NOME
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    note: "Nome e insumo da resolucao de identidade por nome (ADR-0004)."
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_COMP_011
+    name: "moeda presente na folha"
+    dimension: Completeness
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: PAYROLL_BR.compensation
+    expectation: expect_column_values_to_not_be_null
+    column: moeda
+    threshold: {max_failure_rate: 0.02}
+    threshold_basis: derivado
+    detects_defects: [D14]
+    consumed_by_kpis: [compa_ratio, pay_gap]
+
+  - check_id: DQ_COMP_012
+    name: "centro de custo presente no snapshot da folha"
+    dimension: Completeness
+    severity: WARNING
+    finding_class: INVALIDO
+    dataset: PAYROLL_BR.payroll_headcount_snapshot
+    expectation: expect_column_values_to_not_be_null
+    column: centro_custo
+    threshold: {max_failure_rate: 0.05}
+    threshold_basis: provisional
+    decision: "DQ-01, fechamento da F5"
+    note: >
+      Reprova em 100% e continua reprovando por decisao. A coluna esta
+      declarada em sources.yaml e em standardization.yaml, foi perfilada desde
+      a F3, e nunca carregou um unico valor.
+
+      DQ-01: manter o campo exatamente como veio do RAW. Nao alterar o gerador,
+      nao imputar, nao remover a coluna da declaracao. O check permanece como
+      finding de completude permanente, e o impacto sobre KPIs esta em
+      docs/f5_completeness_gaps.md.
+
+      O que isso custa, em uma linha: o centro de custo EXISTE e esta completo
+      nos dois HRIS, entao recortar headcount por centro de custo continua
+      possivel. O que fica impossivel e atribuir VALOR da folha a centro de
+      custo, porque a chave de atribuicao so existe do lado do HRIS.
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_COMP_013
+    name: "e-mail presente na candidatura"
+    dimension: Completeness
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: ATS_CLOUD.application
+    expectation: expect_column_values_to_not_be_null
+    column: candidate_email
+    threshold: {max_failure_rate: 0.05}
+    threshold_basis: provisional
+    detects_defects: [D15]
+    note: "E-mail e a unica chave de ligacao entre candidato e colaborador."
+    consumed_by_kpis: [time_to_hire, offer_acceptance_rate]
+
+  - check_id: DQ_COMP_014
+    name: "nivel presente no cadastro corporativo"
+    dimension: Completeness
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_values_to_not_be_null
+    column: job_level
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [women_in_leadership, promotion_rate, span_of_control]
+
+  - check_id: DQ_COMP_015
+    name: "departamento nao e marcador de vazio disfarcado de valor"
+    dimension: Completeness
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_column_values_to_not_be_in_set
+    column: DEPARTAMENTO
+    value_set: ["N/A", "NA", "-", "--", ".", "NULL", "SEM INFO", "SEM INFORMACAO", "0", "0000"]
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    note: >
+      Marcador de vazio e pior que nulo: passa em check de completude, entra no
+      DE/PARA e vira categoria no grafico. A padronizacao converte vazio em
+      nulo e nao pode converter `N/A`, porque isso seria inventar significado.
+    consumed_by_kpis: [headcount, turnover_rate]
+
+  # ===========================================================================
+  # VALIDITY
+  # ===========================================================================
+  - check_id: DQ_VALID_001
+    name: "data de admissao convertida com sucesso no legado"
+    dimension: Validity
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_parse_ok
+    column: DT_ADMISSAO
+    threshold: {max_failure_rate: 0.01}
+    threshold_basis: derivado
+    detects_defects: [D07, D08]
+    consumed_by_kpis: [headcount, tenure]
+
+  - check_id: DQ_VALID_002
+    name: "data de admissao da aquisicao convertida com sucesso"
+    dimension: Validity
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: VIVAMARKET_LEGACY.employee_master
+    expectation: expect_parse_ok
+    column: DT_ADM
+    threshold: {max_failure_rate: 0.01}
+    threshold_basis: derivado
+    detects_defects: [D07, D08]
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_VALID_003
+    name: "data de admissao sem ambiguidade entre dia e mes"
+    dimension: Validity
+    severity: WARNING
+    finding_class: DIVERGENCIA
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_not_ambiguous
+    column: DT_ADMISSAO
+    threshold: {max_failure_rate: 1.0}
+    threshold_basis: provisional
+    note: >
+      A conversao usou o formato declarado pelo sistema. O check existe para
+      tornar visivel quantos valores dependem dessa declaracao estar certa, e
+      por isso o limiar e 1.0: ele mede exposicao, nao reprova.
+    consumed_by_kpis: [headcount, tenure]
+
+  - check_id: DQ_VALID_004
+    name: "genero em dominio conhecido apos o DE/PARA, cadastro legado"
+    dimension: Validity
+    severity: CRITICAL
+    finding_class: NAO_MAPEADO
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_column_values_to_be_in_set
+    column: std_gender
+    value_set: [Male, Female, Non-binary, Not informed]
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D01]
+    consumed_by_kpis: [gender_representation, women_in_leadership]
+
+  - check_id: DQ_VALID_005
+    name: "genero em dominio conhecido no HRIS corporativo"
+    dimension: Validity
+    severity: CRITICAL
+    finding_class: NAO_MAPEADO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_values_to_be_in_set
+    column: std_gender
+    value_set: [Male, Female, Non-binary, Not informed]
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D01]
+    consumed_by_kpis: [gender_representation, women_in_leadership]
+
+  - check_id: DQ_VALID_006
+    name: "job level em dominio corporativo apos o DE/PARA, aquisicao"
+    dimension: Validity
+    severity: CRITICAL
+    finding_class: DECISAO_PENDENTE
+    dataset: VIVAMARKET_LEGACY.employee_master
+    expectation: expect_column_values_to_not_equal
+    column: std_job_level
+    value: UNMAPPED
+    threshold: {max_failure_rate: 0.10}
+    threshold_basis: provisional
+    detects_defects: [D12]
+    note: >
+      Reprovado em 13,12% desde a F3, e o limiar nao foi alterado (decisao da
+      Sam, F3 item 1). A classe e DECISAO_PENDENTE e nao NAO_MAPEADO porque
+      `N4` e `N5` nao tem traducao correta: a escala da adquirida cobre dois
+      niveis da NOVAORA por valor. Isso muda o efeito no trust score
+      (ADR-0022): a perda vem de decisao em aberto, nao de dado errado.
+    consumed_by_kpis: [women_in_leadership, promotion_rate, compa_ratio]
+
+  - check_id: DQ_VALID_007
+    name: "job level em dominio corporativo no HRIS corporativo"
+    dimension: Validity
+    severity: CRITICAL
+    finding_class: NAO_MAPEADO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_values_to_be_in_set
+    column: std_job_level
+    value_set: [IC1, IC2, IC3, IC4, IC5, M1, M2, M3, M4, M5, D1, D2, D3]
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [women_in_leadership, promotion_rate, span_of_control,
+                       black_representation, gender_representation]
+
+  - check_id: DQ_VALID_008
+    name: "jornada entre 0 e 1 no cadastro legado"
+    dimension: Validity
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_column_values_to_be_between
+    column: JORNADA__num
+    min: 0.0
+    max: 1.0
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [fte]
+
+  - check_id: DQ_VALID_009
+    name: "texto sem marca de encoding quebrado"
+    dimension: Validity
+    severity: WARNING
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_column_values_to_not_match_regex
+    column: NOME
+    regex: "[ÃÂ][\\x80-\\xBF]"
+    threshold: {max_failure_rate: 0.01}
+    threshold_basis: derivado
+    detects_defects: [D23]
+    note: "Roda DEPOIS da padronizacao: o que sobrar aqui e dano que o reparo nao resolveu."
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_VALID_010
+    name: "salario positivo na folha"
+    dimension: Validity
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: PAYROLL_BR.compensation
+    expectation: expect_column_values_to_be_between
+    column: salario_base__num
+    min: 0.01
+    max: 100000000.0
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [compa_ratio, pay_gap]
+
+  - check_id: DQ_VALID_011
+    name: "FTE entre 0,1 e 1 no cadastro corporativo"
+    dimension: Validity
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_values_to_be_between
+    column: fte__num
+    min: 0.1
+    max: 1.0
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [fte, headcount]
+
+  - check_id: DQ_VALID_012
+    name: "data de admissao dentro do horizonte plausivel"
+    dimension: Validity
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_date_between
+    column: hire_date__iso
+    min_date: "1980-01-01"
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    note: "Sem `max_date` declarado o limite superior e hoje: admissao no futuro e invalida."
+    consumed_by_kpis: [headcount, tenure]
+
+  - check_id: DQ_VALID_013
+    name: "data de desligamento dentro do horizonte plausivel"
+    dimension: Validity
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_date_between
+    column: termination_date__iso
+    min_date: "1980-01-01"
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [turnover_rate, tenure]
+
+  - check_id: DQ_VALID_014
+    name: "e-mail do candidato tem forma de e-mail"
+    dimension: Validity
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: ATS_CLOUD.application
+    expectation: expect_column_values_to_match_regex
+    column: candidate_email
+    regex: "^[^@\\s]+@[^@\\s]+\\.[^@\\s]+$"
+    threshold: {max_failure_rate: 0.05}
+    threshold_basis: provisional
+    detects_defects: [D15]
+    consumed_by_kpis: [time_to_hire, offer_acceptance_rate]
+
+  - check_id: DQ_VALID_015
+    name: "sexo no dominio que o proprio sistema legado declara"
+    dimension: Validity
+    severity: WARNING
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_column_values_to_be_in_set
+    column: SEXO
+    value_set: ["M", "F"]
+    threshold: {max_failure_rate: 0.10}
+    threshold_basis: derivado
+    detects_defects: [D01]
+    note: >
+      `gender_values` de HRIS_LEGACY em sources.yaml declara M e F. Valor fora
+      disso e o sistema violando o proprio dominio declarado, que e diferente
+      de um vocabulario alternativo legitimo: por isso INVALIDO aqui e
+      NAO_MAPEADO no DQ_VALID_004.
+    consumed_by_kpis: [gender_representation]
+
+  - check_id: DQ_VALID_016
+    name: "nota de performance em dominio conhecido apos o DE/PARA"
+    dimension: Validity
+    severity: CRITICAL
+    finding_class: NAO_MAPEADO
+    dataset: HRIS_CORE.performance
+    expectation: expect_column_values_to_be_in_set
+    column: std_performance_rating
+    value_set: ["Below Expectations", "Developing", "Meets Expectations",
+                "Exceeds Expectations", "Outstanding"]
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    note: >
+      O DE/PARA deste campo tem vigencia: a escala virou textual em 2021. O
+      check so passa se a vigencia estiver sendo respeitada (F4).
+    consumed_by_kpis: [performance_distribution, promotion_rate]
+
+  - check_id: DQ_VALID_017
+    name: "salario positivo no cadastro da aquisicao"
+    dimension: Validity
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: VIVAMARKET_LEGACY.employee_master
+    expectation: expect_column_values_to_be_between
+    column: SALARIO__num
+    min: 0.01
+    max: 100000000.0
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [compa_ratio]
+
+  - check_id: DQ_VALID_018
+    name: "nome com comprimento plausivel"
+    dimension: Validity
+    severity: WARNING
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_value_lengths_to_be_between
+    column: full_name
+    min_length: 3
+    max_length: 120
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_VALID_019
+    name: "FTE entre 0,1 e 1 no snapshot corporativo"
+    dimension: Validity
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.headcount_snapshot
+    expectation: expect_column_values_to_be_between
+    column: fte__num
+    min: 0.1
+    max: 1.0
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [fte, headcount]
+
+  - check_id: DQ_VALID_020
+    name: "tipo de contrato em dominio conhecido"
+    dimension: Validity
+    severity: WARNING
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_values_to_be_in_set
+    column: employment_type
+    value_set: [Permanent, Temporary, Intern, Apprentice]
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [headcount, fte]
+
+  - check_id: DQ_VALID_021
+    name: "competencia da folha convertida com sucesso"
+    dimension: Validity
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: PAYROLL_BR.payroll_headcount_snapshot
+    expectation: expect_parse_ok
+    column: dt_competencia
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D07]
+    consumed_by_kpis: [headcount]
+
+  # ===========================================================================
+  # CONSISTENCY
+  # ===========================================================================
+  - check_id: DQ_CONS_001
+    name: "departamento mapeado para o dominio padrao, cadastro legado"
+    dimension: Consistency
+    severity: CRITICAL
+    finding_class: NAO_MAPEADO
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_column_values_to_not_equal
+    column: std_department
+    value: UNMAPPED
+    threshold: {max_failure_rate: 0.05}
+    threshold_basis: provisional
+    detects_defects: [D04]
+    consumed_by_kpis: [turnover_rate, headcount, internal_mobility_rate]
+
+  - check_id: DQ_CONS_002
+    name: "departamento mapeado tambem no snapshot legado"
+    dimension: Consistency
+    severity: CRITICAL
+    finding_class: NAO_MAPEADO
+    dataset: HRIS_LEGACY.headcount_snapshot
+    expectation: expect_column_values_to_not_equal
+    column: std_department
+    value: UNMAPPED
+    threshold: {max_failure_rate: 0.05}
+    threshold_basis: provisional
+    detects_defects: [D04]
+    consumed_by_kpis: [headcount, turnover_rate]
+
+  - check_id: DQ_CONS_003
+    name: "pais mapeado para o dominio padrao, HRIS corporativo"
+    dimension: Consistency
+    severity: CRITICAL
+    finding_class: NAO_MAPEADO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_values_to_not_equal
+    column: std_country
+    value: UNMAPPED
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D19]
+    consumed_by_kpis: [headcount, turnover_rate, compa_ratio,
+                       black_representation, pcd_representation]
+
+  - check_id: DQ_CONS_004
+    name: "desligamento nunca anterior a admissao, corporativo"
+    dimension: Consistency
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_a_to_be_before_b
+    column: hire_date__iso
+    column_b: termination_date__iso
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [turnover_rate, tenure]
+
+  - check_id: DQ_CONS_005
+    name: "desligamento nunca anterior a admissao, legado"
+    dimension: Consistency
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_column_a_to_be_before_b
+    column: DT_ADMISSAO__iso
+    column_b: DT_DEMISSAO__iso
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [turnover_rate, tenure]
+
+  - check_id: DQ_CONS_006
+    name: "departamento da aquisicao mapeado para o dominio padrao"
+    dimension: Consistency
+    severity: CRITICAL
+    finding_class: NAO_MAPEADO
+    dataset: VIVAMARKET_LEGACY.employee_master
+    expectation: expect_column_values_to_not_equal
+    column: std_department
+    value: UNMAPPED
+    threshold: {max_failure_rate: 0.10}
+    threshold_basis: provisional
+    detects_defects: [D04]
+    consumed_by_kpis: [headcount, turnover_rate]
+
+  - check_id: DQ_CONS_007
+    name: "candidatura nunca posterior a admissao"
+    dimension: Consistency
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: ATS_CLOUD.application
+    expectation: expect_column_a_to_be_before_b
+    column: application_date__iso
+    column_b: hire_date__iso
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D16]
+    consumed_by_kpis: [time_to_hire]
+
+  - check_id: DQ_CONS_008
+    name: "situacao do cadastro legado em dominio conhecido"
+    dimension: Consistency
+    severity: WARNING
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_column_values_to_be_in_set
+    column: SITUACAO
+    value_set: [ATIVO, DEMITIDO]
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_CONS_009
+    name: "situacao do cadastro corporativo em dominio conhecido"
+    dimension: Consistency
+    severity: WARNING
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_values_to_be_in_set
+    column: employment_status
+    value_set: [Active, Terminated]
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [headcount, turnover_rate]
+
+  - check_id: DQ_CONS_010
+    name: "requisicao aberta antes da contratacao"
+    dimension: Consistency
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: ATS_CLOUD.requisition
+    expectation: expect_column_a_to_be_before_b
+    column: opening_date__iso
+    column_b: hire_date__iso
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [time_to_fill]
+
+  - check_id: DQ_CONS_011
+    name: "proposta nunca posterior a admissao"
+    dimension: Consistency
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: ATS_CLOUD.application
+    expectation: expect_column_a_to_be_before_b
+    column: offer_date__iso
+    column_b: hire_date__iso
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [time_to_hire, offer_acceptance_rate]
+
+  - check_id: DQ_CONS_012
+    name: "departamento mapeado no snapshot corporativo"
+    dimension: Consistency
+    severity: CRITICAL
+    finding_class: NAO_MAPEADO
+    dataset: HRIS_CORE.headcount_snapshot
+    expectation: expect_column_values_to_not_equal
+    column: std_department
+    value: UNMAPPED
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [headcount, turnover_rate]
+
+  - check_id: DQ_CONS_013
+    name: "departamento da requisicao mapeado para o dominio padrao"
+    dimension: Consistency
+    severity: CRITICAL
+    finding_class: NAO_MAPEADO
+    dataset: ATS_CLOUD.requisition
+    expectation: expect_column_values_to_not_equal
+    column: std_department
+    value: UNMAPPED
+    threshold: {max_failure_rate: 0.05}
+    threshold_basis: provisional
+    consumed_by_kpis: [time_to_fill, hiring_volume]
+
+  - check_id: DQ_CONS_014
+    name: "pais mapeado no snapshot da folha"
+    dimension: Consistency
+    severity: CRITICAL
+    finding_class: NAO_MAPEADO
+    dataset: PAYROLL_BR.payroll_headcount_snapshot
+    expectation: expect_column_values_to_not_equal
+    column: std_country
+    value: UNMAPPED
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D19]
+    consumed_by_kpis: [headcount, compa_ratio]
+
+  - check_id: DQ_CONS_015
+    name: "numero de departamentos distintos dentro do esperado"
+    dimension: Consistency
+    severity: INFO
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_distinct_count_between
+    column: std_department
+    min_distinct: 10
+    max_distinct: 30
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: derivado
+    note: >
+      generation.yaml declara 27 departamentos. Explosao de valores distintos e
+      sintoma de texto livre entrando onde deveria haver dominio.
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_CONS_016
+    name: "moeda da aquisicao coerente com os paises declarados"
+    dimension: Consistency
+    severity: WARNING
+    finding_class: DIVERGENCIA
+    dataset: VIVAMARKET_LEGACY.employee_master
+    expectation: expect_column_values_to_be_in_set
+    column: MOEDA
+    value_set: [BRL, ARS]
+    threshold: {max_failure_rate: 0.05}
+    threshold_basis: derivado
+    detects_defects: [D13]
+    note: "sources.yaml declara countries [BR, AR] para VIVAMARKET_LEGACY."
+    consumed_by_kpis: [compa_ratio, pay_gap]
+
+  # ===========================================================================
+  # UNIQUENESS
+  # ===========================================================================
+  - check_id: DQ_UNIQ_001
+    name: "matricula unica no cadastro legado"
+    dimension: Uniqueness
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_column_values_to_be_unique
+    column: MATRICULA
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D22]
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_UNIQ_002
+    name: "codigo unico no cadastro da aquisicao"
+    dimension: Uniqueness
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: VIVAMARKET_LEGACY.employee_master
+    expectation: expect_column_values_to_be_unique
+    column: COD_FUNC
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D06]
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_UNIQ_003
+    name: "snapshot corporativo sem duplicidade por pessoa e mes"
+    dimension: Uniqueness
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.headcount_snapshot
+    expectation: expect_compound_columns_to_be_unique
+    columns: [employee_id, snapshot_date]
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [headcount, fte]
+
+  - check_id: DQ_UNIQ_004
+    name: "employee_id unico no cadastro corporativo"
+    dimension: Uniqueness
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_values_to_be_unique
+    column: employee_id
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D22]
+    consumed_by_kpis: [headcount, turnover_rate, gender_representation,
+                       black_representation, pcd_representation]
+
+  - check_id: DQ_UNIQ_005
+    name: "requisicao com identificador unico"
+    dimension: Uniqueness
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: ATS_CLOUD.requisition
+    expectation: expect_column_values_to_be_unique
+    column: requisition_id
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [time_to_fill, hiring_volume]
+
+  - check_id: DQ_UNIQ_006
+    name: "snapshot legado sem duplicidade por pessoa e mes"
+    dimension: Uniqueness
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.headcount_snapshot
+    expectation: expect_compound_columns_to_be_unique
+    columns: [MATRICULA, DT_REFERENCIA]
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_UNIQ_007
+    name: "folha sem duplicidade por matricula e competencia"
+    dimension: Uniqueness
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: PAYROLL_BR.payroll_headcount_snapshot
+    expectation: expect_compound_columns_to_be_unique
+    columns: [matricula_folha, dt_competencia]
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_UNIQ_008
+    name: "uma candidatura por pessoa e vaga"
+    dimension: Uniqueness
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: ATS_CLOUD.application
+    expectation: expect_compound_columns_to_be_unique
+    columns: [requisition_id, candidate_id]
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D15]
+    consumed_by_kpis: [offer_acceptance_rate, hiring_volume]
+
+  - check_id: DQ_UNIQ_009
+    name: "uma avaliacao por pessoa e ciclo"
+    dimension: Uniqueness
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.performance
+    expectation: expect_compound_columns_to_be_unique
+    columns: [employee_id, review_cycle]
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [performance_distribution, promotion_rate]
+
+  # ===========================================================================
+  # REFERENTIAL INTEGRITY
+  # ===========================================================================
+  - check_id: DQ_REF_001
+    name: "gestor existe no cadastro corporativo"
+    dimension: "Referential Integrity"
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.employee_master
+    expectation: expect_column_values_to_be_in_reference
+    column: manager_id
+    reference_dataset: HRIS_CORE.employee_master
+    reference_column: employee_id
+    threshold: {max_failure_rate: 0.03}
+    threshold_basis: derivado
+    detects_defects: [D09]
+    consumed_by_kpis: [span_of_control, turnover_rate]
+
+  - check_id: DQ_REF_002
+    name: "gestor do legado existe no universo de identidades conformadas"
+    dimension: "Referential Integrity"
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.employee_master
+    expectation: expect_column_values_to_be_in_reference
+    column: GESTOR
+    reference_dataset: CONFORMED.identity
+    reference_column: employee_id
+    threshold: {max_failure_rate: 0.03}
+    threshold_basis: derivado
+    detects_defects: [D09]
+    note: >
+      A referencia e o universo de identidades conformadas, e nao o cadastro de
+      um sistema so. Usar um dataset isolado produzia 23% de orfaos que nao sao
+      orfaos (achado 2 da F3, ADR-0019).
+    consumed_by_kpis: [span_of_control]
+
+  - check_id: DQ_REF_003
+    name: "pessoa do snapshot existe no cadastro corporativo"
+    dimension: "Referential Integrity"
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.headcount_snapshot
+    expectation: expect_column_values_to_be_in_reference
+    column: employee_id
+    reference_dataset: HRIS_CORE.employee_master
+    reference_column: employee_id
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [headcount, fte]
+
+  - check_id: DQ_REF_004
+    name: "candidatura aponta para requisicao existente"
+    dimension: "Referential Integrity"
+    severity: BLOCKER
+    finding_class: INVALIDO
+    dataset: ATS_CLOUD.application
+    expectation: expect_column_values_to_be_in_reference
+    column: requisition_id
+    reference_dataset: ATS_CLOUD.requisition
+    reference_column: requisition_id
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D17]
+    consumed_by_kpis: [time_to_fill, offer_acceptance_rate]
+
+  - check_id: DQ_REF_005
+    name: "avaliacao aponta para pessoa existente"
+    dimension: "Referential Integrity"
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.performance
+    expectation: expect_column_values_to_be_in_reference
+    column: employee_id
+    reference_dataset: HRIS_CORE.employee_master
+    reference_column: employee_id
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [performance_distribution, promotion_rate]
+
+  - check_id: DQ_REF_006
+    name: "movimentacao aponta para pessoa existente"
+    dimension: "Referential Integrity"
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: HRIS_CORE.movement
+    expectation: expect_column_values_to_be_in_reference
+    column: employee_id
+    reference_dataset: HRIS_CORE.employee_master
+    reference_column: employee_id
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    consumed_by_kpis: [internal_mobility_rate, promotion_rate]
+
+  - check_id: DQ_REF_007
+    name: "pessoa do snapshot legado existe no cadastro legado"
+    dimension: "Referential Integrity"
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.headcount_snapshot
+    expectation: expect_column_values_to_be_in_reference
+    column: MATRICULA
+    reference_dataset: HRIS_LEGACY.employee_master
+    reference_column: MATRICULA
+    threshold: {max_failure_rate: 0.02}
+    threshold_basis: provisional
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_REF_008
+    name: "identidade resolvida para a populacao da aquisicao"
+    dimension: "Referential Integrity"
+    severity: CRITICAL
+    finding_class: IDENTIDADE_NAO_RESOLVIDA
+    dataset: VIVAMARKET_LEGACY.employee_master
+    expectation: expect_identity_resolved
+    column: COD_FUNC
+    identity_system: VIVAMARKET_LEGACY
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D05, D06]
+    note: >
+      Reprova de proposito e com folga. A aquisicao veio sem identificador
+      corporativo, entao nenhum vinculo sai por identificador exato e o
+      ADR-0004 proibe promover match por nome. A consequencia desejada e que os
+      KPIs recortados por essa populacao percam confianca por IDENTIDADE e nao
+      por erro de dado: a distincao aparece no trust score (ADR-0022).
+    consumed_by_kpis: [headcount, turnover_rate, compa_ratio]
+
+  - check_id: DQ_REF_009
+    name: "identidade resolvida para a populacao da folha"
+    dimension: "Referential Integrity"
+    severity: WARNING
+    finding_class: IDENTIDADE_NAO_RESOLVIDA
+    dataset: PAYROLL_BR.payroll_headcount_snapshot
+    expectation: expect_identity_resolved
+    column: matricula_folha
+    identity_system: PAYROLL_BR
+    threshold: {max_failure_rate: 0.65}
+    threshold_basis: derivado
+    note: >
+      `has_enterprise_employee_id: partial` em sources.yaml, preenchido so a
+      partir de 2020. Parte da populacao da folha, alem disso, nao tem
+      contraparte no HRIS por definicao: terceiro e estagiario de agencia. O
+      limiar mede exposicao esperada, nao qualidade.
+    consumed_by_kpis: [compa_ratio, pay_gap]
+
+  - check_id: DQ_REF_010
+    name: "candidato do ATS com identidade resolvida"
+    dimension: "Referential Integrity"
+    severity: WARNING
+    finding_class: IDENTIDADE_NAO_RESOLVIDA
+    dataset: ATS_CLOUD.application
+    expectation: expect_identity_resolved
+    column: candidate_id
+    identity_system: ATS_CLOUD
+    threshold: {max_failure_rate: 0.97}
+    threshold_basis: provisional
+    detects_defects: [D15]
+    note: >
+      A chave e `candidate_id`, nao `employee_id`: o xref indexa o ATS pelo
+      identificador de candidato, porque a maior parte das candidaturas nunca
+      teve employee_id. A primeira versao deste check apontava para
+      `employee_id` e reportava 100% de nao resolvido, numero plausivel para um
+      sistema de identidade fraca e por isso dificil de questionar (achado 2 da
+      F5). A maior parte dos candidatos legitimamente nunca virou colaborador,
+      entao este numero mede exposicao e nao erro.
+    consumed_by_kpis: [time_to_hire, offer_acceptance_rate]
+
+  - check_id: DQ_REF_011
+    name: "evento de remuneracao aponta para matricula conhecida na folha"
+    dimension: "Referential Integrity"
+    severity: CRITICAL
+    finding_class: INVALIDO
+    dataset: PAYROLL_BR.compensation
+    expectation: expect_column_values_to_be_in_reference
+    column: matricula_folha
+    reference_dataset: PAYROLL_BR.payroll_headcount_snapshot
+    reference_column: matricula_folha
+    threshold: {max_failure_rate: 0.02}
+    threshold_basis: provisional
+    consumed_by_kpis: [compa_ratio, pay_gap]
+
+  - check_id: DQ_REF_012
+    name: "gestor da aquisicao existe no universo de identidades"
+    dimension: "Referential Integrity"
+    severity: WARNING
+    finding_class: IDENTIDADE_NAO_RESOLVIDA
+    dataset: VIVAMARKET_LEGACY.employee_master
+    expectation: expect_column_values_to_be_in_reference
+    column: GESTOR
+    reference_dataset: CONFORMED.identity
+    reference_column: employee_id
+    threshold: {max_failure_rate: 1.0}
+    threshold_basis: provisional
+    detects_defects: [D09]
+    note: >
+      sources.yaml diz, na personalidade do sistema, que a planilha tem
+      "gestores que nao existem na NOVAORA". Isso e o mundo, nao defeito de
+      carga, e o check mede o tamanho da exposicao em vez de reprovar.
+    consumed_by_kpis: [span_of_control]
+
+  # ===========================================================================
+  # TIMELINESS
+  # ===========================================================================
+  - check_id: DQ_TIME_001
+    name: "snapshot do HRIS corporativo chega ate o fim da serie"
+    dimension: Timeliness
+    severity: WARNING
+    finding_class: DESATUALIZADO
+    dataset: HRIS_CORE.headcount_snapshot
+    expectation: expect_max_date_after
+    column: snapshot_date__iso
+    min_date: "2026-05-01"
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: derivado
+    detects_defects: [D18]
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_TIME_002
+    name: "folha chega ate o fim da serie"
+    dimension: Timeliness
+    severity: WARNING
+    finding_class: DESATUALIZADO
+    dataset: PAYROLL_BR.payroll_headcount_snapshot
+    expectation: expect_max_date_after
+    column: dt_competencia__iso
+    min_date: "2026-05-01"
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: derivado
+    detects_defects: [D18]
+    consumed_by_kpis: [headcount, compa_ratio]
+
+  - check_id: DQ_TIME_003
+    name: "serie do snapshot corporativo sem buraco de carga"
+    dimension: Timeliness
+    severity: CRITICAL
+    finding_class: DESATUALIZADO
+    dataset: HRIS_CORE.headcount_snapshot
+    expectation: expect_date_gap_below
+    column: snapshot_date__iso
+    max_gap_months: 1
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D18]
+    note: >
+      Data maxima em dia nao prova serie completa: um buraco de tres meses no
+      meio passa sem ser visto por um check de recencia.
+    consumed_by_kpis: [headcount, fte, turnover_rate]
+
+  - check_id: DQ_TIME_004
+    name: "serie da folha sem buraco de carga"
+    dimension: Timeliness
+    severity: CRITICAL
+    finding_class: DESATUALIZADO
+    dataset: PAYROLL_BR.payroll_headcount_snapshot
+    expectation: expect_date_gap_below
+    column: dt_competencia__iso
+    max_gap_months: 1
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: invariante
+    detects_defects: [D18]
+    consumed_by_kpis: [headcount, compa_ratio]
+
+  - check_id: DQ_TIME_005
+    name: "sistema legado nao produz dado depois de desativado"
+    dimension: Timeliness
+    severity: WARNING
+    finding_class: INVALIDO
+    dataset: HRIS_LEGACY.headcount_snapshot
+    expectation: expect_date_between
+    column: DT_REFERENCIA__iso
+    min_date: "2016-01-01"
+    max_date: "2019-12-31"
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: derivado
+    note: "sources.yaml declara `active_to: 2019-11-30` para HRIS_LEGACY."
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_TIME_006
+    name: "ATS chega ate o fim da serie"
+    dimension: Timeliness
+    severity: WARNING
+    finding_class: DESATUALIZADO
+    dataset: ATS_CLOUD.application
+    expectation: expect_max_date_after
+    column: application_date__iso
+    min_date: "2026-04-01"
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: derivado
+    consumed_by_kpis: [hiring_volume, time_to_hire]
+
+  # ===========================================================================
+  # RECONCILIATION
+  # ===========================================================================
+  - check_id: DQ_RECON_001
+    name: "headcount BR do HRIS versus folha, na janela de sobreposicao"
+    dimension: Reconciliation
+    severity: CRITICAL
+    finding_class: DIVERGENCIA
+    dataset: HRIS_CORE.headcount_snapshot
+    filter: {column: std_country, equals: BR}
+    expectation: expect_row_count_ratio_between
+    reference_dataset: PAYROLL_BR.payroll_headcount_snapshot
+    reference_filter: {column: dt_competencia__iso, min: "2019-05-01"}
+    min_ratio: 0.90
+    max_ratio: 1.10
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: derivado
+    detects_defects: [D11]
+    note: >
+      Os dois recortes existem por causa do achado 1 da F5. Sem eles o check
+      comparava a empresa inteira (cinco paises, a partir de 2019) contra a
+      folha brasileira (um pais, a partir de 2016), passava com razao 1,07 e
+      nao estava medindo divergencia nenhuma: estava medindo diferenca de
+      escopo. Com escopo igualado, a divergencia remanescente e a que o
+      `population_rule` da folha em sources.yaml preve, porque a folha inclui
+      terceiro, estagiario e aviso previo e exclui afastado longo.
+    consumed_by_kpis: [headcount, fte]
+
+  - check_id: DQ_RECON_002
+    name: "headcount BR do HRIS versus folha, mes a mes"
+    dimension: Reconciliation
+    severity: CRITICAL
+    finding_class: DIVERGENCIA
+    dataset: HRIS_CORE.headcount_snapshot
+    filter: {column: std_country, equals: BR}
+    expectation: expect_group_count_ratio_between
+    group_column: snapshot_date__iso
+    reference_dataset: PAYROLL_BR.payroll_headcount_snapshot
+    reference_group_column: dt_competencia__iso
+    min_ratio: 0.85
+    max_ratio: 1.15
+    threshold: {max_failure_rate: 0.05}
+    threshold_basis: provisional
+    detects_defects: [D11]
+    note: >
+      Reconciliar so o total esconde duas coisas. Compensacao, primeiro: um mes
+      20% acima e outro 20% abaixo fecham em zero. Diferenca de vigencia,
+      depois: periodo em que so uma das fontes existe entra no total e dilui a
+      razao. Aqui a taxa de falha e a fracao de MESES fora da faixa, e so
+      entram meses que existem dos dois lados.
+    consumed_by_kpis: [headcount, fte]
+
+  - check_id: DQ_RECON_003
+    name: "volume de candidaturas versus tamanho do cadastro"
+    dimension: Reconciliation
+    severity: WARNING
+    finding_class: DIVERGENCIA
+    dataset: ATS_CLOUD.application
+    expectation: expect_row_count_ratio_between
+    reference_dataset: HRIS_CORE.employee_master
+    min_ratio: 0.05
+    max_ratio: 20.0
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: provisional
+    detects_defects: [D17]
+    consumed_by_kpis: [hiring_volume, time_to_hire]
+
+  - check_id: DQ_RECON_004
+    name: "snapshot legado versus cadastro legado"
+    dimension: Reconciliation
+    severity: WARNING
+    finding_class: DIVERGENCIA
+    dataset: HRIS_LEGACY.headcount_snapshot
+    expectation: expect_row_count_ratio_between
+    reference_dataset: HRIS_LEGACY.employee_master
+    min_ratio: 1.0
+    max_ratio: 60.0
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: derivado
+    note: "O snapshot e mensal e o cadastro tem uma linha por pessoa; a razao e o numero de meses."
+    consumed_by_kpis: [headcount]
+
+  - check_id: DQ_RECON_005
+    name: "sobreposicao entre HRIS legado e corporativo durante a migracao"
+    dimension: Reconciliation
+    severity: WARNING
+    finding_class: DIVERGENCIA
+    dataset: HRIS_LEGACY.headcount_snapshot
+    expectation: expect_group_count_ratio_between
+    group_column: DT_REFERENCIA__iso
+    reference_dataset: HRIS_CORE.headcount_snapshot
+    reference_group_column: snapshot_date__iso
+    min_ratio: 0.50
+    max_ratio: 2.00
+    threshold: {max_failure_rate: 0.35}
+    threshold_basis: provisional
+    detects_defects: [D10]
+    note: >
+      Os dois sistemas rodaram em paralelo por sete meses em 2019
+      (`INC_2019_HRIS_MIGRATION`). Nos meses de sobreposicao deveriam descrever
+      a mesma empresa, e o quanto nao descrevem e o custo da migracao.
+    consumed_by_kpis: [headcount, turnover_rate]
+
+  - check_id: DQ_RECON_006
+    name: "eventos de remuneracao versus populacao da folha"
+    dimension: Reconciliation
+    severity: WARNING
+    finding_class: DIVERGENCIA
+    dataset: PAYROLL_BR.compensation
+    expectation: expect_group_count_ratio_between
+    group_column: dt_vigencia__iso
+    reference_dataset: PAYROLL_BR.payroll_headcount_snapshot
+    reference_group_column: dt_competencia__iso
+    min_ratio: 0.0
+    max_ratio: 0.50
+    threshold: {max_failure_rate: 0.10}
+    threshold_basis: provisional
+    note: "Mudanca salarial e evento raro: mais de metade da populacao num mes e anomalia."
+    consumed_by_kpis: [compa_ratio, pay_gap]
+
+  - check_id: DQ_RECON_007
+    name: "requisicoes versus candidaturas, mes a mes"
+    dimension: Reconciliation
+    severity: INFO
+    finding_class: DIVERGENCIA
+    dataset: ATS_CLOUD.requisition
+    expectation: expect_group_count_ratio_between
+    group_column: opening_date__iso
+    reference_dataset: ATS_CLOUD.application
+    reference_group_column: application_date__iso
+    min_ratio: 0.01
+    max_ratio: 1.0
+    threshold: {max_failure_rate: 0.10}
+    threshold_basis: provisional
+    consumed_by_kpis: [hiring_volume, time_to_fill]
+
+  - check_id: DQ_RECON_008
+    name: "volume de avaliacoes versus populacao avaliavel"
+    dimension: Reconciliation
+    severity: INFO
+    finding_class: DIVERGENCIA
+    dataset: HRIS_CORE.performance
+    expectation: expect_row_count_ratio_between
+    reference_dataset: HRIS_CORE.employee_master
+    min_ratio: 0.5
+    max_ratio: 10.0
+    threshold: {max_failure_rate: 0.0}
+    threshold_basis: provisional
+    consumed_by_kpis: [performance_distribution, promotion_rate]

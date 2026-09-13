@@ -1,0 +1,78 @@
+# Contrato do KPI `tenure` (ADR-0011).
+#
+# `depends_on_checks` NAO e digitado: e derivado de `consumed_by_kpis` no
+# catalogo de checks, e o teste test_contrato_de_kpi_bate_com_o_catalogo
+# reprova se as duas pontas divergirem.
+#
+# `minimum_n` e a supressao do ADR-0007: abaixo dele o recorte nao responde,
+# e a recusa e por privacidade, nao por qualidade.
+#
+# --- F7 ---------------------------------------------------------------------
+# `status` e `certification` NAO sao calculaveis a partir do trust score
+# (ADR-0029). CERTIFIED e aprovacao humana registrada, com dono e data.
+# Promover porque o dado melhorou e o mesmo erro que a F4 proibe na promocao
+# automatica de mapeamento.
+#
+# `interpretation_rules` vazio significa INTERPRETACAO BLOQUEADA. Nao preencher
+# para destravar o nivel: sem banda ou meta assinada, nao ha o que interpretar.
+kpi_id: tenure
+name: Tempo de casa
+description: Mediana de tempo desde a admissao.
+business_definition: Mediana de tempo de casa, em meses, das pessoas ativas.
+formula: mediana de (data de referencia menos data de admissao)
+grain: mes x pais x nivel
+population: pessoas ativas com data de admissao conhecida
+period_grain: mes
+period_rollup: ultimo_periodo
+period_coverage:
+  from: 2016-01
+  to: 2026-06
+allowed_dimensions:
+- pais
+- business_unit
+- departamento
+- nivel
+- genero
+- origem
+filters:
+- regra: is_system_of_record = true
+  porque: mesmo motivo do headcount
+exclusions:
+- o_que: pessoas sem hire_date
+  porque: nao ha tempo de casa a medir
+source_tables:
+- dim_calendar
+- dim_employee
+- dim_job_level
+- dim_organization
+- dim_origin
+- fact_headcount_snapshot
+coverage: null
+owner: people-analytics
+version: 1.0.0
+status: DECLARED
+certification:
+  approved_by: null
+  approved_at: null
+  blockers:
+  - motivo: fora do escopo de certificacao da v1.0
+    resolvido_por: decisao de People Analytics
+depends_on_checks:
+- DQ_COMP_003
+- DQ_COMP_004
+- DQ_CONS_004
+- DQ_CONS_005
+- DQ_VALID_001
+- DQ_VALID_003
+- DQ_VALID_012
+- DQ_VALID_013
+depends_on_mappings:
+- ref_country_mapping
+minimum_n: 5
+response_levels:
+  FATO: liberado
+  CONTEXTO: liberado; associacao e sempre nomeada como associacao
+  INTERPRETACAO: bloqueado ate haver regra registrada no contrato, com dono
+  CAUSALIDADE: negado por padrao (ADR-0015); sem estudo registrado nao ha resposta causal
+interpretation_rules: []
+causal_studies: []

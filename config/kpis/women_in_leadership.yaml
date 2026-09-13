@@ -1,0 +1,80 @@
+# Contrato do KPI `women_in_leadership` (ADR-0011).
+#
+# `depends_on_checks` NAO e digitado: e derivado de `consumed_by_kpis` no
+# catalogo de checks, e o teste test_contrato_de_kpi_bate_com_o_catalogo
+# reprova se as duas pontas divergirem.
+#
+# `minimum_n` e a supressao do ADR-0007: abaixo dele o recorte nao responde,
+# e a recusa e por privacidade, nao por qualidade.
+#
+# --- F7 ---------------------------------------------------------------------
+# `status` e `certification` NAO sao calculaveis a partir do trust score
+# (ADR-0029). CERTIFIED e aprovacao humana registrada, com dono e data.
+# Promover porque o dado melhorou e o mesmo erro que a F4 proibe na promocao
+# automatica de mapeamento.
+#
+# `interpretation_rules` vazio significa INTERPRETACAO BLOQUEADA. Nao preencher
+# para destravar o nivel: sem banda ou meta assinada, nao ha o que interpretar.
+kpi_id: women_in_leadership
+name: Mulheres em lideranca
+description: Share de mulheres nos niveis de lideranca.
+business_definition: Share de mulheres entre as pessoas em niveis de lideranca, no fim do
+  periodo.
+formula: pessoas com genero Female e nivel em M1..D3 sobre total de lideranca
+grain: mes x pais
+population: pessoas em nivel de lideranca que declararam genero
+period_grain: mes
+period_rollup: ultimo_periodo
+period_coverage:
+  from: 2016-01
+  to: 2026-06
+allowed_dimensions:
+- pais
+- business_unit
+- departamento
+- nivel
+- origem
+filters:
+- regra: dim_job_level.is_leadership = true
+  porque: a definicao de lideranca e do contrato, nao da consulta
+- regra: is_system_of_record = true
+  porque: mesmo motivo do headcount
+exclusions:
+- o_que: genero nao declarado (membro -4 e 'Not informed')
+  porque: sai do numerador E do denominador, e a taxa de nao declaracao e reportada junto;
+    penalizar a nao declaracao no trust continua proibido (ADR-0022)
+- o_que: nivel UNMAPPED e DECISAO_PENDENTE
+  porque: N4 e N5 da VivaMarket seguem sem mapeamento aprovado (F4)
+source_tables:
+- dim_calendar
+- dim_employee
+- dim_job_level
+- dim_organization
+- dim_origin
+- dim_source_system
+- fact_headcount_snapshot
+coverage: null
+owner: people-analytics
+version: 1.0.0
+status: CERTIFIED
+certification:
+  approved_by: people-analytics
+  approved_at: '2026-09-12'
+  blockers: []
+depends_on_checks:
+- DQ_COMP_014
+- DQ_VALID_004
+- DQ_VALID_005
+- DQ_VALID_006
+- DQ_VALID_007
+depends_on_mappings:
+- ref_gender_mapping
+- ref_job_level_mapping
+minimum_n: 20
+response_levels:
+  FATO: liberado
+  CONTEXTO: liberado; associacao e sempre nomeada como associacao
+  INTERPRETACAO: bloqueado ate haver regra registrada no contrato, com dono
+  CAUSALIDADE: negado por padrao (ADR-0015); sem estudo registrado nao ha resposta causal
+interpretation_rules: []
+causal_studies: []

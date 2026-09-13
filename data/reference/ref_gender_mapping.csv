@@ -1,0 +1,9 @@
+mapping_id,source_system,source_field,source_value,standard_value,mapping_status,confidence_score,valid_from,valid_to,approved_by,approved_at
+REF_GENDER_MAPPING-0001,*,gender,F,Female,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_GENDER_MAPPING-0002,*,gender,FEM,Female,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_GENDER_MAPPING-0003,*,gender,Female,Female,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_GENDER_MAPPING-0004,*,gender,M,Male,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_GENDER_MAPPING-0005,*,gender,MASC,Male,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_GENDER_MAPPING-0006,*,gender,Male,Male,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_GENDER_MAPPING-0007,*,gender,Non-binary,Non-binary,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_GENDER_MAPPING-0008,*,gender,Not informed,Not informed,APPROVED,1.0,,,people-analytics,2026-09-11

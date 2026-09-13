@@ -1,0 +1,1001 @@
+employee_id,snapshot_date,active_flag,fte,country,business_unit,department,sub_department,job_family,job_level,job_level_group,location,manager_id,employment_type,org_key,segment,origin
+1,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region South,Store Operations,IC1,Entry,STORE-BR-036,5,Permanent,54,retail_ops,initial
+2,2016-01-31,1,1.0,BR,Supply Chain,Distribution Centers,Inventory,Warehouse,IC3,Professional,DC-BR-005,267,Permanent,62,supply,initial
+3,2016-01-31,1,1.0,BR,Supply Chain,Distribution Centers,Inventory,Warehouse,IC1,Entry,DC-BR-005,48,Temporary,62,supply,initial
+4,2016-01-31,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC2,Professional,SITE-BR-003,171,Permanent,69,customer,initial
+5,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region North,Store Operations,IC2,Professional,STORE-BR-029,34,Permanent,52,retail_ops,initial
+6,2016-01-31,1,1.0,BR,Digital,Product,Product Ops,Product Management,IC3,Professional,HQ-BR-001,192,Temporary,33,digital,initial
+7,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-002,144,Permanent,51,retail_ops,initial
+8,2016-01-31,1,1.0,BR,Digital,Digital Marketing,SEO,Marketing,M2,Manager,HQ-BR-001,121,Temporary,43,digital,initial
+9,2016-01-31,1,1.0,BR,Supply Chain,Planning,Demand Planning,Logistics,IC3,Professional,DC-BR-003,257,Permanent,65,supply,initial
+10,2016-01-31,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,M3,Senior Manager,DC-BR-003,212,Permanent,63,supply,initial
+11,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC2,Professional,STORE-BR-029,273,Permanent,55,retail_ops,initial
+12,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC2,Professional,STORE-BR-034,34,Permanent,54,retail_ops,initial
+13,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-005,7,Permanent,50,retail_ops,initial
+14,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,M3,Senior Manager,STORE-BR-039,212,Permanent,55,retail_ops,initial
+15,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-036,24,Permanent,50,retail_ops,initial
+16,2016-01-31,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Customer Support,IC1,Entry,SITE-BR-002,90,Permanent,68,customer,initial
+17,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-015,26,Permanent,50,retail_ops,initial
+18,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,General Management,IC2,Professional,STORE-BR-016,34,Permanent,53,retail_ops,initial
+19,2016-01-31,1,1.0,BR,Supply Chain,Logistics,Reverse Logistics,Logistics,IC2,Professional,DC-BR-001,260,Permanent,59,supply,initial
+20,2016-01-31,1,1.0,BR,Supply Chain,Distribution Centers,Outbound,Warehouse,IC1,Entry,DC-BR-001,48,Permanent,61,supply,initial
+21,2016-01-31,1,1.0,BR,Retail,Store Operations,Stockroom,Store Operations,IC2,Professional,STORE-BR-006,136,Permanent,48,retail_ops,initial
+22,2016-01-31,1,1.0,BR,Corporate,Legal,Corporate Legal,Legal,IC1,Entry,HQ-BR-001,55,Temporary,10,corporate,initial
+23,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-020,42,Temporary,50,retail_ops,initial
+24,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-012,144,Temporary,50,retail_ops,initial
+25,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-012,11,Permanent,56,retail_ops,initial
+26,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-013,144,Permanent,50,retail_ops,initial
+27,2016-01-31,1,1.0,BR,Corporate,Finance,FP&A,Finance,IC3,Professional,HQ-BR-001,29,Permanent,9,corporate,initial
+28,2016-01-31,1,1.0,BR,Corporate,Finance,FP&A,Finance,IC1,Entry,HQ-BR-001,89,Permanent,9,corporate,initial
+29,2016-01-31,1,1.0,BR,Corporate,Strategy,Corporate Strategy,Strategy,IC4,Senior Professional,HQ-BR-001,193,Permanent,17,corporate,initial
+30,2016-01-31,1,1.0,BR,Customer,Customer Operations,Returns,Customer Support,IC1,Entry,SITE-BR-002,165,Permanent,73,customer,initial
+31,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC2,Professional,STORE-BR-016,34,Permanent,53,retail_ops,initial
+32,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC2,Professional,STORE-BR-040,294,Permanent,55,retail_ops,initial
+33,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-036,61,Permanent,51,retail_ops,initial
+34,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,General Management,IC3,Professional,STORE-BR-002,98,Permanent,53,retail_ops,initial
+35,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC2,Professional,STORE-BR-037,34,Permanent,53,retail_ops,initial
+36,2016-01-31,1,1.0,BR,Supply Chain,Distribution Centers,Outbound,Warehouse,IC1,Entry,DC-BR-005,48,Permanent,61,supply,initial
+37,2016-01-31,1,0.5,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-029,32,Permanent,55,retail_ops,initial
+38,2016-01-31,1,1.0,BR,Supply Chain,Logistics,Transportation,Logistics,IC2,Professional,DC-BR-005,260,Permanent,57,supply,initial
+39,2016-01-31,1,1.0,BR,Customer,Customer Service,Chat,Customer Support,IC1,Entry,SITE-BR-002,4,Intern,70,customer,initial
+40,2016-01-31,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC1,Entry,SITE-BR-003,288,Permanent,73,customer,initial
+41,2016-01-31,1,0.5,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-010,71,Permanent,56,retail_ops,initial
+42,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-027,144,Permanent,51,retail_ops,initial
+43,2016-01-31,1,1.0,BR,Supply Chain,Distribution Centers,Inbound,Warehouse,IC1,Entry,DC-BR-001,48,Permanent,60,supply,initial
+44,2016-01-31,1,0.5,BR,Retail,Regional Operations,Region North,General Management,IC1,Entry,STORE-BR-004,12,Permanent,52,retail_ops,initial
+45,2016-01-31,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC4,Senior Professional,HQ-BR-001,187,Permanent,20,corporate,initial
+46,2016-01-31,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,IC1,Entry,DC-BR-005,204,Temporary,63,supply,initial
+47,2016-01-31,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC1,Entry,HQ-BR-001,88,Permanent,21,corporate,initial
+48,2016-01-31,1,1.0,BR,Supply Chain,Distribution Centers,Inventory,Warehouse,IC2,Professional,DC-BR-003,2,Permanent,62,supply,initial
+49,2016-01-31,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,IC1,Entry,DC-BR-003,302,Permanent,63,supply,initial
+50,2016-01-31,1,1.0,BR,Corporate,Data & Analytics,Business Intelligence,Data,IC1,Entry,HQ-BR-001,202,Permanent,25,corporate,initial
+51,2016-01-31,1,1.0,BR,Customer,Customer Service,Chat,Customer Support,IC1,Entry,SITE-BR-003,53,Permanent,70,customer,initial
+52,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-007,108,Permanent,56,retail_ops,initial
+53,2016-01-31,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC2,Professional,SITE-BR-004,171,Apprentice,69,customer,initial
+54,2016-01-31,1,1.0,BR,Corporate,People,Learning & Development,People,IC1,Entry,HQ-BR-001,113,Permanent,5,corporate,initial
+55,2016-01-31,1,1.0,BR,Corporate,Legal,Corporate Legal,Legal,IC2,Professional,HQ-BR-001,119,Permanent,10,corporate,initial
+56,2016-01-31,1,0.5,BR,Retail,Regional Operations,Region North,General Management,IC1,Entry,STORE-BR-022,18,Temporary,52,retail_ops,initial
+57,2016-01-31,1,1.0,BR,Corporate,People,People Analytics,People,IC1,Entry,HQ-BR-001,156,Permanent,4,corporate,initial
+59,2016-01-31,1,1.0,BR,Corporate,Strategy,Corporate Strategy,Strategy,IC1,Entry,HQ-BR-001,162,Permanent,17,corporate,initial
+60,2016-01-31,1,1.0,BR,Corporate,Marketing,Content,Marketing,IC4,Senior Professional,HQ-BR-001,321,Permanent,16,corporate,initial
+61,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-042,144,Permanent,51,retail_ops,initial
+62,2016-01-31,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,D1,Director,HQ-BR-001,,Permanent,20,corporate,initial
+63,2016-01-31,1,1.0,BR,Supply Chain,Distribution Centers,Inbound,Warehouse,IC1,Entry,DC-BR-006,48,Permanent,60,supply,initial
+64,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-044,139,Permanent,51,retail_ops,initial
+65,2016-01-31,1,0.5,BR,Retail,Sales,Floor Sales,Sales,M2,Manager,STORE-BR-014,14,Permanent,50,retail_ops,initial
+66,2016-01-31,1,1.0,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-041,21,Permanent,46,retail_ops,initial
+68,2016-01-31,1,1.0,BR,Retail,Store Operations,Stockroom,Store Operations,IC1,Entry,STORE-BR-030,77,Temporary,48,retail_ops,initial
+69,2016-01-31,1,1.0,BR,Supply Chain,Logistics,Transportation,Logistics,IC1,Entry,DC-BR-006,19,Permanent,57,supply,initial
+70,2016-01-31,1,1.0,BR,Digital,Data,Data Science,Data,M1,Manager,HQ-BR-001,8,Permanent,35,digital,initial
+71,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC2,Professional,STORE-BR-031,273,Permanent,56,retail_ops,initial
+72,2016-01-31,1,1.0,BR,Corporate,Risk,Internal Audit,Risk & Compliance,IC1,Entry,HQ-BR-001,73,Permanent,22,corporate,initial
+73,2016-01-31,1,1.0,BR,Corporate,Risk,Fraud,Risk & Compliance,IC2,Professional,HQ-BR-001,261,Permanent,24,corporate,initial
+74,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-026,160,Permanent,51,retail_ops,initial
+75,2016-01-31,1,1.0,BR,Corporate,Legal,Compliance,Legal,IC1,Entry,HQ-BR-001,147,Permanent,11,corporate,initial
+76,2016-01-31,1,1.0,BR,Corporate,People,People Analytics,People,IC1,Entry,HQ-BR-001,200,Permanent,4,corporate,initial
+77,2016-01-31,1,1.0,BR,Retail,Store Operations,Cashier,Store Operations,IC2,Professional,STORE-BR-007,136,Permanent,47,retail_ops,initial
+78,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-022,112,Permanent,55,retail_ops,initial
+79,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,M1,Manager,STORE-BR-028,65,Permanent,50,retail_ops,initial
+80,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC1,Entry,STORE-BR-036,31,Permanent,54,retail_ops,initial
+81,2016-01-31,1,1.0,BR,Digital,Product,Product Ops,Product Management,IC3,Professional,HQ-BR-001,192,Permanent,33,digital,initial
+82,2016-01-31,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC4,Senior Professional,HQ-BR-001,187,Permanent,20,corporate,initial
+83,2016-01-31,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-001,242,Permanent,71,customer,initial
+84,2016-01-31,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC1,Entry,DC-BR-001,304,Permanent,64,supply,initial
+85,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-038,7,Permanent,51,retail_ops,initial
+86,2016-01-31,1,1.0,BR,Digital,Engineering,Frontend,Software Engineering,IC4,Senior Professional,HQ-BR-001,177,Permanent,29,digital,initial
+87,2016-01-31,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Design,IC1,Entry,SITE-BR-003,329,Permanent,68,customer,initial
+88,2016-01-31,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC2,Professional,HQ-BR-001,138,Permanent,21,corporate,initial
+89,2016-01-31,1,1.0,BR,Corporate,Finance,Treasury,Finance,IC2,Professional,HQ-BR-001,27,Permanent,7,corporate,initial
+90,2016-01-31,1,1.0,BR,Customer,Customer Experience,CX Design,Design,IC2,Professional,SITE-BR-001,194,Permanent,67,customer,initial
+91,2016-01-31,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-043,127,Permanent,46,retail_ops,initial
+92,2016-01-31,1,1.0,BR,Corporate,Data & Analytics,Business Intelligence,Data,IC4,Senior Professional,HQ-BR-001,196,Permanent,25,corporate,initial
+93,2016-01-31,1,0.75,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-003,4,Permanent,71,customer,initial
+94,2016-01-31,1,0.5,BR,Retail,Store Operations,Stockroom,Store Operations,IC1,Entry,STORE-BR-022,316,Permanent,48,retail_ops,initial
+95,2016-01-31,1,0.75,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC1,Entry,STORE-BR-007,111,Permanent,53,retail_ops,initial
+96,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-043,142,Permanent,55,retail_ops,initial
+97,2016-01-31,1,1.0,BR,Digital,Engineering,Mobile,Software Engineering,IC1,Entry,HQ-BR-001,214,Permanent,30,digital,initial
+98,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,M1,Manager,STORE-BR-010,65,Permanent,53,retail_ops,initial
+100,2016-01-31,1,1.0,BR,Corporate,Finance,Treasury,Finance,IC2,Professional,HQ-BR-001,254,Permanent,7,corporate,initial
+101,2016-01-31,1,1.0,BR,Corporate,Finance,FP&A,Finance,IC1,Entry,HQ-BR-001,100,Permanent,9,corporate,initial
+102,2016-01-31,1,1.0,BR,Customer,Customer Experience,CX Design,Design,IC1,Entry,SITE-BR-004,90,Permanent,67,customer,initial
+103,2016-01-31,1,1.0,BR,Customer,Customer Operations,Order Support,Logistics,IC1,Entry,SITE-BR-003,165,Permanent,72,customer,initial
+104,2016-01-31,1,1.0,BR,Customer,Customer Experience,CX Design,Design,IC1,Entry,SITE-BR-004,90,Permanent,67,customer,initial
+105,2016-01-31,1,1.0,BR,Corporate,Finance,Treasury,Finance,IC1,Entry,HQ-BR-001,296,Permanent,7,corporate,initial
+106,2016-01-31,1,1.0,BR,Digital,E-commerce,Storefront,Product Management,IC2,Professional,HQ-BR-001,129,Temporary,40,digital,initial
+107,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-005,161,Permanent,50,retail_ops,initial
+108,2016-01-31,1,0.5,BR,Retail,Visual Merchandising,Merchandising,Design,IC2,Professional,STORE-BR-028,294,Permanent,56,retail_ops,initial
+109,2016-01-31,1,1.0,BR,Supply Chain,Distribution Centers,Inventory,Warehouse,IC1,Entry,DC-BR-001,48,Permanent,62,supply,initial
+110,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-007,201,Permanent,51,retail_ops,initial
+111,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region North,Store Operations,IC2,Professional,STORE-BR-038,34,Permanent,52,retail_ops,initial
+112,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC2,Professional,STORE-BR-038,273,Permanent,56,retail_ops,initial
+113,2016-01-31,1,1.0,BR,Corporate,People,HR Business Partner,People,IC2,Professional,HQ-BR-001,183,Permanent,2,corporate,initial
+114,2016-01-31,1,0.5,BR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-BR-001,53,Permanent,69,customer,initial
+115,2016-01-31,1,1.0,BR,Digital,UX,Product Design,Design,IC2,Professional,HQ-BR-001,178,Permanent,37,digital,initial
+116,2016-01-31,1,1.0,BR,Digital,Product,Product Management,Product Management,IC2,Professional,HQ-BR-001,6,Permanent,32,digital,initial
+117,2016-01-31,1,1.0,BR,Corporate,Risk,Fraud,Risk & Compliance,IC2,Professional,HQ-BR-001,261,Permanent,24,corporate,initial
+118,2016-01-31,1,1.0,BR,Digital,Product,Product Management,Product Management,IC2,Professional,HQ-BR-001,81,Permanent,32,digital,initial
+119,2016-01-31,1,1.0,BR,Corporate,Legal,Labor Legal,Legal,IC3,Professional,HQ-BR-001,196,Permanent,12,corporate,initial
+120,2016-01-31,1,1.0,BR,Digital,Data,Data Engineering,Data,IC3,Professional,HQ-BR-001,153,Permanent,34,digital,initial
+121,2016-01-31,1,0.5,BR,Digital,E-commerce,Catalog,Product Management,M3,Senior Manager,HQ-BR-001,212,Permanent,42,digital,initial
+122,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC1,Entry,STORE-BR-001,174,Apprentice,54,retail_ops,initial
+123,2016-01-31,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-002,242,Permanent,71,customer,initial
+124,2016-01-31,1,1.0,BR,Corporate,Marketing,Performance,Marketing,IC1,Entry,HQ-BR-001,60,Permanent,14,corporate,initial
+125,2016-01-31,1,1.0,BR,Supply Chain,Planning,Demand Planning,Data,IC2,Professional,DC-BR-002,9,Permanent,65,supply,initial
+126,2016-01-31,1,1.0,BR,Supply Chain,Logistics,Last Mile,Logistics,IC1,Entry,DC-BR-001,38,Permanent,58,supply,initial
+127,2016-01-31,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC2,Professional,STORE-BR-022,136,Permanent,46,retail_ops,initial
+128,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-022,326,Permanent,51,retail_ops,initial
+129,2016-01-31,1,1.0,BR,Digital,E-commerce,Checkout,Product Management,M1,Manager,HQ-BR-001,281,Permanent,41,digital,initial
+130,2016-01-31,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Design,IC1,Entry,SITE-BR-002,329,Permanent,68,customer,initial
+131,2016-01-31,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-022,189,Temporary,46,retail_ops,initial
+132,2016-01-31,1,1.0,BR,Customer,Customer Operations,Order Support,Logistics,IC1,Entry,SITE-BR-003,288,Permanent,72,customer,initial
+133,2016-01-31,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Design,IC1,Entry,SITE-BR-002,90,Permanent,68,customer,initial
+134,2016-01-31,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-BR-004,4,Permanent,69,customer,initial
+135,2016-01-31,1,1.0,BR,Digital,Data,Analytics Engineering,Data,IC2,Professional,HQ-BR-001,120,Permanent,36,digital,initial
+136,2016-01-31,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC3,Professional,STORE-BR-015,219,Permanent,49,retail_ops,initial
+137,2016-01-31,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC1,Entry,HQ-BR-001,166,Permanent,21,corporate,initial
+138,2016-01-31,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC3,Professional,HQ-BR-001,45,Permanent,21,corporate,initial
+139,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-014,144,Permanent,51,retail_ops,initial
+140,2016-01-31,1,0.5,BR,Retail,Visual Merchandising,Store Design,Store Operations,M1,Manager,STORE-BR-038,14,Permanent,55,retail_ops,initial
+141,2016-01-31,1,0.5,BR,Retail,Sales,Key Accounts,Sales,M1,Manager,STORE-BR-018,65,Permanent,51,retail_ops,initial
+142,2016-01-31,1,0.75,BR,Retail,Visual Merchandising,Store Design,Design,IC2,Professional,STORE-BR-025,294,Permanent,55,retail_ops,initial
+143,2016-01-31,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC1,Entry,DC-BR-003,204,Permanent,64,supply,initial
+144,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC3,Professional,STORE-BR-018,79,Permanent,51,retail_ops,initial
+145,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-042,170,Permanent,56,retail_ops,initial
+146,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region North,General Management,IC2,Professional,STORE-BR-036,34,Intern,52,retail_ops,initial
+147,2016-01-31,1,1.0,BR,Corporate,Legal,Corporate Legal,Legal,IC2,Professional,HQ-BR-001,119,Permanent,10,corporate,initial
+148,2016-01-31,1,1.0,BR,Supply Chain,Planning,Supply Planning,Data,IC1,Entry,DC-BR-003,125,Permanent,66,supply,initial
+149,2016-01-31,1,1.0,BR,Supply Chain,Distribution Centers,Outbound,Warehouse,IC1,Entry,DC-BR-006,48,Permanent,61,supply,initial
+150,2016-01-31,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-004,53,Permanent,71,customer,initial
+151,2016-01-31,1,1.0,BR,Retail,Store Operations,Stockroom,Store Operations,IC1,Entry,STORE-BR-018,190,Temporary,48,retail_ops,initial
+152,2016-01-31,1,1.0,BR,Digital,UX,Product Design,Design,IC2,Professional,HQ-BR-001,205,Permanent,37,digital,initial
+153,2016-01-31,1,1.0,BR,Digital,Data,Analytics Engineering,Data,IC4,Senior Professional,HQ-BR-001,314,Intern,36,digital,initial
+154,2016-01-31,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-BR-004,242,Permanent,69,customer,initial
+155,2016-01-31,1,1.0,BR,Corporate,Legal,Corporate Legal,Legal,IC2,Professional,HQ-BR-001,119,Permanent,10,corporate,initial
+156,2016-01-31,1,1.0,BR,Corporate,People,Talent Acquisition,People,IC2,Professional,HQ-BR-001,278,Permanent,1,corporate,initial
+158,2016-01-31,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC1,Entry,DC-BR-004,302,Permanent,64,supply,initial
+159,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-005,223,Temporary,56,retail_ops,initial
+160,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-016,144,Permanent,51,retail_ops,initial
+161,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-013,144,Permanent,50,retail_ops,initial
+162,2016-01-31,1,1.0,BR,Corporate,Strategy,PMO,Strategy,IC4,Senior Professional,HQ-BR-001,193,Permanent,19,corporate,initial
+163,2016-01-31,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC1,Entry,SITE-BR-004,165,Permanent,73,customer,initial
+165,2016-01-31,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC2,Professional,SITE-BR-001,252,Permanent,73,customer,initial
+166,2016-01-31,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC2,Professional,HQ-BR-001,243,Permanent,20,corporate,initial
+167,2016-01-31,1,1.0,BR,Corporate,Risk,Risk Management,Risk & Compliance,IC1,Entry,HQ-BR-001,117,Permanent,23,corporate,initial
+168,2016-01-31,1,1.0,BR,Digital,Digital Marketing,Paid Media,Marketing,IC5,Senior Professional,HQ-BR-001,8,Permanent,44,digital,initial
+169,2016-01-31,1,0.5,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-023,238,Apprentice,55,retail_ops,initial
+170,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC2,Professional,STORE-BR-016,273,Permanent,55,retail_ops,initial
+171,2016-01-31,1,1.0,BR,Customer,Customer Service,Chat,Customer Support,IC4,Senior Professional,SITE-BR-002,194,Permanent,70,customer,initial
+172,2016-01-31,1,1.0,BR,Digital,Digital Marketing,Paid Media,Marketing,IC2,Professional,HQ-BR-001,168,Permanent,44,digital,initial
+173,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-037,11,Permanent,55,retail_ops,initial
+174,2016-01-31,1,0.5,BR,Retail,Regional Operations,Region South,Store Operations,IC2,Professional,STORE-BR-007,34,Permanent,54,retail_ops,initial
+175,2016-01-31,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC2,Professional,HQ-BR-001,286,Apprentice,20,corporate,initial
+176,2016-01-31,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Customer Support,IC1,Entry,SITE-BR-002,329,Permanent,68,customer,initial
+177,2016-01-31,1,1.0,BR,Digital,UX,Product Design,Design,IC5,Senior Professional,HQ-BR-001,129,Permanent,37,digital,initial
+178,2016-01-31,1,1.0,BR,Digital,UX,Product Design,Design,IC4,Senior Professional,HQ-BR-001,177,Permanent,37,digital,initial
+179,2016-01-31,1,1.0,BR,Supply Chain,Planning,Demand Planning,Data,IC1,Entry,DC-BR-003,125,Permanent,65,supply,initial
+181,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Store Operations,M1,Manager,STORE-BR-022,14,Intern,56,retail_ops,initial
+182,2016-01-31,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC1,Entry,STORE-BR-031,221,Permanent,49,retail_ops,initial
+183,2016-01-31,1,1.0,BR,Corporate,People,Talent Acquisition,People,IC3,Professional,HQ-BR-001,327,Permanent,1,corporate,initial
+185,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-004,32,Permanent,56,retail_ops,initial
+186,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-013,26,Permanent,50,retail_ops,initial
+187,2016-01-31,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC5,Senior Professional,HQ-BR-001,62,Permanent,21,corporate,initial
+188,2016-01-31,1,1.0,BR,Supply Chain,Logistics,Reverse Logistics,Logistics,IC1,Entry,DC-BR-002,276,Permanent,59,supply,initial
+189,2016-01-31,1,1.0,BR,Retail,Store Operations,Cashier,Store Operations,IC2,Professional,STORE-BR-011,136,Apprentice,47,retail_ops,initial
+190,2016-01-31,1,0.5,BR,Retail,Store Operations,Cashier,Store Operations,IC2,Professional,STORE-BR-025,136,Permanent,47,retail_ops,initial
+191,2016-01-31,1,0.75,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-042,42,Temporary,50,retail_ops,initial
+192,2016-01-31,1,1.0,BR,Digital,Product,Product Management,Product Management,IC5,Senior Professional,HQ-BR-001,310,Permanent,32,digital,initial
+193,2016-01-31,1,1.0,BR,Corporate,Strategy,M&A,Strategy,M1,Manager,HQ-BR-001,261,Permanent,18,corporate,initial
+194,2016-01-31,1,1.0,BR,Customer,Customer Experience,CX Design,Customer Support,M1,Manager,SITE-BR-004,246,Permanent,67,customer,initial
+195,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-037,71,Permanent,56,retail_ops,initial
+196,2016-01-31,1,1.0,BR,Corporate,Legal,Compliance,Legal,IC5,Senior Professional,HQ-BR-001,307,Permanent,11,corporate,initial
+197,2016-01-31,1,1.0,BR,Digital,Data,Analytics Engineering,Data,IC3,Professional,HQ-BR-001,153,Permanent,36,digital,initial
+198,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC1,Entry,STORE-BR-034,239,Permanent,54,retail_ops,initial
+199,2016-01-31,1,1.0,BR,Digital,E-commerce,Checkout,Software Engineering,IC2,Professional,HQ-BR-001,310,Permanent,41,digital,initial
+200,2016-01-31,1,1.0,BR,Corporate,People,People Analytics,People,IC2,Professional,HQ-BR-001,298,Temporary,4,corporate,initial
+201,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-005,144,Permanent,50,retail_ops,initial
+202,2016-01-31,1,1.0,BR,Corporate,Data & Analytics,Data Governance,Data,IC3,Professional,HQ-BR-001,92,Permanent,26,corporate,initial
+203,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-028,108,Permanent,55,retail_ops,initial
+204,2016-01-31,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,IC2,Professional,DC-BR-002,319,Permanent,63,supply,initial
+205,2016-01-31,1,1.0,BR,Digital,UX,Design System,Design,IC4,Senior Professional,HQ-BR-001,177,Permanent,39,digital,initial
+206,2016-01-31,1,1.0,BR,Supply Chain,Logistics,Reverse Logistics,Logistics,IC1,Entry,DC-BR-002,277,Permanent,59,supply,initial
+207,2016-01-31,1,0.5,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-043,112,Permanent,55,retail_ops,initial
+208,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region North,Store Operations,M1,Manager,STORE-BR-031,65,Permanent,52,retail_ops,initial
+209,2016-01-31,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC1,Entry,STORE-BR-007,280,Permanent,49,retail_ops,initial
+210,2016-01-31,1,1.0,BR,Digital,Engineering,Platform,Software Engineering,IC3,Professional,HQ-BR-001,86,Permanent,27,digital,initial
+211,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC1,Entry,STORE-BR-014,251,Permanent,53,retail_ops,initial
+212,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,M4,Senior Manager,STORE-BR-001,309,Permanent,56,retail_ops,initial
+213,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region North,General Management,IC1,Entry,STORE-BR-013,270,Permanent,52,retail_ops,initial
+214,2016-01-31,1,1.0,BR,Digital,Engineering,SRE,Software Engineering,IC2,Professional,HQ-BR-001,210,Permanent,31,digital,initial
+215,2016-01-31,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC2,Professional,HQ-BR-001,138,Permanent,20,corporate,initial
+216,2016-01-31,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Design,IC1,Entry,SITE-BR-001,90,Permanent,68,customer,initial
+217,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-030,142,Permanent,56,retail_ops,initial
+218,2016-01-31,1,1.0,BR,Corporate,Strategy,PMO,Strategy,IC4,Senior Professional,HQ-BR-001,193,Permanent,19,corporate,initial
+219,2016-01-31,1,1.0,BR,Retail,Store Operations,Store Management,Store Operations,M1,Manager,STORE-BR-010,65,Permanent,46,retail_ops,initial
+220,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region South,Store Operations,IC1,Entry,STORE-BR-025,282,Permanent,54,retail_ops,initial
+221,2016-01-31,1,0.5,BR,Retail,Store Operations,Stockroom,Store Operations,IC2,Professional,STORE-BR-034,136,Intern,48,retail_ops,initial
+222,2016-01-31,1,1.0,BR,Supply Chain,Logistics,Reverse Logistics,Logistics,IC1,Entry,DC-BR-002,19,Permanent,59,supply,initial
+223,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC2,Professional,STORE-BR-026,294,Permanent,55,retail_ops,initial
+224,2016-01-31,1,0.5,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-031,170,Permanent,56,retail_ops,initial
+225,2016-01-31,1,1.0,BR,Customer,Customer Experience,CX Design,Design,IC1,Entry,SITE-BR-004,329,Permanent,67,customer,initial
+226,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC1,Entry,STORE-BR-015,35,Permanent,53,retail_ops,initial
+227,2016-01-31,1,1.0,BR,Corporate,Data & Analytics,Data Governance,Data,IC3,Professional,HQ-BR-001,92,Permanent,26,corporate,initial
+228,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-004,223,Permanent,56,retail_ops,initial
+229,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-012,238,Permanent,56,retail_ops,initial
+230,2016-01-31,1,0.75,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-013,61,Permanent,50,retail_ops,initial
+231,2016-01-31,1,1.0,BR,Customer,Customer Operations,Returns,Customer Support,IC1,Entry,SITE-BR-004,288,Permanent,73,customer,initial
+232,2016-01-31,1,1.0,BR,Corporate,Data & Analytics,Business Intelligence,Data,IC1,Entry,HQ-BR-001,227,Permanent,25,corporate,initial
+233,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,M1,Manager,STORE-BR-033,14,Permanent,55,retail_ops,initial
+234,2016-01-31,1,1.0,BR,Digital,Engineering,Backend,Software Engineering,IC3,Professional,HQ-BR-001,86,Permanent,28,digital,initial
+235,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-015,11,Permanent,56,retail_ops,initial
+236,2016-01-31,1,1.0,BR,Corporate,Risk,Risk Management,Risk & Compliance,IC1,Entry,HQ-BR-001,248,Temporary,23,corporate,initial
+237,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-021,139,Permanent,50,retail_ops,initial
+238,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC2,Professional,STORE-BR-008,273,Permanent,55,retail_ops,initial
+239,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC2,Professional,STORE-BR-033,34,Permanent,53,retail_ops,initial
+240,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-006,32,Permanent,55,retail_ops,initial
+241,2016-01-31,1,0.75,BR,Customer,Customer Operations,Returns,Customer Support,IC1,Entry,SITE-BR-003,165,Permanent,73,customer,initial
+242,2016-01-31,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC2,Professional,SITE-BR-001,171,Permanent,71,customer,initial
+243,2016-01-31,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC3,Professional,HQ-BR-001,82,Permanent,21,corporate,initial
+244,2016-01-31,1,1.0,BR,Digital,Digital Marketing,Lifecycle,Marketing,IC1,Entry,HQ-BR-001,172,Intern,45,digital,initial
+245,2016-01-31,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-BR-004,4,Intern,69,customer,initial
+246,2016-01-31,1,1.0,BR,Supply Chain,Planning,Demand Planning,Data,M2,Manager,DC-BR-005,10,Permanent,65,supply,initial
+247,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-019,71,Permanent,55,retail_ops,initial
+248,2016-01-31,1,1.0,BR,Corporate,Risk,Fraud,Risk & Compliance,IC2,Professional,HQ-BR-001,261,Permanent,24,corporate,initial
+249,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-023,160,Permanent,51,retail_ops,initial
+250,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-040,161,Permanent,51,retail_ops,initial
+251,2016-01-31,1,0.5,BR,Retail,Regional Operations,Region North,Store Operations,IC2,Professional,STORE-BR-025,34,Permanent,52,retail_ops,initial
+252,2016-01-31,1,0.5,BR,Customer,Customer Operations,Order Support,Logistics,M1,Manager,SITE-BR-001,303,Permanent,72,customer,initial
+253,2016-01-31,1,1.0,BR,Customer,Customer Service,Chat,Customer Support,IC1,Entry,SITE-BR-002,53,Permanent,70,customer,initial
+254,2016-01-31,1,1.0,BR,Corporate,Finance,Controlling,Finance,IC3,Professional,HQ-BR-001,60,Permanent,6,corporate,initial
+255,2016-01-31,1,1.0,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-025,313,Permanent,46,retail_ops,initial
+256,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-027,201,Intern,50,retail_ops,initial
+257,2016-01-31,1,1.0,BR,Supply Chain,Planning,Demand Planning,Logistics,M1,Manager,DC-BR-005,246,Intern,65,supply,initial
+258,2016-01-31,1,0.75,BR,Retail,Store Operations,Security,Store Operations,IC1,Entry,STORE-BR-006,316,Permanent,49,retail_ops,initial
+259,2016-01-31,1,1.0,BR,Supply Chain,Logistics,Transportation,Logistics,IC1,Entry,DC-BR-005,38,Permanent,57,supply,initial
+260,2016-01-31,1,1.0,BR,Supply Chain,Logistics,Reverse Logistics,Logistics,IC3,Professional,DC-BR-002,303,Permanent,59,supply,initial
+261,2016-01-31,1,1.0,BR,Corporate,Risk,Risk Management,Risk & Compliance,M2,Manager,HQ-BR-001,321,Permanent,23,corporate,initial
+262,2016-01-31,1,1.0,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-027,21,Permanent,46,retail_ops,initial
+263,2016-01-31,1,1.0,BR,Customer,Customer Operations,Order Support,Customer Support,IC1,Entry,SITE-BR-001,288,Permanent,72,customer,initial
+264,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,M1,Manager,STORE-BR-030,14,Permanent,56,retail_ops,initial
+265,2016-01-31,1,0.75,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-031,108,Permanent,56,retail_ops,initial
+266,2016-01-31,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC1,Entry,SITE-BR-003,165,Permanent,73,customer,initial
+267,2016-01-31,1,1.0,BR,Supply Chain,Distribution Centers,Inventory,Warehouse,M1,Manager,DC-BR-004,303,Permanent,62,supply,initial
+268,2016-01-31,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-003,242,Permanent,71,customer,initial
+269,2016-01-31,1,1.0,BR,Retail,Store Operations,Cashier,Store Operations,IC1,Entry,STORE-BR-027,77,Permanent,47,retail_ops,initial
+270,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC2,Professional,STORE-BR-006,34,Permanent,54,retail_ops,initial
+271,2016-01-31,1,1.0,BR,Supply Chain,Planning,Demand Planning,Logistics,IC1,Entry,DC-BR-004,125,Permanent,65,supply,initial
+272,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-003,112,Temporary,56,retail_ops,initial
+273,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC3,Professional,STORE-BR-001,140,Permanent,56,retail_ops,initial
+274,2016-01-31,1,0.5,BR,Retail,Regional Operations,Region South,Store Operations,IC1,Entry,STORE-BR-016,5,Permanent,54,retail_ops,initial
+275,2016-01-31,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC1,Entry,STORE-BR-043,127,Permanent,49,retail_ops,initial
+276,2016-01-31,1,1.0,BR,Supply Chain,Logistics,Transportation,Logistics,IC2,Professional,DC-BR-001,260,Permanent,57,supply,initial
+277,2016-01-31,1,1.0,BR,Supply Chain,Logistics,Last Mile,Logistics,IC2,Professional,DC-BR-005,260,Temporary,58,supply,initial
+278,2016-01-31,1,1.0,BR,Corporate,People,People Analytics,People,IC3,Professional,HQ-BR-001,327,Permanent,4,corporate,initial
+279,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-014,142,Permanent,55,retail_ops,initial
+280,2016-01-31,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC2,Professional,STORE-BR-006,136,Intern,49,retail_ops,initial
+281,2016-01-31,1,1.0,BR,Digital,E-commerce,Catalog,Product Management,M3,Senior Manager,HQ-BR-001,212,Permanent,42,digital,initial
+282,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region North,Store Operations,IC2,Professional,STORE-BR-001,34,Permanent,52,retail_ops,initial
+283,2016-01-31,1,1.0,BR,Digital,Engineering,SRE,Software Engineering,IC2,Professional,HQ-BR-001,234,Permanent,31,digital,initial
+285,2016-01-31,1,1.0,BR,Digital,Digital Marketing,Lifecycle,Marketing,IC2,Professional,HQ-BR-001,168,Permanent,45,digital,initial
+286,2016-01-31,1,0.5,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC3,Professional,HQ-BR-001,45,Permanent,20,corporate,initial
+287,2016-01-31,1,1.0,BR,Retail,Store Operations,Stockroom,Store Operations,IC1,Entry,STORE-BR-016,21,Permanent,48,retail_ops,initial
+288,2016-01-31,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC2,Professional,SITE-BR-003,252,Permanent,73,customer,initial
+289,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-021,170,Permanent,55,retail_ops,initial
+290,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-005,7,Permanent,51,retail_ops,initial
+291,2016-01-31,1,0.5,BR,Customer,Customer Operations,Returns,Logistics,IC1,Entry,SITE-BR-002,288,Temporary,73,customer,initial
+292,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,M1,Manager,STORE-BR-005,65,Permanent,51,retail_ops,initial
+293,2016-01-31,1,0.5,BR,Retail,Store Operations,Stockroom,Store Operations,IC1,Entry,STORE-BR-034,189,Permanent,48,retail_ops,initial
+294,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC3,Professional,STORE-BR-036,181,Permanent,56,retail_ops,initial
+295,2016-01-31,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,M1,Manager,DC-BR-005,10,Permanent,64,supply,initial
+296,2016-01-31,1,1.0,BR,Corporate,Finance,Controlling,Finance,IC2,Professional,HQ-BR-001,27,Permanent,6,corporate,initial
+297,2016-01-31,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC4,Senior Professional,DC-BR-003,295,Temporary,64,supply,initial
+298,2016-01-31,1,1.0,BR,Corporate,People,HR Business Partner,People,IC3,Professional,HQ-BR-001,327,Permanent,2,corporate,initial
+299,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-015,223,Permanent,55,retail_ops,initial
+300,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,General Management,IC1,Entry,STORE-BR-012,12,Permanent,53,retail_ops,initial
+301,2016-01-31,1,0.5,BR,Customer,Customer Experience,Voice of Customer,Customer Support,IC1,Entry,SITE-BR-003,90,Permanent,68,customer,initial
+302,2016-01-31,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,IC2,Professional,DC-BR-005,319,Permanent,63,supply,initial
+303,2016-01-31,1,1.0,BR,Supply Chain,Logistics,Reverse Logistics,Logistics,M2,Manager,DC-BR-004,10,Permanent,59,supply,initial
+304,2016-01-31,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,IC2,Professional,DC-BR-001,319,Permanent,63,supply,initial
+305,2016-01-31,1,1.0,BR,Supply Chain,Planning,Supply Planning,Logistics,IC3,Professional,DC-BR-003,335,Permanent,66,supply,initial
+306,2016-01-31,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC1,Entry,STORE-BR-027,190,Permanent,49,retail_ops,initial
+307,2016-01-31,1,1.0,BR,Corporate,Legal,Corporate Legal,Legal,M2,Manager,HQ-BR-001,321,Permanent,10,corporate,initial
+308,2016-01-31,1,0.5,BR,Retail,Store Operations,Cashier,Store Operations,IC1,Entry,STORE-BR-012,221,Permanent,47,retail_ops,initial
+309,2016-01-31,1,1.0,BR,Corporate,Marketing,Brand,Marketing,M5,Senior Manager,HQ-BR-001,62,Permanent,13,corporate,initial
+310,2016-01-31,1,1.0,BR,Digital,E-commerce,Storefront,Software Engineering,M1,Manager,HQ-BR-001,121,Permanent,40,digital,initial
+311,2016-01-31,1,0.5,BR,Retail,Store Operations,Cashier,Store Operations,IC1,Entry,STORE-BR-041,280,Temporary,47,retail_ops,initial
+312,2016-01-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-006,24,Permanent,51,retail_ops,initial
+313,2016-01-31,1,1.0,BR,Retail,Store Operations,Cashier,Store Operations,IC2,Professional,STORE-BR-023,136,Permanent,47,retail_ops,initial
+314,2016-01-31,1,1.0,BR,Digital,Data,Data Engineering,Data,IC5,Senior Professional,HQ-BR-001,70,Permanent,34,digital,initial
+315,2016-01-31,1,1.0,BR,Supply Chain,Distribution Centers,Outbound,Warehouse,IC1,Entry,DC-BR-005,48,Permanent,61,supply,initial
+316,2016-01-31,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC2,Professional,STORE-BR-026,136,Permanent,46,retail_ops,initial
+317,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region South,Store Operations,IC1,Entry,STORE-BR-013,18,Permanent,54,retail_ops,initial
+318,2016-01-31,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC1,Entry,DC-BR-006,304,Permanent,64,supply,initial
+319,2016-01-31,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC3,Professional,DC-BR-003,297,Permanent,64,supply,initial
+320,2016-01-31,1,1.0,BR,Customer,Customer Experience,CX Design,Design,IC1,Entry,SITE-BR-001,329,Permanent,67,customer,initial
+321,2016-01-31,1,1.0,BR,Corporate,Marketing,CRM,Marketing,M3,Senior Manager,HQ-BR-001,309,Permanent,15,corporate,initial
+322,2016-01-31,1,1.0,BR,Supply Chain,Logistics,Last Mile,Logistics,IC1,Entry,DC-BR-005,276,Intern,58,supply,initial
+323,2016-01-31,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC1,Entry,SITE-BR-001,165,Apprentice,73,customer,initial
+324,2016-01-31,1,1.0,BR,Corporate,Finance,Accounting,Finance,IC2,Professional,HQ-BR-001,254,Permanent,8,corporate,initial
+325,2016-01-31,1,0.5,BR,Retail,Regional Operations,Region Southeast,General Management,IC1,Entry,STORE-BR-020,31,Permanent,53,retail_ops,initial
+326,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-018,144,Permanent,50,retail_ops,initial
+327,2016-01-31,1,1.0,BR,Corporate,People,HR Business Partner,People,M1,Manager,HQ-BR-001,307,Permanent,2,corporate,initial
+328,2016-01-31,1,1.0,BR,Digital,UX,Research,Design,IC1,Entry,HQ-BR-001,115,Permanent,38,digital,initial
+329,2016-01-31,1,1.0,BR,Customer,Customer Experience,CX Design,Customer Support,IC2,Professional,SITE-BR-002,194,Permanent,67,customer,initial
+330,2016-01-31,1,1.0,BR,Supply Chain,Logistics,Last Mile,Logistics,IC1,Entry,DC-BR-004,277,Temporary,58,supply,initial
+331,2016-01-31,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-025,313,Permanent,46,retail_ops,initial
+332,2016-01-31,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-002,4,Permanent,71,customer,initial
+333,2016-01-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-030,26,Permanent,50,retail_ops,initial
+335,2016-01-31,1,1.0,BR,Supply Chain,Planning,Supply Planning,Data,M1,Manager,DC-BR-003,246,Permanent,66,supply,initial
+336,2016-01-31,1,1.0,AR,Retail,Store Operations,Stockroom,Store Operations,IC3,Professional,STORE-AR-008,341,Permanent,127,retail_ops,initial
+337,2016-01-31,1,1.0,AR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-AR-001,344,Permanent,148,customer,initial
+338,2016-01-31,1,1.0,AR,Supply Chain,Planning,Demand Planning,Data,IC1,Entry,DC-AR-001,355,Permanent,144,supply,initial
+339,2016-01-31,1,1.0,AR,Supply Chain,Distribution Centers,Inbound,Warehouse,IC3,Professional,DC-AR-001,343,Permanent,139,supply,initial
+340,2016-01-31,1,1.0,AR,Supply Chain,Planning,Supply Planning,Data,IC1,Entry,DC-AR-001,373,Permanent,145,supply,initial
+341,2016-01-31,1,1.0,AR,Retail,Sales,Key Accounts,Sales,M1,Manager,STORE-AR-008,8,Permanent,130,retail_ops,initial
+342,2016-01-31,1,1.0,AR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-AR-003,362,Permanent,130,retail_ops,initial
+343,2016-01-31,1,1.0,AR,Retail,Sales,Floor Sales,Sales,M1,Manager,STORE-AR-009,261,Permanent,129,retail_ops,initial
+344,2016-01-31,1,1.0,AR,Supply Chain,Planning,Demand Planning,Data,IC2,Professional,DC-AR-001,339,Temporary,144,supply,initial
+345,2016-01-31,1,1.0,AR,Supply Chain,Logistics,Last Mile,Logistics,IC1,Entry,DC-AR-001,348,Permanent,137,supply,initial
+346,2016-01-31,1,1.0,AR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-AR-004,379,Permanent,129,retail_ops,initial
+347,2016-01-31,1,1.0,AR,Customer,Customer Service,Chat,Customer Support,IC1,Entry,SITE-AR-001,351,Permanent,149,customer,initial
+348,2016-01-31,1,1.0,AR,Supply Chain,Logistics,Last Mile,Logistics,IC2,Professional,DC-AR-001,339,Permanent,137,supply,initial
+349,2016-01-31,1,1.0,AR,Retail,Regional Operations,Region South,General Management,IC1,Entry,STORE-AR-003,351,Permanent,133,retail_ops,initial
+350,2016-01-31,1,1.0,AR,Supply Chain,Planning,Supply Planning,Data,IC1,Entry,DC-AR-001,344,Permanent,145,supply,initial
+351,2016-01-31,1,1.0,AR,Retail,Regional Operations,Region Southeast,Store Operations,IC2,Professional,STORE-AR-001,336,Permanent,132,retail_ops,initial
+352,2016-01-31,1,1.0,AR,Corporate,Marketing,Brand,Marketing,IC3,Professional,HQ-AR-001,363,Permanent,92,corporate,initial
+354,2016-01-31,1,0.5,AR,Retail,Store Operations,Security,Store Operations,IC1,Entry,STORE-AR-003,375,Permanent,128,retail_ops,initial
+355,2016-01-31,1,1.0,AR,Supply Chain,Planning,Supply Planning,Logistics,IC2,Professional,DC-AR-001,339,Permanent,145,supply,initial
+356,2016-01-31,1,1.0,AR,Supply Chain,Logistics,Last Mile,Logistics,IC2,Professional,DC-AR-001,339,Permanent,137,supply,initial
+357,2016-01-31,1,1.0,AR,Supply Chain,Distribution Centers,Outbound,Warehouse,IC2,Professional,DC-AR-001,339,Permanent,140,supply,initial
+358,2016-01-31,1,1.0,AR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-AR-007,365,Permanent,134,retail_ops,initial
+359,2016-01-31,1,0.5,AR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-AR-001,389,Permanent,148,customer,initial
+360,2016-01-31,1,1.0,AR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-AR-007,362,Permanent,130,retail_ops,initial
+361,2016-01-31,1,1.0,AR,Retail,Regional Operations,Region Southeast,General Management,IC1,Entry,STORE-AR-010,351,Temporary,132,retail_ops,initial
+362,2016-01-31,1,1.0,AR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-AR-008,341,Permanent,129,retail_ops,initial
+363,2016-01-31,1,1.0,AR,Retail,Visual Merchandising,Merchandising,Store Operations,M1,Manager,STORE-AR-008,307,Permanent,135,retail_ops,initial
+364,2016-01-31,1,1.0,AR,Supply Chain,Logistics,Transportation,Logistics,IC2,Professional,DC-AR-001,339,Permanent,136,supply,initial
+365,2016-01-31,1,1.0,AR,Retail,Visual Merchandising,Store Design,Store Operations,IC3,Professional,STORE-AR-001,363,Temporary,134,retail_ops,initial
+366,2016-01-31,1,1.0,AR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-AR-010,379,Permanent,129,retail_ops,initial
+367,2016-01-31,1,1.0,AR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-AR-001,356,Permanent,150,customer,initial
+368,2016-01-31,1,1.0,AR,Supply Chain,Logistics,Last Mile,Logistics,IC1,Entry,DC-AR-001,364,Permanent,137,supply,initial
+369,2016-01-31,1,1.0,AR,Retail,Store Operations,Cashier,Store Operations,IC1,Entry,STORE-AR-005,375,Temporary,126,retail_ops,initial
+370,2016-01-31,1,1.0,AR,Retail,Regional Operations,Region South,General Management,IC1,Entry,STORE-AR-001,351,Permanent,133,retail_ops,initial
+371,2016-01-31,1,0.5,AR,Customer,Customer Operations,Returns,Logistics,IC1,Entry,SITE-AR-001,357,Permanent,152,customer,initial
+372,2016-01-31,1,1.0,AR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-AR-001,362,Apprentice,130,retail_ops,initial
+373,2016-01-31,1,1.0,AR,Supply Chain,Planning,Supply Planning,Data,IC2,Professional,DC-AR-001,339,Permanent,145,supply,initial
+374,2016-01-31,1,1.0,AR,Supply Chain,Distribution Centers,Inbound,Warehouse,IC1,Entry,DC-AR-001,357,Permanent,139,supply,initial
+375,2016-01-31,1,1.0,AR,Retail,Store Operations,Security,Store Operations,IC2,Professional,STORE-AR-009,336,Intern,128,retail_ops,initial
+376,2016-01-31,1,1.0,AR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-AR-010,379,Permanent,130,retail_ops,initial
+377,2016-01-31,1,1.0,AR,Retail,Regional Operations,Region North,General Management,IC1,Entry,STORE-AR-009,351,Permanent,131,retail_ops,initial
+378,2016-01-31,1,1.0,AR,Retail,Regional Operations,Region Southeast,General Management,IC1,Entry,STORE-AR-009,351,Permanent,132,retail_ops,initial
+379,2016-01-31,1,1.0,AR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-AR-001,343,Permanent,130,retail_ops,initial
+380,2016-01-31,1,1.0,AR,Retail,Store Operations,Cashier,Store Operations,IC1,Entry,STORE-AR-008,375,Permanent,126,retail_ops,initial
+381,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-019,238,Permanent,56,retail_ops,organic
+382,2016-01-31,1,0.75,AR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-AR-010,365,Permanent,135,retail_ops,organic
+383,2016-01-31,1,0.5,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-019,326,Permanent,50,retail_ops,organic
+384,2016-01-31,1,1.0,BR,Corporate,Data & Analytics,Data Governance,Data,IC2,Professional,HQ-BR-001,202,Permanent,26,corporate,organic
+385,2016-01-31,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC2,Professional,STORE-BR-001,136,Permanent,46,retail_ops,organic
+386,2016-01-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-013,11,Permanent,55,retail_ops,organic
+387,2016-01-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,General Management,IC1,Entry,STORE-BR-027,111,Permanent,53,retail_ops,organic
+388,2016-01-31,1,1.0,BR,Retail,Store Operations,Cashier,Store Operations,IC1,Entry,STORE-BR-016,385,Permanent,47,retail_ops,organic
+389,2016-01-31,1,1.0,AR,Retail,Regional Operations,Region North,General Management,IC2,Professional,STORE-AR-007,336,Temporary,131,retail_ops,organic
+390,2016-01-31,1,1.0,BR,Digital,Product,Product Ops,Product Management,IC1,Entry,HQ-BR-001,116,Permanent,33,digital,organic
+1,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region South,Store Operations,IC1,Entry,STORE-BR-036,5,Permanent,54,retail_ops,initial
+2,2016-02-29,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Customer Support,IC3,Professional,SITE-BR-002,194,Permanent,68,customer,initial
+3,2016-02-29,1,1.0,BR,Supply Chain,Distribution Centers,Inventory,Warehouse,IC1,Entry,DC-BR-005,48,Temporary,62,supply,initial
+4,2016-02-29,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC2,Professional,SITE-BR-003,171,Permanent,69,customer,initial
+5,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region North,Store Operations,IC2,Professional,STORE-BR-029,34,Permanent,52,retail_ops,initial
+6,2016-02-29,1,1.0,BR,Digital,Product,Product Ops,Product Management,IC3,Professional,HQ-BR-001,192,Temporary,33,digital,initial
+7,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-002,144,Permanent,51,retail_ops,initial
+8,2016-02-29,1,1.0,BR,Digital,Digital Marketing,SEO,Marketing,M2,Manager,HQ-BR-001,121,Temporary,43,digital,initial
+9,2016-02-29,1,1.0,BR,Supply Chain,Planning,Demand Planning,Logistics,IC3,Professional,DC-BR-003,257,Permanent,65,supply,initial
+10,2016-02-29,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,M3,Senior Manager,DC-BR-003,212,Permanent,63,supply,initial
+11,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC2,Professional,STORE-BR-029,273,Permanent,55,retail_ops,initial
+12,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC2,Professional,STORE-BR-034,34,Permanent,54,retail_ops,initial
+13,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-005,7,Permanent,50,retail_ops,initial
+14,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,M3,Senior Manager,STORE-BR-039,212,Permanent,55,retail_ops,initial
+15,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-036,24,Permanent,50,retail_ops,initial
+16,2016-02-29,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Customer Support,IC1,Entry,SITE-BR-002,90,Permanent,68,customer,initial
+17,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-015,26,Permanent,50,retail_ops,initial
+18,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region Southeast,General Management,IC2,Professional,STORE-BR-016,34,Permanent,53,retail_ops,initial
+19,2016-02-29,1,1.0,BR,Supply Chain,Logistics,Reverse Logistics,Logistics,IC2,Professional,DC-BR-001,260,Permanent,59,supply,initial
+20,2016-02-29,1,1.0,BR,Supply Chain,Distribution Centers,Outbound,Warehouse,IC1,Entry,DC-BR-001,48,Permanent,61,supply,initial
+21,2016-02-29,1,1.0,BR,Retail,Store Operations,Stockroom,Store Operations,IC2,Professional,STORE-BR-006,136,Permanent,48,retail_ops,initial
+22,2016-02-29,1,1.0,BR,Corporate,Legal,Corporate Legal,Legal,IC1,Entry,HQ-BR-001,55,Temporary,10,corporate,initial
+23,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-020,42,Temporary,50,retail_ops,initial
+24,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-012,144,Temporary,50,retail_ops,initial
+25,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-012,11,Permanent,56,retail_ops,initial
+26,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-013,144,Permanent,50,retail_ops,initial
+27,2016-02-29,1,1.0,BR,Corporate,Finance,FP&A,Finance,IC3,Professional,HQ-BR-001,29,Permanent,9,corporate,initial
+28,2016-02-29,1,1.0,BR,Corporate,Finance,FP&A,Finance,IC1,Entry,HQ-BR-001,89,Permanent,9,corporate,initial
+29,2016-02-29,1,1.0,BR,Corporate,Strategy,Corporate Strategy,Strategy,IC4,Senior Professional,HQ-BR-001,193,Permanent,17,corporate,initial
+30,2016-02-29,1,1.0,BR,Customer,Customer Operations,Returns,Customer Support,IC1,Entry,SITE-BR-002,165,Permanent,73,customer,initial
+31,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC2,Professional,STORE-BR-016,34,Permanent,53,retail_ops,initial
+32,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC2,Professional,STORE-BR-040,294,Permanent,55,retail_ops,initial
+33,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-036,61,Permanent,51,retail_ops,initial
+34,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region Southeast,General Management,IC3,Professional,STORE-BR-002,98,Permanent,53,retail_ops,initial
+35,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC2,Professional,STORE-BR-037,34,Permanent,53,retail_ops,initial
+36,2016-02-29,1,1.0,BR,Supply Chain,Distribution Centers,Outbound,Warehouse,IC1,Entry,DC-BR-005,48,Permanent,61,supply,initial
+37,2016-02-29,1,0.5,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-029,32,Permanent,55,retail_ops,initial
+38,2016-02-29,1,1.0,BR,Supply Chain,Logistics,Transportation,Logistics,IC2,Professional,DC-BR-005,260,Permanent,57,supply,initial
+39,2016-02-29,1,1.0,BR,Customer,Customer Service,Chat,Customer Support,IC1,Entry,SITE-BR-002,4,Intern,70,customer,initial
+40,2016-02-29,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC1,Entry,SITE-BR-003,288,Permanent,73,customer,initial
+41,2016-02-29,1,0.5,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-010,71,Permanent,56,retail_ops,initial
+42,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-027,144,Permanent,51,retail_ops,initial
+43,2016-02-29,1,1.0,BR,Supply Chain,Distribution Centers,Inbound,Warehouse,IC1,Entry,DC-BR-001,48,Permanent,60,supply,initial
+44,2016-02-29,1,0.5,BR,Retail,Regional Operations,Region North,General Management,IC1,Entry,STORE-BR-004,12,Permanent,52,retail_ops,initial
+45,2016-02-29,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC4,Senior Professional,HQ-BR-001,187,Permanent,20,corporate,initial
+46,2016-02-29,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,IC1,Entry,DC-BR-005,204,Temporary,63,supply,initial
+47,2016-02-29,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC1,Entry,HQ-BR-001,88,Permanent,21,corporate,initial
+48,2016-02-29,1,1.0,BR,Supply Chain,Distribution Centers,Inventory,Warehouse,IC2,Professional,DC-BR-003,2,Permanent,62,supply,initial
+49,2016-02-29,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,IC1,Entry,DC-BR-003,302,Permanent,63,supply,initial
+50,2016-02-29,1,1.0,BR,Corporate,Data & Analytics,Business Intelligence,Data,IC1,Entry,HQ-BR-001,202,Permanent,25,corporate,initial
+51,2016-02-29,1,1.0,BR,Customer,Customer Service,Chat,Customer Support,IC1,Entry,SITE-BR-003,53,Permanent,70,customer,initial
+52,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-007,108,Permanent,56,retail_ops,initial
+53,2016-02-29,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC2,Professional,SITE-BR-004,171,Apprentice,69,customer,initial
+54,2016-02-29,1,1.0,BR,Corporate,People,Learning & Development,People,IC1,Entry,HQ-BR-001,113,Permanent,5,corporate,initial
+55,2016-02-29,1,1.0,BR,Corporate,Legal,Corporate Legal,Legal,IC2,Professional,HQ-BR-001,119,Permanent,10,corporate,initial
+56,2016-02-29,1,0.5,BR,Retail,Regional Operations,Region North,General Management,IC1,Entry,STORE-BR-022,18,Temporary,52,retail_ops,initial
+57,2016-02-29,1,1.0,BR,Corporate,People,People Analytics,People,IC1,Entry,HQ-BR-001,156,Permanent,4,corporate,initial
+59,2016-02-29,1,1.0,BR,Corporate,Strategy,Corporate Strategy,Strategy,IC1,Entry,HQ-BR-001,162,Permanent,17,corporate,initial
+60,2016-02-29,1,1.0,BR,Corporate,Marketing,Content,Marketing,IC4,Senior Professional,HQ-BR-001,321,Permanent,16,corporate,initial
+61,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-042,144,Permanent,51,retail_ops,initial
+62,2016-02-29,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,D1,Director,HQ-BR-001,,Permanent,20,corporate,initial
+63,2016-02-29,1,1.0,BR,Supply Chain,Distribution Centers,Inbound,Warehouse,IC1,Entry,DC-BR-006,48,Permanent,60,supply,initial
+64,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-044,139,Permanent,51,retail_ops,initial
+65,2016-02-29,1,0.5,BR,Retail,Sales,Floor Sales,Sales,M2,Manager,STORE-BR-014,14,Permanent,50,retail_ops,initial
+66,2016-02-29,1,1.0,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-041,21,Permanent,46,retail_ops,initial
+68,2016-02-29,1,1.0,BR,Retail,Store Operations,Stockroom,Store Operations,IC1,Entry,STORE-BR-030,77,Temporary,48,retail_ops,initial
+69,2016-02-29,1,1.0,BR,Supply Chain,Logistics,Transportation,Logistics,IC1,Entry,DC-BR-006,19,Permanent,57,supply,initial
+70,2016-02-29,1,1.0,BR,Digital,Data,Data Science,Data,M1,Manager,HQ-BR-001,8,Permanent,35,digital,initial
+71,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC2,Professional,STORE-BR-031,273,Permanent,56,retail_ops,initial
+72,2016-02-29,1,1.0,BR,Corporate,Risk,Internal Audit,Risk & Compliance,IC1,Entry,HQ-BR-001,73,Permanent,22,corporate,initial
+73,2016-02-29,1,1.0,BR,Corporate,Risk,Fraud,Risk & Compliance,IC2,Professional,HQ-BR-001,261,Permanent,24,corporate,initial
+74,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-026,160,Permanent,51,retail_ops,initial
+75,2016-02-29,1,1.0,BR,Corporate,Legal,Compliance,Legal,IC1,Entry,HQ-BR-001,147,Permanent,11,corporate,initial
+76,2016-02-29,1,1.0,BR,Corporate,People,People Analytics,People,IC1,Entry,HQ-BR-001,200,Permanent,4,corporate,initial
+77,2016-02-29,1,1.0,BR,Retail,Store Operations,Cashier,Store Operations,IC2,Professional,STORE-BR-007,136,Permanent,47,retail_ops,initial
+78,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-022,32,Permanent,55,retail_ops,initial
+79,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,M1,Manager,STORE-BR-028,65,Permanent,50,retail_ops,initial
+80,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC1,Entry,STORE-BR-036,31,Permanent,54,retail_ops,initial
+81,2016-02-29,1,1.0,BR,Digital,Product,Product Ops,Product Management,IC3,Professional,HQ-BR-001,192,Permanent,33,digital,initial
+82,2016-02-29,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC4,Senior Professional,HQ-BR-001,187,Permanent,20,corporate,initial
+83,2016-02-29,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-001,242,Permanent,71,customer,initial
+84,2016-02-29,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC1,Entry,DC-BR-001,204,Permanent,64,supply,initial
+85,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-038,7,Permanent,51,retail_ops,initial
+86,2016-02-29,1,1.0,BR,Digital,Engineering,Frontend,Software Engineering,IC4,Senior Professional,HQ-BR-001,177,Permanent,29,digital,initial
+87,2016-02-29,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Design,IC1,Entry,SITE-BR-003,329,Permanent,68,customer,initial
+88,2016-02-29,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC2,Professional,HQ-BR-001,138,Permanent,21,corporate,initial
+89,2016-02-29,1,1.0,BR,Corporate,Finance,Treasury,Finance,IC2,Professional,HQ-BR-001,27,Permanent,7,corporate,initial
+90,2016-02-29,1,1.0,BR,Customer,Customer Experience,CX Design,Design,IC2,Professional,SITE-BR-001,194,Permanent,67,customer,initial
+91,2016-02-29,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-043,127,Permanent,46,retail_ops,initial
+92,2016-02-29,1,1.0,BR,Corporate,Data & Analytics,Business Intelligence,Data,IC4,Senior Professional,HQ-BR-001,196,Permanent,25,corporate,initial
+93,2016-02-29,1,0.75,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-003,4,Permanent,71,customer,initial
+94,2016-02-29,1,0.5,BR,Retail,Store Operations,Stockroom,Store Operations,IC1,Entry,STORE-BR-022,316,Permanent,48,retail_ops,initial
+95,2016-02-29,1,0.75,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC1,Entry,STORE-BR-007,111,Permanent,53,retail_ops,initial
+96,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-043,142,Permanent,55,retail_ops,initial
+97,2016-02-29,1,1.0,BR,Digital,Engineering,Mobile,Software Engineering,IC1,Entry,HQ-BR-001,214,Permanent,30,digital,initial
+98,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,M1,Manager,STORE-BR-010,65,Permanent,53,retail_ops,initial
+100,2016-02-29,1,1.0,BR,Corporate,Finance,Treasury,Finance,IC2,Professional,HQ-BR-001,254,Permanent,7,corporate,initial
+101,2016-02-29,1,1.0,BR,Corporate,Finance,FP&A,Finance,IC1,Entry,HQ-BR-001,100,Permanent,9,corporate,initial
+102,2016-02-29,1,1.0,BR,Customer,Customer Experience,CX Design,Design,IC1,Entry,SITE-BR-004,90,Permanent,67,customer,initial
+103,2016-02-29,1,1.0,BR,Customer,Customer Operations,Order Support,Logistics,IC1,Entry,SITE-BR-003,165,Permanent,72,customer,initial
+104,2016-02-29,1,1.0,BR,Customer,Customer Experience,CX Design,Design,IC1,Entry,SITE-BR-004,90,Permanent,67,customer,initial
+105,2016-02-29,1,1.0,BR,Corporate,Finance,Treasury,Finance,IC1,Entry,HQ-BR-001,296,Permanent,7,corporate,initial
+106,2016-02-29,1,1.0,BR,Digital,E-commerce,Storefront,Product Management,IC2,Professional,HQ-BR-001,129,Temporary,40,digital,initial
+107,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-005,161,Permanent,50,retail_ops,initial
+108,2016-02-29,1,0.5,BR,Retail,Visual Merchandising,Merchandising,Design,IC2,Professional,STORE-BR-028,294,Permanent,56,retail_ops,initial
+109,2016-02-29,1,1.0,BR,Supply Chain,Distribution Centers,Inventory,Warehouse,IC1,Entry,DC-BR-001,48,Permanent,62,supply,initial
+110,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-007,201,Permanent,51,retail_ops,initial
+111,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region North,Store Operations,IC2,Professional,STORE-BR-038,34,Permanent,52,retail_ops,initial
+113,2016-02-29,1,1.0,BR,Corporate,People,HR Business Partner,People,IC2,Professional,HQ-BR-001,183,Permanent,2,corporate,initial
+114,2016-02-29,1,0.5,BR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-BR-001,53,Permanent,69,customer,initial
+115,2016-02-29,1,1.0,BR,Digital,UX,Product Design,Design,IC2,Professional,HQ-BR-001,178,Permanent,37,digital,initial
+116,2016-02-29,1,1.0,BR,Digital,Product,Product Management,Product Management,IC2,Professional,HQ-BR-001,6,Permanent,32,digital,initial
+117,2016-02-29,1,1.0,BR,Corporate,Risk,Fraud,Risk & Compliance,IC2,Professional,HQ-BR-001,261,Permanent,24,corporate,initial
+118,2016-02-29,1,1.0,BR,Digital,Product,Product Management,Product Management,IC2,Professional,HQ-BR-001,81,Permanent,32,digital,initial
+119,2016-02-29,1,1.0,BR,Corporate,Legal,Labor Legal,Legal,IC3,Professional,HQ-BR-001,196,Permanent,12,corporate,initial
+120,2016-02-29,1,1.0,BR,Digital,Data,Data Engineering,Data,IC3,Professional,HQ-BR-001,153,Permanent,34,digital,initial
+121,2016-02-29,1,0.5,BR,Digital,E-commerce,Catalog,Product Management,M3,Senior Manager,HQ-BR-001,212,Permanent,42,digital,initial
+122,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC1,Entry,STORE-BR-001,174,Apprentice,54,retail_ops,initial
+123,2016-02-29,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-002,242,Permanent,71,customer,initial
+124,2016-02-29,1,1.0,BR,Corporate,Marketing,Performance,Marketing,IC1,Entry,HQ-BR-001,60,Permanent,14,corporate,initial
+125,2016-02-29,1,1.0,BR,Supply Chain,Planning,Demand Planning,Data,IC2,Professional,DC-BR-002,9,Permanent,65,supply,initial
+126,2016-02-29,1,1.0,BR,Supply Chain,Logistics,Last Mile,Logistics,IC1,Entry,DC-BR-001,38,Permanent,58,supply,initial
+127,2016-02-29,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC2,Professional,STORE-BR-022,136,Permanent,46,retail_ops,initial
+128,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-022,326,Permanent,51,retail_ops,initial
+129,2016-02-29,1,1.0,BR,Digital,E-commerce,Checkout,Product Management,M1,Manager,HQ-BR-001,281,Permanent,41,digital,initial
+130,2016-02-29,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Design,IC1,Entry,SITE-BR-002,329,Permanent,68,customer,initial
+131,2016-02-29,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-022,189,Temporary,46,retail_ops,initial
+132,2016-02-29,1,1.0,BR,Customer,Customer Operations,Order Support,Logistics,IC1,Entry,SITE-BR-003,288,Permanent,72,customer,initial
+133,2016-02-29,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Design,IC1,Entry,SITE-BR-002,90,Permanent,68,customer,initial
+134,2016-02-29,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-BR-004,4,Permanent,69,customer,initial
+135,2016-02-29,1,1.0,BR,Digital,Data,Analytics Engineering,Data,IC2,Professional,HQ-BR-001,120,Permanent,36,digital,initial
+136,2016-02-29,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC3,Professional,STORE-BR-015,141,Permanent,49,retail_ops,initial
+137,2016-02-29,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC1,Entry,HQ-BR-001,166,Permanent,21,corporate,initial
+138,2016-02-29,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC3,Professional,HQ-BR-001,45,Permanent,21,corporate,initial
+139,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-014,144,Permanent,51,retail_ops,initial
+140,2016-02-29,1,0.5,BR,Retail,Visual Merchandising,Store Design,Store Operations,M1,Manager,STORE-BR-038,14,Permanent,55,retail_ops,initial
+141,2016-02-29,1,0.5,BR,Retail,Sales,Key Accounts,Sales,M1,Manager,STORE-BR-018,65,Permanent,51,retail_ops,initial
+142,2016-02-29,1,0.75,BR,Retail,Visual Merchandising,Store Design,Design,IC2,Professional,STORE-BR-025,294,Permanent,55,retail_ops,initial
+143,2016-02-29,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC1,Entry,DC-BR-003,204,Permanent,64,supply,initial
+144,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC3,Professional,STORE-BR-018,79,Permanent,51,retail_ops,initial
+145,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-042,170,Permanent,56,retail_ops,initial
+146,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region North,General Management,IC2,Professional,STORE-BR-036,34,Intern,52,retail_ops,initial
+147,2016-02-29,1,1.0,BR,Corporate,Legal,Corporate Legal,Legal,IC2,Professional,HQ-BR-001,119,Permanent,10,corporate,initial
+148,2016-02-29,1,1.0,BR,Supply Chain,Planning,Supply Planning,Data,IC1,Entry,DC-BR-003,125,Permanent,66,supply,initial
+149,2016-02-29,1,1.0,BR,Supply Chain,Distribution Centers,Outbound,Warehouse,IC1,Entry,DC-BR-006,48,Permanent,61,supply,initial
+150,2016-02-29,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-004,53,Permanent,71,customer,initial
+151,2016-02-29,1,1.0,BR,Retail,Store Operations,Stockroom,Store Operations,IC1,Entry,STORE-BR-018,190,Temporary,48,retail_ops,initial
+152,2016-02-29,1,1.0,BR,Digital,UX,Product Design,Design,IC2,Professional,HQ-BR-001,205,Permanent,37,digital,initial
+153,2016-02-29,1,1.0,BR,Digital,Data,Analytics Engineering,Data,IC4,Senior Professional,HQ-BR-001,314,Intern,36,digital,initial
+154,2016-02-29,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-BR-004,242,Permanent,69,customer,initial
+155,2016-02-29,1,1.0,BR,Corporate,Legal,Corporate Legal,Legal,IC2,Professional,HQ-BR-001,119,Permanent,10,corporate,initial
+156,2016-02-29,1,1.0,BR,Corporate,People,Talent Acquisition,People,IC2,Professional,HQ-BR-001,278,Permanent,1,corporate,initial
+158,2016-02-29,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC1,Entry,DC-BR-004,302,Permanent,64,supply,initial
+159,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-005,223,Temporary,56,retail_ops,initial
+160,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-016,144,Permanent,51,retail_ops,initial
+161,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-013,144,Permanent,50,retail_ops,initial
+162,2016-02-29,1,1.0,BR,Corporate,Strategy,PMO,Strategy,IC4,Senior Professional,HQ-BR-001,193,Permanent,19,corporate,initial
+163,2016-02-29,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC1,Entry,SITE-BR-004,165,Permanent,73,customer,initial
+165,2016-02-29,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC2,Professional,SITE-BR-001,252,Permanent,73,customer,initial
+166,2016-02-29,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC2,Professional,HQ-BR-001,243,Permanent,20,corporate,initial
+167,2016-02-29,1,1.0,BR,Corporate,Risk,Risk Management,Risk & Compliance,IC1,Entry,HQ-BR-001,117,Permanent,23,corporate,initial
+168,2016-02-29,1,1.0,BR,Digital,Digital Marketing,Paid Media,Marketing,IC5,Senior Professional,HQ-BR-001,8,Permanent,44,digital,initial
+169,2016-02-29,1,0.5,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-023,238,Apprentice,55,retail_ops,initial
+170,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC2,Professional,STORE-BR-016,273,Permanent,55,retail_ops,initial
+171,2016-02-29,1,1.0,BR,Customer,Customer Service,Chat,Customer Support,IC4,Senior Professional,SITE-BR-002,194,Permanent,70,customer,initial
+172,2016-02-29,1,1.0,BR,Digital,Digital Marketing,Paid Media,Marketing,IC2,Professional,HQ-BR-001,168,Permanent,44,digital,initial
+173,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-037,11,Permanent,55,retail_ops,initial
+174,2016-02-29,1,0.5,BR,Retail,Regional Operations,Region South,Store Operations,IC2,Professional,STORE-BR-007,34,Permanent,54,retail_ops,initial
+175,2016-02-29,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC2,Professional,HQ-BR-001,286,Apprentice,20,corporate,initial
+176,2016-02-29,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Customer Support,IC1,Entry,SITE-BR-002,329,Permanent,68,customer,initial
+177,2016-02-29,1,1.0,BR,Digital,UX,Product Design,Design,IC5,Senior Professional,HQ-BR-001,129,Permanent,37,digital,initial
+178,2016-02-29,1,1.0,BR,Digital,UX,Product Design,Design,IC4,Senior Professional,HQ-BR-001,177,Permanent,37,digital,initial
+179,2016-02-29,1,1.0,BR,Supply Chain,Planning,Demand Planning,Data,IC1,Entry,DC-BR-003,125,Permanent,65,supply,initial
+181,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Store Operations,M1,Manager,STORE-BR-022,14,Intern,56,retail_ops,initial
+182,2016-02-29,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC1,Entry,STORE-BR-031,221,Permanent,49,retail_ops,initial
+183,2016-02-29,1,1.0,BR,Corporate,People,Talent Acquisition,People,IC3,Professional,HQ-BR-001,327,Permanent,1,corporate,initial
+185,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-004,32,Permanent,56,retail_ops,initial
+186,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-013,26,Permanent,50,retail_ops,initial
+187,2016-02-29,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC5,Senior Professional,HQ-BR-001,62,Permanent,21,corporate,initial
+188,2016-02-29,1,1.0,BR,Supply Chain,Logistics,Reverse Logistics,Logistics,IC1,Entry,DC-BR-002,276,Permanent,59,supply,initial
+189,2016-02-29,1,1.0,BR,Retail,Store Operations,Cashier,Store Operations,IC2,Professional,STORE-BR-011,136,Apprentice,47,retail_ops,initial
+190,2016-02-29,1,0.5,BR,Retail,Store Operations,Cashier,Store Operations,IC2,Professional,STORE-BR-025,136,Permanent,47,retail_ops,initial
+191,2016-02-29,1,0.75,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-042,42,Temporary,50,retail_ops,initial
+192,2016-02-29,1,1.0,BR,Digital,Product,Product Management,Product Management,IC5,Senior Professional,HQ-BR-001,310,Permanent,32,digital,initial
+193,2016-02-29,1,1.0,BR,Corporate,Strategy,M&A,Strategy,M1,Manager,HQ-BR-001,261,Permanent,18,corporate,initial
+194,2016-02-29,1,1.0,BR,Customer,Customer Experience,CX Design,Customer Support,M1,Manager,SITE-BR-004,246,Permanent,67,customer,initial
+195,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-037,71,Permanent,56,retail_ops,initial
+196,2016-02-29,1,1.0,BR,Corporate,Legal,Compliance,Legal,IC5,Senior Professional,HQ-BR-001,307,Permanent,11,corporate,initial
+197,2016-02-29,1,1.0,BR,Digital,Data,Analytics Engineering,Data,IC3,Professional,HQ-BR-001,153,Permanent,36,digital,initial
+198,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC1,Entry,STORE-BR-034,239,Permanent,54,retail_ops,initial
+199,2016-02-29,1,1.0,BR,Digital,E-commerce,Checkout,Software Engineering,IC2,Professional,HQ-BR-001,310,Permanent,41,digital,initial
+200,2016-02-29,1,1.0,BR,Corporate,People,People Analytics,People,IC2,Professional,HQ-BR-001,298,Temporary,4,corporate,initial
+201,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-005,144,Permanent,50,retail_ops,initial
+202,2016-02-29,1,1.0,BR,Corporate,Data & Analytics,Data Governance,Data,IC3,Professional,HQ-BR-001,92,Permanent,26,corporate,initial
+203,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-028,108,Permanent,55,retail_ops,initial
+204,2016-02-29,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,IC2,Professional,DC-BR-002,319,Permanent,63,supply,initial
+205,2016-02-29,1,1.0,BR,Digital,UX,Design System,Design,IC4,Senior Professional,HQ-BR-001,177,Permanent,39,digital,initial
+206,2016-02-29,1,1.0,BR,Supply Chain,Logistics,Reverse Logistics,Logistics,IC1,Entry,DC-BR-002,277,Permanent,59,supply,initial
+207,2016-02-29,1,0.5,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-043,71,Permanent,55,retail_ops,initial
+208,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region North,Store Operations,M1,Manager,STORE-BR-031,65,Permanent,52,retail_ops,initial
+209,2016-02-29,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC1,Entry,STORE-BR-007,280,Permanent,49,retail_ops,initial
+210,2016-02-29,1,1.0,BR,Digital,Engineering,Platform,Software Engineering,IC3,Professional,HQ-BR-001,86,Permanent,27,digital,initial
+211,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC1,Entry,STORE-BR-014,251,Permanent,53,retail_ops,initial
+212,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,M4,Senior Manager,STORE-BR-001,309,Permanent,56,retail_ops,initial
+213,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region North,General Management,IC1,Entry,STORE-BR-013,270,Permanent,52,retail_ops,initial
+214,2016-02-29,1,1.0,BR,Digital,Engineering,SRE,Software Engineering,IC2,Professional,HQ-BR-001,210,Permanent,31,digital,initial
+215,2016-02-29,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC2,Professional,HQ-BR-001,138,Permanent,20,corporate,initial
+216,2016-02-29,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Design,IC1,Entry,SITE-BR-001,90,Permanent,68,customer,initial
+217,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-030,142,Permanent,56,retail_ops,initial
+218,2016-02-29,1,1.0,BR,Corporate,Strategy,PMO,Strategy,IC4,Senior Professional,HQ-BR-001,193,Permanent,19,corporate,initial
+220,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region South,Store Operations,IC1,Entry,STORE-BR-025,282,Permanent,54,retail_ops,initial
+221,2016-02-29,1,0.5,BR,Retail,Store Operations,Stockroom,Store Operations,IC2,Professional,STORE-BR-034,136,Intern,48,retail_ops,initial
+223,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC2,Professional,STORE-BR-026,294,Permanent,55,retail_ops,initial
+224,2016-02-29,1,0.5,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-031,170,Permanent,56,retail_ops,initial
+225,2016-02-29,1,1.0,BR,Customer,Customer Experience,CX Design,Design,IC1,Entry,SITE-BR-004,329,Permanent,67,customer,initial
+226,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC1,Entry,STORE-BR-015,35,Permanent,53,retail_ops,initial
+227,2016-02-29,1,1.0,BR,Corporate,Data & Analytics,Data Governance,Data,IC3,Professional,HQ-BR-001,92,Permanent,26,corporate,initial
+228,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-004,223,Permanent,56,retail_ops,initial
+229,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-012,238,Permanent,56,retail_ops,initial
+230,2016-02-29,1,0.75,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-013,61,Permanent,50,retail_ops,initial
+231,2016-02-29,1,1.0,BR,Customer,Customer Operations,Returns,Customer Support,IC1,Entry,SITE-BR-004,288,Permanent,73,customer,initial
+232,2016-02-29,1,1.0,BR,Corporate,Data & Analytics,Business Intelligence,Data,IC1,Entry,HQ-BR-001,227,Permanent,25,corporate,initial
+233,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,M1,Manager,STORE-BR-033,14,Permanent,55,retail_ops,initial
+234,2016-02-29,1,1.0,BR,Digital,Engineering,Backend,Software Engineering,IC3,Professional,HQ-BR-001,86,Permanent,28,digital,initial
+235,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-015,11,Permanent,56,retail_ops,initial
+236,2016-02-29,1,1.0,BR,Corporate,Risk,Risk Management,Risk & Compliance,IC1,Entry,HQ-BR-001,248,Temporary,23,corporate,initial
+237,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-021,139,Permanent,50,retail_ops,initial
+238,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC2,Professional,STORE-BR-008,273,Permanent,55,retail_ops,initial
+239,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC2,Professional,STORE-BR-033,34,Permanent,53,retail_ops,initial
+240,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-006,32,Permanent,55,retail_ops,initial
+241,2016-02-29,1,0.75,BR,Customer,Customer Operations,Returns,Customer Support,IC1,Entry,SITE-BR-003,165,Permanent,73,customer,initial
+242,2016-02-29,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC2,Professional,SITE-BR-001,171,Permanent,71,customer,initial
+243,2016-02-29,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC3,Professional,HQ-BR-001,82,Permanent,21,corporate,initial
+244,2016-02-29,1,1.0,BR,Digital,Digital Marketing,Lifecycle,Marketing,IC1,Entry,HQ-BR-001,172,Intern,45,digital,initial
+245,2016-02-29,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-BR-004,4,Intern,69,customer,initial
+246,2016-02-29,1,1.0,BR,Supply Chain,Planning,Demand Planning,Data,M2,Manager,DC-BR-005,10,Permanent,65,supply,initial
+247,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-019,71,Permanent,55,retail_ops,initial
+248,2016-02-29,1,1.0,BR,Corporate,Risk,Fraud,Risk & Compliance,IC2,Professional,HQ-BR-001,261,Permanent,24,corporate,initial
+249,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-023,160,Permanent,51,retail_ops,initial
+250,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-040,161,Permanent,51,retail_ops,initial
+251,2016-02-29,1,0.5,BR,Retail,Regional Operations,Region North,Store Operations,IC2,Professional,STORE-BR-025,34,Permanent,52,retail_ops,initial
+252,2016-02-29,1,0.5,BR,Customer,Customer Operations,Order Support,Logistics,M1,Manager,SITE-BR-001,303,Permanent,72,customer,initial
+253,2016-02-29,1,1.0,BR,Customer,Customer Service,Chat,Customer Support,IC1,Entry,SITE-BR-002,53,Permanent,70,customer,initial
+254,2016-02-29,1,1.0,BR,Corporate,Finance,Controlling,Finance,IC3,Professional,HQ-BR-001,60,Permanent,6,corporate,initial
+255,2016-02-29,1,1.0,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-025,313,Permanent,46,retail_ops,initial
+256,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-027,201,Intern,50,retail_ops,initial
+257,2016-02-29,1,1.0,BR,Supply Chain,Planning,Demand Planning,Logistics,M1,Manager,DC-BR-005,246,Intern,65,supply,initial
+258,2016-02-29,1,0.75,BR,Retail,Store Operations,Security,Store Operations,IC1,Entry,STORE-BR-006,316,Permanent,49,retail_ops,initial
+259,2016-02-29,1,1.0,BR,Supply Chain,Logistics,Transportation,Logistics,IC1,Entry,DC-BR-005,38,Permanent,57,supply,initial
+260,2016-02-29,1,1.0,BR,Supply Chain,Logistics,Reverse Logistics,Logistics,IC3,Professional,DC-BR-002,303,Permanent,59,supply,initial
+261,2016-02-29,1,1.0,BR,Corporate,Risk,Risk Management,Risk & Compliance,M2,Manager,HQ-BR-001,321,Permanent,23,corporate,initial
+262,2016-02-29,1,1.0,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-027,21,Permanent,46,retail_ops,initial
+263,2016-02-29,1,1.0,BR,Customer,Customer Operations,Order Support,Customer Support,IC1,Entry,SITE-BR-001,288,Permanent,72,customer,initial
+264,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,M1,Manager,STORE-BR-030,14,Permanent,56,retail_ops,initial
+265,2016-02-29,1,0.75,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-031,108,Permanent,56,retail_ops,initial
+266,2016-02-29,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC1,Entry,SITE-BR-003,165,Permanent,73,customer,initial
+267,2016-02-29,1,1.0,BR,Supply Chain,Distribution Centers,Inventory,Warehouse,M1,Manager,DC-BR-004,303,Permanent,62,supply,initial
+268,2016-02-29,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-003,242,Permanent,71,customer,initial
+269,2016-02-29,1,1.0,BR,Retail,Store Operations,Cashier,Store Operations,IC1,Entry,STORE-BR-027,77,Permanent,47,retail_ops,initial
+270,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC2,Professional,STORE-BR-006,34,Permanent,54,retail_ops,initial
+271,2016-02-29,1,1.0,BR,Supply Chain,Planning,Demand Planning,Logistics,IC1,Entry,DC-BR-004,125,Permanent,65,supply,initial
+272,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-003,108,Temporary,56,retail_ops,initial
+273,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC3,Professional,STORE-BR-001,140,Permanent,56,retail_ops,initial
+274,2016-02-29,1,0.5,BR,Retail,Regional Operations,Region South,Store Operations,IC1,Entry,STORE-BR-016,5,Permanent,54,retail_ops,initial
+275,2016-02-29,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC1,Entry,STORE-BR-043,127,Permanent,49,retail_ops,initial
+276,2016-02-29,1,1.0,BR,Supply Chain,Logistics,Transportation,Logistics,IC2,Professional,DC-BR-001,260,Permanent,57,supply,initial
+277,2016-02-29,1,1.0,BR,Supply Chain,Logistics,Last Mile,Logistics,IC2,Professional,DC-BR-005,260,Temporary,58,supply,initial
+278,2016-02-29,1,1.0,BR,Corporate,People,People Analytics,People,IC3,Professional,HQ-BR-001,327,Permanent,4,corporate,initial
+279,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-014,142,Permanent,55,retail_ops,initial
+280,2016-02-29,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC2,Professional,STORE-BR-006,136,Intern,49,retail_ops,initial
+281,2016-02-29,1,1.0,BR,Digital,E-commerce,Catalog,Product Management,M3,Senior Manager,HQ-BR-001,212,Permanent,42,digital,initial
+282,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region North,Store Operations,IC2,Professional,STORE-BR-001,34,Permanent,52,retail_ops,initial
+283,2016-02-29,1,1.0,BR,Digital,Engineering,SRE,Software Engineering,IC2,Professional,HQ-BR-001,234,Permanent,31,digital,initial
+285,2016-02-29,1,1.0,BR,Digital,Digital Marketing,Lifecycle,Marketing,IC2,Professional,HQ-BR-001,168,Permanent,45,digital,initial
+286,2016-02-29,1,0.5,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC3,Professional,HQ-BR-001,45,Permanent,20,corporate,initial
+287,2016-02-29,1,1.0,BR,Retail,Store Operations,Stockroom,Store Operations,IC1,Entry,STORE-BR-016,21,Permanent,48,retail_ops,initial
+288,2016-02-29,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC2,Professional,SITE-BR-003,252,Permanent,73,customer,initial
+289,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-021,170,Permanent,55,retail_ops,initial
+290,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-005,7,Permanent,51,retail_ops,initial
+291,2016-02-29,1,0.5,BR,Customer,Customer Operations,Returns,Logistics,IC1,Entry,SITE-BR-002,288,Temporary,73,customer,initial
+292,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,M1,Manager,STORE-BR-005,65,Permanent,51,retail_ops,initial
+293,2016-02-29,1,0.5,BR,Retail,Store Operations,Stockroom,Store Operations,IC1,Entry,STORE-BR-034,189,Permanent,48,retail_ops,initial
+294,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC3,Professional,STORE-BR-036,181,Permanent,56,retail_ops,initial
+295,2016-02-29,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,M1,Manager,DC-BR-005,10,Permanent,64,supply,initial
+296,2016-02-29,1,1.0,BR,Corporate,Finance,Controlling,Finance,IC2,Professional,HQ-BR-001,27,Permanent,6,corporate,initial
+297,2016-02-29,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC4,Senior Professional,DC-BR-003,295,Temporary,64,supply,initial
+298,2016-02-29,1,1.0,BR,Corporate,People,HR Business Partner,People,IC3,Professional,HQ-BR-001,327,Permanent,2,corporate,initial
+299,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-015,223,Permanent,55,retail_ops,initial
+300,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region Southeast,General Management,IC1,Entry,STORE-BR-012,12,Permanent,53,retail_ops,initial
+301,2016-02-29,1,0.5,BR,Customer,Customer Experience,Voice of Customer,Customer Support,IC1,Entry,SITE-BR-003,90,Permanent,68,customer,initial
+302,2016-02-29,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,IC2,Professional,DC-BR-005,319,Permanent,63,supply,initial
+303,2016-02-29,1,1.0,BR,Supply Chain,Logistics,Reverse Logistics,Logistics,M2,Manager,DC-BR-004,10,Permanent,59,supply,initial
+305,2016-02-29,1,1.0,BR,Supply Chain,Planning,Supply Planning,Logistics,IC3,Professional,DC-BR-003,335,Permanent,66,supply,initial
+306,2016-02-29,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC1,Entry,STORE-BR-027,190,Permanent,49,retail_ops,initial
+307,2016-02-29,1,1.0,BR,Corporate,Legal,Corporate Legal,Legal,M2,Manager,HQ-BR-001,321,Permanent,10,corporate,initial
+308,2016-02-29,1,0.5,BR,Retail,Store Operations,Cashier,Store Operations,IC1,Entry,STORE-BR-012,221,Permanent,47,retail_ops,initial
+309,2016-02-29,1,1.0,BR,Corporate,Marketing,Brand,Marketing,M5,Senior Manager,HQ-BR-001,62,Permanent,13,corporate,initial
+310,2016-02-29,1,1.0,BR,Digital,E-commerce,Storefront,Software Engineering,M1,Manager,HQ-BR-001,121,Permanent,40,digital,initial
+312,2016-02-29,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-006,24,Permanent,51,retail_ops,initial
+313,2016-02-29,1,1.0,BR,Retail,Store Operations,Cashier,Store Operations,IC2,Professional,STORE-BR-023,136,Permanent,47,retail_ops,initial
+314,2016-02-29,1,1.0,BR,Digital,Data,Data Engineering,Data,IC5,Senior Professional,HQ-BR-001,70,Permanent,34,digital,initial
+315,2016-02-29,1,1.0,BR,Supply Chain,Distribution Centers,Outbound,Warehouse,IC1,Entry,DC-BR-005,48,Permanent,61,supply,initial
+316,2016-02-29,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC2,Professional,STORE-BR-026,136,Permanent,46,retail_ops,initial
+317,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region South,Store Operations,IC1,Entry,STORE-BR-013,18,Permanent,54,retail_ops,initial
+318,2016-02-29,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC1,Entry,DC-BR-006,302,Permanent,64,supply,initial
+319,2016-02-29,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC3,Professional,DC-BR-003,297,Permanent,64,supply,initial
+320,2016-02-29,1,1.0,BR,Customer,Customer Experience,CX Design,Design,IC1,Entry,SITE-BR-001,329,Permanent,67,customer,initial
+321,2016-02-29,1,1.0,BR,Corporate,Marketing,CRM,Marketing,M3,Senior Manager,HQ-BR-001,309,Permanent,15,corporate,initial
+322,2016-02-29,1,1.0,BR,Supply Chain,Logistics,Last Mile,Logistics,IC1,Entry,DC-BR-005,276,Intern,58,supply,initial
+323,2016-02-29,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC1,Entry,SITE-BR-001,165,Apprentice,73,customer,initial
+324,2016-02-29,1,1.0,BR,Corporate,Finance,Accounting,Finance,IC2,Professional,HQ-BR-001,254,Permanent,8,corporate,initial
+325,2016-02-29,1,0.5,BR,Retail,Regional Operations,Region Southeast,General Management,IC1,Entry,STORE-BR-020,31,Permanent,53,retail_ops,initial
+326,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-018,144,Permanent,50,retail_ops,initial
+327,2016-02-29,1,1.0,BR,Corporate,People,HR Business Partner,People,M1,Manager,HQ-BR-001,307,Permanent,2,corporate,initial
+328,2016-02-29,1,1.0,BR,Digital,UX,Research,Design,IC1,Entry,HQ-BR-001,115,Permanent,38,digital,initial
+329,2016-02-29,1,1.0,BR,Customer,Customer Experience,CX Design,Customer Support,IC2,Professional,SITE-BR-002,194,Permanent,67,customer,initial
+330,2016-02-29,1,1.0,BR,Supply Chain,Logistics,Last Mile,Logistics,IC1,Entry,DC-BR-004,277,Temporary,58,supply,initial
+331,2016-02-29,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-025,313,Permanent,46,retail_ops,initial
+332,2016-02-29,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-002,4,Permanent,71,customer,initial
+333,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-030,26,Permanent,50,retail_ops,initial
+335,2016-02-29,1,1.0,BR,Supply Chain,Planning,Supply Planning,Data,M1,Manager,DC-BR-003,246,Permanent,66,supply,initial
+336,2016-02-29,1,1.0,AR,Retail,Store Operations,Stockroom,Store Operations,IC3,Professional,STORE-AR-008,341,Permanent,127,retail_ops,initial
+337,2016-02-29,1,1.0,AR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-AR-001,344,Permanent,148,customer,initial
+338,2016-02-29,1,1.0,AR,Supply Chain,Planning,Demand Planning,Data,IC1,Entry,DC-AR-001,355,Permanent,144,supply,initial
+339,2016-02-29,1,1.0,AR,Supply Chain,Distribution Centers,Inbound,Warehouse,IC3,Professional,DC-AR-001,343,Permanent,139,supply,initial
+340,2016-02-29,1,1.0,AR,Supply Chain,Planning,Supply Planning,Data,IC1,Entry,DC-AR-001,373,Permanent,145,supply,initial
+341,2016-02-29,1,1.0,AR,Retail,Sales,Key Accounts,Sales,M1,Manager,STORE-AR-008,8,Permanent,130,retail_ops,initial
+342,2016-02-29,1,1.0,AR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-AR-003,362,Permanent,130,retail_ops,initial
+343,2016-02-29,1,1.0,AR,Retail,Sales,Floor Sales,Sales,M1,Manager,STORE-AR-009,261,Permanent,129,retail_ops,initial
+344,2016-02-29,1,1.0,AR,Supply Chain,Planning,Demand Planning,Data,IC2,Professional,DC-AR-001,339,Temporary,144,supply,initial
+345,2016-02-29,1,1.0,AR,Supply Chain,Logistics,Last Mile,Logistics,IC1,Entry,DC-AR-001,348,Permanent,137,supply,initial
+346,2016-02-29,1,1.0,AR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-AR-004,379,Permanent,129,retail_ops,initial
+347,2016-02-29,1,1.0,AR,Customer,Customer Service,Chat,Customer Support,IC1,Entry,SITE-AR-001,351,Permanent,149,customer,initial
+348,2016-02-29,1,1.0,AR,Supply Chain,Logistics,Last Mile,Logistics,IC2,Professional,DC-AR-001,339,Permanent,137,supply,initial
+349,2016-02-29,1,1.0,AR,Retail,Regional Operations,Region South,General Management,IC1,Entry,STORE-AR-003,351,Permanent,133,retail_ops,initial
+351,2016-02-29,1,1.0,AR,Retail,Regional Operations,Region Southeast,Store Operations,IC2,Professional,STORE-AR-001,336,Permanent,132,retail_ops,initial
+352,2016-02-29,1,1.0,AR,Corporate,Marketing,Brand,Marketing,IC3,Professional,HQ-AR-001,363,Permanent,92,corporate,initial
+354,2016-02-29,1,0.5,AR,Retail,Store Operations,Security,Store Operations,IC1,Entry,STORE-AR-003,375,Permanent,128,retail_ops,initial
+355,2016-02-29,1,1.0,AR,Supply Chain,Planning,Supply Planning,Logistics,IC2,Professional,DC-AR-001,339,Permanent,145,supply,initial
+356,2016-02-29,1,1.0,AR,Supply Chain,Logistics,Last Mile,Logistics,IC2,Professional,DC-AR-001,339,Permanent,137,supply,initial
+357,2016-02-29,1,1.0,AR,Supply Chain,Distribution Centers,Outbound,Warehouse,IC2,Professional,DC-AR-001,339,Permanent,140,supply,initial
+358,2016-02-29,1,1.0,AR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-AR-007,365,Permanent,134,retail_ops,initial
+359,2016-02-29,1,0.5,AR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-AR-001,389,Permanent,148,customer,initial
+360,2016-02-29,1,1.0,AR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-AR-007,362,Permanent,130,retail_ops,initial
+361,2016-02-29,1,1.0,AR,Retail,Regional Operations,Region Southeast,General Management,IC1,Entry,STORE-AR-010,351,Temporary,132,retail_ops,initial
+362,2016-02-29,1,1.0,AR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-AR-008,341,Permanent,129,retail_ops,initial
+363,2016-02-29,1,1.0,AR,Retail,Visual Merchandising,Merchandising,Store Operations,M1,Manager,STORE-AR-008,307,Permanent,135,retail_ops,initial
+364,2016-02-29,1,1.0,AR,Supply Chain,Logistics,Transportation,Logistics,IC2,Professional,DC-AR-001,339,Permanent,136,supply,initial
+365,2016-02-29,1,1.0,AR,Retail,Visual Merchandising,Store Design,Store Operations,IC3,Professional,STORE-AR-001,363,Temporary,134,retail_ops,initial
+366,2016-02-29,1,1.0,AR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-AR-010,379,Permanent,129,retail_ops,initial
+367,2016-02-29,1,1.0,AR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-AR-001,356,Permanent,150,customer,initial
+368,2016-02-29,1,1.0,AR,Supply Chain,Logistics,Last Mile,Logistics,IC1,Entry,DC-AR-001,364,Permanent,137,supply,initial
+369,2016-02-29,1,1.0,AR,Retail,Store Operations,Cashier,Store Operations,IC1,Entry,STORE-AR-005,375,Temporary,126,retail_ops,initial
+370,2016-02-29,1,1.0,AR,Retail,Regional Operations,Region South,General Management,IC1,Entry,STORE-AR-001,351,Permanent,133,retail_ops,initial
+371,2016-02-29,1,0.5,AR,Customer,Customer Operations,Returns,Logistics,IC1,Entry,SITE-AR-001,357,Permanent,152,customer,initial
+372,2016-02-29,1,1.0,AR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-AR-001,362,Apprentice,130,retail_ops,initial
+373,2016-02-29,1,1.0,AR,Supply Chain,Planning,Supply Planning,Data,IC2,Professional,DC-AR-001,339,Permanent,145,supply,initial
+374,2016-02-29,1,1.0,AR,Supply Chain,Distribution Centers,Inbound,Warehouse,IC1,Entry,DC-AR-001,357,Permanent,139,supply,initial
+375,2016-02-29,1,1.0,AR,Retail,Store Operations,Security,Store Operations,IC2,Professional,STORE-AR-009,336,Intern,128,retail_ops,initial
+377,2016-02-29,1,1.0,AR,Retail,Regional Operations,Region North,General Management,IC1,Entry,STORE-AR-009,351,Permanent,131,retail_ops,initial
+378,2016-02-29,1,1.0,AR,Retail,Regional Operations,Region Southeast,General Management,IC1,Entry,STORE-AR-009,351,Permanent,132,retail_ops,initial
+379,2016-02-29,1,1.0,AR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-AR-001,343,Permanent,130,retail_ops,initial
+380,2016-02-29,1,1.0,AR,Retail,Store Operations,Cashier,Store Operations,IC1,Entry,STORE-AR-008,375,Permanent,126,retail_ops,initial
+381,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-019,238,Permanent,56,retail_ops,organic
+382,2016-02-29,1,0.75,AR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-AR-010,365,Permanent,135,retail_ops,organic
+383,2016-02-29,1,0.5,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-019,326,Permanent,50,retail_ops,organic
+384,2016-02-29,1,1.0,BR,Corporate,Data & Analytics,Data Governance,Data,IC2,Professional,HQ-BR-001,202,Permanent,26,corporate,organic
+385,2016-02-29,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC2,Professional,STORE-BR-001,136,Permanent,46,retail_ops,organic
+386,2016-02-29,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-013,11,Permanent,55,retail_ops,organic
+387,2016-02-29,1,1.0,BR,Digital,Engineering,Platform,Software Engineering,IC1,Entry,HQ-BR-001,283,Permanent,27,digital,organic
+388,2016-02-29,1,1.0,BR,Retail,Store Operations,Cashier,Store Operations,IC1,Entry,STORE-BR-016,385,Permanent,47,retail_ops,organic
+389,2016-02-29,1,1.0,AR,Retail,Regional Operations,Region North,General Management,IC2,Professional,STORE-AR-007,336,Temporary,131,retail_ops,organic
+390,2016-02-29,1,1.0,BR,Digital,Product,Product Ops,Product Management,IC1,Entry,HQ-BR-001,116,Permanent,33,digital,organic
+391,2016-02-29,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC2,Professional,SITE-BR-001,171,Permanent,71,customer,organic
+392,2016-02-29,1,1.0,BR,Retail,Store Operations,Cashier,Store Operations,IC1,Entry,STORE-BR-021,280,Permanent,47,retail_ops,organic
+393,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC1,Entry,STORE-BR-032,146,Permanent,53,retail_ops,organic
+394,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC1,Entry,STORE-BR-024,35,Permanent,53,retail_ops,organic
+395,2016-02-29,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC2,Professional,STORE-BR-035,34,Permanent,54,retail_ops,organic
+396,2016-02-29,1,1.0,AR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-AR-003,341,Permanent,130,retail_ops,organic
+397,2016-02-29,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-036,24,Permanent,50,retail_ops,organic
+398,2016-02-29,1,1.0,BR,Corporate,Data & Analytics,Data Governance,Data,IC2,Professional,HQ-BR-001,227,Permanent,26,corporate,organic
+399,2016-02-29,1,0.75,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-044,144,Permanent,50,retail_ops,organic
+400,2016-02-29,1,1.0,BR,Supply Chain,Distribution Centers,Inbound,Warehouse,IC1,Entry,DC-BR-004,48,Permanent,60,supply,organic
+1,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region South,Store Operations,IC1,Entry,STORE-BR-036,5,Permanent,54,retail_ops,initial
+2,2016-03-31,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Customer Support,IC3,Professional,SITE-BR-002,194,Permanent,68,customer,initial
+3,2016-03-31,1,1.0,BR,Supply Chain,Distribution Centers,Inventory,Warehouse,IC1,Entry,DC-BR-005,48,Temporary,62,supply,initial
+4,2016-03-31,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC2,Professional,SITE-BR-003,171,Permanent,69,customer,initial
+5,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region North,Store Operations,IC2,Professional,STORE-BR-029,34,Permanent,52,retail_ops,initial
+6,2016-03-31,1,1.0,BR,Digital,Product,Product Ops,Product Management,IC3,Professional,HQ-BR-001,192,Temporary,33,digital,initial
+7,2016-03-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-002,144,Permanent,51,retail_ops,initial
+8,2016-03-31,1,1.0,BR,Digital,Digital Marketing,SEO,Marketing,M2,Manager,HQ-BR-001,121,Temporary,43,digital,initial
+9,2016-03-31,1,1.0,BR,Supply Chain,Planning,Demand Planning,Logistics,IC3,Professional,DC-BR-003,257,Permanent,65,supply,initial
+10,2016-03-31,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,M3,Senior Manager,DC-BR-003,212,Permanent,63,supply,initial
+11,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC2,Professional,STORE-BR-029,273,Permanent,55,retail_ops,initial
+12,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC2,Professional,STORE-BR-034,34,Permanent,54,retail_ops,initial
+13,2016-03-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-005,7,Permanent,50,retail_ops,initial
+14,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,M3,Senior Manager,STORE-BR-039,212,Permanent,55,retail_ops,initial
+15,2016-03-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-036,24,Permanent,50,retail_ops,initial
+16,2016-03-31,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Customer Support,IC1,Entry,SITE-BR-002,90,Permanent,68,customer,initial
+17,2016-03-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-015,26,Permanent,50,retail_ops,initial
+18,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,General Management,IC2,Professional,STORE-BR-016,34,Permanent,53,retail_ops,initial
+19,2016-03-31,1,1.0,BR,Supply Chain,Logistics,Reverse Logistics,Logistics,IC2,Professional,DC-BR-001,260,Permanent,59,supply,initial
+20,2016-03-31,1,1.0,BR,Supply Chain,Distribution Centers,Outbound,Warehouse,IC1,Entry,DC-BR-001,48,Permanent,61,supply,initial
+21,2016-03-31,1,1.0,BR,Retail,Store Operations,Stockroom,Store Operations,IC2,Professional,STORE-BR-006,136,Permanent,48,retail_ops,initial
+22,2016-03-31,1,1.0,BR,Corporate,Legal,Corporate Legal,Legal,IC1,Entry,HQ-BR-001,55,Temporary,10,corporate,initial
+23,2016-03-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-020,42,Temporary,50,retail_ops,initial
+24,2016-03-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-012,144,Temporary,50,retail_ops,initial
+25,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-012,11,Permanent,56,retail_ops,initial
+26,2016-03-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-013,144,Permanent,50,retail_ops,initial
+27,2016-03-31,1,1.0,BR,Corporate,Finance,FP&A,Finance,IC3,Professional,HQ-BR-001,29,Permanent,9,corporate,initial
+28,2016-03-31,1,1.0,BR,Corporate,Finance,FP&A,Finance,IC1,Entry,HQ-BR-001,89,Permanent,9,corporate,initial
+29,2016-03-31,1,1.0,BR,Corporate,Strategy,Corporate Strategy,Strategy,IC5,Senior Professional,HQ-BR-001,193,Permanent,17,corporate,initial
+30,2016-03-31,1,1.0,BR,Customer,Customer Operations,Returns,Customer Support,IC1,Entry,SITE-BR-002,165,Permanent,73,customer,initial
+31,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC2,Professional,STORE-BR-016,34,Permanent,53,retail_ops,initial
+32,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC2,Professional,STORE-BR-040,294,Permanent,55,retail_ops,initial
+33,2016-03-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-036,61,Permanent,51,retail_ops,initial
+34,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,General Management,IC3,Professional,STORE-BR-002,98,Permanent,53,retail_ops,initial
+36,2016-03-31,1,1.0,BR,Supply Chain,Distribution Centers,Outbound,Warehouse,IC1,Entry,DC-BR-005,48,Permanent,61,supply,initial
+37,2016-03-31,1,0.5,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-029,32,Permanent,55,retail_ops,initial
+38,2016-03-31,1,1.0,BR,Supply Chain,Logistics,Transportation,Logistics,IC2,Professional,DC-BR-005,260,Permanent,57,supply,initial
+40,2016-03-31,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC1,Entry,SITE-BR-003,288,Permanent,73,customer,initial
+42,2016-03-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-027,144,Permanent,51,retail_ops,initial
+43,2016-03-31,1,1.0,BR,Supply Chain,Distribution Centers,Inbound,Warehouse,IC1,Entry,DC-BR-001,48,Permanent,60,supply,initial
+44,2016-03-31,1,0.5,BR,Retail,Regional Operations,Region North,General Management,IC1,Entry,STORE-BR-004,12,Permanent,52,retail_ops,initial
+45,2016-03-31,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC4,Senior Professional,HQ-BR-001,187,Permanent,20,corporate,initial
+46,2016-03-31,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,IC1,Entry,DC-BR-005,204,Temporary,63,supply,initial
+47,2016-03-31,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC2,Professional,HQ-BR-001,243,Permanent,21,corporate,initial
+48,2016-03-31,1,1.0,BR,Supply Chain,Distribution Centers,Inventory,Warehouse,IC2,Professional,DC-BR-003,2,Permanent,62,supply,initial
+49,2016-03-31,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,IC2,Professional,DC-BR-003,319,Permanent,63,supply,initial
+50,2016-03-31,1,1.0,BR,Corporate,Data & Analytics,Business Intelligence,Data,IC1,Entry,HQ-BR-001,202,Permanent,25,corporate,initial
+51,2016-03-31,1,1.0,BR,Customer,Customer Service,Chat,Customer Support,IC1,Entry,SITE-BR-003,53,Permanent,70,customer,initial
+53,2016-03-31,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC2,Professional,SITE-BR-004,171,Apprentice,69,customer,initial
+54,2016-03-31,1,1.0,BR,Corporate,People,Learning & Development,People,IC1,Entry,HQ-BR-001,113,Permanent,5,corporate,initial
+55,2016-03-31,1,1.0,BR,Corporate,Legal,Corporate Legal,Legal,IC2,Professional,HQ-BR-001,119,Permanent,10,corporate,initial
+56,2016-03-31,1,0.5,BR,Retail,Regional Operations,Region North,General Management,IC1,Entry,STORE-BR-022,18,Temporary,52,retail_ops,initial
+57,2016-03-31,1,1.0,BR,Corporate,People,People Analytics,People,IC1,Entry,HQ-BR-001,156,Permanent,4,corporate,initial
+59,2016-03-31,1,1.0,BR,Corporate,Strategy,Corporate Strategy,Strategy,IC1,Entry,HQ-BR-001,162,Permanent,17,corporate,initial
+60,2016-03-31,1,1.0,BR,Corporate,Marketing,Content,Marketing,IC4,Senior Professional,HQ-BR-001,321,Permanent,16,corporate,initial
+61,2016-03-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-042,144,Permanent,51,retail_ops,initial
+62,2016-03-31,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,D1,Director,HQ-BR-001,,Permanent,20,corporate,initial
+63,2016-03-31,1,1.0,BR,Supply Chain,Distribution Centers,Inbound,Warehouse,IC1,Entry,DC-BR-006,48,Permanent,60,supply,initial
+64,2016-03-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-044,139,Permanent,51,retail_ops,initial
+65,2016-03-31,1,0.5,BR,Retail,Sales,Floor Sales,Sales,M2,Manager,STORE-BR-014,14,Permanent,50,retail_ops,initial
+66,2016-03-31,1,1.0,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-041,21,Permanent,46,retail_ops,initial
+68,2016-03-31,1,1.0,BR,Retail,Store Operations,Stockroom,Store Operations,IC1,Entry,STORE-BR-030,77,Temporary,48,retail_ops,initial
+69,2016-03-31,1,1.0,BR,Supply Chain,Logistics,Transportation,Logistics,IC1,Entry,DC-BR-006,19,Permanent,57,supply,initial
+70,2016-03-31,1,1.0,BR,Digital,Data,Data Science,Data,M1,Manager,HQ-BR-001,8,Permanent,35,digital,initial
+71,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC2,Professional,STORE-BR-031,273,Permanent,56,retail_ops,initial
+72,2016-03-31,1,1.0,BR,Corporate,Risk,Internal Audit,Risk & Compliance,IC1,Entry,HQ-BR-001,73,Permanent,22,corporate,initial
+73,2016-03-31,1,1.0,BR,Corporate,Risk,Fraud,Risk & Compliance,IC2,Professional,HQ-BR-001,261,Permanent,24,corporate,initial
+74,2016-03-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-026,160,Permanent,51,retail_ops,initial
+75,2016-03-31,1,1.0,BR,Corporate,Legal,Compliance,Legal,IC1,Entry,HQ-BR-001,155,Permanent,11,corporate,initial
+76,2016-03-31,1,1.0,BR,Corporate,People,People Analytics,People,IC1,Entry,HQ-BR-001,200,Permanent,4,corporate,initial
+77,2016-03-31,1,1.0,BR,Retail,Store Operations,Cashier,Store Operations,IC2,Professional,STORE-BR-007,136,Permanent,47,retail_ops,initial
+78,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-022,32,Permanent,55,retail_ops,initial
+79,2016-03-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,M1,Manager,STORE-BR-028,65,Permanent,50,retail_ops,initial
+80,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC1,Entry,STORE-BR-036,31,Permanent,54,retail_ops,initial
+81,2016-03-31,1,1.0,BR,Digital,Product,Product Ops,Product Management,IC3,Professional,HQ-BR-001,192,Permanent,33,digital,initial
+82,2016-03-31,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC4,Senior Professional,HQ-BR-001,187,Permanent,20,corporate,initial
+83,2016-03-31,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-001,242,Permanent,71,customer,initial
+84,2016-03-31,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC1,Entry,DC-BR-001,204,Permanent,64,supply,initial
+85,2016-03-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-038,7,Permanent,51,retail_ops,initial
+86,2016-03-31,1,1.0,BR,Digital,Engineering,Frontend,Software Engineering,IC4,Senior Professional,HQ-BR-001,177,Permanent,29,digital,initial
+87,2016-03-31,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Design,IC1,Entry,SITE-BR-003,329,Permanent,68,customer,initial
+88,2016-03-31,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC2,Professional,HQ-BR-001,138,Permanent,21,corporate,initial
+89,2016-03-31,1,1.0,BR,Corporate,Finance,Treasury,Finance,IC3,Professional,HQ-BR-001,218,Permanent,7,corporate,initial
+90,2016-03-31,1,1.0,BR,Customer,Customer Experience,CX Design,Design,IC2,Professional,SITE-BR-001,194,Permanent,67,customer,initial
+91,2016-03-31,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-043,127,Permanent,46,retail_ops,initial
+92,2016-03-31,1,1.0,BR,Corporate,Data & Analytics,Business Intelligence,Data,IC4,Senior Professional,HQ-BR-001,196,Permanent,25,corporate,initial
+93,2016-03-31,1,0.75,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-003,4,Permanent,71,customer,initial
+94,2016-03-31,1,0.5,BR,Retail,Store Operations,Stockroom,Store Operations,IC1,Entry,STORE-BR-022,316,Permanent,48,retail_ops,initial
+95,2016-03-31,1,0.75,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC1,Entry,STORE-BR-007,111,Permanent,53,retail_ops,initial
+96,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-043,142,Permanent,55,retail_ops,initial
+97,2016-03-31,1,1.0,BR,Digital,Engineering,Mobile,Software Engineering,IC1,Entry,HQ-BR-001,214,Permanent,30,digital,initial
+98,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,M1,Manager,STORE-BR-010,65,Permanent,53,retail_ops,initial
+100,2016-03-31,1,1.0,BR,Corporate,Finance,Treasury,Finance,IC2,Professional,HQ-BR-001,254,Permanent,7,corporate,initial
+101,2016-03-31,1,1.0,BR,Corporate,Finance,FP&A,Finance,IC1,Entry,HQ-BR-001,100,Permanent,9,corporate,initial
+102,2016-03-31,1,1.0,BR,Customer,Customer Experience,CX Design,Design,IC1,Entry,SITE-BR-004,90,Permanent,67,customer,initial
+103,2016-03-31,1,1.0,BR,Customer,Customer Operations,Order Support,Logistics,IC1,Entry,SITE-BR-003,165,Permanent,72,customer,initial
+104,2016-03-31,1,1.0,BR,Customer,Customer Experience,CX Design,Design,IC1,Entry,SITE-BR-004,90,Permanent,67,customer,initial
+105,2016-03-31,1,1.0,BR,Corporate,Finance,Treasury,Finance,IC1,Entry,HQ-BR-001,296,Permanent,7,corporate,initial
+106,2016-03-31,1,1.0,BR,Digital,E-commerce,Storefront,Product Management,IC2,Professional,HQ-BR-001,129,Temporary,40,digital,initial
+107,2016-03-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-005,161,Permanent,50,retail_ops,initial
+108,2016-03-31,1,0.5,BR,Retail,Visual Merchandising,Merchandising,Design,IC2,Professional,STORE-BR-028,294,Permanent,56,retail_ops,initial
+109,2016-03-31,1,1.0,BR,Supply Chain,Distribution Centers,Inventory,Warehouse,IC1,Entry,DC-BR-001,48,Permanent,62,supply,initial
+110,2016-03-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-007,201,Permanent,51,retail_ops,initial
+111,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region North,Store Operations,IC2,Professional,STORE-BR-038,34,Permanent,52,retail_ops,initial
+113,2016-03-31,1,1.0,BR,Corporate,People,HR Business Partner,People,IC2,Professional,HQ-BR-001,183,Permanent,2,corporate,initial
+114,2016-03-31,1,0.5,BR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-BR-001,53,Permanent,69,customer,initial
+115,2016-03-31,1,1.0,BR,Digital,UX,Product Design,Design,IC2,Professional,HQ-BR-001,178,Permanent,37,digital,initial
+116,2016-03-31,1,1.0,BR,Digital,Product,Product Management,Product Management,IC2,Professional,HQ-BR-001,6,Permanent,32,digital,initial
+117,2016-03-31,1,1.0,BR,Corporate,Risk,Fraud,Risk & Compliance,IC2,Professional,HQ-BR-001,261,Permanent,24,corporate,initial
+118,2016-03-31,1,1.0,BR,Digital,Product,Product Management,Product Management,IC2,Professional,HQ-BR-001,81,Permanent,32,digital,initial
+119,2016-03-31,1,1.0,BR,Corporate,Legal,Labor Legal,Legal,IC3,Professional,HQ-BR-001,196,Permanent,12,corporate,initial
+120,2016-03-31,1,1.0,BR,Digital,Data,Data Engineering,Data,IC3,Professional,HQ-BR-001,153,Permanent,34,digital,initial
+121,2016-03-31,1,0.5,BR,Digital,E-commerce,Catalog,Product Management,M4,Senior Manager,HQ-BR-001,309,Permanent,42,digital,initial
+122,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC1,Entry,STORE-BR-001,174,Apprentice,54,retail_ops,initial
+123,2016-03-31,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-002,242,Permanent,71,customer,initial
+124,2016-03-31,1,1.0,BR,Corporate,Marketing,Performance,Marketing,IC1,Entry,HQ-BR-001,60,Permanent,14,corporate,initial
+125,2016-03-31,1,1.0,BR,Supply Chain,Planning,Demand Planning,Data,IC2,Professional,DC-BR-002,9,Permanent,65,supply,initial
+126,2016-03-31,1,1.0,BR,Supply Chain,Logistics,Last Mile,Logistics,IC1,Entry,DC-BR-001,38,Permanent,58,supply,initial
+127,2016-03-31,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC2,Professional,STORE-BR-022,136,Permanent,46,retail_ops,initial
+128,2016-03-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-022,326,Permanent,51,retail_ops,initial
+129,2016-03-31,1,1.0,BR,Digital,E-commerce,Checkout,Product Management,M1,Manager,HQ-BR-001,281,Permanent,41,digital,initial
+130,2016-03-31,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Design,IC1,Entry,SITE-BR-002,329,Permanent,68,customer,initial
+131,2016-03-31,1,0.5,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-022,189,Temporary,46,retail_ops,initial
+132,2016-03-31,1,1.0,BR,Customer,Customer Operations,Order Support,Logistics,IC1,Entry,SITE-BR-003,288,Permanent,72,customer,initial
+133,2016-03-31,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Design,IC1,Entry,SITE-BR-002,90,Permanent,68,customer,initial
+134,2016-03-31,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-BR-004,4,Permanent,69,customer,initial
+135,2016-03-31,1,1.0,BR,Digital,Data,Analytics Engineering,Data,IC2,Professional,HQ-BR-001,120,Permanent,36,digital,initial
+136,2016-03-31,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC3,Professional,STORE-BR-015,141,Permanent,49,retail_ops,initial
+137,2016-03-31,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC1,Entry,HQ-BR-001,166,Permanent,21,corporate,initial
+138,2016-03-31,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC3,Professional,HQ-BR-001,45,Permanent,21,corporate,initial
+139,2016-03-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-014,144,Permanent,51,retail_ops,initial
+140,2016-03-31,1,0.5,BR,Retail,Visual Merchandising,Store Design,Store Operations,M1,Manager,STORE-BR-038,14,Permanent,55,retail_ops,initial
+141,2016-03-31,1,0.5,BR,Retail,Sales,Key Accounts,Sales,M1,Manager,STORE-BR-018,65,Permanent,51,retail_ops,initial
+142,2016-03-31,1,0.75,BR,Retail,Visual Merchandising,Store Design,Design,IC2,Professional,STORE-BR-025,294,Permanent,55,retail_ops,initial
+143,2016-03-31,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC1,Entry,DC-BR-003,204,Permanent,64,supply,initial
+144,2016-03-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC3,Professional,STORE-BR-018,79,Permanent,51,retail_ops,initial
+145,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-042,170,Permanent,56,retail_ops,initial
+146,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region North,General Management,IC2,Professional,STORE-BR-036,34,Intern,52,retail_ops,initial
+148,2016-03-31,1,1.0,BR,Supply Chain,Planning,Supply Planning,Data,IC1,Entry,DC-BR-003,125,Permanent,66,supply,initial
+149,2016-03-31,1,1.0,BR,Supply Chain,Distribution Centers,Outbound,Warehouse,IC1,Entry,DC-BR-006,48,Permanent,61,supply,initial
+150,2016-03-31,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC1,Entry,SITE-BR-004,53,Permanent,71,customer,initial
+151,2016-03-31,1,1.0,BR,Retail,Store Operations,Stockroom,Store Operations,IC1,Entry,STORE-BR-018,385,Temporary,48,retail_ops,initial
+152,2016-03-31,1,1.0,BR,Digital,UX,Product Design,Design,IC2,Professional,HQ-BR-001,205,Permanent,37,digital,initial
+153,2016-03-31,1,1.0,BR,Digital,Data,Analytics Engineering,Data,IC4,Senior Professional,HQ-BR-001,314,Intern,36,digital,initial
+154,2016-03-31,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-BR-004,242,Permanent,69,customer,initial
+155,2016-03-31,1,1.0,BR,Corporate,Legal,Corporate Legal,Legal,IC2,Professional,HQ-BR-001,119,Permanent,10,corporate,initial
+156,2016-03-31,1,1.0,BR,Corporate,People,Talent Acquisition,People,IC2,Professional,HQ-BR-001,278,Permanent,1,corporate,initial
+158,2016-03-31,1,1.0,BR,Supply Chain,Procurement,Supplier Management,Procurement,IC1,Entry,DC-BR-004,302,Permanent,64,supply,initial
+159,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-005,223,Temporary,56,retail_ops,initial
+160,2016-03-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC2,Professional,STORE-BR-016,144,Permanent,51,retail_ops,initial
+161,2016-03-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-013,144,Permanent,50,retail_ops,initial
+162,2016-03-31,1,1.0,BR,Corporate,Strategy,PMO,Strategy,IC4,Senior Professional,HQ-BR-001,193,Permanent,19,corporate,initial
+163,2016-03-31,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC1,Entry,SITE-BR-004,165,Permanent,73,customer,initial
+165,2016-03-31,1,1.0,BR,Customer,Customer Operations,Returns,Logistics,IC2,Professional,SITE-BR-001,252,Permanent,73,customer,initial
+166,2016-03-31,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC2,Professional,HQ-BR-001,243,Permanent,20,corporate,initial
+167,2016-03-31,1,1.0,BR,Corporate,Risk,Risk Management,Risk & Compliance,IC1,Entry,HQ-BR-001,117,Permanent,23,corporate,initial
+168,2016-03-31,1,1.0,BR,Digital,Digital Marketing,Paid Media,Marketing,IC5,Senior Professional,HQ-BR-001,8,Permanent,44,digital,initial
+169,2016-03-31,1,0.5,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-023,238,Apprentice,55,retail_ops,initial
+170,2016-03-31,1,1.0,BR,Corporate,Strategy,Corporate Strategy,Strategy,IC2,Professional,HQ-BR-001,162,Permanent,17,corporate,initial
+171,2016-03-31,1,1.0,BR,Customer,Customer Service,Chat,Customer Support,IC4,Senior Professional,SITE-BR-002,194,Permanent,70,customer,initial
+172,2016-03-31,1,1.0,BR,Digital,Digital Marketing,Paid Media,Marketing,IC2,Professional,HQ-BR-001,168,Permanent,44,digital,initial
+173,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-037,11,Permanent,55,retail_ops,initial
+174,2016-03-31,1,0.5,BR,Retail,Regional Operations,Region South,Store Operations,IC2,Professional,STORE-BR-007,34,Permanent,54,retail_ops,initial
+175,2016-03-31,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC2,Professional,HQ-BR-001,286,Apprentice,20,corporate,initial
+176,2016-03-31,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Customer Support,IC1,Entry,SITE-BR-002,329,Permanent,68,customer,initial
+177,2016-03-31,1,1.0,BR,Digital,UX,Product Design,Design,IC5,Senior Professional,HQ-BR-001,129,Permanent,37,digital,initial
+178,2016-03-31,1,1.0,BR,Digital,UX,Product Design,Design,IC4,Senior Professional,HQ-BR-001,177,Permanent,37,digital,initial
+179,2016-03-31,1,1.0,BR,Supply Chain,Planning,Demand Planning,Data,IC1,Entry,DC-BR-003,125,Permanent,65,supply,initial
+181,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Store Operations,M1,Manager,STORE-BR-022,14,Intern,56,retail_ops,initial
+182,2016-03-31,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC1,Entry,STORE-BR-031,221,Permanent,49,retail_ops,initial
+183,2016-03-31,1,1.0,BR,Corporate,People,Talent Acquisition,People,IC3,Professional,HQ-BR-001,327,Permanent,1,corporate,initial
+185,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-004,32,Permanent,56,retail_ops,initial
+186,2016-03-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-013,26,Permanent,50,retail_ops,initial
+187,2016-03-31,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,M2,Manager,HQ-BR-001,62,Permanent,21,corporate,initial
+188,2016-03-31,1,1.0,BR,Supply Chain,Logistics,Reverse Logistics,Logistics,IC1,Entry,DC-BR-002,276,Permanent,59,supply,initial
+189,2016-03-31,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC2,Professional,SITE-BR-003,171,Apprentice,69,customer,initial
+191,2016-03-31,1,0.75,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-042,42,Temporary,50,retail_ops,initial
+192,2016-03-31,1,1.0,BR,Digital,Product,Product Management,Product Management,IC5,Senior Professional,HQ-BR-001,310,Permanent,32,digital,initial
+193,2016-03-31,1,1.0,BR,Corporate,Strategy,M&A,Strategy,M1,Manager,HQ-BR-001,261,Permanent,18,corporate,initial
+194,2016-03-31,1,1.0,BR,Customer,Customer Experience,CX Design,Customer Support,M1,Manager,SITE-BR-004,246,Permanent,67,customer,initial
+195,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-037,71,Permanent,56,retail_ops,initial
+196,2016-03-31,1,1.0,BR,Corporate,Legal,Compliance,Legal,IC5,Senior Professional,HQ-BR-001,307,Permanent,11,corporate,initial
+197,2016-03-31,1,1.0,BR,Digital,Data,Analytics Engineering,Data,IC4,Senior Professional,HQ-BR-001,314,Permanent,36,digital,initial
+198,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region South,General Management,IC1,Entry,STORE-BR-034,239,Permanent,54,retail_ops,initial
+199,2016-03-31,1,1.0,BR,Digital,E-commerce,Checkout,Software Engineering,IC2,Professional,HQ-BR-001,310,Permanent,41,digital,initial
+200,2016-03-31,1,1.0,BR,Corporate,People,People Analytics,People,IC2,Professional,HQ-BR-001,298,Temporary,4,corporate,initial
+201,2016-03-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC2,Professional,STORE-BR-005,144,Permanent,50,retail_ops,initial
+202,2016-03-31,1,1.0,BR,Corporate,Data & Analytics,Data Governance,Data,IC3,Professional,HQ-BR-001,92,Permanent,26,corporate,initial
+203,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-028,108,Permanent,55,retail_ops,initial
+204,2016-03-31,1,1.0,BR,Supply Chain,Procurement,Sourcing,Procurement,IC2,Professional,DC-BR-002,319,Permanent,63,supply,initial
+205,2016-03-31,1,1.0,BR,Digital,UX,Design System,Design,IC4,Senior Professional,HQ-BR-001,177,Permanent,39,digital,initial
+206,2016-03-31,1,1.0,BR,Supply Chain,Logistics,Reverse Logistics,Logistics,IC1,Entry,DC-BR-002,277,Permanent,59,supply,initial
+207,2016-03-31,1,0.5,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-043,71,Permanent,55,retail_ops,initial
+208,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region North,Store Operations,M1,Manager,STORE-BR-031,65,Permanent,52,retail_ops,initial
+209,2016-03-31,1,1.0,BR,Retail,Store Operations,Security,Store Operations,IC1,Entry,STORE-BR-007,280,Permanent,49,retail_ops,initial
+210,2016-03-31,1,1.0,BR,Digital,Engineering,Platform,Software Engineering,IC3,Professional,HQ-BR-001,86,Permanent,27,digital,initial
+212,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,M4,Senior Manager,STORE-BR-001,309,Permanent,56,retail_ops,initial
+213,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region North,General Management,IC1,Entry,STORE-BR-013,270,Permanent,52,retail_ops,initial
+214,2016-03-31,1,1.0,BR,Digital,Engineering,SRE,Software Engineering,IC2,Professional,HQ-BR-001,210,Permanent,31,digital,initial
+215,2016-03-31,1,1.0,BR,Corporate,Procurement,Indirect Procurement,Procurement,IC2,Professional,HQ-BR-001,138,Permanent,20,corporate,initial
+216,2016-03-31,1,1.0,BR,Customer,Customer Experience,Voice of Customer,Design,IC1,Entry,SITE-BR-001,90,Permanent,68,customer,initial
+217,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-030,142,Permanent,56,retail_ops,initial
+218,2016-03-31,1,1.0,BR,Corporate,Strategy,PMO,Strategy,IC4,Senior Professional,HQ-BR-001,193,Permanent,19,corporate,initial
+220,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region South,Store Operations,IC1,Entry,STORE-BR-025,282,Permanent,54,retail_ops,initial
+221,2016-03-31,1,0.5,BR,Retail,Store Operations,Stockroom,Store Operations,IC2,Professional,STORE-BR-034,136,Intern,48,retail_ops,initial
+223,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC2,Professional,STORE-BR-026,294,Permanent,55,retail_ops,initial
+224,2016-03-31,1,0.5,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-031,170,Permanent,56,retail_ops,initial
+225,2016-03-31,1,1.0,BR,Customer,Customer Experience,CX Design,Design,IC1,Entry,SITE-BR-004,329,Permanent,67,customer,initial
+226,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC1,Entry,STORE-BR-015,395,Permanent,53,retail_ops,initial
+227,2016-03-31,1,1.0,BR,Corporate,Data & Analytics,Data Governance,Data,IC3,Professional,HQ-BR-001,92,Permanent,26,corporate,initial
+228,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-004,223,Permanent,56,retail_ops,initial
+229,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Store Operations,IC1,Entry,STORE-BR-012,238,Permanent,56,retail_ops,initial
+230,2016-03-31,1,0.75,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-013,61,Permanent,50,retail_ops,initial
+231,2016-03-31,1,1.0,BR,Customer,Customer Operations,Returns,Customer Support,IC1,Entry,SITE-BR-004,288,Permanent,73,customer,initial
+232,2016-03-31,1,1.0,BR,Corporate,Data & Analytics,Business Intelligence,Data,IC2,Professional,HQ-BR-001,202,Permanent,25,corporate,initial
+233,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,M1,Manager,STORE-BR-033,14,Permanent,55,retail_ops,initial
+235,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Merchandising,Design,IC1,Entry,STORE-BR-015,11,Permanent,56,retail_ops,initial
+236,2016-03-31,1,1.0,BR,Corporate,Risk,Risk Management,Risk & Compliance,IC1,Entry,HQ-BR-001,248,Temporary,23,corporate,initial
+237,2016-03-31,1,1.0,BR,Retail,Sales,Floor Sales,Sales,IC1,Entry,STORE-BR-021,139,Permanent,50,retail_ops,initial
+238,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC2,Professional,STORE-BR-008,273,Permanent,55,retail_ops,initial
+239,2016-03-31,1,1.0,BR,Retail,Regional Operations,Region Southeast,Store Operations,IC2,Professional,STORE-BR-033,34,Permanent,53,retail_ops,initial
+240,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Design,IC1,Entry,STORE-BR-006,32,Permanent,55,retail_ops,initial
+241,2016-03-31,1,0.75,BR,Customer,Customer Operations,Returns,Customer Support,IC1,Entry,SITE-BR-003,165,Permanent,73,customer,initial
+242,2016-03-31,1,1.0,BR,Customer,Customer Service,Escalations,Customer Support,IC2,Professional,SITE-BR-001,171,Permanent,71,customer,initial
+243,2016-03-31,1,1.0,BR,Corporate,Procurement,Contracts,Procurement,IC3,Professional,HQ-BR-001,82,Permanent,21,corporate,initial
+244,2016-03-31,1,1.0,BR,Digital,Digital Marketing,Lifecycle,Marketing,IC1,Entry,HQ-BR-001,172,Intern,45,digital,initial
+245,2016-03-31,1,1.0,BR,Customer,Customer Service,Contact Center,Customer Support,IC1,Entry,SITE-BR-004,4,Intern,69,customer,initial
+246,2016-03-31,1,1.0,BR,Supply Chain,Planning,Demand Planning,Data,M2,Manager,DC-BR-005,10,Permanent,65,supply,initial
+247,2016-03-31,1,1.0,BR,Retail,Visual Merchandising,Store Design,Store Operations,IC1,Entry,STORE-BR-019,71,Permanent,55,retail_ops,initial
+248,2016-03-31,1,1.0,BR,Corporate,Risk,Fraud,Risk & Compliance,IC2,Professional,HQ-BR-001,261,Permanent,24,corporate,initial
+249,2016-03-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-023,160,Permanent,51,retail_ops,initial
+250,2016-03-31,1,1.0,BR,Retail,Sales,Key Accounts,Sales,IC1,Entry,STORE-BR-040,161,Permanent,51,retail_ops,initial
+251,2016-03-31,1,0.5,BR,Retail,Regional Operations,Region North,Store Operations,IC2,Professional,STORE-BR-025,34,Permanent,52,retail_ops,initial
+252,2016-03-31,1,0.5,BR,Customer,Customer Operations,Order Support,Logistics,M1,Manager,SITE-BR-001,303,Permanent,72,customer,initial
+253,2016-03-31,1,1.0,BR,Customer,Customer Service,Chat,Customer Support,IC1,Entry,SITE-BR-002,53,Permanent,70,customer,initial
+254,2016-03-31,1,1.0,BR,Corporate,Finance,Controlling,Finance,IC3,Professional,HQ-BR-001,60,Permanent,6,corporate,initial
+255,2016-03-31,1,1.0,BR,Retail,Store Operations,Store Management,Store Operations,IC1,Entry,STORE-BR-025,313,Permanent,46,retail_ops,initial

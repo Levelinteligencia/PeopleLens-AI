@@ -1,0 +1,376 @@
+# =============================================================================
+# PeopleLens AI  ::  NOVAORA
+# config/defects.yaml
+#
+# Catalogo de defeitos deliberados. Todo defeito tem causa raiz declarada,
+# escopo e sistema de origem. Nada de randomly_make_10_percent_null().
+#
+# ESTADO DA DECISAO D8  (ADR-0008):
+#   Parte A, ESTRUTURA deste catalogo: APROVADA, com a Emenda 1 de 11/09/2026
+#   (reconciliacao com sources.yaml: D01, D04, D05 e D_DEFINITION_DRIFT ganharam
+#   os sistemas que sources.yaml ja declarava).
+#   Parte B, TAXAS numericas: PROVISORIAS ate a F7. Emenda 2 de 11/09/2026: os
+#   criterios de saida dependem do trust score, que so existe na F7, entao o
+#   congelamento acontece la e nao ao final da F2.
+#
+# Referencia: Technical Design v0.3 secao 8. Especificacao secao 25.
+# Status: F0. Nenhum dado foi gerado a partir deste arquivo.
+# =============================================================================
+
+meta:
+  config_version: "0.2"
+  phase: F2
+  rates_status: PROVISIONAL          # muda para FROZEN na F7 (ADR-0008, Emenda 2)
+  freeze_phase: F7
+  frozen_at: null
+  frozen_in_adr: null
+  part_a_amendments:
+    - {id: 1, date: 2026-09-11, summary: "reconciliacao com sources.yaml em D01, D04, D05 e D_DEFINITION_DRIFT"}
+
+# -----------------------------------------------------------------------------
+# Alvo de calibragem  (ADR-0008)
+# -----------------------------------------------------------------------------
+# As taxas NAO sao escolhidas por realismo isolado. Realismo e restricao,
+# a distribuicao abaixo e o objetivo. Medida sobre o conjunto de combinacoes
+# (KPI x recorte) na camada semantica.
+calibration:
+  method: "iterativa, com perfil de escala dev (10%)"
+  # A F2 verifica a calibragem TECNICA (taxa realizada versus esperada por
+  # defeito, sistema e dataset). A calibragem contra a distribuicao de trust
+  # score acontece na F7, quando o trust score existir. Ver ADR-0008 Emenda 2.
+  technical_calibration_phase: F2
+  trust_calibration_phase: F7
+  # DQ-04 (fechamento da F5, ADR-0023): a calibragem da F7 acontece por RECORTE
+  # FINO, e as bandas de trust score NAO se movem. Se, com recorte fino, a
+  # distribuicao continuar fora da faixa, e a faixa alvo abaixo que e revista
+  # com evidencia, e nao os limiares do score.
+  trust_calibration_strategy: "recorte fino; bandas preservadas (ADR-0023)"
+  target_trust_distribution:
+    CERTIFIED: [0.60, 0.70]
+    LIMITED:   [0.20, 0.25]
+    BLOCKED:   [0.10, 0.15]
+  target_concentration:
+    CERTIFIED: "Brasil e Corporate, 2021 em diante"
+    LIMITED:   "janela da migracao de 2019, paises menores"
+    BLOCKED:   "populacoes VivaMarket e CompraFacil, e o periodo 2016 a 2018"
+  most_sensitive_rates:
+    - {defect: D03, reason: "governa todos os KPIs de DEI e interage com o n minimo do ADR-0007"}
+    - {defect: D11, reason: "governa a reconciliacao, o check mais visivel na demonstracao. Abaixo de 2% ninguem percebe; acima de 8% parece erro de implementacao"}
+  exit_criteria:
+    - "distribuicao de trust score dentro das faixas alvo"
+    - "fila de exceptions com pelo menos 40 valores distintos abertos no primeiro processamento"
+    - "pelo menos um KPI CERTIFIED e um BLOCKED respondiveis pela mesma pergunta em recortes diferentes"
+    - "quarentena nao vazia e abaixo de 3% do volume total"
+
+# -----------------------------------------------------------------------------
+# Severidades de injecao
+# -----------------------------------------------------------------------------
+severity_legend:
+  structural: "impede o registro de entrar no analitico; vai para quarentena"
+  semantic:   "registro entra, mas exige DE/PARA ou derruba trust score"
+  cosmetic:   "afeta forma, nao significado; resolvido na camada standardized"
+
+# -----------------------------------------------------------------------------
+# Defeitos
+# -----------------------------------------------------------------------------
+defects:
+
+  - id: D01
+    name: "Dominio de gender divergente"
+    dimension: Consistency
+    kind: semantic
+    root_cause_incident: INC_2019_HRIS_MIGRATION
+    description: "M/F no legado convivendo com Male/Female no novo HRIS durante a janela de migracao"
+    source_systems: [HRIS_LEGACY, HRIS_CORE, VIVAMARKET_LEGACY]   # VivaMarket usa MASC/FEM
+    scope: {date_range: [2019-05-01, 2019-11-30]}
+    rate: 1.00
+    rate_basis: "100% dos registros do periodo de sobreposicao"
+    requires_mapping: ref_gender_mapping
+    detected_by: [DQ_VALID_004, DQ_CONS_002]
+
+  - id: D02
+    name: "race_ethnicity inexistente"
+    dimension: Completeness
+    kind: semantic
+    root_cause_incident: INC_2019_HRIS_MIGRATION
+    description: "O campo nao existia antes de jun/2019. Nao e dado faltante, e ausencia de campo"
+    source_systems: [HRIS_LEGACY]
+    scope: {date_range: [2016-01-01, 2019-05-31]}
+    rate: 1.00
+    note: "O KPI de representatividade nao deve retornar zero para este periodo, deve retornar indisponivel"
+    detected_by: [DQ_COMP_007]
+
+  - id: D03
+    name: "race_ethnicity nao informada"
+    dimension: Completeness
+    kind: semantic
+    root_cause: "autodeclaracao opcional"
+    source_systems: [HRIS_CORE]
+    scope: {date_range: [2019-06-01, 2026-06-30]}
+    rate_by_country: {BR: 0.24, AR: 0.31, CL: 0.29, CO: 0.26, MX: 0.35}
+    rate_status: PROVISIONAL_SENSITIVE
+    note: >
+      Taxa mais sensivel do catalogo. Define o denominador de todos os KPIs de
+      DEI. A regra e reportar sobre a base de declarantes e informar a taxa de
+      nao declaracao junto, nunca imputar.
+    detected_by: [DQ_COMP_008]
+
+  - id: D04
+    name: "Departamento com nomenclatura livre"
+    dimension: Consistency
+    kind: semantic
+    root_cause: "entrada manual sem dominio controlado"
+    source_systems: [HRIS_LEGACY, VIVAMARKET_LEGACY]
+    scope: {date_range: [2016-01-01, 2019-11-30]}
+    rate: 0.12
+    variants_example: ["RH", "R.H.", "Recursos Humanos", "rh", "REC HUMANOS", "People & Culture"]
+    requires_mapping: ref_department_mapping
+    detected_by: [DQ_CONS_001]
+
+  - id: D05
+    name: "employee_id corporativo ausente"
+    dimension: Completeness
+    kind: structural
+    root_cause_incident: [INC_2022_VIVAMARKET, INC_2024_COMPRAFACIL]
+    description: "Sistemas de aquisicao nao conhecem o ID corporativo da NOVAORA"
+    # ATS_CLOUD entra aqui porque o `enterprise_id_fill_rate: 0.63` declarado em
+    # sources.yaml e o mesmo fenomeno: o sistema nao conhece o ID corporativo.
+    source_systems: [VIVAMARKET_LEGACY, COMPRAFACIL_ERP, ATS_CLOUD]
+    scope: {on_initial_load: true}
+    rate: 1.00
+    resolved_by: xref_employee_identity
+    detected_by: [DQ_COMP_001]
+
+  - id: D06
+    name: "employee_id duplicado entre sistemas"
+    dimension: Uniqueness
+    kind: structural
+    root_cause_incident: INC_2022_VIVAMARKET
+    description: "Colisao de faixa numerica entre os IDs da VivaMarket e os do HRIS_CORE"
+    source_systems: [VIVAMARKET_LEGACY, HRIS_CORE]
+    scope: {absolute_count: 180}
+    rate: null
+    rate_type: absolute
+    detected_by: [DQ_UNIQ_002]
+
+  - id: D07
+    name: "Formato de data divergente"
+    dimension: Validity
+    kind: cosmetic
+    root_cause: "padrao do sistema de origem"
+    source_systems: [HRIS_LEGACY, VIVAMARKET_LEGACY, ATS_LEGACY, COMPRAFACIL_ERP]
+    formats: {HRIS_LEGACY: "%d/%m/%Y", VIVAMARKET_LEGACY: "%d/%m/%y", ATS_LEGACY: "%m/%d/%Y", COMPRAFACIL_ERP: "%Y%m%d"}
+    rate: 1.00
+    note: "Resolvido na camada standardized. O risco real e o silencioso: 03/04 e ambiguo entre BR e US"
+    detected_by: [DQ_VALID_001]
+
+  - id: D08
+    name: "Data impossivel"
+    dimension: Validity
+    kind: structural
+    root_cause: "digitacao manual"
+    source_systems: [HRIS_LEGACY, VIVAMARKET_LEGACY, COMPRAFACIL_ERP]
+    rate: 0.004
+    patterns: ["31/02", "ano 1900", "data futura", "ano 0202 por digitacao"]
+    detected_by: [DQ_VALID_002, DQ_VALID_003]
+
+  - id: D09
+    name: "manager_id orfao"
+    dimension: "Referential Integrity"
+    kind: structural
+    root_cause: "gestor desligado sem sucessao registrada, e reorganizacoes"
+    source_systems: [HRIS_LEGACY, HRIS_CORE, ORGCHART, VIVAMARKET_LEGACY, COMPRAFACIL_ERP]
+    rate: 0.018
+    rate_peaks:
+      - {date_range: [2025-05-01, 2025-08-31], rate: 0.06, cause: INC_2025_NEW_ORG_MODEL}
+      - {date_range: [2022-08-01, 2022-12-31], rate: 0.05, cause: INC_2022_VIVAMARKET}
+    detected_by: [DQ_REF_001]
+
+  - id: D10
+    name: "Departamento extinto ainda em uso"
+    dimension: Consistency
+    kind: semantic
+    root_cause_incident: [INC_2023_DIGITAL_REORG, INC_2025_NEW_ORG_MODEL]
+    source_systems: [ORGCHART]
+    scope: {months_after_reorg: 4}
+    rate: 0.15
+    detected_by: [DQ_CONS_005, DQ_RECON_004]
+
+  - id: D11
+    name: "Divergencia de headcount HRIS versus Payroll"
+    dimension: Reconciliation
+    kind: semantic
+    root_cause: "definicoes diferentes de ativo: a folha inclui terceiros, estagiarios e aviso previo"
+    source_systems: [HRIS_CORE, PAYROLL_BR, PAYROLL_LATAM]
+    rate_range: [0.02, 0.05]
+    rate_status: PROVISIONAL_SENSITIVE
+    note: "Segunda taxa mais sensivel. Abaixo de 2% a reconciliacao fica invisivel na demonstracao"
+    detected_by: [DQ_RECON_001]
+
+  - id: D12
+    name: "job_level fora do padrao corporativo"
+    dimension: Validity
+    kind: semantic
+    root_cause_incident: [INC_2022_VIVAMARKET, INC_2024_COMPRAFACIL]
+    source_systems: [VIVAMARKET_LEGACY, COMPRAFACIL_ERP]
+    foreign_scales: {VIVAMARKET_LEGACY: [N1, N2, N3, N4, N5, N6, N7], COMPRAFACIL_ERP: [A, B, C, D, E, F]}
+    rate: 1.00
+    requires_mapping: ref_job_level_mapping
+    note: "Parte do mapeamento e ambiguo de proposito: N4 pode ser IC4 ou M1 dependendo da area. Esses casos DEVEM cair em mapping_exceptions"
+    detected_by: [DQ_VALID_006]
+
+  - id: D13
+    name: "Salario anual versus mensal"
+    dimension: Consistency
+    kind: semantic
+    root_cause: "pratica diferente por pais"
+    source_systems: [PAYROLL_LATAM, COMP_PLAN]
+    scope: {countries: [CL, MX]}
+    rate: 1.00
+    note: "Sem normalizacao, o Chile aparece com salarios 12x maiores que o Brasil"
+    detected_by: [DQ_CONS_008]
+
+  - id: D14
+    name: "Moeda ausente"
+    dimension: Completeness
+    kind: semantic
+    root_cause: "campo opcional no sistema legado"
+    source_systems: [HRIS_LEGACY, PAYROLL_BR, PAYROLL_LATAM]
+    scope: {date_range: [2016-01-01, 2019-12-31]}
+    rate: 0.08
+    note: "Nao assumir moeda pelo pais. Registro sem moeda vai para excecao, nao para inferencia"
+    detected_by: [DQ_COMP_011]
+
+  - id: D15
+    name: "Candidato duplicado"
+    dimension: Uniqueness
+    kind: semantic
+    root_cause: "mesma pessoa com e-mails diferentes, sem chave estavel no ATS legado"
+    source_systems: [ATS_LEGACY]
+    rate: 0.06
+    rate_basis: "percentual de candidatos"
+    note: "Infla o denominador de Offer Acceptance Rate e distorce analise de fonte de candidato"
+    detected_by: [DQ_UNIQ_005]
+
+  - id: D16
+    name: "Requisicao sem contratacao"
+    dimension: "Referential Integrity"
+    kind: semantic
+    root_cause: "vaga cancelada, congelada ou preenchida internamente sem registro"
+    source_systems: [ATS_LEGACY, ATS_CLOUD]
+    rate: 0.15
+    rate_peaks:
+      - {year: 2020, rate: 0.40, cause: INC_2020_PANDEMIC}
+    note: "Depois do split do ADR-0005 isto deixa de ser anomalia e vira simplesmente requisicao sem candidatura aceita"
+    detected_by: [DQ_REF_004]
+
+  - id: D17
+    name: "Contratacao sem requisicao valida"
+    dimension: "Referential Integrity"
+    kind: structural
+    root_cause: "contratacao emergencial de loja, registrada depois"
+    source_systems: [ATS_LEGACY, ATS_CLOUD, HRIS_CORE]
+    scope: {segments: [retail_ops]}
+    rate: 0.09
+    note: "Quebra o Time to Fill: existe admissao sem opening_date"
+    detected_by: [DQ_REF_005, DQ_RECON_003]
+
+  - id: D18
+    name: "Registro parado"
+    dimension: Timeliness
+    kind: semantic
+    root_cause: "integracao que parou de rodar e ninguem percebeu"
+    source_systems: [ORGCHART, LMS, COMPRAFACIL_ERP]
+    scope: {date_range: [2023-01-01, 2026-06-30]}
+    rate: 0.03
+    note: "Registros que nunca foram atualizados apos 2023. O dado nao esta errado, esta velho, e essa e a dimensao que quase todo projeto esquece"
+    detected_by: [DQ_TIME_002]
+
+  - id: D19
+    name: "country inconsistente entre sistemas"
+    dimension: Consistency
+    kind: semantic
+    root_cause: "pais do contrato diferente do pais de trabalho, em expatriados e remotos"
+    source_systems: [HRIS_CORE, PAYROLL_BR, PAYROLL_LATAM, COMPRAFACIL_ERP]
+    rate: 0.012
+    note: "Afeta todo KPI com recorte de pais, inclusive compa-ratio e pay gap"
+    detected_by: [DQ_CONS_003]
+
+  - id: D20
+    name: "compa_ratio da fonte divergente do recalculado"
+    dimension: Reconciliation
+    kind: semantic
+    root_cause_incident: INC_2025_NEW_ORG_MODEL
+    description: "A banda salarial mudou e o COMP_PLAN nao reprocessou"
+    source_systems: [COMP_PLAN]
+    scope: {absolute_count: 340, date_range: [2025-01-01, 2026-06-30]}
+    rate: null
+    rate_type: absolute
+    note: "Caso didatico de fato versus calculo: o sistema reportava 0,98 medio; recalculado era 0,94"
+    detected_by: [DQ_RECON_002]
+
+  - id: D21
+    name: "engagement_score zerado indevidamente"
+    dimension: Validity
+    kind: structural
+    root_cause: "response_flag = 0 exportado como score 0 em vez de nulo"
+    source_systems: [ENGAGE]
+    scope: {date_range: [2017-01-01, 2020-12-31]}
+    rate: 1.00
+    rate_basis: "100% dos nao respondentes do periodo"
+    note: >
+      O defeito que mais engana analista senior. Somando sem filtrar
+      response_flag, o engajamento de 2018 parece catastrofico. A
+      Especificacao ja sinaliza isso na secao 14 e este e o check de DQ mais
+      importante do projeto.
+    detected_by: [DQ_VALID_011]
+    priority: highest
+
+  - id: D22
+    name: "Duplicidade de vinculo por recontratacao"
+    dimension: Uniqueness
+    kind: semantic
+    root_cause: "recontratacao criou registro novo em vez de reabrir o vinculo"
+    source_systems: [HRIS_LEGACY, HRIS_CORE, LMS]
+    scope: {absolute_count: 1900}
+    rate: null
+    rate_type: absolute
+    note: "Infla headcount historico e quebra o calculo de tenure"
+    detected_by: [DQ_UNIQ_001, DQ_CONS_006]
+
+  - id: D23
+    name: "Encoding quebrado"
+    dimension: Validity
+    kind: cosmetic
+    root_cause: "arquivo latin-1 lido como utf-8"
+    source_systems: [HRIS_LEGACY, VIVAMARKET_LEGACY, COMPRAFACIL_ERP]
+    rate: 1.00
+    rate_basis: "100% dos campos de texto com acento"
+    example: "Distribuicao -> Distribuiu00e7u00e3o mal decodificado"
+    detected_by: [DQ_VALID_009]
+
+  # ---------------------------------------------------------------------------
+  # Defeito estrutural sem numero, por ser mudanca de definicao e nao erro
+  # ---------------------------------------------------------------------------
+  - id: D_DEFINITION_DRIFT
+    name: "Deriva de definicao ao longo do tempo"
+    dimension: Consistency
+    kind: semantic
+    root_cause_incident: [INC_2021_PERF_SCALE, INC_2025_NEW_ORG_MODEL]
+    description: >
+      Nao e defeito de digitacao nem de sistema: a organizacao mudou o
+      significado de um campo. Exige DE/PARA temporal e afeta toda comparacao
+      historica.
+    source_systems: [HRIS_CORE, HRIS_LEGACY, COMP_PLAN]
+    affected_fields: [performance_rating, job_level, business_unit, cost_center]
+    requires_mapping: [ref_performance_rating_mapping, ref_job_level_mapping, ref_business_unit_mapping, ref_cost_center_mapping]
+    detected_by: [DQ_CONS_010]
+
+# -----------------------------------------------------------------------------
+# O que NAO fazer  (Especificacao secao 25)
+# -----------------------------------------------------------------------------
+forbidden_injection_patterns:
+  - "nulos distribuidos uniformemente sem causa"
+  - "corrupcao aleatoria de valores sem sistema de origem"
+  - "defeito que nao aponta para um incidente ou uma pratica declarada"
+  - "taxa escolhida sem estar neste arquivo"

@@ -1,0 +1,396 @@
+org_key,country,business_unit,department,sub_department,segment,cost_center,hc_weight,valid_from,valid_to,is_current
+1,BR,Corporate,People,Talent Acquisition,corporate,CC-BR-COR-01,0.003999999999999999,2016-01-01,,true
+2,BR,Corporate,People,HR Business Partner,corporate,CC-BR-COR-01,0.003999999999999999,2016-01-01,,true
+3,BR,Corporate,People,Compensation & Benefits,corporate,CC-BR-COR-01,0.003999999999999999,2016-01-01,,true
+4,BR,Corporate,People,People Analytics,corporate,CC-BR-COR-01,0.003999999999999999,2016-01-01,,true
+5,BR,Corporate,People,Learning & Development,corporate,CC-BR-COR-01,0.003999999999999999,2016-01-01,,true
+6,BR,Corporate,Finance,Controlling,corporate,CC-BR-COR-02,0.004999999999999999,2016-01-01,,true
+7,BR,Corporate,Finance,Treasury,corporate,CC-BR-COR-02,0.004999999999999999,2016-01-01,,true
+8,BR,Corporate,Finance,Accounting,corporate,CC-BR-COR-02,0.004999999999999999,2016-01-01,,true
+9,BR,Corporate,Finance,FP&A,corporate,CC-BR-COR-02,0.004999999999999999,2016-01-01,,true
+10,BR,Corporate,Legal,Corporate Legal,corporate,CC-BR-COR-03,0.006666666666666665,2016-01-01,,true
+11,BR,Corporate,Legal,Compliance,corporate,CC-BR-COR-03,0.006666666666666665,2016-01-01,,true
+12,BR,Corporate,Legal,Labor Legal,corporate,CC-BR-COR-03,0.006666666666666665,2016-01-01,,true
+13,BR,Corporate,Marketing,Brand,corporate,CC-BR-COR-04,0.004999999999999999,2016-01-01,,true
+14,BR,Corporate,Marketing,Performance,corporate,CC-BR-COR-04,0.004999999999999999,2016-01-01,,true
+15,BR,Corporate,Marketing,CRM,corporate,CC-BR-COR-04,0.004999999999999999,2016-01-01,,true
+16,BR,Corporate,Marketing,Content,corporate,CC-BR-COR-04,0.004999999999999999,2016-01-01,,true
+17,BR,Corporate,Strategy,Corporate Strategy,corporate,CC-BR-COR-05,0.006666666666666665,2016-01-01,,true
+18,BR,Corporate,Strategy,M&A,corporate,CC-BR-COR-05,0.006666666666666665,2016-01-01,,true
+19,BR,Corporate,Strategy,PMO,corporate,CC-BR-COR-05,0.006666666666666665,2016-01-01,,true
+20,BR,Corporate,Procurement,Indirect Procurement,corporate,CC-BR-COR-06,0.009999999999999998,2016-01-01,,true
+21,BR,Corporate,Procurement,Contracts,corporate,CC-BR-COR-06,0.009999999999999998,2016-01-01,,true
+22,BR,Corporate,Risk,Internal Audit,corporate,CC-BR-COR-07,0.006666666666666665,2016-01-01,,true
+23,BR,Corporate,Risk,Risk Management,corporate,CC-BR-COR-07,0.006666666666666665,2016-01-01,,true
+24,BR,Corporate,Risk,Fraud,corporate,CC-BR-COR-07,0.006666666666666665,2016-01-01,,true
+25,BR,Corporate,Data & Analytics,Business Intelligence,corporate,CC-BR-COR-08,0.009999999999999998,2016-01-01,,true
+26,BR,Corporate,Data & Analytics,Data Governance,corporate,CC-BR-COR-08,0.009999999999999998,2016-01-01,,true
+27,BR,Digital,Engineering,Platform,digital,CC-BR-DIG-01,0.0031111111111111105,2016-01-01,,true
+28,BR,Digital,Engineering,Backend,digital,CC-BR-DIG-01,0.0031111111111111105,2016-01-01,,true
+29,BR,Digital,Engineering,Frontend,digital,CC-BR-DIG-01,0.0031111111111111105,2016-01-01,,true
+30,BR,Digital,Engineering,Mobile,digital,CC-BR-DIG-01,0.0031111111111111105,2016-01-01,,true
+31,BR,Digital,Engineering,SRE,digital,CC-BR-DIG-01,0.0031111111111111105,2016-01-01,,true
+32,BR,Digital,Product,Product Management,digital,CC-BR-DIG-02,0.007777777777777777,2016-01-01,,true
+33,BR,Digital,Product,Product Ops,digital,CC-BR-DIG-02,0.007777777777777777,2016-01-01,,true
+34,BR,Digital,Data,Data Engineering,digital,CC-BR-DIG-03,0.005185185185185184,2016-01-01,,true
+35,BR,Digital,Data,Data Science,digital,CC-BR-DIG-03,0.005185185185185184,2016-01-01,,true
+36,BR,Digital,Data,Analytics Engineering,digital,CC-BR-DIG-03,0.005185185185185184,2016-01-01,,true
+37,BR,Digital,UX,Product Design,digital,CC-BR-DIG-04,0.005185185185185184,2016-01-01,,true
+38,BR,Digital,UX,Research,digital,CC-BR-DIG-04,0.005185185185185184,2016-01-01,,true
+39,BR,Digital,UX,Design System,digital,CC-BR-DIG-04,0.005185185185185184,2016-01-01,,true
+40,BR,Digital,E-commerce,Storefront,digital,CC-BR-DIG-05,0.005185185185185184,2016-01-01,,true
+41,BR,Digital,E-commerce,Checkout,digital,CC-BR-DIG-05,0.005185185185185184,2016-01-01,,true
+42,BR,Digital,E-commerce,Catalog,digital,CC-BR-DIG-05,0.005185185185185184,2016-01-01,,true
+43,BR,Digital,Digital Marketing,SEO,digital,CC-BR-DIG-06,0.005185185185185184,2016-01-01,,true
+44,BR,Digital,Digital Marketing,Paid Media,digital,CC-BR-DIG-06,0.005185185185185184,2016-01-01,,true
+45,BR,Digital,Digital Marketing,Lifecycle,digital,CC-BR-DIG-06,0.005185185185185184,2016-01-01,,true
+46,BR,Retail,Store Operations,Store Management,retail_ops,CC-BR-RET-01,0.026249999999999992,2016-01-01,,true
+47,BR,Retail,Store Operations,Cashier,retail_ops,CC-BR-RET-01,0.026249999999999992,2016-01-01,,true
+48,BR,Retail,Store Operations,Stockroom,retail_ops,CC-BR-RET-01,0.026249999999999992,2016-01-01,,true
+49,BR,Retail,Store Operations,Security,retail_ops,CC-BR-RET-01,0.026249999999999992,2016-01-01,,true
+50,BR,Retail,Sales,Floor Sales,retail_ops,CC-BR-RET-02,0.052499999999999984,2016-01-01,,true
+51,BR,Retail,Sales,Key Accounts,retail_ops,CC-BR-RET-02,0.052499999999999984,2016-01-01,,true
+52,BR,Retail,Regional Operations,Region North,retail_ops,CC-BR-RET-03,0.03499999999999999,2016-01-01,,true
+53,BR,Retail,Regional Operations,Region Southeast,retail_ops,CC-BR-RET-03,0.03499999999999999,2016-01-01,,true
+54,BR,Retail,Regional Operations,Region South,retail_ops,CC-BR-RET-03,0.03499999999999999,2016-01-01,,true
+55,BR,Retail,Visual Merchandising,Store Design,retail_ops,CC-BR-RET-04,0.052499999999999984,2016-01-01,,true
+56,BR,Retail,Visual Merchandising,Merchandising,retail_ops,CC-BR-RET-04,0.052499999999999984,2016-01-01,,true
+57,BR,Supply Chain,Logistics,Transportation,supply,CC-BR-SUP-01,0.012499999999999995,2016-01-01,,true
+58,BR,Supply Chain,Logistics,Last Mile,supply,CC-BR-SUP-01,0.012499999999999995,2016-01-01,,true
+59,BR,Supply Chain,Logistics,Reverse Logistics,supply,CC-BR-SUP-01,0.012499999999999995,2016-01-01,,true
+60,BR,Supply Chain,Distribution Centers,Inbound,supply,CC-BR-SUP-02,0.012499999999999995,2016-01-01,,true
+61,BR,Supply Chain,Distribution Centers,Outbound,supply,CC-BR-SUP-02,0.012499999999999995,2016-01-01,,true
+62,BR,Supply Chain,Distribution Centers,Inventory,supply,CC-BR-SUP-02,0.012499999999999995,2016-01-01,,true
+63,BR,Supply Chain,Procurement,Sourcing,supply,CC-BR-SUP-03,0.018749999999999996,2016-01-01,,true
+64,BR,Supply Chain,Procurement,Supplier Management,supply,CC-BR-SUP-03,0.018749999999999996,2016-01-01,,true
+65,BR,Supply Chain,Planning,Demand Planning,supply,CC-BR-SUP-04,0.018749999999999996,2016-01-01,,true
+66,BR,Supply Chain,Planning,Supply Planning,supply,CC-BR-SUP-04,0.018749999999999996,2016-01-01,,true
+67,BR,Customer,Customer Experience,CX Design,customer,CC-BR-CUS-01,0.021666666666666664,2016-01-01,,true
+68,BR,Customer,Customer Experience,Voice of Customer,customer,CC-BR-CUS-01,0.021666666666666664,2016-01-01,,true
+69,BR,Customer,Customer Service,Contact Center,customer,CC-BR-CUS-02,0.014444444444444442,2016-01-01,,true
+70,BR,Customer,Customer Service,Chat,customer,CC-BR-CUS-02,0.014444444444444442,2016-01-01,,true
+71,BR,Customer,Customer Service,Escalations,customer,CC-BR-CUS-02,0.014444444444444442,2016-01-01,,true
+72,BR,Customer,Customer Operations,Order Support,customer,CC-BR-CUS-03,0.021666666666666664,2016-01-01,,true
+73,BR,Customer,Customer Operations,Returns,customer,CC-BR-CUS-03,0.021666666666666664,2016-01-01,,true
+74,BR,Marketplace,Marketplace Operations,Onboarding,digital,CC-BR-MKT-01,0.007777777777777777,2022-08-01,,true
+75,BR,Marketplace,Marketplace Operations,Quality,digital,CC-BR-MKT-01,0.007777777777777777,2022-08-01,,true
+76,BR,Marketplace,Seller Management,Seller Success,digital,CC-BR-MKT-02,0.007777777777777777,2022-08-01,,true
+77,BR,Marketplace,Seller Management,Seller Growth,digital,CC-BR-MKT-02,0.007777777777777777,2022-08-01,,true
+78,BR,Marketplace,Marketplace Technology,Integrations,digital,CC-BR-MKT-03,0.007777777777777777,2022-08-01,,true
+79,BR,Marketplace,Marketplace Technology,Seller Platform,digital,CC-BR-MKT-03,0.007777777777777777,2022-08-01,,true
+80,AR,Corporate,People,Talent Acquisition,corporate,CC-AR-COR-01,0.0010526315789473684,2016-01-01,,true
+81,AR,Corporate,People,HR Business Partner,corporate,CC-AR-COR-01,0.0010526315789473684,2016-01-01,,true
+82,AR,Corporate,People,Compensation & Benefits,corporate,CC-AR-COR-01,0.0010526315789473684,2016-01-01,,true
+83,AR,Corporate,People,People Analytics,corporate,CC-AR-COR-01,0.0010526315789473684,2016-01-01,,true
+84,AR,Corporate,People,Learning & Development,corporate,CC-AR-COR-01,0.0010526315789473684,2016-01-01,,true
+85,AR,Corporate,Finance,Controlling,corporate,CC-AR-COR-02,0.0013157894736842105,2016-01-01,,true
+86,AR,Corporate,Finance,Treasury,corporate,CC-AR-COR-02,0.0013157894736842105,2016-01-01,,true
+87,AR,Corporate,Finance,Accounting,corporate,CC-AR-COR-02,0.0013157894736842105,2016-01-01,,true
+88,AR,Corporate,Finance,FP&A,corporate,CC-AR-COR-02,0.0013157894736842105,2016-01-01,,true
+89,AR,Corporate,Legal,Corporate Legal,corporate,CC-AR-COR-03,0.0017543859649122805,2016-01-01,,true
+90,AR,Corporate,Legal,Compliance,corporate,CC-AR-COR-03,0.0017543859649122805,2016-01-01,,true
+91,AR,Corporate,Legal,Labor Legal,corporate,CC-AR-COR-03,0.0017543859649122805,2016-01-01,,true
+92,AR,Corporate,Marketing,Brand,corporate,CC-AR-COR-04,0.0013157894736842105,2016-01-01,,true
+93,AR,Corporate,Marketing,Performance,corporate,CC-AR-COR-04,0.0013157894736842105,2016-01-01,,true
+94,AR,Corporate,Marketing,CRM,corporate,CC-AR-COR-04,0.0013157894736842105,2016-01-01,,true
+95,AR,Corporate,Marketing,Content,corporate,CC-AR-COR-04,0.0013157894736842105,2016-01-01,,true
+96,AR,Corporate,Strategy,Corporate Strategy,corporate,CC-AR-COR-05,0.0017543859649122805,2016-01-01,,true
+97,AR,Corporate,Strategy,M&A,corporate,CC-AR-COR-05,0.0017543859649122805,2016-01-01,,true
+98,AR,Corporate,Strategy,PMO,corporate,CC-AR-COR-05,0.0017543859649122805,2016-01-01,,true
+99,AR,Corporate,Procurement,Indirect Procurement,corporate,CC-AR-COR-06,0.002631578947368421,2016-01-01,,true
+100,AR,Corporate,Procurement,Contracts,corporate,CC-AR-COR-06,0.002631578947368421,2016-01-01,,true
+101,AR,Corporate,Risk,Internal Audit,corporate,CC-AR-COR-07,0.0017543859649122805,2016-01-01,,true
+102,AR,Corporate,Risk,Risk Management,corporate,CC-AR-COR-07,0.0017543859649122805,2016-01-01,,true
+103,AR,Corporate,Risk,Fraud,corporate,CC-AR-COR-07,0.0017543859649122805,2016-01-01,,true
+104,AR,Corporate,Data & Analytics,Business Intelligence,corporate,CC-AR-COR-08,0.002631578947368421,2016-01-01,,true
+105,AR,Corporate,Data & Analytics,Data Governance,corporate,CC-AR-COR-08,0.002631578947368421,2016-01-01,,true
+106,AR,Digital,Engineering,Platform,digital,CC-AR-DIG-01,0.0006140350877192983,2016-01-01,,true
+107,AR,Digital,Engineering,Backend,digital,CC-AR-DIG-01,0.0006140350877192983,2016-01-01,,true
+108,AR,Digital,Engineering,Frontend,digital,CC-AR-DIG-01,0.0006140350877192983,2016-01-01,,true
+109,AR,Digital,Engineering,Mobile,digital,CC-AR-DIG-01,0.0006140350877192983,2016-01-01,,true
+110,AR,Digital,Engineering,SRE,digital,CC-AR-DIG-01,0.0006140350877192983,2016-01-01,,true
+111,AR,Digital,Product,Product Management,digital,CC-AR-DIG-02,0.0015350877192982456,2016-01-01,,true
+112,AR,Digital,Product,Product Ops,digital,CC-AR-DIG-02,0.0015350877192982456,2016-01-01,,true
+113,AR,Digital,Data,Data Engineering,digital,CC-AR-DIG-03,0.0010233918128654971,2016-01-01,,true
+114,AR,Digital,Data,Data Science,digital,CC-AR-DIG-03,0.0010233918128654971,2016-01-01,,true
+115,AR,Digital,Data,Analytics Engineering,digital,CC-AR-DIG-03,0.0010233918128654971,2016-01-01,,true
+116,AR,Digital,UX,Product Design,digital,CC-AR-DIG-04,0.0010233918128654971,2016-01-01,,true
+117,AR,Digital,UX,Research,digital,CC-AR-DIG-04,0.0010233918128654971,2016-01-01,,true
+118,AR,Digital,UX,Design System,digital,CC-AR-DIG-04,0.0010233918128654971,2016-01-01,,true
+119,AR,Digital,E-commerce,Storefront,digital,CC-AR-DIG-05,0.0010233918128654971,2016-01-01,,true
+120,AR,Digital,E-commerce,Checkout,digital,CC-AR-DIG-05,0.0010233918128654971,2016-01-01,,true
+121,AR,Digital,E-commerce,Catalog,digital,CC-AR-DIG-05,0.0010233918128654971,2016-01-01,,true
+122,AR,Digital,Digital Marketing,SEO,digital,CC-AR-DIG-06,0.0010233918128654971,2016-01-01,,true
+123,AR,Digital,Digital Marketing,Paid Media,digital,CC-AR-DIG-06,0.0010233918128654971,2016-01-01,,true
+124,AR,Digital,Digital Marketing,Lifecycle,digital,CC-AR-DIG-06,0.0010233918128654971,2016-01-01,,true
+125,AR,Retail,Store Operations,Store Management,retail_ops,CC-AR-RET-01,0.03453947368421052,2016-01-01,,true
+126,AR,Retail,Store Operations,Cashier,retail_ops,CC-AR-RET-01,0.03453947368421052,2016-01-01,,true
+127,AR,Retail,Store Operations,Stockroom,retail_ops,CC-AR-RET-01,0.03453947368421052,2016-01-01,,true
+128,AR,Retail,Store Operations,Security,retail_ops,CC-AR-RET-01,0.03453947368421052,2016-01-01,,true
+129,AR,Retail,Sales,Floor Sales,retail_ops,CC-AR-RET-02,0.06907894736842105,2016-01-01,,true
+130,AR,Retail,Sales,Key Accounts,retail_ops,CC-AR-RET-02,0.06907894736842105,2016-01-01,,true
+131,AR,Retail,Regional Operations,Region North,retail_ops,CC-AR-RET-03,0.046052631578947366,2016-01-01,,true
+132,AR,Retail,Regional Operations,Region Southeast,retail_ops,CC-AR-RET-03,0.046052631578947366,2016-01-01,,true
+133,AR,Retail,Regional Operations,Region South,retail_ops,CC-AR-RET-03,0.046052631578947366,2016-01-01,,true
+134,AR,Retail,Visual Merchandising,Store Design,retail_ops,CC-AR-RET-04,0.06907894736842105,2016-01-01,,true
+135,AR,Retail,Visual Merchandising,Merchandising,retail_ops,CC-AR-RET-04,0.06907894736842105,2016-01-01,,true
+136,AR,Supply Chain,Logistics,Transportation,supply,CC-AR-SUP-01,0.01644736842105263,2016-01-01,,true
+137,AR,Supply Chain,Logistics,Last Mile,supply,CC-AR-SUP-01,0.01644736842105263,2016-01-01,,true
+138,AR,Supply Chain,Logistics,Reverse Logistics,supply,CC-AR-SUP-01,0.01644736842105263,2016-01-01,,true
+139,AR,Supply Chain,Distribution Centers,Inbound,supply,CC-AR-SUP-02,0.01644736842105263,2016-01-01,,true
+140,AR,Supply Chain,Distribution Centers,Outbound,supply,CC-AR-SUP-02,0.01644736842105263,2016-01-01,,true
+141,AR,Supply Chain,Distribution Centers,Inventory,supply,CC-AR-SUP-02,0.01644736842105263,2016-01-01,,true
+142,AR,Supply Chain,Procurement,Sourcing,supply,CC-AR-SUP-03,0.024671052631578948,2016-01-01,,true
+143,AR,Supply Chain,Procurement,Supplier Management,supply,CC-AR-SUP-03,0.024671052631578948,2016-01-01,,true
+144,AR,Supply Chain,Planning,Demand Planning,supply,CC-AR-SUP-04,0.024671052631578948,2016-01-01,,true
+145,AR,Supply Chain,Planning,Supply Planning,supply,CC-AR-SUP-04,0.024671052631578948,2016-01-01,,true
+146,AR,Customer,Customer Experience,CX Design,customer,CC-AR-CUS-01,0.028508771929824563,2016-01-01,,true
+147,AR,Customer,Customer Experience,Voice of Customer,customer,CC-AR-CUS-01,0.028508771929824563,2016-01-01,,true
+148,AR,Customer,Customer Service,Contact Center,customer,CC-AR-CUS-02,0.019005847953216377,2016-01-01,,true
+149,AR,Customer,Customer Service,Chat,customer,CC-AR-CUS-02,0.019005847953216377,2016-01-01,,true
+150,AR,Customer,Customer Service,Escalations,customer,CC-AR-CUS-02,0.019005847953216377,2016-01-01,,true
+151,AR,Customer,Customer Operations,Order Support,customer,CC-AR-CUS-03,0.028508771929824563,2016-01-01,,true
+152,AR,Customer,Customer Operations,Returns,customer,CC-AR-CUS-03,0.028508771929824563,2016-01-01,,true
+153,AR,Marketplace,Marketplace Operations,Onboarding,digital,CC-AR-MKT-01,0.0030701754385964912,2022-08-01,,true
+154,AR,Marketplace,Marketplace Operations,Quality,digital,CC-AR-MKT-01,0.0030701754385964912,2022-08-01,,true
+155,AR,Marketplace,Seller Management,Seller Success,digital,CC-AR-MKT-02,0.0030701754385964912,2022-08-01,,true
+156,AR,Marketplace,Seller Management,Seller Growth,digital,CC-AR-MKT-02,0.0030701754385964912,2022-08-01,,true
+157,AR,Marketplace,Marketplace Technology,Integrations,digital,CC-AR-MKT-03,0.0030701754385964912,2022-08-01,,true
+158,AR,Marketplace,Marketplace Technology,Seller Platform,digital,CC-AR-MKT-03,0.0030701754385964912,2022-08-01,,true
+159,CL,Corporate,People,Talent Acquisition,corporate,CC-CL-COR-01,0.0008078994614003589,2016-01-01,,true
+160,CL,Corporate,People,HR Business Partner,corporate,CC-CL-COR-01,0.0008078994614003589,2016-01-01,,true
+161,CL,Corporate,People,Compensation & Benefits,corporate,CC-CL-COR-01,0.0008078994614003589,2016-01-01,,true
+162,CL,Corporate,People,People Analytics,corporate,CC-CL-COR-01,0.0008078994614003589,2016-01-01,,true
+163,CL,Corporate,People,Learning & Development,corporate,CC-CL-COR-01,0.0008078994614003589,2016-01-01,,true
+164,CL,Corporate,Finance,Controlling,corporate,CC-CL-COR-02,0.0010098743267504488,2016-01-01,,true
+165,CL,Corporate,Finance,Treasury,corporate,CC-CL-COR-02,0.0010098743267504488,2016-01-01,,true
+166,CL,Corporate,Finance,Accounting,corporate,CC-CL-COR-02,0.0010098743267504488,2016-01-01,,true
+167,CL,Corporate,Finance,FP&A,corporate,CC-CL-COR-02,0.0010098743267504488,2016-01-01,,true
+168,CL,Corporate,Legal,Corporate Legal,corporate,CC-CL-COR-03,0.0013464991023339316,2016-01-01,,true
+169,CL,Corporate,Legal,Compliance,corporate,CC-CL-COR-03,0.0013464991023339316,2016-01-01,,true
+170,CL,Corporate,Legal,Labor Legal,corporate,CC-CL-COR-03,0.0013464991023339316,2016-01-01,,true
+171,CL,Corporate,Marketing,Brand,corporate,CC-CL-COR-04,0.0010098743267504488,2016-01-01,,true
+172,CL,Corporate,Marketing,Performance,corporate,CC-CL-COR-04,0.0010098743267504488,2016-01-01,,true
+173,CL,Corporate,Marketing,CRM,corporate,CC-CL-COR-04,0.0010098743267504488,2016-01-01,,true
+174,CL,Corporate,Marketing,Content,corporate,CC-CL-COR-04,0.0010098743267504488,2016-01-01,,true
+175,CL,Corporate,Strategy,Corporate Strategy,corporate,CC-CL-COR-05,0.0013464991023339316,2016-01-01,,true
+176,CL,Corporate,Strategy,M&A,corporate,CC-CL-COR-05,0.0013464991023339316,2016-01-01,,true
+177,CL,Corporate,Strategy,PMO,corporate,CC-CL-COR-05,0.0013464991023339316,2016-01-01,,true
+178,CL,Corporate,Procurement,Indirect Procurement,corporate,CC-CL-COR-06,0.0020197486535008975,2016-01-01,,true
+179,CL,Corporate,Procurement,Contracts,corporate,CC-CL-COR-06,0.0020197486535008975,2016-01-01,,true
+180,CL,Corporate,Risk,Internal Audit,corporate,CC-CL-COR-07,0.0013464991023339316,2016-01-01,,true
+181,CL,Corporate,Risk,Risk Management,corporate,CC-CL-COR-07,0.0013464991023339316,2016-01-01,,true
+182,CL,Corporate,Risk,Fraud,corporate,CC-CL-COR-07,0.0013464991023339316,2016-01-01,,true
+183,CL,Corporate,Data & Analytics,Business Intelligence,corporate,CC-CL-COR-08,0.0020197486535008975,2016-01-01,,true
+184,CL,Corporate,Data & Analytics,Data Governance,corporate,CC-CL-COR-08,0.0020197486535008975,2016-01-01,,true
+185,CL,Digital,Engineering,Platform,digital,CC-CL-DIG-01,0.00041891083183722317,2016-01-01,,true
+186,CL,Digital,Engineering,Backend,digital,CC-CL-DIG-01,0.00041891083183722317,2016-01-01,,true
+187,CL,Digital,Engineering,Frontend,digital,CC-CL-DIG-01,0.00041891083183722317,2016-01-01,,true
+188,CL,Digital,Engineering,Mobile,digital,CC-CL-DIG-01,0.00041891083183722317,2016-01-01,,true
+189,CL,Digital,Engineering,SRE,digital,CC-CL-DIG-01,0.00041891083183722317,2016-01-01,,true
+190,CL,Digital,Product,Product Management,digital,CC-CL-DIG-02,0.001047277079593058,2016-01-01,,true
+191,CL,Digital,Product,Product Ops,digital,CC-CL-DIG-02,0.001047277079593058,2016-01-01,,true
+192,CL,Digital,Data,Data Engineering,digital,CC-CL-DIG-03,0.0006981847197287053,2016-01-01,,true
+193,CL,Digital,Data,Data Science,digital,CC-CL-DIG-03,0.0006981847197287053,2016-01-01,,true
+194,CL,Digital,Data,Analytics Engineering,digital,CC-CL-DIG-03,0.0006981847197287053,2016-01-01,,true
+195,CL,Digital,UX,Product Design,digital,CC-CL-DIG-04,0.0006981847197287053,2016-01-01,,true
+196,CL,Digital,UX,Research,digital,CC-CL-DIG-04,0.0006981847197287053,2016-01-01,,true
+197,CL,Digital,UX,Design System,digital,CC-CL-DIG-04,0.0006981847197287053,2016-01-01,,true
+198,CL,Digital,E-commerce,Storefront,digital,CC-CL-DIG-05,0.0006981847197287053,2016-01-01,,true
+199,CL,Digital,E-commerce,Checkout,digital,CC-CL-DIG-05,0.0006981847197287053,2016-01-01,,true
+200,CL,Digital,E-commerce,Catalog,digital,CC-CL-DIG-05,0.0006981847197287053,2016-01-01,,true
+201,CL,Digital,Digital Marketing,SEO,digital,CC-CL-DIG-06,0.0006981847197287053,2016-01-01,,true
+202,CL,Digital,Digital Marketing,Paid Media,digital,CC-CL-DIG-06,0.0006981847197287053,2016-01-01,,true
+203,CL,Digital,Digital Marketing,Lifecycle,digital,CC-CL-DIG-06,0.0006981847197287053,2016-01-01,,true
+204,CL,Retail,Store Operations,Store Management,retail_ops,CC-CL-RET-01,0.0353456014362657,2016-01-01,,true
+205,CL,Retail,Store Operations,Cashier,retail_ops,CC-CL-RET-01,0.0353456014362657,2016-01-01,,true
+206,CL,Retail,Store Operations,Stockroom,retail_ops,CC-CL-RET-01,0.0353456014362657,2016-01-01,,true
+207,CL,Retail,Store Operations,Security,retail_ops,CC-CL-RET-01,0.0353456014362657,2016-01-01,,true
+208,CL,Retail,Sales,Floor Sales,retail_ops,CC-CL-RET-02,0.0706912028725314,2016-01-01,,true
+209,CL,Retail,Sales,Key Accounts,retail_ops,CC-CL-RET-02,0.0706912028725314,2016-01-01,,true
+210,CL,Retail,Regional Operations,Region North,retail_ops,CC-CL-RET-03,0.0471274685816876,2016-01-01,,true
+211,CL,Retail,Regional Operations,Region Southeast,retail_ops,CC-CL-RET-03,0.0471274685816876,2016-01-01,,true
+212,CL,Retail,Regional Operations,Region South,retail_ops,CC-CL-RET-03,0.0471274685816876,2016-01-01,,true
+213,CL,Retail,Visual Merchandising,Store Design,retail_ops,CC-CL-RET-04,0.0706912028725314,2016-01-01,,true
+214,CL,Retail,Visual Merchandising,Merchandising,retail_ops,CC-CL-RET-04,0.0706912028725314,2016-01-01,,true
+215,CL,Supply Chain,Logistics,Transportation,supply,CC-CL-SUP-01,0.016831238779174144,2016-01-01,,true
+216,CL,Supply Chain,Logistics,Last Mile,supply,CC-CL-SUP-01,0.016831238779174144,2016-01-01,,true
+217,CL,Supply Chain,Logistics,Reverse Logistics,supply,CC-CL-SUP-01,0.016831238779174144,2016-01-01,,true
+218,CL,Supply Chain,Distribution Centers,Inbound,supply,CC-CL-SUP-02,0.016831238779174144,2016-01-01,,true
+219,CL,Supply Chain,Distribution Centers,Outbound,supply,CC-CL-SUP-02,0.016831238779174144,2016-01-01,,true
+220,CL,Supply Chain,Distribution Centers,Inventory,supply,CC-CL-SUP-02,0.016831238779174144,2016-01-01,,true
+221,CL,Supply Chain,Procurement,Sourcing,supply,CC-CL-SUP-03,0.025246858168761214,2016-01-01,,true
+222,CL,Supply Chain,Procurement,Supplier Management,supply,CC-CL-SUP-03,0.025246858168761214,2016-01-01,,true
+223,CL,Supply Chain,Planning,Demand Planning,supply,CC-CL-SUP-04,0.025246858168761214,2016-01-01,,true
+224,CL,Supply Chain,Planning,Supply Planning,supply,CC-CL-SUP-04,0.025246858168761214,2016-01-01,,true
+225,CL,Customer,Customer Experience,CX Design,customer,CC-CL-CUS-01,0.029174147217235186,2016-01-01,,true
+226,CL,Customer,Customer Experience,Voice of Customer,customer,CC-CL-CUS-01,0.029174147217235186,2016-01-01,,true
+227,CL,Customer,Customer Service,Contact Center,customer,CC-CL-CUS-02,0.01944943147815679,2016-01-01,,true
+228,CL,Customer,Customer Service,Chat,customer,CC-CL-CUS-02,0.01944943147815679,2016-01-01,,true
+229,CL,Customer,Customer Service,Escalations,customer,CC-CL-CUS-02,0.01944943147815679,2016-01-01,,true
+230,CL,Customer,Customer Operations,Order Support,customer,CC-CL-CUS-03,0.029174147217235186,2016-01-01,,true
+231,CL,Customer,Customer Operations,Returns,customer,CC-CL-CUS-03,0.029174147217235186,2016-01-01,,true
+232,CL,Marketplace,Marketplace Operations,Onboarding,digital,CC-CL-MKT-01,0.002094554159186116,2022-08-01,,true
+233,CL,Marketplace,Marketplace Operations,Quality,digital,CC-CL-MKT-01,0.002094554159186116,2022-08-01,,true
+234,CL,Marketplace,Seller Management,Seller Success,digital,CC-CL-MKT-02,0.002094554159186116,2022-08-01,,true
+235,CL,Marketplace,Seller Management,Seller Growth,digital,CC-CL-MKT-02,0.002094554159186116,2022-08-01,,true
+236,CL,Marketplace,Marketplace Technology,Integrations,digital,CC-CL-MKT-03,0.002094554159186116,2022-08-01,,true
+237,CL,Marketplace,Marketplace Technology,Seller Platform,digital,CC-CL-MKT-03,0.002094554159186116,2022-08-01,,true
+238,CO,Corporate,People,Talent Acquisition,corporate,CC-CO-COR-01,0.0008078994614003589,2016-01-01,,true
+239,CO,Corporate,People,HR Business Partner,corporate,CC-CO-COR-01,0.0008078994614003589,2016-01-01,,true
+240,CO,Corporate,People,Compensation & Benefits,corporate,CC-CO-COR-01,0.0008078994614003589,2016-01-01,,true
+241,CO,Corporate,People,People Analytics,corporate,CC-CO-COR-01,0.0008078994614003589,2016-01-01,,true
+242,CO,Corporate,People,Learning & Development,corporate,CC-CO-COR-01,0.0008078994614003589,2016-01-01,,true
+243,CO,Corporate,Finance,Controlling,corporate,CC-CO-COR-02,0.0010098743267504488,2016-01-01,,true
+244,CO,Corporate,Finance,Treasury,corporate,CC-CO-COR-02,0.0010098743267504488,2016-01-01,,true
+245,CO,Corporate,Finance,Accounting,corporate,CC-CO-COR-02,0.0010098743267504488,2016-01-01,,true
+246,CO,Corporate,Finance,FP&A,corporate,CC-CO-COR-02,0.0010098743267504488,2016-01-01,,true
+247,CO,Corporate,Legal,Corporate Legal,corporate,CC-CO-COR-03,0.0013464991023339316,2016-01-01,,true
+248,CO,Corporate,Legal,Compliance,corporate,CC-CO-COR-03,0.0013464991023339316,2016-01-01,,true
+249,CO,Corporate,Legal,Labor Legal,corporate,CC-CO-COR-03,0.0013464991023339316,2016-01-01,,true
+250,CO,Corporate,Marketing,Brand,corporate,CC-CO-COR-04,0.0010098743267504488,2016-01-01,,true
+251,CO,Corporate,Marketing,Performance,corporate,CC-CO-COR-04,0.0010098743267504488,2016-01-01,,true
+252,CO,Corporate,Marketing,CRM,corporate,CC-CO-COR-04,0.0010098743267504488,2016-01-01,,true
+253,CO,Corporate,Marketing,Content,corporate,CC-CO-COR-04,0.0010098743267504488,2016-01-01,,true
+254,CO,Corporate,Strategy,Corporate Strategy,corporate,CC-CO-COR-05,0.0013464991023339316,2016-01-01,,true
+255,CO,Corporate,Strategy,M&A,corporate,CC-CO-COR-05,0.0013464991023339316,2016-01-01,,true
+256,CO,Corporate,Strategy,PMO,corporate,CC-CO-COR-05,0.0013464991023339316,2016-01-01,,true
+257,CO,Corporate,Procurement,Indirect Procurement,corporate,CC-CO-COR-06,0.0020197486535008975,2016-01-01,,true
+258,CO,Corporate,Procurement,Contracts,corporate,CC-CO-COR-06,0.0020197486535008975,2016-01-01,,true
+259,CO,Corporate,Risk,Internal Audit,corporate,CC-CO-COR-07,0.0013464991023339316,2016-01-01,,true
+260,CO,Corporate,Risk,Risk Management,corporate,CC-CO-COR-07,0.0013464991023339316,2016-01-01,,true
+261,CO,Corporate,Risk,Fraud,corporate,CC-CO-COR-07,0.0013464991023339316,2016-01-01,,true
+262,CO,Corporate,Data & Analytics,Business Intelligence,corporate,CC-CO-COR-08,0.0020197486535008975,2016-01-01,,true
+263,CO,Corporate,Data & Analytics,Data Governance,corporate,CC-CO-COR-08,0.0020197486535008975,2016-01-01,,true
+264,CO,Digital,Engineering,Platform,digital,CC-CO-DIG-01,0.00041891083183722317,2016-01-01,,true
+265,CO,Digital,Engineering,Backend,digital,CC-CO-DIG-01,0.00041891083183722317,2016-01-01,,true
+266,CO,Digital,Engineering,Frontend,digital,CC-CO-DIG-01,0.00041891083183722317,2016-01-01,,true
+267,CO,Digital,Engineering,Mobile,digital,CC-CO-DIG-01,0.00041891083183722317,2016-01-01,,true
+268,CO,Digital,Engineering,SRE,digital,CC-CO-DIG-01,0.00041891083183722317,2016-01-01,,true
+269,CO,Digital,Product,Product Management,digital,CC-CO-DIG-02,0.001047277079593058,2016-01-01,,true
+270,CO,Digital,Product,Product Ops,digital,CC-CO-DIG-02,0.001047277079593058,2016-01-01,,true
+271,CO,Digital,Data,Data Engineering,digital,CC-CO-DIG-03,0.0006981847197287053,2016-01-01,,true
+272,CO,Digital,Data,Data Science,digital,CC-CO-DIG-03,0.0006981847197287053,2016-01-01,,true
+273,CO,Digital,Data,Analytics Engineering,digital,CC-CO-DIG-03,0.0006981847197287053,2016-01-01,,true
+274,CO,Digital,UX,Product Design,digital,CC-CO-DIG-04,0.0006981847197287053,2016-01-01,,true
+275,CO,Digital,UX,Research,digital,CC-CO-DIG-04,0.0006981847197287053,2016-01-01,,true
+276,CO,Digital,UX,Design System,digital,CC-CO-DIG-04,0.0006981847197287053,2016-01-01,,true
+277,CO,Digital,E-commerce,Storefront,digital,CC-CO-DIG-05,0.0006981847197287053,2016-01-01,,true
+278,CO,Digital,E-commerce,Checkout,digital,CC-CO-DIG-05,0.0006981847197287053,2016-01-01,,true
+279,CO,Digital,E-commerce,Catalog,digital,CC-CO-DIG-05,0.0006981847197287053,2016-01-01,,true
+280,CO,Digital,Digital Marketing,SEO,digital,CC-CO-DIG-06,0.0006981847197287053,2016-01-01,,true
+281,CO,Digital,Digital Marketing,Paid Media,digital,CC-CO-DIG-06,0.0006981847197287053,2016-01-01,,true
+282,CO,Digital,Digital Marketing,Lifecycle,digital,CC-CO-DIG-06,0.0006981847197287053,2016-01-01,,true
+283,CO,Retail,Store Operations,Store Management,retail_ops,CC-CO-RET-01,0.0353456014362657,2016-01-01,,true
+284,CO,Retail,Store Operations,Cashier,retail_ops,CC-CO-RET-01,0.0353456014362657,2016-01-01,,true
+285,CO,Retail,Store Operations,Stockroom,retail_ops,CC-CO-RET-01,0.0353456014362657,2016-01-01,,true
+286,CO,Retail,Store Operations,Security,retail_ops,CC-CO-RET-01,0.0353456014362657,2016-01-01,,true
+287,CO,Retail,Sales,Floor Sales,retail_ops,CC-CO-RET-02,0.0706912028725314,2016-01-01,,true
+288,CO,Retail,Sales,Key Accounts,retail_ops,CC-CO-RET-02,0.0706912028725314,2016-01-01,,true
+289,CO,Retail,Regional Operations,Region North,retail_ops,CC-CO-RET-03,0.0471274685816876,2016-01-01,,true
+290,CO,Retail,Regional Operations,Region Southeast,retail_ops,CC-CO-RET-03,0.0471274685816876,2016-01-01,,true
+291,CO,Retail,Regional Operations,Region South,retail_ops,CC-CO-RET-03,0.0471274685816876,2016-01-01,,true
+292,CO,Retail,Visual Merchandising,Store Design,retail_ops,CC-CO-RET-04,0.0706912028725314,2016-01-01,,true
+293,CO,Retail,Visual Merchandising,Merchandising,retail_ops,CC-CO-RET-04,0.0706912028725314,2016-01-01,,true
+294,CO,Supply Chain,Logistics,Transportation,supply,CC-CO-SUP-01,0.016831238779174144,2016-01-01,,true
+295,CO,Supply Chain,Logistics,Last Mile,supply,CC-CO-SUP-01,0.016831238779174144,2016-01-01,,true
+296,CO,Supply Chain,Logistics,Reverse Logistics,supply,CC-CO-SUP-01,0.016831238779174144,2016-01-01,,true
+297,CO,Supply Chain,Distribution Centers,Inbound,supply,CC-CO-SUP-02,0.016831238779174144,2016-01-01,,true
+298,CO,Supply Chain,Distribution Centers,Outbound,supply,CC-CO-SUP-02,0.016831238779174144,2016-01-01,,true
+299,CO,Supply Chain,Distribution Centers,Inventory,supply,CC-CO-SUP-02,0.016831238779174144,2016-01-01,,true
+300,CO,Supply Chain,Procurement,Sourcing,supply,CC-CO-SUP-03,0.025246858168761214,2016-01-01,,true
+301,CO,Supply Chain,Procurement,Supplier Management,supply,CC-CO-SUP-03,0.025246858168761214,2016-01-01,,true
+302,CO,Supply Chain,Planning,Demand Planning,supply,CC-CO-SUP-04,0.025246858168761214,2016-01-01,,true
+303,CO,Supply Chain,Planning,Supply Planning,supply,CC-CO-SUP-04,0.025246858168761214,2016-01-01,,true
+304,CO,Customer,Customer Experience,CX Design,customer,CC-CO-CUS-01,0.029174147217235186,2016-01-01,,true
+305,CO,Customer,Customer Experience,Voice of Customer,customer,CC-CO-CUS-01,0.029174147217235186,2016-01-01,,true
+306,CO,Customer,Customer Service,Contact Center,customer,CC-CO-CUS-02,0.01944943147815679,2016-01-01,,true
+307,CO,Customer,Customer Service,Chat,customer,CC-CO-CUS-02,0.01944943147815679,2016-01-01,,true
+308,CO,Customer,Customer Service,Escalations,customer,CC-CO-CUS-02,0.01944943147815679,2016-01-01,,true
+309,CO,Customer,Customer Operations,Order Support,customer,CC-CO-CUS-03,0.029174147217235186,2016-01-01,,true
+310,CO,Customer,Customer Operations,Returns,customer,CC-CO-CUS-03,0.029174147217235186,2016-01-01,,true
+311,CO,Marketplace,Marketplace Operations,Onboarding,digital,CC-CO-MKT-01,0.002094554159186116,2022-08-01,,true
+312,CO,Marketplace,Marketplace Operations,Quality,digital,CC-CO-MKT-01,0.002094554159186116,2022-08-01,,true
+313,CO,Marketplace,Seller Management,Seller Success,digital,CC-CO-MKT-02,0.002094554159186116,2022-08-01,,true
+314,CO,Marketplace,Seller Management,Seller Growth,digital,CC-CO-MKT-02,0.002094554159186116,2022-08-01,,true
+315,CO,Marketplace,Marketplace Technology,Integrations,digital,CC-CO-MKT-03,0.002094554159186116,2022-08-01,,true
+316,CO,Marketplace,Marketplace Technology,Seller Platform,digital,CC-CO-MKT-03,0.002094554159186116,2022-08-01,,true
+317,MX,Corporate,People,Talent Acquisition,corporate,CC-MX-COR-01,0.0012864493996569471,2016-01-01,,true
+318,MX,Corporate,People,HR Business Partner,corporate,CC-MX-COR-01,0.0012864493996569471,2016-01-01,,true
+319,MX,Corporate,People,Compensation & Benefits,corporate,CC-MX-COR-01,0.0012864493996569471,2016-01-01,,true
+320,MX,Corporate,People,People Analytics,corporate,CC-MX-COR-01,0.0012864493996569471,2016-01-01,,true
+321,MX,Corporate,People,Learning & Development,corporate,CC-MX-COR-01,0.0012864493996569471,2016-01-01,,true
+322,MX,Corporate,Finance,Controlling,corporate,CC-MX-COR-02,0.0016080617495711838,2016-01-01,,true
+323,MX,Corporate,Finance,Treasury,corporate,CC-MX-COR-02,0.0016080617495711838,2016-01-01,,true
+324,MX,Corporate,Finance,Accounting,corporate,CC-MX-COR-02,0.0016080617495711838,2016-01-01,,true
+325,MX,Corporate,Finance,FP&A,corporate,CC-MX-COR-02,0.0016080617495711838,2016-01-01,,true
+326,MX,Corporate,Legal,Corporate Legal,corporate,CC-MX-COR-03,0.0021440823327615786,2016-01-01,,true
+327,MX,Corporate,Legal,Compliance,corporate,CC-MX-COR-03,0.0021440823327615786,2016-01-01,,true
+328,MX,Corporate,Legal,Labor Legal,corporate,CC-MX-COR-03,0.0021440823327615786,2016-01-01,,true
+329,MX,Corporate,Marketing,Brand,corporate,CC-MX-COR-04,0.0016080617495711838,2016-01-01,,true
+330,MX,Corporate,Marketing,Performance,corporate,CC-MX-COR-04,0.0016080617495711838,2016-01-01,,true
+331,MX,Corporate,Marketing,CRM,corporate,CC-MX-COR-04,0.0016080617495711838,2016-01-01,,true
+332,MX,Corporate,Marketing,Content,corporate,CC-MX-COR-04,0.0016080617495711838,2016-01-01,,true
+333,MX,Corporate,Strategy,Corporate Strategy,corporate,CC-MX-COR-05,0.0021440823327615786,2016-01-01,,true
+334,MX,Corporate,Strategy,M&A,corporate,CC-MX-COR-05,0.0021440823327615786,2016-01-01,,true
+335,MX,Corporate,Strategy,PMO,corporate,CC-MX-COR-05,0.0021440823327615786,2016-01-01,,true
+336,MX,Corporate,Procurement,Indirect Procurement,corporate,CC-MX-COR-06,0.0032161234991423676,2016-01-01,,true
+337,MX,Corporate,Procurement,Contracts,corporate,CC-MX-COR-06,0.0032161234991423676,2016-01-01,,true
+338,MX,Corporate,Risk,Internal Audit,corporate,CC-MX-COR-07,0.0021440823327615786,2016-01-01,,true
+339,MX,Corporate,Risk,Risk Management,corporate,CC-MX-COR-07,0.0021440823327615786,2016-01-01,,true
+340,MX,Corporate,Risk,Fraud,corporate,CC-MX-COR-07,0.0021440823327615786,2016-01-01,,true
+341,MX,Corporate,Data & Analytics,Business Intelligence,corporate,CC-MX-COR-08,0.0032161234991423676,2016-01-01,,true
+342,MX,Corporate,Data & Analytics,Data Governance,corporate,CC-MX-COR-08,0.0032161234991423676,2016-01-01,,true
+343,MX,Digital,Engineering,Platform,digital,CC-MX-DIG-01,0.0008004574042309893,2016-01-01,,true
+344,MX,Digital,Engineering,Backend,digital,CC-MX-DIG-01,0.0008004574042309893,2016-01-01,,true
+345,MX,Digital,Engineering,Frontend,digital,CC-MX-DIG-01,0.0008004574042309893,2016-01-01,,true
+346,MX,Digital,Engineering,Mobile,digital,CC-MX-DIG-01,0.0008004574042309893,2016-01-01,,true
+347,MX,Digital,Engineering,SRE,digital,CC-MX-DIG-01,0.0008004574042309893,2016-01-01,,true
+348,MX,Digital,Product,Product Management,digital,CC-MX-DIG-02,0.0020011435105774735,2016-01-01,,true
+349,MX,Digital,Product,Product Ops,digital,CC-MX-DIG-02,0.0020011435105774735,2016-01-01,,true
+350,MX,Digital,Data,Data Engineering,digital,CC-MX-DIG-03,0.0013340956737183155,2016-01-01,,true
+351,MX,Digital,Data,Data Science,digital,CC-MX-DIG-03,0.0013340956737183155,2016-01-01,,true
+352,MX,Digital,Data,Analytics Engineering,digital,CC-MX-DIG-03,0.0013340956737183155,2016-01-01,,true
+353,MX,Digital,UX,Product Design,digital,CC-MX-DIG-04,0.0013340956737183155,2016-01-01,,true
+354,MX,Digital,UX,Research,digital,CC-MX-DIG-04,0.0013340956737183155,2016-01-01,,true
+355,MX,Digital,UX,Design System,digital,CC-MX-DIG-04,0.0013340956737183155,2016-01-01,,true
+356,MX,Digital,E-commerce,Storefront,digital,CC-MX-DIG-05,0.0013340956737183155,2016-01-01,,true
+357,MX,Digital,E-commerce,Checkout,digital,CC-MX-DIG-05,0.0013340956737183155,2016-01-01,,true
+358,MX,Digital,E-commerce,Catalog,digital,CC-MX-DIG-05,0.0013340956737183155,2016-01-01,,true
+359,MX,Digital,Digital Marketing,SEO,digital,CC-MX-DIG-06,0.0013340956737183155,2016-01-01,,true
+360,MX,Digital,Digital Marketing,Paid Media,digital,CC-MX-DIG-06,0.0013340956737183155,2016-01-01,,true
+361,MX,Digital,Digital Marketing,Lifecycle,digital,CC-MX-DIG-06,0.0013340956737183155,2016-01-01,,true
+362,MX,Retail,Store Operations,Store Management,retail_ops,CC-MX-RET-01,0.03376929674099486,2016-01-01,,true
+363,MX,Retail,Store Operations,Cashier,retail_ops,CC-MX-RET-01,0.03376929674099486,2016-01-01,,true
+364,MX,Retail,Store Operations,Stockroom,retail_ops,CC-MX-RET-01,0.03376929674099486,2016-01-01,,true
+365,MX,Retail,Store Operations,Security,retail_ops,CC-MX-RET-01,0.03376929674099486,2016-01-01,,true
+366,MX,Retail,Sales,Floor Sales,retail_ops,CC-MX-RET-02,0.06753859348198972,2016-01-01,,true
+367,MX,Retail,Sales,Key Accounts,retail_ops,CC-MX-RET-02,0.06753859348198972,2016-01-01,,true
+368,MX,Retail,Regional Operations,Region North,retail_ops,CC-MX-RET-03,0.04502572898799314,2016-01-01,,true
+369,MX,Retail,Regional Operations,Region Southeast,retail_ops,CC-MX-RET-03,0.04502572898799314,2016-01-01,,true
+370,MX,Retail,Regional Operations,Region South,retail_ops,CC-MX-RET-03,0.04502572898799314,2016-01-01,,true
+371,MX,Retail,Visual Merchandising,Store Design,retail_ops,CC-MX-RET-04,0.06753859348198972,2016-01-01,,true
+372,MX,Retail,Visual Merchandising,Merchandising,retail_ops,CC-MX-RET-04,0.06753859348198972,2016-01-01,,true
+373,MX,Supply Chain,Logistics,Transportation,supply,CC-MX-SUP-01,0.016080617495711838,2016-01-01,,true
+374,MX,Supply Chain,Logistics,Last Mile,supply,CC-MX-SUP-01,0.016080617495711838,2016-01-01,,true
+375,MX,Supply Chain,Logistics,Reverse Logistics,supply,CC-MX-SUP-01,0.016080617495711838,2016-01-01,,true
+376,MX,Supply Chain,Distribution Centers,Inbound,supply,CC-MX-SUP-02,0.016080617495711838,2016-01-01,,true
+377,MX,Supply Chain,Distribution Centers,Outbound,supply,CC-MX-SUP-02,0.016080617495711838,2016-01-01,,true
+378,MX,Supply Chain,Distribution Centers,Inventory,supply,CC-MX-SUP-02,0.016080617495711838,2016-01-01,,true
+379,MX,Supply Chain,Procurement,Sourcing,supply,CC-MX-SUP-03,0.024120926243567757,2016-01-01,,true
+380,MX,Supply Chain,Procurement,Supplier Management,supply,CC-MX-SUP-03,0.024120926243567757,2016-01-01,,true
+381,MX,Supply Chain,Planning,Demand Planning,supply,CC-MX-SUP-04,0.024120926243567757,2016-01-01,,true
+382,MX,Supply Chain,Planning,Supply Planning,supply,CC-MX-SUP-04,0.024120926243567757,2016-01-01,,true
+383,MX,Customer,Customer Experience,CX Design,customer,CC-MX-CUS-01,0.02787307032590052,2016-01-01,,true
+384,MX,Customer,Customer Experience,Voice of Customer,customer,CC-MX-CUS-01,0.02787307032590052,2016-01-01,,true
+385,MX,Customer,Customer Service,Contact Center,customer,CC-MX-CUS-02,0.01858204688393368,2016-01-01,,true
+386,MX,Customer,Customer Service,Chat,customer,CC-MX-CUS-02,0.01858204688393368,2016-01-01,,true
+387,MX,Customer,Customer Service,Escalations,customer,CC-MX-CUS-02,0.01858204688393368,2016-01-01,,true
+388,MX,Customer,Customer Operations,Order Support,customer,CC-MX-CUS-03,0.02787307032590052,2016-01-01,,true
+389,MX,Customer,Customer Operations,Returns,customer,CC-MX-CUS-03,0.02787307032590052,2016-01-01,,true
+390,MX,Marketplace,Marketplace Operations,Onboarding,digital,CC-MX-MKT-01,0.004002287021154947,2022-08-01,,true
+391,MX,Marketplace,Marketplace Operations,Quality,digital,CC-MX-MKT-01,0.004002287021154947,2022-08-01,,true
+392,MX,Marketplace,Seller Management,Seller Success,digital,CC-MX-MKT-02,0.004002287021154947,2022-08-01,,true
+393,MX,Marketplace,Seller Management,Seller Growth,digital,CC-MX-MKT-02,0.004002287021154947,2022-08-01,,true
+394,MX,Marketplace,Marketplace Technology,Integrations,digital,CC-MX-MKT-03,0.004002287021154947,2022-08-01,,true
+395,MX,Marketplace,Marketplace Technology,Seller Platform,digital,CC-MX-MKT-03,0.004002287021154947,2022-08-01,,true

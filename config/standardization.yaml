@@ -1,0 +1,148 @@
+# =============================================================================
+# PeopleLens AI  ::  NOVAORA
+# config/standardization.yaml
+#
+# Regras da camada L1 (ADR-0003). Padronizacao mexe em FORMA, nunca em
+# significado: `RH` continua `RH` depois de passar por aqui. Traduzir `RH` para
+# `People` e trabalho do DE/PARA, na L2, e depende de mapeamento aprovado.
+#
+# Nenhuma regra fica escondida em codigo. O papel de cada coluna e declarado
+# aqui, e o perfilamento serve para SUGERIR candidatos, nunca para decidir
+# sozinho: inferencia automatica de tipo e a porta de entrada da correcao
+# silenciosa, que a F3 proibe.
+#
+# Status: F3.
+# =============================================================================
+
+meta:
+  config_version: "0.1"
+  phase: F3
+  layer: L1_standardized
+
+# -----------------------------------------------------------------------------
+# Catalogo de regras. O rule_id aparece no transformation_log de cada valor
+# alterado, e e por ele que se responde "que regra mexeu neste dado".
+# -----------------------------------------------------------------------------
+rules:
+  STD_EMPTY_TO_NULL:
+    description: "String vazia vira nulo. Vazio e ausencia, nao valor."
+    reversible: true
+  STD_TRIM:
+    description: "Remove espaco nas pontas."
+    reversible: true
+  STD_COLLAPSE_WS:
+    description: "Colapsa espacos internos repetidos em um."
+    reversible: false
+  STD_ENCODING_REPAIR:
+    description: >
+      Repara texto latin-1 lido como utf-8 (defeito D23). E correcao de FORMA:
+      o significado da palavra nao muda, so a representacao dos bytes.
+    reversible: true
+  STD_DATE_PARSE:
+    description: >
+      Converte para ISO usando o formato declarado do sistema, com candidatos
+      de fallback. Falha NAO vira nulo: o valor original e preservado e a linha
+      recebe marca de falha, para ser reprovada com nome e sobrenome na camada
+      de qualidade.
+    reversible: true
+  STD_DECIMAL_BR:
+    description: "Converte decimal com virgula e separador de milhar para numero."
+    reversible: true
+
+# -----------------------------------------------------------------------------
+# Papel de cada coluna, por sistema e dataset.
+# Colunas nao listadas sao tratadas como texto e recebem apenas as regras
+# universais (vazio para nulo, trim, colapso de espaco, reparo de encoding).
+# -----------------------------------------------------------------------------
+datasets:
+
+  HRIS_LEGACY.employee_master:
+    date_columns: [DT_ADMISSAO, DT_DEMISSAO]
+    decimal_columns: [JORNADA]
+    id_columns: [MATRICULA, GESTOR]
+    text_columns: [NOME, DEPARTAMENTO, CARGO, LOCAL, CENTRO_CUSTO]
+    code_columns: [SEXO, SITUACAO, NIVEL, PAIS, TIPO_CONTRATO]
+
+  HRIS_LEGACY.headcount_snapshot:
+    date_columns: [DT_REFERENCIA]
+    decimal_columns: [JORNADA]
+    id_columns: [MATRICULA, GESTOR]
+    text_columns: [DEPARTAMENTO]
+    code_columns: [SITUACAO, NIVEL, PAIS]
+
+  HRIS_LEGACY.movement:
+    date_columns: [DT_MOVIMENTO]
+    id_columns: [MATRICULA]
+    text_columns: [DEPTO_ANTERIOR, DEPTO_NOVO]
+    code_columns: [TIPO, NIVEL_ANTERIOR, NIVEL_NOVO]
+
+  HRIS_CORE.employee_master:
+    date_columns: [hire_date, termination_date]
+    decimal_columns: [fte]
+    id_columns: [employee_id, source_employee_id, manager_id]
+    text_columns: [full_name, department, sub_department, job_title, location, cost_center]
+    code_columns: [gender, race_ethnicity, employment_status, job_level, business_unit, country, employment_type, job_family]
+
+  HRIS_CORE.headcount_snapshot:
+    date_columns: [snapshot_date]
+    decimal_columns: [fte]
+    id_columns: [employee_id, manager_id]
+    text_columns: [department, sub_department, location]
+    code_columns: [job_level, business_unit, country, employment_type, job_family, active_flag]
+
+  HRIS_CORE.performance:
+    date_columns: [review_date]
+    id_columns: [employee_id, manager_id]
+    code_columns: [performance_rating, potential_rating, promotion_ready_flag, review_cycle]
+
+  HRIS_CORE.movement:
+    date_columns: [movement_date]
+    id_columns: [employee_id, old_manager_id, new_manager_id]
+    text_columns: [old_department, new_department, old_location, new_location]
+    code_columns: [movement_type, old_job_level, new_job_level]
+
+  PAYROLL_BR.payroll_headcount_snapshot:
+    date_columns: [dt_competencia]
+    decimal_columns: [valor_base]
+    id_columns: [matricula_folha]
+    code_columns: [situacao, moeda, vinculo, pais]
+    text_columns: [centro_custo]
+
+  PAYROLL_BR.compensation:
+    date_columns: [dt_vigencia]
+    decimal_columns: [salario_base]
+    id_columns: [matricula_folha]
+    code_columns: [moeda, periodicidade, motivo]
+
+  VIVAMARKET_LEGACY.employee_master:
+    date_columns: [DT_ADM]
+    decimal_columns: [SALARIO]
+    id_columns: [COD_FUNC, GESTOR]
+    text_columns: [NOME, DEPTO, LOCAL]
+    code_columns: [SEXO, NIVEL, MOEDA, PAIS, SITUACAO]
+
+  ATS_CLOUD.requisition:
+    date_columns: [opening_date, approval_date, posting_date, hire_date]
+    id_columns: [requisition_id, position_id, recruiter_id]
+    text_columns: [org_location]
+    code_columns: [status, org_country, org_business_unit, org_department, org_job_level, org_job_family]
+
+  ATS_CLOUD.application:
+    date_columns: [application_date, screening_date, interview_date, offer_date, hire_date]
+    id_columns: [requisition_id, candidate_id, employee_id]
+    text_columns: [candidate_name, candidate_email]
+    code_columns: [offer_accepted, source, type]
+
+# -----------------------------------------------------------------------------
+# Formatos de data aceitos na tentativa de parse, em ordem.
+# O primeiro e sempre o declarado pelo proprio sistema em sources.yaml.
+# -----------------------------------------------------------------------------
+date_parse:
+  fallback_formats: ["%Y-%m-%d", "%d/%m/%Y", "%d/%m/%y", "%m/%d/%Y", "%Y%m%d", "%Y-%m-%dT%H:%M:%SZ"]
+  # Ambiguidade conhecida e NAO resolvida por chute: `03/04/2019` e valido em
+  # %d/%m/%Y e em %m/%d/%Y. Quando os dois formatos aceitam a mesma string e
+  # produzem datas diferentes, o valor e marcado como ambiguo e segue para a
+  # camada de qualidade em vez de ser convertido.
+  flag_ambiguous_day_month: true
+  min_year: 1950
+  max_year_offset: 1        # ano corrente + 1; acima disso e data futura invalida

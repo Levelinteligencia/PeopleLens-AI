@@ -1,0 +1,43 @@
+{
+  "perfil": "dev",
+  "escala": 0.1,
+  "seed": 42,
+  "linhas_por_tabela": {
+    "dim_calendar": 4201,
+    "dim_employee": 17121,
+    "dim_job_level": 15,
+    "dim_organization": 334,
+    "dim_origin": 5,
+    "dim_source_system": 13,
+    "fact_application": 31110,
+    "fact_compensation": 10505,
+    "fact_headcount_snapshot": 130817,
+    "fact_movement": 3611,
+    "fact_performance": 14909,
+    "fact_requisition": 2752,
+    "fact_termination": 2667,
+    "fact_workforce_entry": 5919
+  },
+  "pessoas_analiticas": 5030,
+  "pessoas_provisorias": 320,
+  "origem": {
+    "INDETERMINADA": 2736,
+    "CONTRATACAO": 1499,
+    "POPULACAO_INICIAL": 475,
+    "AQUISICAO_VIVAMARKET": 320
+  },
+  "origem_por_regra": {
+    "P2": 475,
+    "None": 2736,
+    "P1": 320,
+    "P3": 1499
+  },
+  "contaminacao": {
+    "indeterminadas": 2736,
+    "total": 5030,
+    "taxa_indeterminada": 0.5439,
+    "teto_contaminacao_aquisicao": 320,
+    "teto_relativo": 0.0636
+  },
+  "exclusoes": 8
+}

@@ -1,0 +1,251 @@
+# =============================================================================
+# PeopleLens AI  ::  NOVAORA
+# config/incidents.yaml
+#
+# Calendario de incidentes historicos. Os incidentes nao sao cenario de fundo:
+# eles sao a CAUSA de quase todos os defeitos do dataset. Cada defeito em
+# defects.yaml aponta para o incidente que o origina.
+#
+# Referencia: Technical Design v0.3 secao 7.3. Especificacao secao 24.
+# Status: F0. Nenhum dado foi gerado a partir deste arquivo.
+# =============================================================================
+
+meta:
+  config_version: "0.1"
+  phase: F0
+
+incidents:
+
+  - id: INC_2016_START
+    date: 2016-01-01
+    type: baseline
+    title: "Inicio da serie historica"
+    narrative: >
+      A NOVAORA opera no Brasil e na Argentina, com cerca de 4 mil pessoas.
+      Dois sistemas em producao: HRIS_LEGACY e PAYROLL_BR.
+    effects:
+      - {kind: activate_system, system: HRIS_LEGACY}
+      - {kind: activate_system, system: PAYROLL_BR}
+
+  - id: INC_2017_CL
+    date: 2017-04-01
+    type: expansion
+    title: "Entrada no Chile"
+    effects:
+      - {kind: open_country, country: CL}
+
+  - id: INC_2018_CO_MX
+    date: 2018-02-01
+    type: expansion
+    title: "Entrada em Colombia e Mexico"
+    effects:
+      - {kind: open_country, country: CO}
+      - {kind: open_country, country: MX}
+      - {kind: activate_system, system: PAYROLL_LATAM}
+
+  - id: INC_2018_LMS
+    date: 2018-03-01
+    type: system
+    title: "Entrada do LMS"
+    narrative: >
+      Antes desta data nao existe dado de aprendizagem. Nao e dado faltante,
+      e ausencia de sistema. O KPI Training Completion Rate nao tem valor
+      definido antes de 2018, e o PeopleLens deve dizer isso em vez de
+      devolver zero.
+    effects:
+      - {kind: activate_system, system: LMS}
+      - {kind: kpi_validity_start, kpi: training_completion_rate, date: 2018-03-01}
+
+  - id: INC_2019_HRIS_MIGRATION
+    date_range: [2019-05-01, 2019-11-30]
+    type: system_migration
+    title: "Migracao de HRIS"
+    narrative: >
+      O HRIS_LEGACY e substituido pelo HRIS_CORE. Durante sete meses os dois
+      sistemas operam em paralelo e a mesma pessoa aparece nos dois, com
+      dominios diferentes para gender e com campos de DEI existindo apenas no
+      novo. Este e o incidente que mais gera trabalho para a camada de DE/PARA.
+    effects:
+      - {kind: activate_system, system: HRIS_CORE, date: 2019-05-01}
+      - {kind: deactivate_system, system: HRIS_LEGACY, date: 2019-11-30}
+      - {kind: overlap_window, systems: [HRIS_LEGACY, HRIS_CORE], date_range: [2019-05-01, 2019-11-30]}
+      - {kind: domain_change, field: gender, from: ["M","F"], to: ["Male","Female","Non-binary","Not informed"]}
+      - {kind: field_appears, fields: [race_ethnicity, disability_flag], date: 2019-06-01}
+      - {kind: trigger_defects, defects: [D01, D02, D03, D22]}
+    expected_kpi_impact:
+      - {kpi: gender_representation, trust_status: LIMITED, period: [2019-05, 2019-12]}
+
+  - id: INC_2020_PANDEMIC
+    date: 2020-03-01
+    type: macro
+    title: "Pandemia"
+    narrative: >
+      Congelamento de contratacao, queda forte de turnover voluntario e alta
+      de requisicoes canceladas. O ano de 2020 e o unico em que a serie de
+      turnover quebra a tendencia, e e um bom teste para a IA nao interpretar
+      a queda como melhoria de retencao.
+    effects:
+      - {kind: turnover_modifier, year: 2020, factor: 0.62}
+      - {kind: hiring_freeze, date_range: [2020-03-01, 2020-09-30], intensity: 0.65}
+      - {kind: requisition_cancellation_rate, year: 2020, value: 0.40}
+      - {kind: remote_work_flag, date_range: [2020-03-01, 2021-12-31], segments: [corporate, digital]}
+
+  - id: INC_2021_PERF_SCALE
+    date: 2021-01-01
+    type: definition_change
+    title: "Nova escala de performance"
+    narrative: >
+      A escala numerica de 1 a 5 e substituida por escala textual de cinco
+      pontos. Sem um DE/PARA explicito, qualquer serie historica de performance
+      quebra em 2021. Este e o caso mais didatico de "definition drift" do
+      projeto.
+    effects:
+      - {kind: scale_change, field: performance_rating,
+         from: ["1","2","3","4","5"],
+         to: ["Below Expectations","Developing","Meets Expectations","Exceeds Expectations","Outstanding"]}
+      - {kind: cycle_change, entity: performance, from: annual, to: semiannual}
+      - {kind: requires_mapping, mapping: ref_performance_rating_mapping}
+      - {kind: trigger_defects, defects: [D_DEFINITION_DRIFT]}
+
+  - id: INC_2021_ATS
+    date: 2021-01-01
+    type: system_migration
+    title: "Troca do ATS"
+    effects:
+      - {kind: activate_system, system: ATS_CLOUD}
+      - {kind: deactivate_system, system: ATS_LEGACY, date: 2021-06-30}
+      - {kind: overlap_window, systems: [ATS_LEGACY, ATS_CLOUD], date_range: [2021-01-01, 2021-06-30]}
+
+  - id: INC_2021_GREAT_RESIGNATION
+    date: 2021-01-01
+    type: macro
+    title: "Grande renuncia"
+    effects:
+      - {kind: turnover_modifier, year: 2021, factor: 1.18}
+      - {kind: voluntary_share_shift, year: 2021, delta: 0.07}
+
+  - id: INC_2022_VIVAMARKET
+    date: 2022-08-01
+    type: acquisition
+    title: "Aquisicao VivaMarket"
+    headcount_brought: 3200
+    countries: [BR, AR]
+    narrative: >
+      Entrada de 3.200 pessoas por aquisicao, nao por contratacao. Esta
+      distincao e um dos melhores casos de teste do projeto: um analista
+      desatento reporta crescimento de 44% em 2022, quando o crescimento
+      organico foi de 800 pessoas.
+    effects:
+      - {kind: activate_system, system: VIVAMARKET_LEGACY, load_type: one_shot}
+      - {kind: population_inflow, count: 3200, movement_type: Acquisition, is_hire: false}
+      - {kind: new_business_unit, name: Marketplace, from_acquisition: true}
+      - {kind: foreign_job_level_scale, scale: [N1, N2, N3, N4, N5, N6, N7]}
+      - {kind: requires_mapping, mapping: [ref_job_level_mapping, ref_department_mapping, ref_cost_center_mapping]}
+      - {kind: trigger_defects, defects: [D05, D06, D07, D08, D09, D12, D23]}
+    expected_kpi_impact:
+      - {kpi: headcount_growth, note: "deve separar entrada por aquisicao de contratacao"}
+      - {kpi: hiring_volume, note: "NAO deve contar os 3.200 como contratacoes"}
+      - {scope: "business_unit = Marketplace", trust_status: BLOCKED, period: [2022-08, 2023-06]}
+
+  - id: INC_2023_DIGITAL_REORG
+    date: 2023-04-01
+    type: reorganization
+    title: "Reorganizacao da area Digital"
+    narrative: >
+      Digital Commerce e dividido em E-commerce, Digital Product e Marketplace.
+      Cerca de 2.000 pessoas mudam de departamento no mesmo mes, sem que
+      nenhuma tenha mudado de trabalho. Se o KPI de mobilidade interna contar
+      reorganizacao como movimentacao, ele dispara sem que nada tenha
+      acontecido de fato.
+    effects:
+      - {kind: split_department, from: "Digital Commerce", to: [E-commerce, "Digital Product", Marketplace]}
+      - {kind: mass_movement, count_approx: 2000, movement_type: Reorganization}
+      - {kind: scd2_close_open, dimension: dim_organization}
+      - {kind: trigger_defects, defects: [D10, D09]}
+    expected_kpi_impact:
+      - {kpi: internal_mobility_rate, note: "regra de exclusao obrigatoria: Reorganization nao e mobilidade"}
+
+  - id: INC_2024_COMPRAFACIL
+    date: 2024-09-01
+    type: acquisition
+    title: "Aquisicao CompraFacil"
+    headcount_brought: 2100
+    countries: [BR, MX]
+    narrative: >
+      Segunda aquisicao, com agravante: o ERP legado nunca e migrado e continua
+      rodando em paralelo ate o fim da serie. E a populacao com pior qualidade
+      de dado do dataset inteiro, e por desenho e onde os KPIs ficam BLOCKED.
+    effects:
+      - {kind: activate_system, system: COMPRAFACIL_ERP, load_type: continuous}
+      - {kind: population_inflow, count: 2100, movement_type: Acquisition, is_hire: false}
+      - {kind: foreign_job_level_scale, scale: [A, B, C, D, E, F]}
+      - {kind: parallel_system_forever, system: COMPRAFACIL_ERP}
+      - {kind: trigger_defects, defects: [D05, D08, D09, D12, D18, D19]}
+    expected_kpi_impact:
+      - {scope: "origin = CompraFacil", trust_status: BLOCKED, period: [2024-09, 2026-06]}
+
+  - id: INC_2024_LAYOFF
+    date: 2024-11-01
+    type: workforce_action
+    title: "Evento de reestruturacao"
+    narrative: >
+      450 desligamentos involuntarios concentrados em um mes. Testa a separacao
+      entre turnover voluntario e involuntario, e a de attrition regrettable.
+    effects:
+      - {kind: mass_termination, count: 450, termination_type: Redundancy, voluntary: false}
+      - {kind: concentrated_in, segments: [corporate, digital]}
+    expected_kpi_impact:
+      - {kpi: voluntary_turnover, note: "nao deve subir"}
+      - {kpi: involuntary_turnover, note: "pico isolado em nov/2024"}
+
+  - id: INC_2025_NEW_ORG_MODEL
+    date: 2025-01-01
+    type: definition_change
+    title: "Novo modelo organizacional"
+    narrative: >
+      Job levels, business units e cost centers sao remapeados de uma vez.
+      Diferente da reorg de 2023, que moveu pessoas, esta muda a propria
+      linguagem da organizacao. Toda serie historica que use job_level precisa
+      de DE/PARA temporal, senao a comparacao 2024 versus 2025 e invalida.
+    effects:
+      - {kind: remap_job_levels, mapping_ref: ref_job_level_mapping, temporal: true}
+      - {kind: remap_cost_centers, mapping_ref: ref_cost_center_mapping}
+      - {kind: business_unit_rename, mapping_ref: ref_business_unit_mapping}
+      - {kind: mass_movement, count_approx: 19000, movement_type: Reorganization}
+      - {kind: band_revision, entity: ref_salary_band}
+      - {kind: trigger_defects, defects: [D10, D20, D09]}
+    expected_kpi_impact:
+      - {kpi: promotion_rate, note: "remapeamento de nivel NAO e promocao"}
+      - {kpi: compa_ratio, note: "banda mudou; COMP_PLAN nao reprocessou, ver D20"}
+      - {kpi: internal_mobility_rate, note: "excluir Reorganization"}
+
+  - id: INC_2026_END
+    date: 2026-06-30
+    type: baseline
+    title: "Fim da serie historica"
+    effects:
+      - {kind: close_series}
+
+# -----------------------------------------------------------------------------
+# Regras que atravessam incidentes
+# -----------------------------------------------------------------------------
+cross_cutting_rules:
+  - id: RULE_ACQ_NOT_HIRE
+    statement: "Entrada por aquisicao nunca conta como contratacao em nenhum KPI de Talent Acquisition"
+    applies_to: [INC_2022_VIVAMARKET, INC_2024_COMPRAFACIL]
+    enforced_in: kpi_contract.exclusion_rules
+
+  - id: RULE_REORG_NOT_MOBILITY
+    statement: "Movimentacao do tipo Reorganization nunca conta como mobilidade interna nem como promocao"
+    applies_to: [INC_2023_DIGITAL_REORG, INC_2025_NEW_ORG_MODEL]
+    enforced_in: kpi_contract.exclusion_rules
+
+  - id: RULE_NO_SYSTEM_NO_KPI
+    statement: "KPI cujo sistema-fonte nao existia no periodo nao retorna zero, retorna indisponivel"
+    applies_to: [INC_2018_LMS, INC_2019_HRIS_MIGRATION]
+    enforced_in: kpi_contract.valid_from
+
+  - id: RULE_SCALE_CHANGE_NEEDS_MAPPING
+    statement: "Mudanca de escala exige DE/PARA temporal antes de qualquer comparacao historica"
+    applies_to: [INC_2021_PERF_SCALE, INC_2025_NEW_ORG_MODEL]
+    enforced_in: ref_*_mapping.valid_from

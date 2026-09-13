@@ -1,0 +1,11 @@
+mapping_id,source_system,source_field,source_value,standard_value,mapping_status,confidence_score,valid_from,valid_to,approved_by,approved_at
+REF_PERFORMANCE_RATING_MAPPING-0001,*,performance_rating,1,Below Expectations,APPROVED,1.0,2016-01-01,2020-12-31,people-analytics,2026-09-11
+REF_PERFORMANCE_RATING_MAPPING-0002,*,performance_rating,2,Developing,APPROVED,1.0,2016-01-01,2020-12-31,people-analytics,2026-09-11
+REF_PERFORMANCE_RATING_MAPPING-0003,*,performance_rating,3,Meets Expectations,APPROVED,1.0,2016-01-01,2020-12-31,people-analytics,2026-09-11
+REF_PERFORMANCE_RATING_MAPPING-0004,*,performance_rating,4,Exceeds Expectations,APPROVED,1.0,2016-01-01,2020-12-31,people-analytics,2026-09-11
+REF_PERFORMANCE_RATING_MAPPING-0005,*,performance_rating,5,Outstanding,APPROVED,1.0,2016-01-01,2020-12-31,people-analytics,2026-09-11
+REF_PERFORMANCE_RATING_MAPPING-0006,*,performance_rating,Below Expectations,Below Expectations,APPROVED,1.0,2021-01-01,,people-analytics,2026-09-11
+REF_PERFORMANCE_RATING_MAPPING-0007,*,performance_rating,Developing,Developing,APPROVED,1.0,2021-01-01,,people-analytics,2026-09-11
+REF_PERFORMANCE_RATING_MAPPING-0008,*,performance_rating,Exceeds Expectations,Exceeds Expectations,APPROVED,1.0,2021-01-01,,people-analytics,2026-09-11
+REF_PERFORMANCE_RATING_MAPPING-0009,*,performance_rating,Meets Expectations,Meets Expectations,APPROVED,1.0,2021-01-01,,people-analytics,2026-09-11
+REF_PERFORMANCE_RATING_MAPPING-0010,*,performance_rating,Outstanding,Outstanding,APPROVED,1.0,2021-01-01,,people-analytics,2026-09-11

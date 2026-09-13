@@ -1,0 +1,1001 @@
+employee_id,review_cycle,review_date,performance_rating_recorded,performance_rating_std,scale_type,potential_rating,promotion_ready_flag,manager_id,job_level,country,department,business_unit
+1,2016,2016-11-20,1,Below Expectations,numeric,Medium,false,5,IC1,BR,Regional Operations,Retail
+3,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,48,IC1,BR,Distribution Centers,Supply Chain
+4,2016,2016-11-20,2,Developing,numeric,Medium,false,171,IC2,BR,Customer Service,Customer
+5,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,34,IC2,BR,Regional Operations,Retail
+6,2016,2016-11-20,5,Outstanding,numeric,High,false,192,IC3,BR,Product,Digital
+7,2016,2016-11-20,2,Developing,numeric,Medium,false,144,IC2,BR,Sales,Retail
+8,2016,2016-11-20,3,Meets Expectations,numeric,Low,true,121,M2,BR,Digital Marketing,Digital
+9,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,335,IC3,BR,Planning,Supply Chain
+10,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,212,M3,BR,Procurement,Supply Chain
+11,2016,2016-11-20,2,Developing,numeric,High,false,273,IC2,BR,Visual Merchandising,Retail
+12,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,true,34,IC2,BR,Regional Operations,Retail
+13,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,174,IC1,BR,Regional Operations,Retail
+14,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,309,M3,BR,Marketing,Corporate
+15,2016,2016-11-20,3,Meets Expectations,numeric,High,false,24,IC1,BR,Sales,Retail
+16,2016,2016-11-20,2,Developing,numeric,High,false,90,IC1,BR,Customer Experience,Customer
+17,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,26,IC1,BR,Sales,Retail
+18,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,98,IC3,BR,Regional Operations,Retail
+19,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,260,IC2,BR,Logistics,Supply Chain
+20,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,48,IC1,BR,Distribution Centers,Supply Chain
+21,2016,2016-11-20,3,Meets Expectations,numeric,High,false,129,IC2,BR,Store Operations,Retail
+22,2016,2016-11-20,2,Developing,numeric,Low,false,55,IC1,BR,Legal,Corporate
+23,2016,2016-11-20,3,Meets Expectations,numeric,High,false,42,IC1,BR,Sales,Retail
+24,2016,2016-11-20,2,Developing,numeric,Medium,false,144,IC2,BR,Sales,Retail
+26,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,144,IC2,BR,Sales,Retail
+27,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,29,IC3,BR,Finance,Corporate
+28,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,89,IC1,BR,Finance,Corporate
+29,2016,2016-11-20,3,Meets Expectations,numeric,High,true,193,IC5,BR,Strategy,Corporate
+30,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,165,IC1,BR,Customer Operations,Customer
+31,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,34,IC2,BR,Regional Operations,Retail
+32,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,294,IC2,BR,Visual Merchandising,Retail
+33,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,61,IC1,BR,Sales,Retail
+34,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,98,IC3,BR,Regional Operations,Retail
+36,2016,2016-11-20,3,Meets Expectations,numeric,High,true,48,IC1,BR,Distribution Centers,Supply Chain
+37,2016,2016-11-20,5,Outstanding,numeric,Low,false,32,IC1,BR,Visual Merchandising,Retail
+38,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,260,IC2,BR,Logistics,Supply Chain
+42,2016,2016-11-20,3,Meets Expectations,numeric,High,false,144,IC2,BR,Sales,Retail
+43,2016,2016-11-20,5,Outstanding,numeric,Low,false,48,IC1,BR,Distribution Centers,Supply Chain
+44,2016,2016-11-20,1,Below Expectations,numeric,Medium,true,12,IC1,BR,Regional Operations,Retail
+45,2016,2016-11-20,2,Developing,numeric,Medium,false,187,IC4,BR,Procurement,Corporate
+46,2016,2016-11-20,3,Meets Expectations,numeric,High,false,49,IC1,BR,Procurement,Supply Chain
+47,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,243,IC2,BR,Procurement,Corporate
+48,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,297,IC3,BR,Distribution Centers,Supply Chain
+49,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,319,IC2,BR,Procurement,Supply Chain
+50,2016,2016-11-20,3,Meets Expectations,numeric,High,false,202,IC1,BR,Data & Analytics,Corporate
+54,2016,2016-11-20,5,Outstanding,numeric,High,false,113,IC1,BR,People,Corporate
+55,2016,2016-11-20,2,Developing,numeric,Low,false,119,IC2,BR,Legal,Corporate
+57,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,156,IC1,BR,People,Corporate
+59,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,162,IC1,BR,Strategy,Corporate
+60,2016,2016-11-20,2,Developing,numeric,Low,false,321,IC4,BR,Marketing,Corporate
+61,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,144,IC2,BR,Sales,Retail
+62,2016,2016-11-20,2,Developing,numeric,Low,false,,D1,BR,Procurement,Corporate
+63,2016,2016-11-20,3,Meets Expectations,numeric,High,false,48,IC1,BR,Distribution Centers,Supply Chain
+64,2016,2016-11-20,3,Meets Expectations,numeric,High,false,139,IC1,BR,Sales,Retail
+65,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,14,M2,BR,Sales,Retail
+66,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,21,IC1,BR,Store Operations,Retail
+68,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,77,IC1,BR,Store Operations,Retail
+69,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,19,IC1,BR,Logistics,Supply Chain
+70,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,8,M1,BR,Data,Digital
+71,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,273,IC2,BR,Visual Merchandising,Retail
+72,2016,2016-11-20,3,Meets Expectations,numeric,Low,true,73,IC1,BR,Risk,Corporate
+73,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,261,IC2,BR,Risk,Corporate
+74,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,160,IC1,BR,Sales,Retail
+75,2016,2016-11-20,2,Developing,numeric,High,false,155,IC1,BR,Legal,Corporate
+76,2016,2016-11-20,3,Meets Expectations,numeric,High,false,200,IC1,BR,People,Corporate
+77,2016,2016-11-20,3,Meets Expectations,numeric,High,false,129,IC2,BR,Store Operations,Retail
+78,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,true,32,IC1,BR,Visual Merchandising,Retail
+79,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,65,M1,BR,Sales,Retail
+80,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,true,31,IC1,BR,Regional Operations,Retail
+81,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,192,IC3,BR,Product,Digital
+82,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,187,IC4,BR,Procurement,Corporate
+83,2016,2016-11-20,3,Meets Expectations,numeric,High,false,242,IC1,BR,Customer Service,Customer
+84,2016,2016-11-20,3,Meets Expectations,numeric,Low,true,318,IC1,BR,Procurement,Supply Chain
+85,2016,2016-11-20,2,Developing,numeric,High,false,7,IC1,BR,Sales,Retail
+86,2016,2016-11-20,3,Meets Expectations,numeric,High,false,177,IC4,BR,Engineering,Digital
+87,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,90,IC1,BR,Customer Experience,Customer
+88,2016,2016-11-20,1,Below Expectations,numeric,Medium,false,138,IC2,BR,Procurement,Corporate
+89,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,218,IC3,BR,Finance,Corporate
+90,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,194,IC2,BR,Customer Experience,Customer
+91,2016,2016-11-20,2,Developing,numeric,Medium,false,127,IC1,BR,Store Operations,Retail
+92,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,196,IC4,BR,Data & Analytics,Corporate
+93,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,4,IC1,BR,Customer Service,Customer
+94,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,316,IC1,BR,Store Operations,Retail
+95,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,251,IC1,BR,Regional Operations,Retail
+96,2016,2016-11-20,3,Meets Expectations,numeric,High,true,142,IC1,BR,Visual Merchandising,Retail
+97,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,214,IC1,BR,Engineering,Digital
+98,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,65,M1,BR,Regional Operations,Retail
+100,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,254,IC2,BR,Finance,Corporate
+101,2016,2016-11-20,3,Meets Expectations,numeric,High,false,100,IC1,BR,Finance,Corporate
+102,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,90,IC1,BR,Customer Experience,Customer
+103,2016,2016-11-20,2,Developing,numeric,High,false,165,IC1,BR,Customer Operations,Customer
+104,2016,2016-11-20,5,Outstanding,numeric,Medium,false,90,IC1,BR,Customer Experience,Customer
+105,2016,2016-11-20,3,Meets Expectations,numeric,High,false,296,IC1,BR,Finance,Corporate
+106,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,129,IC2,BR,E-commerce,Digital
+107,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,139,IC1,BR,Sales,Retail
+108,2016,2016-11-20,2,Developing,numeric,Medium,false,294,IC2,BR,Visual Merchandising,Retail
+109,2016,2016-11-20,3,Meets Expectations,numeric,High,false,48,IC2,BR,Distribution Centers,Supply Chain
+110,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,201,IC1,BR,Sales,Retail
+113,2016,2016-11-20,1,Below Expectations,numeric,High,false,183,IC2,BR,People,Corporate
+114,2016,2016-11-20,3,Meets Expectations,numeric,High,false,189,IC1,BR,Customer Service,Customer
+115,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,205,IC2,BR,UX,Digital
+116,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,6,IC2,BR,Product,Digital
+117,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,261,IC2,BR,Risk,Corporate
+118,2016,2016-11-20,2,Developing,numeric,Low,false,81,IC2,BR,Product,Digital
+119,2016,2016-11-20,5,Outstanding,numeric,High,false,196,IC3,BR,Legal,Corporate
+120,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,153,IC3,BR,Data,Digital
+121,2016,2016-11-20,3,Meets Expectations,numeric,High,true,309,M4,BR,E-commerce,Digital
+123,2016,2016-11-20,2,Developing,numeric,Low,true,242,IC1,BR,Customer Service,Customer
+126,2016,2016-11-20,2,Developing,numeric,Medium,false,38,IC1,BR,Logistics,Supply Chain
+127,2016,2016-11-20,1,Below Expectations,numeric,Medium,false,129,IC2,BR,Store Operations,Retail
+128,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,326,IC1,BR,Sales,Retail
+129,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,65,M1,BR,Store Operations,Retail
+130,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,90,IC1,BR,Customer Experience,Customer
+131,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,189,IC1,BR,Store Operations,Retail
+132,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,170,IC1,BR,Strategy,Corporate
+133,2016,2016-11-20,2,Developing,numeric,Medium,false,90,IC1,BR,Customer Experience,Customer
+134,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,4,IC1,BR,Customer Service,Customer
+135,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,120,IC2,BR,Data,Digital
+137,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,166,IC1,BR,Procurement,Corporate
+138,2016,2016-11-20,2,Developing,numeric,Medium,false,45,IC3,BR,Procurement,Corporate
+139,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,144,IC2,BR,Sales,Retail
+140,2016,2016-11-20,4,Exceeds Expectations,numeric,High,true,14,M1,BR,Visual Merchandising,Retail
+141,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,65,M1,BR,Sales,Retail
+142,2016,2016-11-20,3,Meets Expectations,numeric,High,true,294,IC2,BR,Visual Merchandising,Retail
+143,2016,2016-11-20,2,Developing,numeric,Low,false,430,IC1,BR,Procurement,Supply Chain
+144,2016,2016-11-20,1,Below Expectations,numeric,Low,true,79,IC3,BR,Sales,Retail
+145,2016,2016-11-20,2,Developing,numeric,High,true,170,IC1,BR,Visual Merchandising,Retail
+146,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,34,IC2,BR,Regional Operations,Retail
+148,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,9,IC1,BR,Planning,Supply Chain
+149,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,48,IC1,BR,Distribution Centers,Supply Chain
+150,2016,2016-11-20,2,Developing,numeric,High,false,461,IC1,BR,Customer Service,Customer
+151,2016,2016-11-20,2,Developing,numeric,Medium,false,280,IC1,BR,Store Operations,Retail
+152,2016,2016-11-20,3,Meets Expectations,numeric,High,false,205,IC2,BR,UX,Digital
+153,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,70,IC4,BR,Data,Digital
+154,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,242,IC1,BR,Customer Service,Customer
+155,2016,2016-11-20,1,Below Expectations,numeric,Low,true,119,IC2,BR,Legal,Corporate
+156,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,278,IC2,BR,People,Corporate
+158,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,302,IC1,BR,Procurement,Supply Chain
+159,2016,2016-11-20,3,Meets Expectations,numeric,High,true,223,IC1,BR,Visual Merchandising,Retail
+160,2016,2016-11-20,1,Below Expectations,numeric,Low,false,144,IC2,BR,Sales,Retail
+162,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,303,IC4,BR,Logistics,Supply Chain
+163,2016,2016-11-20,2,Developing,numeric,High,false,165,IC1,BR,Customer Operations,Customer
+165,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,252,IC2,BR,Customer Operations,Customer
+166,2016,2016-11-20,5,Outstanding,numeric,Medium,false,243,IC2,BR,Procurement,Corporate
+167,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,117,IC1,BR,Risk,Corporate
+169,2016,2016-11-20,3,Meets Expectations,numeric,High,false,238,IC1,BR,Visual Merchandising,Retail
+170,2016,2016-11-20,2,Developing,numeric,Medium,false,162,IC2,BR,Strategy,Corporate
+171,2016,2016-11-20,3,Meets Expectations,numeric,High,false,194,IC4,BR,Customer Service,Customer
+172,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,420,IC2,BR,Digital Marketing,Digital
+173,2016,2016-11-20,3,Meets Expectations,numeric,High,false,11,IC1,BR,Visual Merchandising,Retail
+174,2016,2016-11-20,3,Meets Expectations,numeric,High,false,34,IC2,BR,Regional Operations,Retail
+175,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,286,IC2,BR,Procurement,Corporate
+176,2016,2016-11-20,1,Below Expectations,numeric,Low,true,90,IC1,BR,Customer Experience,Customer
+177,2016,2016-11-20,1,Below Expectations,numeric,High,false,129,IC5,BR,UX,Digital
+179,2016,2016-11-20,5,Outstanding,numeric,Medium,false,9,IC1,BR,Planning,Supply Chain
+181,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,14,M1,BR,Visual Merchandising,Retail
+182,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,221,IC1,BR,Store Operations,Retail
+183,2016,2016-11-20,2,Developing,numeric,Low,true,327,IC4,BR,People,Corporate
+186,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,26,IC1,BR,Sales,Retail
+187,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,62,M2,BR,Procurement,Corporate
+188,2016,2016-11-20,5,Outstanding,numeric,Low,false,276,IC1,BR,Logistics,Supply Chain
+189,2016,2016-11-20,3,Meets Expectations,numeric,High,false,171,IC2,BR,Customer Service,Customer
+191,2016,2016-11-20,2,Developing,numeric,High,true,42,IC1,BR,Sales,Retail
+192,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,310,IC5,BR,Product,Digital
+193,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,261,M1,BR,Strategy,Corporate
+194,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,246,M1,BR,Customer Experience,Customer
+195,2016,2016-11-20,3,Meets Expectations,numeric,High,true,47,IC1,BR,Procurement,Corporate
+196,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,307,IC5,BR,Legal,Corporate
+197,2016,2016-11-20,2,Developing,numeric,High,true,70,IC4,BR,Data,Digital
+199,2016,2016-11-20,2,Developing,numeric,High,false,310,IC3,BR,E-commerce,Digital
+200,2016,2016-11-20,3,Meets Expectations,numeric,Low,true,298,IC2,BR,People,Corporate
+201,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,144,IC2,BR,Sales,Retail
+202,2016,2016-11-20,3,Meets Expectations,numeric,High,false,92,IC3,BR,Data & Analytics,Corporate
+203,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,108,IC1,BR,Visual Merchandising,Retail
+205,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,177,IC4,BR,UX,Digital
+206,2016,2016-11-20,5,Outstanding,numeric,Low,true,277,IC1,BR,Logistics,Supply Chain
+207,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,71,IC1,BR,Visual Merchandising,Retail
+208,2016,2016-11-20,5,Outstanding,numeric,Medium,false,65,M1,BR,Regional Operations,Retail
+209,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,280,IC1,BR,Store Operations,Retail
+210,2016,2016-11-20,3,Meets Expectations,numeric,High,false,86,IC3,BR,Engineering,Digital
+212,2016,2016-11-20,3,Meets Expectations,numeric,High,false,309,M4,BR,Visual Merchandising,Retail
+214,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,210,IC2,BR,Engineering,Digital
+215,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,138,IC2,BR,Procurement,Corporate
+216,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,90,IC1,BR,Customer Experience,Customer
+217,2016,2016-11-20,2,Developing,numeric,High,false,142,IC1,BR,Visual Merchandising,Retail
+218,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,193,IC4,BR,Strategy,Corporate
+220,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,282,IC1,BR,Regional Operations,Retail
+221,2016,2016-11-20,2,Developing,numeric,High,false,129,IC2,BR,Store Operations,Retail
+223,2016,2016-11-20,3,Meets Expectations,numeric,High,false,294,IC2,BR,Visual Merchandising,Retail
+224,2016,2016-11-20,5,Outstanding,numeric,Low,false,170,IC1,BR,Visual Merchandising,Retail
+225,2016,2016-11-20,3,Meets Expectations,numeric,High,false,90,IC1,BR,Customer Experience,Customer
+227,2016,2016-11-20,2,Developing,numeric,Low,false,92,IC3,BR,Data & Analytics,Corporate
+228,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,223,IC1,BR,Visual Merchandising,Retail
+229,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,true,174,IC1,BR,Regional Operations,Retail
+230,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,61,IC1,BR,Sales,Retail
+231,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,288,IC1,BR,Customer Operations,Customer
+232,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,202,IC2,BR,Data & Analytics,Corporate
+233,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,14,M1,BR,Visual Merchandising,Retail
+238,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,273,IC2,BR,Visual Merchandising,Retail
+241,2016,2016-11-20,3,Meets Expectations,numeric,High,false,165,IC1,BR,Customer Operations,Customer
+242,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,171,IC2,BR,Customer Service,Customer
+243,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,171,IC3,BR,Customer Service,Customer
+244,2016,2016-11-20,3,Meets Expectations,numeric,High,false,172,IC1,BR,Digital Marketing,Digital
+245,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,4,IC1,BR,Customer Service,Customer
+246,2016,2016-11-20,3,Meets Expectations,numeric,Low,true,10,M2,BR,Planning,Supply Chain
+248,2016,2016-11-20,3,Meets Expectations,numeric,High,false,261,IC2,BR,Risk,Corporate
+249,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,160,IC1,BR,Sales,Retail
+250,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,399,IC1,BR,Sales,Retail
+251,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,34,IC2,BR,Regional Operations,Retail
+252,2016,2016-11-20,3,Meets Expectations,numeric,High,false,303,M1,BR,Customer Operations,Customer
+253,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,189,IC1,BR,Customer Service,Customer
+254,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,60,IC3,BR,Finance,Corporate
+255,2016,2016-11-20,2,Developing,numeric,Medium,false,313,IC1,BR,Store Operations,Retail
+256,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,201,IC1,BR,Sales,Retail
+258,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,316,IC1,BR,Store Operations,Retail
+260,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,129,IC3,BR,Store Operations,Retail
+261,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,321,M2,BR,Risk,Corporate
+262,2016,2016-11-20,2,Developing,numeric,Low,false,21,IC1,BR,Store Operations,Retail
+263,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,288,IC1,BR,Customer Operations,Customer
+264,2016,2016-11-20,5,Outstanding,numeric,Low,false,14,M1,BR,Visual Merchandising,Retail
+268,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,242,IC1,BR,Customer Service,Customer
+269,2016,2016-11-20,3,Meets Expectations,numeric,High,false,77,IC1,BR,Store Operations,Retail
+270,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,273,IC2,BR,Visual Merchandising,Retail
+271,2016,2016-11-20,3,Meets Expectations,numeric,High,false,305,IC1,BR,Planning,Supply Chain
+272,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,108,IC1,BR,Visual Merchandising,Retail
+273,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,true,140,IC3,BR,Visual Merchandising,Retail
+274,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,5,IC1,BR,Regional Operations,Retail
+275,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,127,IC1,BR,Store Operations,Retail
+276,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,260,IC2,BR,Logistics,Supply Chain
+277,2016,2016-11-20,2,Developing,numeric,Low,false,260,IC2,BR,Logistics,Supply Chain
+278,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,327,IC3,BR,People,Corporate
+279,2016,2016-11-20,2,Developing,numeric,Medium,false,142,IC1,BR,Visual Merchandising,Retail
+280,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,129,IC2,BR,Store Operations,Retail
+281,2016,2016-11-20,3,Meets Expectations,numeric,High,false,121,M2,BR,E-commerce,Digital
+282,2016,2016-11-20,2,Developing,numeric,Medium,true,34,IC2,BR,Regional Operations,Retail
+283,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,210,IC2,BR,Engineering,Digital
+285,2016,2016-11-20,3,Meets Expectations,numeric,High,false,420,IC2,BR,Digital Marketing,Digital
+286,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,187,IC4,BR,Procurement,Corporate
+287,2016,2016-11-20,5,Outstanding,numeric,Medium,false,21,IC1,BR,Store Operations,Retail
+288,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,252,IC2,BR,Customer Operations,Customer
+289,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,170,IC1,BR,Visual Merchandising,Retail
+290,2016,2016-11-20,1,Below Expectations,numeric,Medium,false,7,IC1,BR,Sales,Retail
+292,2016,2016-11-20,2,Developing,numeric,Low,false,65,M1,BR,Sales,Retail
+294,2016,2016-11-20,1,Below Expectations,numeric,High,false,181,IC3,BR,Visual Merchandising,Retail
+295,2016,2016-11-20,5,Outstanding,numeric,Medium,false,10,M1,BR,Procurement,Supply Chain
+296,2016,2016-11-20,1,Below Expectations,numeric,Medium,false,27,IC2,BR,Finance,Corporate
+297,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,295,IC4,BR,Procurement,Supply Chain
+298,2016,2016-11-20,2,Developing,numeric,Low,false,327,IC3,BR,People,Corporate
+301,2016,2016-11-20,5,Outstanding,numeric,Medium,false,90,IC1,BR,Customer Experience,Customer
+302,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,319,IC2,BR,Procurement,Supply Chain
+303,2016,2016-11-20,2,Developing,numeric,Low,false,10,M2,BR,Logistics,Supply Chain
+305,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,335,IC3,BR,Planning,Supply Chain
+307,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,321,M2,BR,Legal,Corporate
+308,2016,2016-11-20,5,Outstanding,numeric,High,false,260,IC2,BR,Store Operations,Retail
+309,2016,2016-11-20,1,Below Expectations,numeric,Medium,false,62,M5,BR,Marketing,Corporate
+310,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,121,M1,BR,E-commerce,Digital
+312,2016,2016-11-20,2,Developing,numeric,Medium,true,24,IC1,BR,Sales,Retail
+313,2016,2016-11-20,2,Developing,numeric,Medium,false,129,IC2,BR,Store Operations,Retail
+315,2016,2016-11-20,3,Meets Expectations,numeric,High,false,48,IC1,BR,Distribution Centers,Supply Chain
+316,2016,2016-11-20,2,Developing,numeric,Medium,false,260,IC2,BR,Store Operations,Retail
+317,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,18,IC1,BR,Regional Operations,Retail
+318,2016,2016-11-20,1,Below Expectations,numeric,Low,false,319,IC2,BR,Procurement,Supply Chain
+319,2016,2016-11-20,3,Meets Expectations,numeric,High,false,297,IC3,BR,Procurement,Supply Chain
+320,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,90,IC1,BR,Customer Experience,Customer
+321,2016,2016-11-20,5,Outstanding,numeric,Medium,false,309,M4,BR,Marketing,Corporate
+322,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,280,IC1,BR,Store Operations,Retail
+323,2016,2016-11-20,1,Below Expectations,numeric,High,false,165,IC1,BR,Customer Operations,Customer
+324,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,254,IC2,BR,Finance,Corporate
+325,2016,2016-11-20,3,Meets Expectations,numeric,High,false,31,IC1,BR,Regional Operations,Retail
+326,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,144,IC2,BR,Sales,Retail
+327,2016,2016-11-20,3,Meets Expectations,numeric,High,false,307,M1,BR,People,Corporate
+328,2016,2016-11-20,3,Meets Expectations,numeric,High,false,115,IC1,BR,UX,Digital
+330,2016,2016-11-20,2,Developing,numeric,Low,false,277,IC1,BR,Logistics,Supply Chain
+331,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,313,IC1,BR,Store Operations,Retail
+333,2016,2016-11-20,5,Outstanding,numeric,High,false,26,IC1,BR,Sales,Retail
+335,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,246,M1,BR,Planning,Supply Chain
+336,2016,2016-11-20,3,Meets Expectations,numeric,Low,true,341,IC3,AR,Store Operations,Retail
+337,2016,2016-11-20,2,Developing,numeric,Low,false,344,IC1,AR,Customer Service,Customer
+339,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,343,IC3,AR,Distribution Centers,Supply Chain
+340,2016,2016-11-20,2,Developing,numeric,Low,false,373,IC1,AR,Planning,Supply Chain
+341,2016,2016-11-20,1,Below Expectations,numeric,High,false,8,M1,AR,Sales,Retail
+342,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,288,IC1,BR,Customer Operations,Customer
+343,2016,2016-11-20,3,Meets Expectations,numeric,High,false,261,M1,AR,Sales,Retail
+344,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,339,IC2,AR,Planning,Supply Chain
+345,2016,2016-11-20,3,Meets Expectations,numeric,High,false,364,IC1,AR,Logistics,Supply Chain
+346,2016,2016-11-20,5,Outstanding,numeric,Low,false,379,IC1,AR,Sales,Retail
+347,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,401,IC1,AR,Customer Service,Customer
+349,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,396,IC1,AR,Regional Operations,Retail
+352,2016,2016-11-20,5,Outstanding,numeric,High,false,363,IC3,AR,Marketing,Corporate
+354,2016,2016-11-20,5,Outstanding,numeric,Low,false,375,IC1,AR,Store Operations,Retail
+355,2016,2016-11-20,2,Developing,numeric,Low,false,339,IC2,AR,Planning,Supply Chain
+357,2016,2016-11-20,2,Developing,numeric,Medium,false,416,IC3,AR,Distribution Centers,Supply Chain
+358,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,365,IC1,AR,Visual Merchandising,Retail
+360,2016,2016-11-20,3,Meets Expectations,numeric,High,false,362,IC1,AR,Sales,Retail
+362,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,341,IC2,AR,Sales,Retail
+363,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,307,M1,AR,Visual Merchandising,Retail
+364,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,339,IC2,AR,Logistics,Supply Chain
+365,2016,2016-11-20,3,Meets Expectations,numeric,High,false,363,IC3,AR,Visual Merchandising,Retail
+366,2016,2016-11-20,4,Exceeds Expectations,numeric,High,false,379,IC1,AR,Sales,Retail
+367,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,344,IC1,AR,Customer Service,Customer
+368,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,357,IC2,AR,Logistics,Supply Chain
+370,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,379,IC1,AR,Regional Operations,Retail
+373,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,339,IC2,AR,Planning,Supply Chain
+374,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,357,IC1,AR,Distribution Centers,Supply Chain
+375,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,416,IC3,AR,Store Operations,Retail
+378,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,362,IC1,AR,Regional Operations,Retail
+379,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,343,IC2,AR,Sales,Retail
+380,2016,2016-11-20,2,Developing,numeric,High,false,375,IC1,AR,Store Operations,Retail
+381,2016,2016-11-20,3,Meets Expectations,numeric,High,false,238,IC1,BR,Visual Merchandising,Retail
+382,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,365,IC1,AR,Visual Merchandising,Retail
+383,2016,2016-11-20,3,Meets Expectations,numeric,Low,true,326,IC1,BR,Sales,Retail
+384,2016,2016-11-20,2,Developing,numeric,High,false,202,IC2,BR,Data & Analytics,Corporate
+386,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,11,IC1,BR,Visual Merchandising,Retail
+390,2016,2016-11-20,3,Meets Expectations,numeric,High,false,116,IC1,BR,Product,Digital
+391,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,144,IC2,BR,Sales,Retail
+392,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,248,IC1,BR,Risk,Corporate
+393,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,146,IC1,BR,Regional Operations,Retail
+395,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,34,IC2,BR,Regional Operations,Retail
+396,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,341,IC2,AR,Sales,Retail
+398,2016,2016-11-20,2,Developing,numeric,Medium,false,227,IC2,BR,Data & Analytics,Corporate
+399,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,144,IC2,BR,Sales,Retail
+400,2016,2016-11-20,3,Meets Expectations,numeric,High,false,48,IC1,BR,Distribution Centers,Supply Chain
+401,2016,2016-11-20,3,Meets Expectations,numeric,Medium,true,339,IC2,AR,Planning,Supply Chain
+403,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,196,IC3,BR,Legal,Corporate
+404,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,192,IC3,BR,Product,Digital
+405,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,453,IC1,BR,Procurement,Supply Chain
+406,2016,2016-11-20,1,Below Expectations,numeric,Medium,false,196,IC4,BR,Legal,Corporate
+407,2016,2016-11-20,2,Developing,numeric,High,false,375,IC1,AR,Store Operations,Retail
+408,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,273,IC2,BR,Visual Merchandising,Retail
+410,2016,2016-11-20,3,Meets Expectations,numeric,High,false,4,IC1,BR,Customer Service,Customer
+411,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,90,IC1,BR,Customer Experience,Customer
+413,2016,2016-11-20,2,Developing,numeric,Low,false,252,IC2,BR,Customer Operations,Customer
+414,2016,2016-11-20,4,Exceeds Expectations,numeric,Low,false,408,IC1,BR,Visual Merchandising,Retail
+415,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,true,12,IC1,BR,Regional Operations,Retail
+416,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,70,IC5,BR,Engineering,Digital
+417,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,399,IC1,BR,Sales,Retail
+418,2016,2016-11-20,2,Developing,numeric,High,false,127,IC1,BR,Store Operations,Retail
+419,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,false,413,IC1,BR,Customer Operations,Customer
+420,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,8,IC3,BR,Digital Marketing,Digital
+422,2016,2016-11-20,3,Meets Expectations,numeric,High,false,408,IC1,BR,Visual Merchandising,Retail
+423,2016,2016-11-20,2,Developing,numeric,Medium,false,391,IC1,BR,Customer Service,Customer
+424,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,170,IC1,BR,Strategy,Corporate
+425,2016,2016-11-20,4,Exceeds Expectations,numeric,Medium,true,9,IC1,BR,Planning,Supply Chain
+426,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,92,IC3,BR,Data & Analytics,Corporate
+427,2016,2016-11-20,3,Meets Expectations,numeric,Medium,false,413,IC1,BR,Customer Operations,Customer
+428,2016,2016-11-20,3,Meets Expectations,numeric,High,false,252,IC2,BR,Customer Operations,Customer
+429,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,459,IC1,BR,Sales,Retail
+430,2016,2016-11-20,3,Meets Expectations,numeric,Low,false,319,IC2,BR,Procurement,Supply Chain
+1,2017,2017-11-20,1,Below Expectations,numeric,High,false,12,IC1,BR,Regional Operations,Retail
+3,2017,2017-11-20,3,Meets Expectations,numeric,High,false,48,IC1,BR,Distribution Centers,Supply Chain
+8,2017,2017-11-20,2,Developing,numeric,Medium,true,121,M2,BR,Digital Marketing,Digital
+9,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,335,IC3,BR,Planning,Supply Chain
+10,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,309,M4,BR,Procurement,Supply Chain
+11,2017,2017-11-20,2,Developing,numeric,High,false,273,IC2,BR,Visual Merchandising,Retail
+12,2017,2017-11-20,3,Meets Expectations,numeric,High,false,98,IC3,BR,Regional Operations,Retail
+13,2017,2017-11-20,5,Outstanding,numeric,Low,false,174,IC1,BR,Regional Operations,Retail
+14,2017,2017-11-20,3,Meets Expectations,numeric,Low,true,309,M3,BR,Marketing,Corporate
+16,2017,2017-11-20,3,Meets Expectations,numeric,Low,true,90,IC1,BR,Customer Experience,Customer
+17,2017,2017-11-20,3,Meets Expectations,numeric,Medium,true,26,IC1,BR,Sales,Retail
+18,2017,2017-11-20,1,Below Expectations,numeric,Low,false,98,IC3,BR,Regional Operations,Retail
+20,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,48,IC1,BR,Distribution Centers,Supply Chain
+21,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,585,IC2,BR,Sales,Retail
+24,2017,2017-11-20,2,Developing,numeric,Low,false,585,IC2,BR,Sales,Retail
+26,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,585,IC2,BR,Sales,Retail
+27,2017,2017-11-20,3,Meets Expectations,numeric,High,false,98,IC3,BR,Regional Operations,Retail
+28,2017,2017-11-20,3,Meets Expectations,numeric,High,false,630,IC2,BR,Finance,Corporate
+29,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,193,IC5,BR,Strategy,Corporate
+30,2017,2017-11-20,2,Developing,numeric,High,false,165,IC1,BR,Customer Operations,Customer
+31,2017,2017-11-20,5,Outstanding,numeric,Medium,false,34,IC2,BR,Regional Operations,Retail
+32,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,294,IC2,BR,Visual Merchandising,Retail
+33,2017,2017-11-20,2,Developing,numeric,Low,false,61,IC1,BR,Sales,Retail
+34,2017,2017-11-20,5,Outstanding,numeric,Low,false,98,IC3,BR,Regional Operations,Retail
+36,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,48,IC1,BR,Distribution Centers,Supply Chain
+42,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,585,IC2,BR,Sales,Retail
+43,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,517,IC2,BR,Distribution Centers,Supply Chain
+45,2017,2017-11-20,2,Developing,numeric,High,false,187,IC4,BR,Procurement,Corporate
+46,2017,2017-11-20,2,Developing,numeric,Low,true,49,IC1,BR,Procurement,Supply Chain
+47,2017,2017-11-20,2,Developing,numeric,Medium,false,45,IC3,BR,Procurement,Corporate
+48,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,297,IC3,BR,Distribution Centers,Supply Chain
+49,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,430,IC1,BR,Procurement,Supply Chain
+50,2017,2017-11-20,3,Meets Expectations,numeric,High,false,384,IC1,BR,Data & Analytics,Corporate
+55,2017,2017-11-20,3,Meets Expectations,numeric,High,false,119,IC2,BR,Legal,Corporate
+57,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,156,IC1,BR,People,Corporate
+59,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,162,IC1,BR,Strategy,Corporate
+60,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,321,IC4,BR,Marketing,Corporate
+61,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,585,IC2,BR,Sales,Retail
+62,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,,D1,BR,Procurement,Corporate
+63,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,48,IC1,BR,Distribution Centers,Supply Chain
+64,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,139,IC1,BR,Sales,Retail
+65,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,14,M2,BR,Sales,Retail
+66,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,21,IC1,BR,Store Operations,Retail
+69,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,276,IC1,BR,Logistics,Supply Chain
+70,2017,2017-11-20,2,Developing,numeric,Medium,false,121,M2,BR,Data,Digital
+71,2017,2017-11-20,1,Below Expectations,numeric,High,false,273,IC2,BR,Visual Merchandising,Retail
+72,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,73,IC1,BR,Risk,Corporate
+73,2017,2017-11-20,3,Meets Expectations,numeric,High,true,261,IC2,BR,Risk,Corporate
+74,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,160,IC1,BR,Sales,Retail
+75,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,155,IC1,BR,Legal,Corporate
+76,2017,2017-11-20,2,Developing,numeric,Low,false,200,IC1,BR,People,Corporate
+77,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,467,IC2,BR,Store Operations,Retail
+78,2017,2017-11-20,2,Developing,numeric,High,false,586,IC2,BR,Visual Merchandising,Retail
+79,2017,2017-11-20,5,Outstanding,numeric,High,false,65,M1,BR,Sales,Retail
+80,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,31,IC1,BR,Regional Operations,Retail
+81,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,281,M1,BR,Product,Digital
+82,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,187,IC4,BR,Procurement,Corporate
+83,2017,2017-11-20,1,Below Expectations,numeric,Medium,false,242,IC1,BR,Customer Service,Customer
+84,2017,2017-11-20,5,Outstanding,numeric,High,false,318,IC1,BR,Procurement,Supply Chain
+85,2017,2017-11-20,3,Meets Expectations,numeric,Low,true,391,IC1,BR,Sales,Retail
+86,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,177,IC4,BR,Engineering,Digital
+88,2017,2017-11-20,2,Developing,numeric,High,false,138,IC2,BR,Procurement,Corporate
+89,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,218,IC3,BR,Finance,Corporate
+90,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,194,IC2,BR,Customer Experience,Customer
+91,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,308,IC1,BR,Store Operations,Retail
+92,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,196,IC4,BR,Data & Analytics,Corporate
+93,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,189,IC1,BR,Customer Service,Customer
+94,2017,2017-11-20,2,Developing,numeric,High,false,316,IC1,BR,Store Operations,Retail
+95,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,251,IC1,BR,Regional Operations,Retail
+96,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,142,IC1,BR,Visual Merchandising,Retail
+98,2017,2017-11-20,3,Meets Expectations,numeric,Low,true,65,M1,BR,Regional Operations,Retail
+100,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,254,IC2,BR,Finance,Corporate
+101,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,550,IC1,BR,Customer Operations,Customer
+102,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,90,IC1,BR,Customer Experience,Customer
+105,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,296,IC1,BR,Finance,Corporate
+106,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,199,IC2,BR,E-commerce,Digital
+107,2017,2017-11-20,2,Developing,numeric,Low,false,139,IC1,BR,Sales,Retail
+109,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,48,IC2,BR,Distribution Centers,Supply Chain
+113,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,183,IC2,BR,People,Corporate
+115,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,518,IC2,BR,Regional Operations,Retail
+116,2017,2017-11-20,3,Meets Expectations,numeric,Low,true,404,IC2,BR,Product,Digital
+117,2017,2017-11-20,3,Meets Expectations,numeric,High,false,261,IC2,BR,Risk,Corporate
+118,2017,2017-11-20,2,Developing,numeric,Medium,false,81,IC2,BR,Product,Digital
+119,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,196,IC4,BR,Legal,Corporate
+121,2017,2017-11-20,1,Below Expectations,numeric,High,false,309,M4,BR,Sales,Retail
+123,2017,2017-11-20,3,Meets Expectations,numeric,High,true,242,IC1,BR,Customer Service,Customer
+126,2017,2017-11-20,2,Developing,numeric,Low,false,568,IC1,BR,Logistics,Supply Chain
+128,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,585,IC2,BR,Sales,Retail
+130,2017,2017-11-20,1,Below Expectations,numeric,Low,false,90,IC1,BR,Customer Experience,Customer
+131,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,189,IC1,BR,Store Operations,Retail
+132,2017,2017-11-20,1,Below Expectations,numeric,Low,false,494,IC1,BR,Strategy,Corporate
+133,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,90,IC1,BR,Customer Experience,Customer
+134,2017,2017-11-20,1,Below Expectations,numeric,Low,false,189,IC1,BR,Customer Service,Customer
+137,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,166,IC1,BR,Procurement,Corporate
+138,2017,2017-11-20,3,Meets Expectations,numeric,High,false,45,IC3,BR,Procurement,Corporate
+139,2017,2017-11-20,2,Developing,numeric,Low,false,585,IC2,BR,Sales,Retail
+140,2017,2017-11-20,1,Below Expectations,numeric,Medium,false,14,M1,BR,Visual Merchandising,Retail
+141,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,65,M1,BR,Sales,Retail
+142,2017,2017-11-20,3,Meets Expectations,numeric,High,false,585,IC2,BR,Sales,Retail
+143,2017,2017-11-20,2,Developing,numeric,Low,true,430,IC1,BR,Procurement,Supply Chain
+146,2017,2017-11-20,2,Developing,numeric,Medium,false,34,IC2,BR,Regional Operations,Retail
+148,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,9,IC1,BR,Planning,Supply Chain
+149,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,48,IC1,BR,Distribution Centers,Supply Chain
+150,2017,2017-11-20,2,Developing,numeric,Low,false,461,IC1,BR,Customer Service,Customer
+152,2017,2017-11-20,5,Outstanding,numeric,Medium,true,205,IC2,BR,UX,Digital
+153,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,70,M1,BR,Data,Digital
+155,2017,2017-11-20,5,Outstanding,numeric,Medium,true,119,IC2,BR,Legal,Corporate
+156,2017,2017-11-20,1,Below Expectations,numeric,Low,false,278,IC2,BR,People,Corporate
+158,2017,2017-11-20,2,Developing,numeric,Low,false,302,IC1,BR,Procurement,Supply Chain
+160,2017,2017-11-20,2,Developing,numeric,Medium,false,585,IC2,BR,Sales,Retail
+162,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,79,IC4,BR,Sales,Retail
+165,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,252,IC2,BR,Customer Operations,Customer
+166,2017,2017-11-20,3,Meets Expectations,numeric,High,false,517,IC2,BR,Distribution Centers,Supply Chain
+167,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,522,IC1,BR,Store Operations,Retail
+169,2017,2017-11-20,5,Outstanding,numeric,Medium,false,238,IC1,BR,Visual Merchandising,Retail
+171,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,194,IC4,BR,Customer Service,Customer
+172,2017,2017-11-20,2,Developing,numeric,Medium,false,420,IC2,BR,Digital Marketing,Digital
+173,2017,2017-11-20,1,Below Expectations,numeric,Low,false,294,IC2,BR,Visual Merchandising,Retail
+174,2017,2017-11-20,3,Meets Expectations,numeric,Low,true,34,IC2,BR,Regional Operations,Retail
+175,2017,2017-11-20,3,Meets Expectations,numeric,Medium,true,286,IC2,BR,Procurement,Corporate
+177,2017,2017-11-20,1,Below Expectations,numeric,Low,false,528,IC5,BR,UX,Digital
+179,2017,2017-11-20,2,Developing,numeric,Low,false,9,IC1,BR,Planning,Supply Chain
+181,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,14,M1,BR,Visual Merchandising,Retail
+182,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,77,IC1,BR,Store Operations,Retail
+183,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,327,IC4,BR,People,Corporate
+186,2017,2017-11-20,2,Developing,numeric,Low,false,26,IC1,BR,Sales,Retail
+187,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,62,M2,BR,Procurement,Corporate
+188,2017,2017-11-20,1,Below Expectations,numeric,High,false,276,IC1,BR,Logistics,Supply Chain
+189,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,171,IC2,BR,Customer Service,Customer
+191,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,42,IC1,BR,Sales,Retail
+192,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,310,IC5,BR,Product,Digital
+193,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,261,M1,BR,Strategy,Corporate
+194,2017,2017-11-20,2,Developing,numeric,Low,false,246,M1,BR,Customer Experience,Customer
+195,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,47,IC1,BR,Procurement,Corporate
+196,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,321,M3,BR,Legal,Corporate
+197,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,70,IC4,BR,Data,Digital
+199,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,310,IC3,BR,E-commerce,Digital
+200,2017,2017-11-20,5,Outstanding,numeric,Low,false,298,IC2,BR,People,Corporate
+201,2017,2017-11-20,3,Meets Expectations,numeric,High,false,585,IC2,BR,Sales,Retail
+203,2017,2017-11-20,3,Meets Expectations,numeric,High,false,32,IC1,BR,Visual Merchandising,Retail
+205,2017,2017-11-20,3,Meets Expectations,numeric,High,false,177,IC4,BR,UX,Digital
+206,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,277,IC1,BR,Logistics,Supply Chain
+207,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,71,IC1,BR,Visual Merchandising,Retail
+208,2017,2017-11-20,3,Meets Expectations,numeric,High,false,212,M2,BR,Regional Operations,Retail
+210,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,true,416,IC4,BR,Engineering,Digital
+212,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,309,M4,BR,Visual Merchandising,Retail
+214,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,210,IC2,BR,Engineering,Digital
+215,2017,2017-11-20,3,Meets Expectations,numeric,High,false,138,IC2,BR,Procurement,Corporate
+216,2017,2017-11-20,2,Developing,numeric,High,false,433,IC2,BR,Customer Experience,Customer
+217,2017,2017-11-20,2,Developing,numeric,High,false,142,IC1,BR,Visual Merchandising,Retail
+218,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,193,IC4,BR,Strategy,Corporate
+220,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,282,IC1,BR,Regional Operations,Retail
+223,2017,2017-11-20,3,Meets Expectations,numeric,Low,true,294,IC2,BR,Visual Merchandising,Retail
+224,2017,2017-11-20,2,Developing,numeric,Medium,false,294,IC2,BR,Visual Merchandising,Retail
+227,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,92,IC3,BR,Data & Analytics,Corporate
+229,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,174,IC1,BR,Regional Operations,Retail
+232,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,92,IC3,BR,Data & Analytics,Corporate
+233,2017,2017-11-20,1,Below Expectations,numeric,Medium,false,14,M1,BR,Visual Merchandising,Retail
+238,2017,2017-11-20,2,Developing,numeric,Low,false,273,IC2,BR,Visual Merchandising,Retail
+241,2017,2017-11-20,3,Meets Expectations,numeric,High,false,165,IC1,BR,Customer Operations,Customer
+242,2017,2017-11-20,3,Meets Expectations,numeric,Medium,true,171,IC2,BR,Customer Service,Customer
+243,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,171,IC3,BR,Customer Service,Customer
+244,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,172,IC1,BR,Digital Marketing,Digital
+245,2017,2017-11-20,3,Meets Expectations,numeric,High,false,199,IC2,BR,E-commerce,Digital
+246,2017,2017-11-20,3,Meets Expectations,numeric,High,false,10,M2,BR,Planning,Supply Chain
+248,2017,2017-11-20,2,Developing,numeric,Low,false,261,IC2,BR,Risk,Corporate
+250,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,399,IC1,BR,Sales,Retail
+251,2017,2017-11-20,3,Meets Expectations,numeric,High,false,34,IC2,BR,Regional Operations,Retail
+252,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,303,M1,BR,Customer Operations,Customer
+254,2017,2017-11-20,5,Outstanding,numeric,Medium,false,60,IC3,BR,Finance,Corporate
+256,2017,2017-11-20,1,Below Expectations,numeric,Low,false,201,IC1,BR,Sales,Retail
+258,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,316,IC1,BR,Store Operations,Retail
+261,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,321,M2,BR,Risk,Corporate
+262,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,21,IC1,BR,Store Operations,Retail
+263,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,288,IC1,BR,Customer Operations,Customer
+264,2017,2017-11-20,3,Meets Expectations,numeric,High,false,14,M1,BR,Visual Merchandising,Retail
+269,2017,2017-11-20,3,Meets Expectations,numeric,High,false,77,IC1,BR,Store Operations,Retail
+270,2017,2017-11-20,2,Developing,numeric,High,false,273,IC2,BR,Visual Merchandising,Retail
+272,2017,2017-11-20,3,Meets Expectations,numeric,Medium,true,479,IC1,BR,Visual Merchandising,Retail
+273,2017,2017-11-20,3,Meets Expectations,numeric,High,false,140,IC3,BR,Visual Merchandising,Retail
+274,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,115,IC1,BR,Regional Operations,Retail
+275,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,308,IC1,BR,Store Operations,Retail
+276,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,162,IC2,BR,Logistics,Supply Chain
+277,2017,2017-11-20,3,Meets Expectations,numeric,High,false,162,IC2,BR,Logistics,Supply Chain
+278,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,327,IC3,BR,People,Corporate
+279,2017,2017-11-20,2,Developing,numeric,Medium,false,142,IC1,BR,Visual Merchandising,Retail
+280,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,467,IC2,BR,Store Operations,Retail
+281,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,121,M2,BR,E-commerce,Digital
+282,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,34,IC2,BR,Regional Operations,Retail
+283,2017,2017-11-20,1,Below Expectations,numeric,Medium,false,86,IC3,BR,Engineering,Digital
+285,2017,2017-11-20,5,Outstanding,numeric,Medium,false,420,IC2,BR,Digital Marketing,Digital
+286,2017,2017-11-20,3,Meets Expectations,numeric,High,false,187,IC4,BR,Procurement,Corporate
+287,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,467,IC2,BR,Store Operations,Retail
+288,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,252,IC2,BR,Customer Operations,Customer
+290,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,42,IC1,BR,Sales,Retail
+292,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,121,M2,BR,Sales,Retail
+294,2017,2017-11-20,3,Meets Expectations,numeric,High,false,181,IC3,BR,Visual Merchandising,Retail
+295,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,10,M1,BR,Procurement,Supply Chain
+296,2017,2017-11-20,2,Developing,numeric,Low,false,27,IC2,BR,Finance,Corporate
+297,2017,2017-11-20,1,Below Expectations,numeric,Low,false,295,IC4,BR,Procurement,Supply Chain
+298,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,327,IC3,BR,People,Corporate
+301,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,90,IC1,BR,Customer Experience,Customer
+302,2017,2017-11-20,3,Meets Expectations,numeric,Medium,true,319,IC2,BR,Procurement,Supply Chain
+303,2017,2017-11-20,1,Below Expectations,numeric,Low,false,10,M2,BR,Logistics,Supply Chain
+305,2017,2017-11-20,3,Meets Expectations,numeric,High,true,335,IC3,BR,Planning,Supply Chain
+307,2017,2017-11-20,3,Meets Expectations,numeric,High,false,700,M2,BR,Visual Merchandising,Retail
+308,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,406,IC3,BR,Legal,Corporate
+309,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,62,M5,BR,People,Corporate
+310,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,578,M1,BR,Customer Service,Customer
+312,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,24,IC1,BR,Sales,Retail
+313,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,47,IC2,BR,Procurement,Corporate
+315,2017,2017-11-20,1,Below Expectations,numeric,High,false,48,IC1,BR,Distribution Centers,Supply Chain
+316,2017,2017-11-20,3,Meets Expectations,numeric,High,false,467,IC3,BR,Store Operations,Retail
+318,2017,2017-11-20,3,Meets Expectations,numeric,High,false,319,IC2,BR,Procurement,Supply Chain
+319,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,297,IC3,BR,Procurement,Supply Chain
+320,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,90,IC1,BR,Customer Experience,Customer
+321,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,309,M4,BR,Marketing,Corporate
+322,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,280,IC1,BR,Store Operations,Retail
+323,2017,2017-11-20,3,Meets Expectations,numeric,High,true,165,IC1,BR,Customer Operations,Customer
+324,2017,2017-11-20,5,Outstanding,numeric,High,false,254,IC2,BR,Finance,Corporate
+326,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,585,IC2,BR,Sales,Retail
+327,2017,2017-11-20,2,Developing,numeric,Medium,false,307,M1,BR,People,Corporate
+328,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,115,IC1,BR,UX,Digital
+330,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,277,IC1,BR,Logistics,Supply Chain
+331,2017,2017-11-20,3,Meets Expectations,numeric,High,false,515,IC1,BR,Procurement,Supply Chain
+333,2017,2017-11-20,3,Meets Expectations,numeric,Low,true,26,IC1,BR,Sales,Retail
+335,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,true,246,M1,BR,Planning,Supply Chain
+336,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,341,IC3,AR,Store Operations,Retail
+337,2017,2017-11-20,3,Meets Expectations,numeric,High,false,344,IC1,AR,Customer Service,Customer
+341,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,8,M1,AR,Sales,Retail
+342,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,288,IC1,BR,Customer Operations,Customer
+343,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,261,M1,AR,Sales,Retail
+344,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,541,IC2,AR,Planning,Supply Chain
+345,2017,2017-11-20,2,Developing,numeric,Low,false,368,IC1,AR,Logistics,Supply Chain
+346,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,379,IC1,AR,Sales,Retail
+347,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,true,401,IC1,AR,Customer Service,Customer
+349,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,396,IC1,AR,Regional Operations,Retail
+352,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,341,IC4,AR,Marketing,Corporate
+355,2017,2017-11-20,3,Meets Expectations,numeric,Low,true,541,IC2,AR,Planning,Supply Chain
+357,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,416,IC3,AR,Distribution Centers,Supply Chain
+360,2017,2017-11-20,2,Developing,numeric,High,false,396,IC1,AR,Sales,Retail
+363,2017,2017-11-20,3,Meets Expectations,numeric,High,true,307,M1,AR,Visual Merchandising,Retail
+365,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,363,IC3,AR,Visual Merchandising,Retail
+366,2017,2017-11-20,2,Developing,numeric,High,false,379,IC1,AR,Sales,Retail
+368,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,357,IC2,AR,Logistics,Supply Chain
+373,2017,2017-11-20,5,Outstanding,numeric,Medium,true,541,IC2,AR,Planning,Supply Chain
+375,2017,2017-11-20,2,Developing,numeric,High,false,416,IC3,AR,Store Operations,Retail
+378,2017,2017-11-20,3,Meets Expectations,numeric,High,false,506,IC1,AR,Regional Operations,Retail
+379,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,343,IC2,AR,Sales,Retail
+380,2017,2017-11-20,3,Meets Expectations,numeric,High,false,375,IC1,AR,Store Operations,Retail
+384,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,227,IC2,BR,Data & Analytics,Corporate
+386,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,11,IC1,BR,Visual Merchandising,Retail
+390,2017,2017-11-20,5,Outstanding,numeric,Medium,false,116,IC1,BR,Product,Digital
+391,2017,2017-11-20,3,Meets Expectations,numeric,High,false,585,IC2,BR,Sales,Retail
+392,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,248,IC1,BR,Risk,Corporate
+393,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,146,IC1,BR,Regional Operations,Retail
+395,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,34,IC2,BR,Regional Operations,Retail
+396,2017,2017-11-20,2,Developing,numeric,Low,false,341,IC2,AR,Sales,Retail
+398,2017,2017-11-20,1,Below Expectations,numeric,Medium,false,227,IC2,BR,Data & Analytics,Corporate
+399,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,585,IC2,BR,Sales,Retail
+401,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,541,IC2,AR,Planning,Supply Chain
+403,2017,2017-11-20,3,Meets Expectations,numeric,High,false,196,IC3,BR,Legal,Corporate
+404,2017,2017-11-20,3,Meets Expectations,numeric,High,false,482,IC4,BR,Product,Digital
+405,2017,2017-11-20,3,Meets Expectations,numeric,Medium,true,302,IC1,BR,Procurement,Supply Chain
+406,2017,2017-11-20,5,Outstanding,numeric,Medium,false,196,IC4,BR,Legal,Corporate
+411,2017,2017-11-20,3,Meets Expectations,numeric,High,false,90,IC1,BR,Customer Experience,Customer
+414,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,78,IC1,BR,Visual Merchandising,Retail
+416,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,70,IC5,BR,Engineering,Digital
+417,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,399,IC1,BR,Sales,Retail
+420,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,8,IC3,BR,Digital Marketing,Digital
+422,2017,2017-11-20,3,Meets Expectations,numeric,High,false,224,IC1,BR,Visual Merchandising,Retail
+423,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,391,IC1,BR,Customer Service,Customer
+425,2017,2017-11-20,3,Meets Expectations,numeric,Low,true,9,IC1,BR,Planning,Supply Chain
+427,2017,2017-11-20,1,Below Expectations,numeric,Medium,false,165,IC1,BR,Customer Operations,Customer
+429,2017,2017-11-20,2,Developing,numeric,Low,true,326,IC1,BR,Sales,Retail
+430,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,319,IC2,BR,Procurement,Supply Chain
+433,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,303,M1,BR,Customer Experience,Customer
+434,2017,2017-11-20,3,Meets Expectations,numeric,High,false,568,IC1,BR,Logistics,Supply Chain
+435,2017,2017-11-20,2,Developing,numeric,Low,false,201,IC1,BR,Sales,Retail
+436,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,294,IC2,BR,Visual Merchandising,Retail
+438,2017,2017-11-20,3,Meets Expectations,numeric,Low,true,281,M2,AR,Visual Merchandising,Retail
+439,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,477,IC1,BR,Regional Operations,Retail
+440,2017,2017-11-20,2,Developing,numeric,Low,false,321,M2,BR,Marketing,Corporate
+441,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,406,IC3,BR,Legal,Corporate
+444,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,29,IC4,BR,Strategy,Corporate
+447,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,183,IC2,BR,People,Corporate
+448,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,208,IC3,BR,Regional Operations,Retail
+452,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,355,IC1,AR,Planning,Supply Chain
+457,2017,2017-11-20,2,Developing,numeric,Low,false,406,IC3,BR,Legal,Corporate
+458,2017,2017-11-20,3,Meets Expectations,numeric,High,false,21,IC1,BR,Store Operations,Retail
+460,2017,2017-11-20,3,Meets Expectations,numeric,High,false,391,IC1,BR,Sales,Retail
+461,2017,2017-11-20,2,Developing,numeric,Medium,false,243,IC2,BR,Customer Service,Customer
+464,2017,2017-11-20,5,Outstanding,numeric,Medium,false,403,IC2,BR,Legal,Corporate
+466,2017,2017-11-20,2,Developing,numeric,Medium,false,34,IC2,BR,Regional Operations,Retail
+467,2017,2017-11-20,3,Meets Expectations,numeric,High,false,65,M1,BR,Store Operations,Retail
+468,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,77,IC1,BR,Store Operations,Retail
+469,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,77,IC1,BR,Store Operations,Retail
+471,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,261,IC2,BR,Risk,Corporate
+473,2017,2017-11-20,3,Meets Expectations,numeric,High,false,585,IC2,BR,Sales,Retail
+474,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,335,IC3,BR,Planning,Supply Chain
+475,2017,2017-11-20,2,Developing,numeric,Medium,false,324,IC1,BR,Finance,Corporate
+476,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,473,IC1,BR,Sales,Retail
+477,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,18,IC2,BR,Regional Operations,Retail
+479,2017,2017-11-20,5,Outstanding,numeric,Low,false,273,IC2,BR,Visual Merchandising,Retail
+482,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,310,IC5,BR,Product,Digital
+484,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,270,IC1,BR,Visual Merchandising,Retail
+485,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,436,IC1,BR,Visual Merchandising,Retail
+486,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,461,IC1,BR,Customer Service,Customer
+488,2017,2017-11-20,3,Meets Expectations,numeric,High,true,473,IC1,BR,Sales,Retail
+490,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,24,IC1,BR,Sales,Retail
+491,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,479,IC1,BR,Visual Merchandising,Retail
+493,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,212,M1,BR,Visual Merchandising,Retail
+494,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,444,IC3,BR,Strategy,Corporate
+495,2017,2017-11-20,2,Developing,numeric,Low,false,146,IC1,BR,Regional Operations,Retail
+498,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,71,IC1,BR,Visual Merchandising,Retail
+499,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,352,IC2,AR,Customer Operations,Customer
+501,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,516,IC1,BR,Data,Digital
+502,2017,2017-11-20,2,Developing,numeric,Low,false,294,IC2,BR,Visual Merchandising,Retail
+503,2017,2017-11-20,4,Exceeds Expectations,numeric,High,true,212,M2,BR,Store Operations,Retail
+504,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,232,IC1,BR,Data & Analytics,Corporate
+505,2017,2017-11-20,3,Meets Expectations,numeric,High,false,474,IC1,BR,Planning,Supply Chain
+506,2017,2017-11-20,2,Developing,numeric,High,false,336,IC2,AR,Regional Operations,Retail
+507,2017,2017-11-20,1,Below Expectations,numeric,High,false,396,IC1,AR,Sales,Retail
+509,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,14,M2,BR,Data & Analytics,Corporate
+510,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,352,IC2,AR,Customer Service,Customer
+511,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,49,IC1,BR,Procurement,Supply Chain
+514,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,90,IC1,BR,Customer Experience,Customer
+515,2017,2017-11-20,3,Meets Expectations,numeric,Low,true,319,IC2,BR,Procurement,Supply Chain
+516,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,197,IC3,BR,Data,Digital
+517,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,162,IC3,BR,Distribution Centers,Supply Chain
+518,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,208,IC3,BR,Regional Operations,Retail
+520,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,90,IC1,BR,Customer Experience,Customer
+521,2017,2017-11-20,3,Meets Expectations,numeric,High,false,461,IC1,BR,Customer Service,Customer
+522,2017,2017-11-20,2,Developing,numeric,Low,true,283,IC2,BR,Engineering,Digital
+523,2017,2017-11-20,3,Meets Expectations,numeric,High,false,553,IC1,BR,Customer Operations,Customer
+526,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,355,IC1,AR,Planning,Supply Chain
+528,2017,2017-11-20,3,Meets Expectations,numeric,High,true,281,M1,BR,Engineering,Digital
+529,2017,2017-11-20,2,Developing,numeric,Medium,true,276,IC1,BR,Logistics,Supply Chain
+530,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,352,IC2,AR,Customer Service,Customer
+532,2017,2017-11-20,5,Outstanding,numeric,High,false,436,IC1,BR,Visual Merchandising,Retail
+534,2017,2017-11-20,3,Meets Expectations,numeric,High,false,283,IC1,BR,Engineering,Digital
+535,2017,2017-11-20,2,Developing,numeric,Low,false,319,IC2,BR,Procurement,Supply Chain
+536,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,88,IC1,BR,Procurement,Corporate
+537,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,440,IC5,BR,Marketing,Corporate
+538,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,502,IC1,BR,Visual Merchandising,Retail
+539,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,14,M2,BR,Strategy,Corporate
+541,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,343,IC3,AR,Planning,Supply Chain
+542,2017,2017-11-20,2,Developing,numeric,Medium,false,506,IC1,AR,Regional Operations,Retail
+543,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,406,IC3,BR,Legal,Corporate
+544,2017,2017-11-20,5,Outstanding,numeric,Low,false,223,IC1,BR,Visual Merchandising,Retail
+546,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,280,IC1,BR,Store Operations,Retail
+547,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,494,IC1,BR,Strategy,Corporate
+548,2017,2017-11-20,1,Below Expectations,numeric,High,false,308,IC1,BR,Store Operations,Retail
+549,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,399,IC1,BR,Sales,Retail
+550,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,252,IC2,BR,Customer Operations,Customer
+551,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,297,IC3,BR,Procurement,Supply Chain
+552,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,578,M1,BR,Customer Experience,Customer
+553,2017,2017-11-20,1,Below Expectations,numeric,Medium,false,252,IC2,BR,Customer Operations,Customer
+554,2017,2017-11-20,3,Meets Expectations,numeric,Low,true,313,IC1,BR,Store Operations,Retail
+555,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,295,IC5,BR,Distribution Centers,Supply Chain
+556,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,305,IC2,BR,Planning,Supply Chain
+557,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,227,IC2,BR,Data & Analytics,Corporate
+558,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,473,IC1,BR,Sales,Retail
+560,2017,2017-11-20,3,Meets Expectations,numeric,High,false,585,IC2,BR,Sales,Retail
+561,2017,2017-11-20,3,Meets Expectations,numeric,High,false,535,IC1,BR,Procurement,Supply Chain
+562,2017,2017-11-20,2,Developing,numeric,Medium,false,232,IC2,BR,Data & Analytics,Corporate
+564,2017,2017-11-20,1,Below Expectations,numeric,Low,false,10,M2,BR,Procurement,Supply Chain
+565,2017,2017-11-20,3,Meets Expectations,numeric,High,false,152,IC1,BR,UX,Digital
+566,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,8,IC4,BR,Digital Marketing,Digital
+567,2017,2017-11-20,2,Developing,numeric,High,true,212,M2,BR,Store Operations,Retail
+568,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,162,IC2,BR,Logistics,Supply Chain
+570,2017,2017-11-20,3,Meets Expectations,numeric,High,false,482,IC4,BR,Product,Digital
+571,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,139,IC1,BR,Sales,Retail
+572,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,365,IC1,AR,Visual Merchandising,Retail
+573,2017,2017-11-20,5,Outstanding,numeric,Medium,false,12,IC1,BR,Regional Operations,Retail
+574,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,396,IC1,AR,Sales,Retail
+575,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,379,IC1,AR,Sales,Retail
+576,2017,2017-11-20,4,Exceeds Expectations,numeric,High,false,598,IC3,BR,Finance,Corporate
+577,2017,2017-11-20,3,Meets Expectations,numeric,High,false,173,IC1,BR,Visual Merchandising,Retail
+578,2017,2017-11-20,3,Meets Expectations,numeric,High,false,121,M3,BR,Customer Experience,Customer
+579,2017,2017-11-20,4,Exceeds Expectations,numeric,Medium,false,31,IC1,BR,Regional Operations,Retail
+580,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,336,IC1,AR,Store Operations,Retail
+581,2017,2017-11-20,3,Meets Expectations,numeric,High,false,285,IC1,BR,Digital Marketing,Digital
+582,2017,2017-11-20,5,Outstanding,numeric,High,false,26,IC1,BR,Sales,Retail
+583,2017,2017-11-20,5,Outstanding,numeric,Low,true,273,IC2,BR,Visual Merchandising,Retail
+584,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,294,IC2,BR,Visual Merchandising,Retail
+585,2017,2017-11-20,2,Developing,numeric,Medium,true,141,IC3,BR,Sales,Retail
+586,2017,2017-11-20,4,Exceeds Expectations,numeric,Low,false,233,IC3,BR,Visual Merchandising,Retail
+587,2017,2017-11-20,3,Meets Expectations,numeric,High,false,8,M1,BR,Digital Marketing,Digital
+588,2017,2017-11-20,3,Meets Expectations,numeric,High,false,576,IC2,BR,Digital Marketing,Digital
+589,2017,2017-11-20,3,Meets Expectations,numeric,Low,false,42,IC1,BR,Sales,Retail
+590,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,416,IC4,BR,Engineering,Digital
+591,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,464,IC1,BR,Legal,Corporate
+592,2017,2017-11-20,2,Developing,numeric,Medium,false,243,IC2,BR,Customer Service,Customer
+593,2017,2017-11-20,3,Meets Expectations,numeric,Medium,false,55,IC1,BR,Legal,Corporate
+1,2018,2018-11-20,2,Developing,numeric,Low,true,12,IC1,BR,Regional Operations,Retail
+3,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,48,IC1,BR,Distribution Centers,Supply Chain
+8,2018,2018-11-20,3,Meets Expectations,numeric,Medium,true,692,M3,BR,Procurement,Corporate
+9,2018,2018-11-20,2,Developing,numeric,High,false,335,IC3,BR,Planning,Supply Chain
+10,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,309,M4,BR,Procurement,Supply Chain
+11,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,273,IC2,BR,Visual Merchandising,Retail
+12,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,406,IC3,BR,Regional Operations,Retail
+13,2018,2018-11-20,3,Meets Expectations,numeric,High,false,174,IC1,BR,Regional Operations,Retail
+14,2018,2018-11-20,4,Exceeds Expectations,numeric,High,false,309,M3,BR,Marketing,Corporate
+16,2018,2018-11-20,3,Meets Expectations,numeric,High,true,90,IC1,BR,Customer Experience,Customer
+17,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,26,IC1,BR,Sales,Retail
+18,2018,2018-11-20,3,Meets Expectations,numeric,High,false,406,IC3,BR,Regional Operations,Retail
+20,2018,2018-11-20,3,Meets Expectations,numeric,High,false,48,IC1,BR,Distribution Centers,Supply Chain
+21,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,162,IC2,BR,Sales,Retail
+24,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,162,IC2,BR,Sales,Retail
+26,2018,2018-11-20,4,Exceeds Expectations,numeric,High,true,162,IC2,BR,Sales,Retail
+27,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,406,IC3,BR,Regional Operations,Retail
+28,2018,2018-11-20,5,Outstanding,numeric,Medium,false,630,IC2,BR,Finance,Corporate
+29,2018,2018-11-20,2,Developing,numeric,Medium,false,81,IC5,BR,Procurement,Corporate
+31,2018,2018-11-20,5,Outstanding,numeric,High,false,34,IC2,BR,Regional Operations,Retail
+32,2018,2018-11-20,1,Below Expectations,numeric,Medium,false,294,IC2,BR,Visual Merchandising,Retail
+34,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,208,M1,BR,Regional Operations,Retail
+36,2018,2018-11-20,2,Developing,numeric,Low,false,48,IC1,BR,Distribution Centers,Supply Chain
+45,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,335,IC4,BR,Planning,Supply Chain
+47,2018,2018-11-20,2,Developing,numeric,Medium,false,45,IC3,BR,Procurement,Corporate
+48,2018,2018-11-20,3,Meets Expectations,numeric,High,false,297,IC3,BR,Distribution Centers,Supply Chain
+50,2018,2018-11-20,3,Meets Expectations,numeric,High,false,384,IC1,BR,Data & Analytics,Corporate
+55,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,119,IC2,BR,Legal,Corporate
+57,2018,2018-11-20,3,Meets Expectations,numeric,High,false,298,IC2,BR,People,Corporate
+59,2018,2018-11-20,2,Developing,numeric,Medium,false,162,IC1,BR,Strategy,Corporate
+60,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,321,IC4,BR,Marketing,Corporate
+61,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,162,IC2,BR,Sales,Retail
+62,2018,2018-11-20,2,Developing,numeric,High,false,,D1,BR,Procurement,Corporate
+63,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,48,IC1,BR,Distribution Centers,Supply Chain
+64,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,139,IC1,BR,Sales,Retail
+65,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,14,M2,BR,Sales,Retail
+66,2018,2018-11-20,3,Meets Expectations,numeric,High,false,691,IC2,BR,Store Operations,Retail
+69,2018,2018-11-20,3,Meets Expectations,numeric,High,false,623,IC2,BR,Logistics,Supply Chain
+70,2018,2018-11-20,5,Outstanding,numeric,Medium,false,673,M2,BR,Customer Operations,Customer
+72,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,73,IC1,BR,Risk,Corporate
+73,2018,2018-11-20,2,Developing,numeric,Medium,false,261,IC3,BR,Risk,Corporate
+74,2018,2018-11-20,5,Outstanding,numeric,High,false,160,IC1,BR,Sales,Retail
+75,2018,2018-11-20,1,Below Expectations,numeric,Low,false,155,IC1,BR,Legal,Corporate
+76,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,true,200,IC1,BR,People,Corporate
+77,2018,2018-11-20,3,Meets Expectations,numeric,High,false,467,IC2,BR,Store Operations,Retail
+78,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,586,IC2,BR,Visual Merchandising,Retail
+81,2018,2018-11-20,4,Exceeds Expectations,numeric,High,false,187,M1,BR,Procurement,Corporate
+82,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,false,92,IC4,BR,Data & Analytics,Corporate
+83,2018,2018-11-20,2,Developing,numeric,Low,false,556,IC1,BR,Planning,Supply Chain
+84,2018,2018-11-20,3,Meets Expectations,numeric,High,false,780,IC1,BR,Procurement,Supply Chain
+85,2018,2018-11-20,3,Meets Expectations,numeric,High,false,391,IC1,BR,Sales,Retail
+86,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,177,IC4,BR,Engineering,Digital
+88,2018,2018-11-20,3,Meets Expectations,numeric,High,false,138,IC2,BR,Procurement,Corporate
+89,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,467,IC3,BR,Store Operations,Retail
+90,2018,2018-11-20,4,Exceeds Expectations,numeric,High,false,194,IC2,BR,Customer Experience,Customer
+91,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,308,IC1,BR,Store Operations,Retail
+92,2018,2018-11-20,4,Exceeds Expectations,numeric,High,true,509,M1,BR,Data & Analytics,Corporate
+93,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,189,IC1,BR,Customer Service,Customer
+94,2018,2018-11-20,2,Developing,numeric,Medium,true,316,IC1,BR,Store Operations,Retail
+95,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,251,IC1,BR,Regional Operations,Retail
+96,2018,2018-11-20,4,Exceeds Expectations,numeric,High,false,142,IC1,BR,Visual Merchandising,Retail
+100,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,254,IC2,BR,Finance,Corporate
+101,2018,2018-11-20,2,Developing,numeric,High,false,395,IC1,BR,Regional Operations,Retail
+102,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,false,90,IC1,BR,Customer Experience,Customer
+105,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,28,IC1,BR,Finance,Corporate
+109,2018,2018-11-20,2,Developing,numeric,Medium,false,48,IC2,BR,Distribution Centers,Supply Chain
+113,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,183,IC2,BR,People,Corporate
+115,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,518,IC2,BR,Regional Operations,Retail
+116,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,243,IC2,BR,Customer Service,Customer
+117,2018,2018-11-20,3,Meets Expectations,numeric,High,false,261,IC2,BR,Risk,Corporate
+118,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,81,IC2,BR,Product,Digital
+119,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,196,IC4,BR,Legal,Corporate
+121,2018,2018-11-20,3,Meets Expectations,numeric,High,true,309,M4,BR,Sales,Retail
+123,2018,2018-11-20,3,Meets Expectations,numeric,High,false,242,IC1,BR,Customer Service,Customer
+126,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,568,IC1,BR,Logistics,Supply Chain
+128,2018,2018-11-20,3,Meets Expectations,numeric,High,false,162,IC2,BR,Sales,Retail
+132,2018,2018-11-20,3,Meets Expectations,numeric,High,false,494,IC1,BR,Strategy,Corporate
+133,2018,2018-11-20,5,Outstanding,numeric,Low,true,90,IC1,BR,Customer Experience,Customer
+134,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,189,IC1,BR,Customer Service,Customer
+137,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,166,IC1,BR,Procurement,Corporate
+138,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,45,IC3,BR,Procurement,Corporate
+139,2018,2018-11-20,4,Exceeds Expectations,numeric,High,false,630,IC2,BR,Sales,Retail
+142,2018,2018-11-20,1,Below Expectations,numeric,High,false,162,IC2,BR,Sales,Retail
+143,2018,2018-11-20,2,Developing,numeric,Medium,false,430,IC1,BR,Procurement,Supply Chain
+146,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,34,IC2,BR,Regional Operations,Retail
+148,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,9,IC1,BR,Planning,Supply Chain
+149,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,48,IC1,BR,Distribution Centers,Supply Chain
+150,2018,2018-11-20,4,Exceeds Expectations,numeric,High,false,461,IC1,BR,Customer Service,Customer
+153,2018,2018-11-20,4,Exceeds Expectations,numeric,High,false,70,M1,BR,Data,Digital
+155,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,119,IC2,BR,Legal,Corporate
+156,2018,2018-11-20,3,Meets Expectations,numeric,High,false,278,IC2,BR,People,Corporate
+158,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,302,IC1,BR,Procurement,Supply Chain
+160,2018,2018-11-20,4,Exceeds Expectations,numeric,High,false,162,IC2,BR,Sales,Retail
+162,2018,2018-11-20,4,Exceeds Expectations,numeric,High,false,721,IC5,BR,Sales,Retail
+165,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,252,IC2,BR,Customer Operations,Customer
+166,2018,2018-11-20,4,Exceeds Expectations,numeric,High,false,517,IC2,BR,Distribution Centers,Supply Chain
+171,2018,2018-11-20,2,Developing,numeric,Low,false,673,M2,BR,Customer Service,Customer
+172,2018,2018-11-20,2,Developing,numeric,Low,false,420,IC2,BR,Digital Marketing,Digital
+174,2018,2018-11-20,1,Below Expectations,numeric,High,false,34,IC2,BR,Regional Operations,Retail
+175,2018,2018-11-20,2,Developing,numeric,Medium,false,286,IC2,BR,Procurement,Corporate
+177,2018,2018-11-20,2,Developing,numeric,High,false,528,IC5,BR,UX,Digital
+179,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,true,9,IC1,BR,Planning,Supply Chain
+181,2018,2018-11-20,3,Meets Expectations,numeric,High,true,700,M2,BR,Visual Merchandising,Retail
+182,2018,2018-11-20,2,Developing,numeric,Low,false,77,IC1,BR,Store Operations,Retail
+183,2018,2018-11-20,3,Meets Expectations,numeric,High,true,327,IC4,BR,People,Corporate
+186,2018,2018-11-20,3,Meets Expectations,numeric,High,false,26,IC1,BR,Sales,Retail
+187,2018,2018-11-20,3,Meets Expectations,numeric,Medium,true,121,M2,BR,Sales,Retail
+188,2018,2018-11-20,2,Developing,numeric,Medium,true,276,IC1,BR,Logistics,Supply Chain
+189,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,171,IC2,BR,Customer Service,Customer
+191,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,326,IC1,BR,Sales,Retail
+193,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,261,M1,BR,Strategy,Corporate
+194,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,281,M1,BR,UX,Digital
+195,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,47,IC1,BR,Procurement,Corporate
+196,2018,2018-11-20,2,Developing,numeric,High,true,321,M3,BR,Legal,Corporate
+200,2018,2018-11-20,3,Meets Expectations,numeric,High,false,586,IC2,BR,Visual Merchandising,Retail
+203,2018,2018-11-20,5,Outstanding,numeric,Low,false,32,IC1,BR,Visual Merchandising,Retail
+205,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,false,493,IC4,BR,Visual Merchandising,Retail
+206,2018,2018-11-20,3,Meets Expectations,numeric,High,false,277,IC1,BR,Logistics,Supply Chain
+207,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,436,IC1,BR,Visual Merchandising,Retail
+208,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,212,M2,BR,Regional Operations,Retail
+210,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,8,M2,BR,Engineering,Digital
+212,2018,2018-11-20,2,Developing,numeric,High,false,62,M5,BR,Visual Merchandising,Retail
+214,2018,2018-11-20,3,Meets Expectations,numeric,Medium,true,657,IC1,BR,Engineering,Digital
+215,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,138,IC2,BR,Procurement,Corporate
+217,2018,2018-11-20,2,Developing,numeric,Medium,false,142,IC1,BR,Visual Merchandising,Retail
+218,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,false,193,IC4,BR,Strategy,Corporate
+220,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,282,IC1,BR,Regional Operations,Retail
+223,2018,2018-11-20,3,Meets Expectations,numeric,High,false,294,IC2,BR,Visual Merchandising,Retail
+224,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,294,IC2,BR,Visual Merchandising,Retail
+227,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,92,IC3,BR,Data & Analytics,Corporate
+229,2018,2018-11-20,5,Outstanding,numeric,Low,false,174,IC1,BR,Regional Operations,Retail
+232,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,false,92,IC3,BR,Data & Analytics,Corporate
+238,2018,2018-11-20,3,Meets Expectations,numeric,Medium,true,273,IC2,BR,Visual Merchandising,Retail
+241,2018,2018-11-20,1,Below Expectations,numeric,High,true,165,IC1,BR,Customer Operations,Customer
+242,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,false,171,IC2,BR,Customer Service,Customer
+243,2018,2018-11-20,5,Outstanding,numeric,Medium,false,171,IC3,BR,Customer Service,Customer
+244,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,172,IC1,BR,Digital Marketing,Digital
+245,2018,2018-11-20,3,Meets Expectations,numeric,High,false,787,IC2,BR,E-commerce,Digital
+246,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,10,M2,BR,Planning,Supply Chain
+248,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,261,IC2,BR,Risk,Corporate
+251,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,34,IC2,BR,Regional Operations,Retail
+252,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,false,264,M1,BR,Visual Merchandising,Retail
+254,2018,2018-11-20,2,Developing,numeric,Medium,true,60,IC3,BR,Finance,Corporate
+258,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,316,IC1,BR,Store Operations,Retail
+261,2018,2018-11-20,2,Developing,numeric,High,false,321,M2,BR,Risk,Corporate
+262,2018,2018-11-20,2,Developing,numeric,Low,false,21,IC1,BR,Store Operations,Retail
+263,2018,2018-11-20,3,Meets Expectations,numeric,High,false,288,IC1,BR,Customer Operations,Customer
+264,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,700,M2,BR,Visual Merchandising,Retail
+270,2018,2018-11-20,3,Meets Expectations,numeric,High,true,273,IC2,BR,Visual Merchandising,Retail
+272,2018,2018-11-20,2,Developing,numeric,High,false,479,IC1,BR,Visual Merchandising,Retail
+273,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,493,IC3,BR,Visual Merchandising,Retail
+274,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,115,IC1,BR,Regional Operations,Retail
+275,2018,2018-11-20,3,Meets Expectations,numeric,High,false,100,IC1,BR,Finance,Corporate
+276,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,false,162,IC2,BR,Logistics,Supply Chain
+277,2018,2018-11-20,3,Meets Expectations,numeric,Low,true,162,IC2,BR,Logistics,Supply Chain
+278,2018,2018-11-20,2,Developing,numeric,High,false,327,IC3,BR,People,Corporate
+279,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,142,IC1,BR,Visual Merchandising,Retail
+280,2018,2018-11-20,4,Exceeds Expectations,numeric,High,false,467,IC3,BR,Store Operations,Retail
+281,2018,2018-11-20,3,Meets Expectations,numeric,Medium,true,121,M2,BR,E-commerce,Digital
+282,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,34,IC2,BR,Regional Operations,Retail
+283,2018,2018-11-20,5,Outstanding,numeric,Low,true,86,IC3,BR,Engineering,Digital
+285,2018,2018-11-20,2,Developing,numeric,Low,false,566,IC3,BR,Digital Marketing,Digital
+286,2018,2018-11-20,3,Meets Expectations,numeric,Medium,true,187,IC4,BR,Procurement,Corporate
+288,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,252,IC2,BR,Customer Operations,Customer
+290,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,false,333,IC1,BR,Sales,Retail
+292,2018,2018-11-20,3,Meets Expectations,numeric,High,false,121,M2,BR,Sales,Retail
+294,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,181,IC3,BR,Visual Merchandising,Retail
+295,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,10,M1,BR,Procurement,Supply Chain
+297,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,295,IC4,BR,Procurement,Supply Chain
+298,2018,2018-11-20,3,Meets Expectations,numeric,Medium,true,327,IC3,BR,People,Corporate
+301,2018,2018-11-20,1,Below Expectations,numeric,Low,false,90,IC1,BR,Customer Experience,Customer
+302,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,false,319,IC2,BR,Procurement,Supply Chain
+303,2018,2018-11-20,3,Meets Expectations,numeric,High,false,10,M2,BR,Logistics,Supply Chain
+305,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,335,IC3,BR,Planning,Supply Chain
+307,2018,2018-11-20,3,Meets Expectations,numeric,Low,true,700,M2,BR,Visual Merchandising,Retail
+308,2018,2018-11-20,3,Meets Expectations,numeric,High,false,748,IC4,BR,Legal,Corporate
+309,2018,2018-11-20,1,Below Expectations,numeric,Low,false,62,M5,BR,People,Corporate
+310,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,70,M1,BR,Customer Service,Customer
+312,2018,2018-11-20,2,Developing,numeric,Medium,false,24,IC1,BR,Sales,Retail
+313,2018,2018-11-20,3,Meets Expectations,numeric,High,false,47,IC2,BR,Procurement,Corporate
+315,2018,2018-11-20,1,Below Expectations,numeric,High,false,28,IC1,CL,Logistics,Supply Chain
+316,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,467,IC4,BR,Store Operations,Retail
+319,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,297,IC3,BR,Procurement,Supply Chain
+320,2018,2018-11-20,3,Meets Expectations,numeric,Medium,true,90,IC1,BR,Customer Experience,Customer
+321,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,309,M4,BR,Marketing,Corporate
+322,2018,2018-11-20,2,Developing,numeric,High,false,280,IC1,BR,Store Operations,Retail
+323,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,165,IC1,BR,Customer Operations,Customer
+324,2018,2018-11-20,2,Developing,numeric,Medium,false,254,IC2,BR,Finance,Corporate
+326,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,162,IC2,BR,Sales,Retail
+327,2018,2018-11-20,3,Meets Expectations,numeric,High,false,307,M1,BR,People,Corporate
+328,2018,2018-11-20,3,Meets Expectations,numeric,High,false,115,IC1,BR,UX,Digital
+330,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,277,IC1,BR,Logistics,Supply Chain
+331,2018,2018-11-20,5,Outstanding,numeric,Low,false,302,IC1,BR,Procurement,Supply Chain
+333,2018,2018-11-20,3,Meets Expectations,numeric,High,false,29,IC2,BR,Sales,Retail
+335,2018,2018-11-20,3,Meets Expectations,numeric,High,false,246,M1,BR,Planning,Supply Chain
+337,2018,2018-11-20,2,Developing,numeric,Medium,false,344,IC1,AR,Customer Service,Customer
+341,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,8,M1,AR,Sales,Retail
+342,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,288,IC1,BR,Customer Operations,Customer
+343,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,261,M1,AR,Sales,Retail
+344,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,541,IC2,AR,Planning,Supply Chain
+346,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,379,IC1,AR,Sales,Retail
+347,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,false,401,IC1,AR,Customer Service,Customer
+349,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,506,IC1,AR,Regional Operations,Retail
+352,2018,2018-11-20,3,Meets Expectations,numeric,High,false,341,IC4,AR,Marketing,Corporate
+355,2018,2018-11-20,2,Developing,numeric,Medium,false,541,IC2,AR,Planning,Supply Chain
+357,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,416,IC3,AR,Distribution Centers,Supply Chain
+363,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,307,M1,AR,Visual Merchandising,Retail
+365,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,363,IC3,AR,Visual Merchandising,Retail
+366,2018,2018-11-20,5,Outstanding,numeric,Medium,false,379,IC1,AR,Sales,Retail
+368,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,true,357,IC2,AR,Logistics,Supply Chain
+373,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,541,IC2,AR,Planning,Supply Chain
+375,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,416,IC3,AR,Store Operations,Retail
+378,2018,2018-11-20,2,Developing,numeric,Low,false,506,IC1,AR,Regional Operations,Retail
+379,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,false,341,IC3,AR,Sales,Retail
+380,2018,2018-11-20,3,Meets Expectations,numeric,High,false,375,IC1,AR,Store Operations,Retail
+384,2018,2018-11-20,5,Outstanding,numeric,High,false,227,IC2,BR,Data & Analytics,Corporate
+386,2018,2018-11-20,3,Meets Expectations,numeric,High,false,11,IC1,BR,Visual Merchandising,Retail
+391,2018,2018-11-20,2,Developing,numeric,Low,false,162,IC2,BR,Sales,Retail
+392,2018,2018-11-20,1,Below Expectations,numeric,Medium,false,248,IC1,BR,Risk,Corporate
+395,2018,2018-11-20,2,Developing,numeric,Low,false,34,IC2,BR,Regional Operations,Retail
+399,2018,2018-11-20,3,Meets Expectations,numeric,High,true,630,IC2,BR,Sales,Retail
+401,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,541,IC2,AR,Planning,Supply Chain
+403,2018,2018-11-20,3,Meets Expectations,numeric,Low,true,196,IC3,BR,Legal,Corporate
+404,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,482,IC4,BR,Product,Digital
+405,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,302,IC1,BR,Procurement,Supply Chain
+406,2018,2018-11-20,3,Meets Expectations,numeric,High,false,34,IC4,BR,Regional Operations,Retail
+411,2018,2018-11-20,4,Exceeds Expectations,numeric,High,false,90,IC1,BR,Customer Experience,Customer
+414,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,78,IC1,BR,Visual Merchandising,Retail
+416,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,70,IC5,BR,Engineering,Digital
+420,2018,2018-11-20,4,Exceeds Expectations,numeric,High,false,8,IC3,BR,Digital Marketing,Digital
+422,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,224,IC1,BR,Visual Merchandising,Retail
+423,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,391,IC1,BR,Customer Service,Customer
+425,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,9,IC1,BR,Planning,Supply Chain
+430,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,319,IC2,BR,Procurement,Supply Chain
+433,2018,2018-11-20,2,Developing,numeric,Low,false,303,M1,BR,Customer Experience,Customer
+436,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,294,IC2,BR,Visual Merchandising,Retail
+438,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,281,M2,AR,Visual Merchandising,Retail
+440,2018,2018-11-20,4,Exceeds Expectations,numeric,Medium,false,321,M2,BR,Marketing,Corporate
+441,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,406,IC3,BR,Legal,Corporate
+444,2018,2018-11-20,5,Outstanding,numeric,Low,false,29,IC4,BR,Strategy,Corporate
+447,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,183,IC2,BR,People,Corporate
+448,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,false,252,IC3,BR,Customer Operations,Customer
+452,2018,2018-11-20,3,Meets Expectations,numeric,High,false,672,IC2,AR,Planning,Supply Chain
+458,2018,2018-11-20,3,Meets Expectations,numeric,Medium,true,21,IC1,BR,Store Operations,Retail
+461,2018,2018-11-20,1,Below Expectations,numeric,Medium,false,243,IC2,BR,Customer Service,Customer
+464,2018,2018-11-20,3,Meets Expectations,numeric,High,false,403,IC2,BR,Legal,Corporate
+466,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,34,IC2,BR,Regional Operations,Retail
+467,2018,2018-11-20,3,Meets Expectations,numeric,High,true,65,M1,BR,Store Operations,Retail
+468,2018,2018-11-20,3,Meets Expectations,numeric,High,false,843,IC1,BR,Planning,Supply Chain
+469,2018,2018-11-20,1,Below Expectations,numeric,Low,true,77,IC1,BR,Store Operations,Retail
+473,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,162,IC2,BR,Sales,Retail
+474,2018,2018-11-20,3,Meets Expectations,numeric,High,false,335,IC3,BR,Planning,Supply Chain
+475,2018,2018-11-20,3,Meets Expectations,numeric,High,true,324,IC1,BR,Finance,Corporate
+476,2018,2018-11-20,1,Below Expectations,numeric,High,false,473,IC1,BR,Sales,Retail
+477,2018,2018-11-20,3,Meets Expectations,numeric,Low,false,406,IC3,BR,Regional Operations,Retail
+479,2018,2018-11-20,4,Exceeds Expectations,numeric,Low,false,273,IC2,BR,Visual Merchandising,Retail
+482,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,687,M2,BR,Product,Digital
+484,2018,2018-11-20,3,Meets Expectations,numeric,Medium,false,270,IC1,BR,Visual Merchandising,Retail

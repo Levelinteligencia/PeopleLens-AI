@@ -1,0 +1,66 @@
+# Contrato do KPI `pay_gap` (ADR-0011).
+#
+# `depends_on_checks` NAO e digitado: e derivado de `consumed_by_kpis` no
+# catalogo de checks, e o teste test_contrato_de_kpi_bate_com_o_catalogo
+# reprova se as duas pontas divergirem.
+#
+# `minimum_n` e a supressao do ADR-0007: abaixo dele o recorte nao responde,
+# e a recusa e por privacidade, nao por qualidade.
+#
+# --- F7 ---------------------------------------------------------------------
+# `status` e `certification` NAO sao calculaveis a partir do trust score
+# (ADR-0029). CERTIFIED e aprovacao humana registrada, com dono e data.
+# Promover porque o dado melhorou e o mesmo erro que a F4 proibe na promocao
+# automatica de mapeamento.
+#
+# `interpretation_rules` vazio significa INTERPRETACAO BLOQUEADA. Nao preencher
+# para destravar o nivel: sem banda ou meta assinada, nao ha o que interpretar.
+kpi_id: pay_gap
+name: Diferenca salarial
+description: Diferenca de mediana salarial entre grupos, dentro do mesmo nivel.
+business_definition: Diferenca de salario mediano entre generos, no mesmo nivel.
+formula: diferenca relativa entre medianas de grupos comparaveis, sempre controlada por nivel
+grain: mes x pais x nivel
+population: pessoas com salario, nivel e genero declarado
+period_grain: mes
+period_rollup: ultimo_periodo
+period_coverage: null
+allowed_dimensions:
+- pais
+- nivel
+- business_unit
+filters: []
+exclusions: []
+source_tables:
+- fact_compensation
+- dim_employee
+- dim_job_level
+coverage: null
+owner: people-analytics
+version: 1.0.0
+status: BLOCKED
+certification:
+  approved_by: null
+  approved_at: null
+  blockers:
+  - motivo: 'mesma causa do compa_ratio: sem faixa salarial de referencia fora da camada de
+      verdade, o gap nao e comparavel entre niveis.'
+    resolvido_por: COMP_PLAN na onda 2
+depends_on_checks:
+- DQ_COMP_011
+- DQ_CONS_016
+- DQ_RECON_006
+- DQ_REF_009
+- DQ_REF_011
+- DQ_VALID_010
+depends_on_mappings:
+- ref_gender_mapping
+- ref_job_level_mapping
+minimum_n: 20
+response_levels:
+  FATO: liberado
+  CONTEXTO: liberado; associacao e sempre nomeada como associacao
+  INTERPRETACAO: bloqueado ate haver regra registrada no contrato, com dono
+  CAUSALIDADE: negado por padrao (ADR-0015); sem estudo registrado nao ha resposta causal
+interpretation_rules: []
+causal_studies: []

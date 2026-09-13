@@ -1,0 +1,11 @@
+mapping_id,source_system,source_field,source_value,standard_value,mapping_status,confidence_score,valid_from,valid_to,approved_by,approved_at
+REF_COUNTRY_MAPPING-0001,*,country,AR,AR,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_COUNTRY_MAPPING-0002,*,country,Argentina,AR,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_COUNTRY_MAPPING-0003,*,country,BR,BR,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_COUNTRY_MAPPING-0004,*,country,Brasil,BR,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_COUNTRY_MAPPING-0005,*,country,CL,CL,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_COUNTRY_MAPPING-0006,*,country,CO,CO,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_COUNTRY_MAPPING-0007,*,country,Chile,CL,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_COUNTRY_MAPPING-0008,*,country,Colombia,CO,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_COUNTRY_MAPPING-0009,*,country,MX,MX,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_COUNTRY_MAPPING-0010,*,country,Mexico,MX,APPROVED,1.0,,,people-analytics,2026-09-11

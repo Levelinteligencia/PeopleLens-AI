@@ -1,0 +1,122 @@
+# Contrato do KPI `headcount` (ADR-0011).
+#
+# `depends_on_checks` NAO e digitado: e derivado de `consumed_by_kpis` no
+# catalogo de checks, e o teste test_contrato_de_kpi_bate_com_o_catalogo
+# reprova se as duas pontas divergirem.
+#
+# `minimum_n` e a supressao do ADR-0007: abaixo dele o recorte nao responde,
+# e a recusa e por privacidade, nao por qualidade.
+#
+# --- F7 ---------------------------------------------------------------------
+# `status` e `certification` NAO sao calculaveis a partir do trust score
+# (ADR-0029). CERTIFIED e aprovacao humana registrada, com dono e data.
+# Promover porque o dado melhorou e o mesmo erro que a F4 proibe na promocao
+# automatica de mapeamento.
+#
+# `interpretation_rules` vazio significa INTERPRETACAO BLOQUEADA. Nao preencher
+# para destravar o nivel: sem banda ou meta assinada, nao ha o que interpretar.
+kpi_id: headcount
+name: Headcount
+description: Pessoas ativas no fim do periodo.
+business_definition: Pessoas ativas no fim do periodo, contadas uma vez por pessoa, observadas
+  pelo sistema de registro daquele periodo.
+formula: contagem distinta de employee_id com active_flag verdadeiro no snapshot do mes
+grain: mes x pais x business unit x departamento
+population: pessoas observadas pelo sistema de registro do periodo
+period_grain: mes
+period_rollup: ultimo_periodo
+period_coverage:
+  from: 2016-01
+  to: 2026-06
+allowed_dimensions:
+- pais
+- business_unit
+- departamento
+- nivel
+- genero
+- origem
+- sistema_fonte
+filters:
+- regra: is_system_of_record = true
+  porque: a sobreposicao HRIS_LEGACY x HRIS_CORE entre 2016 e 2019 duplicaria a pessoa; o
+    filtro e do KPI, nao do consumidor (ADR-0026)
+exclusions:
+- o_que: linhas em quarentena
+  porque: nunca entram na L3
+- o_que: membro -1 de dim_employee
+  porque: pessoa sem chave de origem nao e pessoa contavel (ADR-0025)
+source_tables:
+- dim_calendar
+- dim_employee
+- dim_job_level
+- dim_organization
+- dim_origin
+- dim_source_system
+- fact_headcount_snapshot
+coverage: null
+owner: people-analytics
+version: 1.0.0
+status: CERTIFIED
+certification:
+  approved_by: people-analytics
+  approved_at: '2026-09-12'
+  blockers: []
+depends_on_checks:
+- DQ_COMP_001
+- DQ_COMP_002
+- DQ_COMP_003
+- DQ_COMP_004
+- DQ_COMP_005
+- DQ_COMP_006
+- DQ_COMP_007
+- DQ_COMP_010
+- DQ_COMP_012
+- DQ_COMP_015
+- DQ_CONS_001
+- DQ_CONS_002
+- DQ_CONS_003
+- DQ_CONS_006
+- DQ_CONS_008
+- DQ_CONS_009
+- DQ_CONS_012
+- DQ_CONS_014
+- DQ_CONS_015
+- DQ_RECON_001
+- DQ_RECON_002
+- DQ_RECON_004
+- DQ_RECON_005
+- DQ_REF_003
+- DQ_REF_007
+- DQ_REF_008
+- DQ_TIME_001
+- DQ_TIME_002
+- DQ_TIME_003
+- DQ_TIME_004
+- DQ_TIME_005
+- DQ_UNIQ_001
+- DQ_UNIQ_002
+- DQ_UNIQ_003
+- DQ_UNIQ_004
+- DQ_UNIQ_006
+- DQ_UNIQ_007
+- DQ_VALID_001
+- DQ_VALID_002
+- DQ_VALID_003
+- DQ_VALID_009
+- DQ_VALID_011
+- DQ_VALID_012
+- DQ_VALID_018
+- DQ_VALID_019
+- DQ_VALID_020
+- DQ_VALID_021
+depends_on_mappings:
+- ref_country_mapping
+- ref_department_mapping
+minimum_n: 5
+response_levels:
+  FATO: liberado
+  CONTEXTO: liberado; associacao e sempre nomeada como associacao
+  INTERPRETACAO: bloqueado ate haver regra registrada no contrato, com dono
+  CAUSALIDADE: negado por padrao (ADR-0015); sem estudo registrado nao ha resposta causal
+interpretation_rules: []
+causal_studies: []

@@ -44,6 +44,19 @@ desktop.ini
 *.log
 logs/
 
-# Observação: os diretórios em data/ estão versionados de propósito neste
-# momento. Quando o volume da base sintética for definido, decidiremos
-# juntos o que entra no Git e o que fica fora.
+# ---------------------------------------------------------------------------
+# Dados gerados (F1 em diante)
+# O dataset é reproduzível byte a byte a partir do seed em config/, então não
+# versionamos os ~170 MB do volume completo. Ver ADR-0001 e Technical Design R9.
+# ---------------------------------------------------------------------------
+data/synthetic/truth/
+data/processed/
+data/raw/
+data/governance/*.db
+docs/f1_metrics.json
+docs/f2_defect_coverage.json
+docs/f3_pipeline.json
+
+# Versionamos de propósito: o gerador, a configuração, as amostras
+# (data/samples/), os mapeamentos aprovados (data/reference/) e o manifesto.
+!data/synthetic/manifest.json

@@ -1,0 +1,42 @@
+mapping_id,source_system,source_field,source_value,standard_value,mapping_status,confidence_score,valid_from,valid_to,approved_by,approved_at
+REF_DEPARTMENT_MAPPING-0001,*,department,Atendimento,Customer Service,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0002,*,department,CD,Distribution Centers,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0003,*,department,Customer Experience,Customer Experience,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0004,*,department,Customer Operations,Customer Operations,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0005,*,department,Customer Service,Customer Service,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0006,*,department,Data,Data,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0007,*,department,Data & Analytics,Data & Analytics,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0008,*,department,Digital Marketing,Digital Marketing,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0009,*,department,Distribution Centers,Distribution Centers,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0010,*,department,E-commerce,E-commerce,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0011,*,department,Engineering,Engineering,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0012,*,department,Finance,Finance,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0013,*,department,Financeiro,Finance,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0014,*,department,Juridico,Legal,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0015,*,department,Jurídico,Legal,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0016,*,department,Legal,Legal,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0017,*,department,Logistica,Logistics,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0018,*,department,Logistics,Logistics,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0019,*,department,Logística,Logistics,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0020,*,department,Lojas,Store Operations,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0021,*,department,MKT,Marketing,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0022,*,department,Marketing,Marketing,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0023,*,department,Marketplace Operations,Marketplace Operations,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0024,*,department,Marketplace Technology,Marketplace Technology,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0025,*,department,People,People,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0026,*,department,Planning,Planning,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0027,*,department,Procurement,Procurement,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0028,*,department,Product,Product,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0029,*,department,RH,People,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0030,*,department,Recursos Humanos,People,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0031,*,department,Regional Operations,Regional Operations,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0032,*,department,Risk,Risk,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0033,*,department,SAC,Customer Service,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0034,*,department,Sales,Sales,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0035,*,department,Seller Management,Seller Management,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0036,*,department,Store Operations,Store Operations,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0037,*,department,Strategy,Strategy,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0038,*,department,TI,Engineering,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0039,*,department,Tecnologia,Engineering,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0040,*,department,UX,UX,APPROVED,1.0,,,people-analytics,2026-09-11
+REF_DEPARTMENT_MAPPING-0041,*,department,Visual Merchandising,Visual Merchandising,APPROVED,1.0,,,people-analytics,2026-09-11

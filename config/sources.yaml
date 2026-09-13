@@ -1,0 +1,369 @@
+# =============================================================================
+# PeopleLens AI  ::  NOVAORA
+# config/sources.yaml
+#
+# Inventario dos sistemas-fonte. Os 12 ficam DECLARADOS desde o inicio, para
+# que o modelo de dados nao mude quando a cobertura crescer, e sao
+# IMPLEMENTADOS em duas ondas.
+#
+# Referencia: Technical Design v0.3 secao 3. ADR-0002.
+# Status: F0. Nenhum dado foi gerado a partir deste arquivo.
+# =============================================================================
+
+meta:
+  config_version: "0.2"
+  phase: F4
+  # Lingua do dominio corporativo da NOVAORA, que e o ALVO do DE/PARA. Fica
+  # declarada porque a distancia entre o `field_language` de um sistema e esta
+  # aqui e o que separa "variacao de escrita" de "traducao", e as duas coisas
+  # exigem revisores diferentes (achado 3 da F4).
+  canonical_field_language: en
+
+  # ---------------------------------------------------------------------------
+  # Vocabulario de proveniencia (ADR-0027). Proveniencia NAO e identidade:
+  # responde "de qual sistema este registro veio e o que isso prova sobre como a
+  # pessoa entrou", e nao "estes dois registros sao a mesma pessoa".
+  #
+  # Tres niveis, avaliados em ordem, e o primeiro que se aplica vence:
+  #   P1  o sistema-fonte determina (campo `determines_origin` abaixo)
+  #   P2  admissao anterior ao inicio da serie declarada em generation.yaml
+  #   P3  candidatura no ATS que resultou em admissao, com identidade resolvida
+  #   --  nenhuma se aplica: INDETERMINADA, que e estado valido e nao e
+  #       preenchido por inferencia
+  # ---------------------------------------------------------------------------
+  origin_vocabulary:
+    CONTRATACAO:           {sk: 1,  is_hire: true,  is_acquisition: false, rule: P3}
+    AQUISICAO_VIVAMARKET:  {sk: 2,  is_hire: false, is_acquisition: true,  rule: P1}
+    AQUISICAO_COMPRAFACIL: {sk: 3,  is_hire: false, is_acquisition: true,  rule: P1}
+    POPULACAO_INICIAL:     {sk: 4,  is_hire: false, is_acquisition: false, rule: P2}
+    INDETERMINADA:         {sk: -1, is_hire: false, is_acquisition: false, rule: null}
+
+# -----------------------------------------------------------------------------
+# Sistema de registro por periodo (ADR-0026).
+#
+# Entre maio e novembro de 2019 os dois HRIS rodaram em paralelo e descrevem a
+# mesma pessoa no mesmo mes. O fato de headcount preserva as duas observacoes,
+# porque apagar uma delas destruiria a evidencia que o DQ_RECON_005 mede. Quem
+# resolve a contagem e este bloco: a observacao que vale, por periodo.
+#
+# Somar sem filtrar por ele duplica a sobreposicao, e essa duplicacao e o
+# comportamento correto: e ruidosa e detectavel, enquanto a escolha silenciosa
+# seria silenciosa.
+# -----------------------------------------------------------------------------
+system_of_record:
+  headcount:
+    - {system: HRIS_LEGACY, from: 2016-01-01, to: 2019-04-30}
+    - {system: HRIS_CORE,   from: 2019-05-01, to: null}
+
+waves:
+  1:
+    description: "Sustenta a migracao de HRIS de 2019 e a aquisicao VivaMarket de 2022"
+    systems: [HRIS_LEGACY, HRIS_CORE, PAYROLL_BR, ATS_CLOUD, VIVAMARKET_LEGACY]
+    target_phase: F2
+  2:
+    description: "Cobertura completa: engajamento, aprendizagem, remuneracao estruturada, organograma e a segunda aquisicao"
+    systems: [PAYROLL_LATAM, ATS_LEGACY, ORGCHART, LMS, ENGAGE, COMP_PLAN, COMPRAFACIL_ERP]
+    target_phase: "apos F5"
+
+# -----------------------------------------------------------------------------
+# Convencoes de landing zone
+# -----------------------------------------------------------------------------
+landing:
+  path_pattern: "data/raw/{source_system}/{dataset}/ingestion_date={YYYY-MM-DD}/part-000.{ext}"
+  technical_columns: [_source_file, _row_number, _ingested_at, _source_system]
+  immutable: true          # principio 1. Nada reescreve raw.
+
+# -----------------------------------------------------------------------------
+# Sistemas
+# -----------------------------------------------------------------------------
+systems:
+
+  HRIS_LEGACY:
+    name: "HRIS nacional antigo"
+    vendor_style: "ERP de RH brasileiro on-premise"
+    wave: 1
+    active_from: 2016-01-01
+    active_to:   2019-11-30
+    countries: [BR, AR]
+    datasets: [employee_master, org_structure, movement, headcount_snapshot]
+    format: csv
+    encoding: latin-1                 # origem do defeito D23
+    delimiter: ";"
+    decimal_separator: ","
+    date_format: "%d/%m/%Y"           # origem do defeito D07
+    field_language: pt-BR             # MATRICULA, NOME, DEPARTAMENTO, SITUACAO
+    determines_origin: null           # ADR-0027: cadastro nao prova como a pessoa entrou
+    employee_id_field: MATRICULA
+    has_enterprise_employee_id: true
+    gender_values: ["M", "F"]         # origem do defeito D01
+    has_race_ethnicity: false         # origem do defeito D02
+    has_disability_flag: false
+    personality: >
+      Entrada manual em boa parte dos campos de texto. Departamento e digitado
+      livre, sem dominio controlado. Nao ha trilha de auditoria de alteracao.
+    carries_defects: [D01, D02, D04, D07, D08, D09, D14, D23]
+
+  HRIS_CORE:
+    name: "HRIS corporativo global"
+    vendor_style: "SaaS de RH global"
+    wave: 1
+    active_from: 2019-05-01           # sobreposicao de 7 meses com o legado
+    active_to:   null
+    countries: [BR, AR, CL, CO, MX]
+    datasets: [employee_master, org_structure, movement, performance, headcount_snapshot]
+    format: parquet                   # snapshots; os demais datasets em csv utf-8
+    secondary_format: csv
+    encoding: utf-8
+    delimiter: ","
+    date_format: "%Y-%m-%d"
+    field_language: en
+    employee_id_field: employee_id
+    determines_origin: null           # ADR-0027: absorve a aquisicao e nao a distingue
+    has_enterprise_employee_id: true
+    gender_values: ["Male", "Female", "Non-binary", "Not informed"]
+    has_race_ethnicity: true
+    race_available_from: 2019-06-01
+    has_disability_flag: true
+    personality: >
+      Sistema de referencia da empresa. Boa qualidade estrutural. Os problemas
+      que aparecem aqui vem de fora: cargas de aquisicao e periodo de migracao.
+    carries_defects: [D01, D03, D09, D19, D22]
+
+  PAYROLL_BR:
+    name: "Folha de pagamento Brasil"
+    wave: 1
+    active_from: 2016-01-01
+    active_to:   null
+    countries: [BR]
+    datasets: [payroll_headcount_snapshot, compensation]
+    format: csv
+    encoding: utf-8
+    delimiter: ";"
+    decimal_separator: ","
+    date_format: "%d/%m/%Y"
+    employee_id_field: matricula_folha
+    field_language: pt-BR             # matricula_folha, situacao, centro_custo
+    determines_origin: null
+    has_enterprise_employee_id: partial     # so a partir de 2020
+    salary_period: monthly
+    currency: BRL
+    population_rule: >
+      A folha tem definicao propria de "ativo": inclui terceiros, estagiarios e
+      pessoas em aviso previo, e exclui afastados de longa duracao. Essa
+      divergencia com o HRIS e proposital e alimenta o defeito D11 e o check de
+      reconciliacao DQ_RECON_001.
+    carries_defects: [D11, D14, D19]
+
+  PAYROLL_LATAM:
+    name: "Folha de pagamento demais paises"
+    wave: 2
+    active_from: 2018-01-01
+    active_to:   null
+    countries: [AR, CL, CO, MX]
+    datasets: [payroll_headcount_snapshot, compensation]
+    format: csv
+    encoding: utf-8
+    delimiter: ","
+    date_format: "%Y-%m-%d"
+    employee_id_field: emp_no
+    field_language: es                # folha dos demais paises da regiao
+    determines_origin: null
+    has_enterprise_employee_id: partial
+    salary_period_by_country: {AR: monthly, CL: annual, CO: monthly, MX: annual}
+    currency_by_country: {AR: ARS, CL: CLP, CO: COP, MX: MXN}
+    carries_defects: [D11, D13, D14, D19]
+
+  ATS_LEGACY:
+    name: "Sistema de recrutamento antigo"
+    wave: 2
+    active_from: 2016-01-01
+    active_to:   2021-06-30
+    countries: [BR, AR, CL, CO, MX]
+    datasets: [requisition, application, candidate]
+    format: csv
+    encoding: utf-8
+    delimiter: ","
+    date_format: "%m/%d/%Y"           # formato americano, diferente do HRIS
+    employee_id_field: null           # nao conhece employee_id
+    field_language: en
+    determines_origin: null           # a evidencia de contratacao e a candidatura (P3), nao o sistema
+    candidate_key: email
+    personality: >
+      Nao integra com o HRIS. A ligacao entre candidato contratado e
+      colaborador so existe por nome, e-mail e data de admissao. Mesma pessoa
+      com e-mails diferentes vira candidatos diferentes.
+    carries_defects: [D15, D16, D17]
+
+  ATS_CLOUD:
+    name: "Sistema de recrutamento atual"
+    wave: 1
+    active_from: 2021-01-01
+    active_to:   null
+    countries: [BR, AR, CL, CO, MX]
+    datasets: [requisition, application, candidate]
+    format: json                      # export por API, aninhado
+    encoding: utf-8
+    date_format: "%Y-%m-%dT%H:%M:%SZ"
+    employee_id_field: employee_id
+    has_enterprise_employee_id: partial
+    enterprise_id_fill_rate: 0.63     # preenchido so as vezes
+    field_language: en
+    determines_origin: null           # a evidencia de contratacao e a candidatura (P3), nao o sistema
+    candidate_key: candidate_id
+    carries_defects: [D15, D16, D17]
+
+  ORGCHART:
+    name: "Ferramenta de organograma"
+    wave: 2
+    active_from: 2019-01-01
+    active_to:   null
+    countries: [BR, AR, CL, CO, MX]
+    datasets: [org_structure, reporting_line]
+    format: xlsx
+    encoding: utf-8
+    date_format: "%Y-%m-%d"
+    update_mode: manual
+    field_language: en
+    determines_origin: null
+    personality: >
+      Atualizada a mao pelo time de People. Atrasa em relacao ao HRIS,
+      especialmente depois de reorganizacao. Alguns registros nunca foram
+      atualizados desde 2023.
+    carries_defects: [D10, D18, D09]
+
+  LMS:
+    name: "Plataforma de treinamento"
+    wave: 2
+    active_from: 2018-03-01
+    active_to:   null
+    countries: [BR, AR, CL, CO, MX]
+    datasets: [enrollment, course_catalog]
+    format: csv
+    encoding: utf-8
+    delimiter: ","
+    date_format: "%Y-%m-%d"
+    employee_id_field: learner_id     # id proprio
+    field_language: en
+    determines_origin: null
+    join_key: email
+    carries_defects: [D18, D22]
+
+  ENGAGE:
+    name: "Fornecedor de pesquisa de engajamento"
+    wave: 2
+    active_from: 2017-01-01
+    active_to:   null
+    countries: [BR, AR, CL, CO, MX]
+    datasets: [survey_response]
+    format: csv
+    encoding: utf-8
+    delimiter: ","
+    date_format: "%Y-%m-%d"
+    employee_id_field: respondent_id
+    field_language: en
+    determines_origin: null
+    pseudonymized_at_source: false    # entrega identificado, ver ADR-0007
+    scale_change: {from: 2021-01-01, old: [0, 10], new: [1, 5]}
+    carries_defects: [D21]
+
+  COMP_PLAN:
+    name: "Ferramenta de planejamento de remuneracao"
+    wave: 2
+    active_from: 2020-01-01
+    active_to:   null
+    countries: [BR, AR, CL, CO, MX]
+    datasets: [salary_band, merit_cycle, bonus, compa_ratio_report]
+    format: xlsx
+    encoding: utf-8
+    date_format: "%Y-%m-%d"
+    provides_calculated_fields: [compa_ratio]    # ver ADR sobre source vs calculated
+    field_language: en
+    determines_origin: null
+    personality: >
+      Calcula compa-ratio internamente e nao reprocessa quando a banda muda.
+      Origem do defeito D20 e do check de reconciliacao DQ_RECON_002.
+    carries_defects: [D20]
+
+  VIVAMARKET_LEGACY:
+    name: "Sistema legado da aquisicao VivaMarket"
+    wave: 1
+    active_from: 2022-08-01
+    active_to:   2022-08-31           # carga unica
+    load_type: one_shot
+    headcount_brought: 3200
+    countries: [BR, AR]
+    datasets: [employee_master, compensation]
+    format: xlsx
+    encoding: latin-1
+    date_format: "%d/%m/%y"           # ano com dois digitos
+    employee_id_field: cod_func
+    field_language: pt-BR             # DEPTO, NOME, LOCAL na lingua da adquirida
+    determines_origin: AQUISICAO_VIVAMARKET   # ADR-0027 P1: carga unica da aquisicao
+    has_enterprise_employee_id: false # origem do defeito D05
+    id_range_collision_with: HRIS_CORE   # origem do defeito D06
+    job_level_scale: [N1, N2, N3, N4, N5, N6, N7]    # origem do defeito D12
+    gender_values: ["MASC", "FEM"]
+    has_history: false                # so a posicao atual, sem historico anterior
+    personality: >
+      Planilha exportada do sistema da empresa adquirida. Sem historico, sem
+      padrao de nomenclatura, com gestores que nao existem na NOVAORA.
+    carries_defects: [D05, D06, D07, D08, D09, D12, D23]
+
+  COMPRAFACIL_ERP:
+    name: "ERP proprio da aquisicao CompraFacil"
+    wave: 2
+    active_from: 2024-09-01
+    active_to:   null                 # nunca migrado, roda em paralelo
+    load_type: continuous
+    headcount_brought: 2100
+    countries: [BR, MX]
+    datasets: [employee_master, payroll_headcount_snapshot, compensation]
+    format: fixed_width               # texto de largura fixa
+    encoding: cp1252
+    date_format: "%Y%m%d"
+    employee_id_field: FUNCCOD
+    field_language: pt-BR
+    determines_origin: AQUISICAO_COMPRAFACIL  # ADR-0027 P1; onda 2
+    has_enterprise_employee_id: false
+    job_level_scale: [A, B, C, D, E, F]   # origem do defeito D12
+    personality: >
+      ERP dos anos 2000 que nunca foi desligado. Layout de largura fixa, sem
+      cabecalho, com dicionario de posicoes em documento separado. E o sistema
+      responsavel pela maior parte dos KPIs em BLOCKED na demonstracao.
+    carries_defects: [D05, D08, D09, D12, D18, D19]
+
+# -----------------------------------------------------------------------------
+# Reconciliacoes entre sistemas  (Especificacao secao 26)
+# -----------------------------------------------------------------------------
+reconciliations:
+  - id: DQ_RECON_001
+    name: "Headcount HRIS versus Payroll"
+    left: {system: HRIS_CORE, dataset: headcount_snapshot}
+    right: {system: PAYROLL_BR, dataset: payroll_headcount_snapshot}
+    grain: [snapshot_date, country]
+    expected_divergence: [0.02, 0.05]
+    severity: CRITICAL
+  - id: DQ_RECON_002
+    name: "Compa-ratio informado versus recalculado"
+    left: {system: COMP_PLAN, field: compa_ratio}
+    right: {layer: semantic, field: compa_ratio_calc}
+    grain: [employee_id, effective_date]
+    severity: CRITICAL
+  - id: DQ_RECON_003
+    name: "Contratacoes no ATS versus admissoes no HRIS"
+    left: {system: ATS_CLOUD, dataset: application, filter: "offer_accepted_flag = 1"}
+    right: {system: HRIS_CORE, dataset: employee_master, filter: "hire_date in period"}
+    grain: [month, country]
+    severity: CRITICAL
+  - id: DQ_RECON_004
+    name: "Departamento no HRIS versus ORGCHART"
+    left: {system: HRIS_CORE, field: department}
+    right: {system: ORGCHART, field: department}
+    grain: [employee_id, snapshot_date]
+    severity: WARNING
+  - id: DQ_RECON_005
+    name: "Populacao CompraFacil no ERP versus no HRIS"
+    left: {system: COMPRAFACIL_ERP, dataset: employee_master}
+    right: {system: HRIS_CORE, dataset: employee_master}
+    grain: [month]
+    severity: BLOCKER

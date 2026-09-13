@@ -1,0 +1,743 @@
+# =============================================================================
+# PeopleLens AI  ::  NOVAORA
+# config/generation.yaml
+#
+# Parametros do universo sintetico. Este arquivo e a fonte unica de verdade
+# sobre COMO a NOVAORA e gerada. Nenhuma regra do mundo simulado deve viver
+# em codigo: se esta aqui, e parametro; se nao esta aqui, nao existe.
+#
+# Referencias: Technical Design v0.3, secoes 2, 4, 6 e 7. ADR-0001.
+# Status: F0. Nenhum dado foi gerado a partir deste arquivo.
+#
+# Legenda dos marcadores:
+#   [SPEC]     valor definido na Especificacao do Universo v1.0 da Sam
+#   [DERIVADO] calculado a partir de valores [SPEC]
+#   [PROPOSTA] preenchido por mim, PRECISA DE REVISAO DA SAM
+#   [SINTETICO] parametro inventado para o mundo ficticio. Nao e estatistica
+#               real de nenhum pais, empresa ou populacao.
+# =============================================================================
+
+meta:
+  spec_version: "1.0"                 # Especificacao do Universo de Dados Sinteticos
+  design_version: "0.3"               # Technical Design
+  config_version: "0.1"
+  phase: F0
+  generated_data: false
+
+# -----------------------------------------------------------------------------
+# 1. Reprodutibilidade  (ADR-0001, Technical Design R9)
+# -----------------------------------------------------------------------------
+reproducibility:
+  master_seed: 42
+  # Nenhum modulo usa estado aleatorio global. Cada um recebe um gerador
+  # derivado de hash(master_seed, module_name, entity_id), o que permite
+  # regerar parte do universo sem alterar o resto.
+  seed_derivation: "pcg64(hash(master_seed, module_name, entity_id))"
+  manifest_path: "data/synthetic/manifest.json"
+  manifest_contents: [dataset, row_count, sha256, generated_at, config_hash]
+
+  # Escala de geracao. Ate a F7 trabalhamos a 10% para iterar rapido.
+  # Volume completo so na F8. (Technical Design, secao 16)
+  scale_profiles:
+    smoke: {factor: 0.02, description: "suite de testes, execucao em segundos"}
+    dev:   {factor: 0.10, description: "F1 a F7, iteracao rapida"}
+    full:  {factor: 1.00, description: "F8 em diante"}
+  active_profile: dev
+
+# -----------------------------------------------------------------------------
+# 2. A empresa  [SPEC]
+# -----------------------------------------------------------------------------
+company:
+  name: NOVAORA
+  sector: "Varejo e E-commerce"
+  founded: 2012
+  analysis_period:
+    start: 2016-01-01
+    end:   2026-06-30
+  snapshot_grain: month               # 126 meses
+  headquarters_country: BR
+
+countries:
+  # Distribuicao alvo de headcount em 2026 [SPEC].
+  # A distribuicao varia ao longo dos anos: a operacao comeca concentrada no
+  # Brasil e internacionaliza. entry_year marca quando o pais aparece.
+  - {code: BR, name: Brasil,   currency: BRL, entry_year: 2016, share_2016: 0.82, share_2026: 0.55}
+  - {code: AR, name: Argentina,currency: ARS, entry_year: 2016, share_2016: 0.11, share_2026: 0.12}
+  - {code: CL, name: Chile,    currency: CLP, entry_year: 2017, share_2016: 0.00, share_2026: 0.08}
+  - {code: CO, name: Colombia, currency: COP, entry_year: 2018, share_2016: 0.00, share_2026: 0.10}
+  - {code: MX, name: Mexico,   currency: MXN, entry_year: 2018, share_2016: 0.00, share_2026: 0.15}
+  # Nota: share_2016 soma 0.93 no Brasil+Argentina e o restante fica em BR.
+  # O gerador interpola linearmente entre share_2016 e share_2026, respeitando
+  # entry_year, e normaliza para somar 1.0 em cada ano.  [DERIVADO]
+
+# -----------------------------------------------------------------------------
+# 3. Curva de headcount  [SPEC]
+# -----------------------------------------------------------------------------
+headcount:
+  # Valores de fim de ano. 2026 e posicao de junho.
+  # Sao metas aproximadas: o gerador produz evolucao natural em torno delas.
+  targets:
+    2015: 3800        # [DERIVADO] ponto inicial para dar historico ao 1o ano
+    2016: 4200
+    2017: 4800
+    2018: 5600
+    2019: 7000
+    2020: 7500
+    2021: 9000
+    2022: 13000
+    2023: 15000
+    2024: 17500
+    2025: 19000
+    2026: 20000
+  tolerance: 0.03     # o gerador pode fechar o ano ate 3% fora da meta
+
+# -----------------------------------------------------------------------------
+# 4. Segmentos e turnover  [SINTETICO, calibrado no Technical Design secao 4.1]
+# -----------------------------------------------------------------------------
+# Varejo e corporativo nao giram igual. Esta diferenciacao e o que faz a
+# pergunta "qual area teve maior turnover" ter resposta interessante.
+segments:
+  - {id: retail_ops,  label: "Retail / Store Ops", hc_share: 0.42, turnover_base: 0.34}
+  - {id: customer,    label: "Customer Service",   hc_share: 0.13, turnover_base: 0.30}
+  - {id: supply,      label: "Supply Chain",       hc_share: 0.15, turnover_base: 0.22}
+  - {id: corporate,   label: "Corporate",          hc_share: 0.16, turnover_base: 0.11}
+  - {id: digital,     label: "Digital / Tech",     hc_share: 0.14, turnover_base: 0.13}
+  # blended = 0.251  [DERIVADO]
+
+turnover_modifiers:
+  # Fator empirico que converte a TAXA ALVO de turnover (terminations sobre
+  # headcount medio, que e como o KPI e reportado) na probabilidade por pessoa
+  # usada no hazard. Os dois numeros nao sao iguais: com reposicao rapida, uma
+  # mesma posicao pode girar mais de uma vez no ano, e o pico de hazard entre 3
+  # e 9 meses de casa faz o recem contratado sair mais. Medido na F1 rodando o
+  # perfil dev e comparando realizado com configurado.  [DERIVADO]
+  realized_calibration: {retail_ops: 0.86, customer: 0.87, supply: 0.85, corporate: 0.87, digital: 1.00}
+
+  # Modulador macro por ano. Multiplica o turnover_base do segmento.
+  by_year:
+    2016: 1.00
+    2017: 1.05
+    2018: 1.05
+    2019: 1.00
+    2020: 0.62        # congelamento na pandemia
+    2021: 1.18        # grande renuncia
+    2022: 1.10
+    2023: 0.95
+    2024: 0.92
+    2025: 0.88
+    2026: 0.85
+  events:
+    - {id: layoff_2024, month: 2024-11, additional_involuntary: 450}
+
+# -----------------------------------------------------------------------------
+# 5. Modelo de risco de desligamento  [SINTETICO]
+# -----------------------------------------------------------------------------
+# Desligamento nao e sorteio uniforme. Hazard multiplicativo sobre a taxa base
+# do segmento. (Technical Design secao 7.2)
+termination_hazard:
+  tenure_curve:
+    # multiplicador por faixa de tempo de casa em meses
+    - {months: [0, 3],    factor: 0.60}
+    - {months: [3, 9],    factor: 1.85}   # pico
+    - {months: [9, 24],   factor: 1.25}
+    - {months: [24, 60],  factor: 0.75}
+    - {months: [60, 999], factor: 0.45}
+  performance_curve:
+    # curva em U: sai quem vai mal e sai quem vai muito bem
+    below_expectations:  1.90
+    developing:          1.20
+    meets_expectations:  0.85
+    exceeds_expectations: 0.95
+    outstanding:         1.35
+    not_rated:           1.10
+  job_level_factor:
+    IC1: 1.45
+    IC2: 1.20
+    IC3: 0.95
+    IC4: 0.75
+    IC5: 0.65
+    M1:  0.80
+    M2:  0.70
+    M3:  0.55
+    M4:  0.45
+    M5:  0.40
+    D1:  0.35
+    D2:  0.30
+    D3:  0.25
+  engagement_factor:
+    # correlacao negativa com defasagem de 2 ciclos. Isto e uma ASSOCIACAO
+    # embutida no gerador, nao uma afirmacao causal. Ver ADR-0015.
+    lag_cycles: 2
+    by_score_band:
+      - {score: [1.0, 2.5], factor: 1.70}
+      - {score: [2.5, 3.2], factor: 1.30}
+      - {score: [3.2, 4.0], factor: 0.90}
+      - {score: [4.0, 5.0], factor: 0.70}
+  manager_effect:
+    # efeito de gestor: alguns times giram muito mais que outros
+    distribution: lognormal
+    sigma: 0.35
+    clip: [0.55, 2.10]
+  country_factor:
+    BR: 1.00
+    AR: 1.22
+    MX: 1.15
+    CO: 1.08
+    CL: 0.95
+
+termination_mix:
+  # composicao de tipo e motivo  [SINTETICO]
+  voluntary_share_base: 0.68
+  types:
+    - {type: Resignation,      voluntary: true,  regrettable_rate: 0.45}
+    - {type: Retirement,       voluntary: true,  regrettable_rate: 0.05}
+    - {type: Performance,      voluntary: false, regrettable_rate: 0.00}
+    - {type: Layoff,           voluntary: false, regrettable_rate: 0.20}
+    - {type: Redundancy,       voluntary: false, regrettable_rate: 0.15}
+    - {type: EndOfContract,    voluntary: false, regrettable_rate: 0.05}
+    - {type: Other,            voluntary: false, regrettable_rate: 0.10}
+
+# -----------------------------------------------------------------------------
+# 6. Estrutura organizacional  [SPEC para BU e Department]
+# -----------------------------------------------------------------------------
+organization:
+  hierarchy: [country, business_unit, department, sub_department, job_family, job_level, job_title]
+
+  business_units:
+    Corporate:
+      segment: corporate
+      departments:
+        People:            {sub_departments: [Talent Acquisition, HR Business Partner, Compensation & Benefits, People Analytics, Learning & Development]}   # [PROPOSTA]
+        Finance:           {sub_departments: [Controlling, Treasury, Accounting, FP&A]}                # [PROPOSTA]
+        Legal:             {sub_departments: [Corporate Legal, Compliance, Labor Legal]}               # [PROPOSTA]
+        Marketing:         {sub_departments: [Brand, Performance, CRM, Content]}                       # [PROPOSTA]
+        Strategy:          {sub_departments: [Corporate Strategy, M&A, PMO]}                           # [PROPOSTA]
+        Procurement:       {sub_departments: [Indirect Procurement, Contracts]}                        # [PROPOSTA]
+        Risk:              {sub_departments: [Internal Audit, Risk Management, Fraud]}                 # [PROPOSTA]
+        Data & Analytics:  {sub_departments: [Business Intelligence, Data Governance]}                 # [PROPOSTA]
+    Digital:
+      segment: digital
+      departments:
+        Engineering:       {sub_departments: [Platform, Backend, Frontend, Mobile, SRE]}               # [PROPOSTA]
+        Product:           {sub_departments: [Product Management, Product Ops]}                        # [PROPOSTA]
+        Data:              {sub_departments: [Data Engineering, Data Science, Analytics Engineering]}  # [PROPOSTA]
+        UX:                {sub_departments: [Product Design, Research, Design System]}                # [PROPOSTA]
+        E-commerce:        {sub_departments: [Storefront, Checkout, Catalog]}                          # [PROPOSTA]
+        Digital Marketing: {sub_departments: [SEO, Paid Media, Lifecycle]}                             # [PROPOSTA]
+    Retail:
+      segment: retail_ops
+      departments:
+        Store Operations:      {sub_departments: [Store Management, Cashier, Stockroom, Security]}     # [PROPOSTA]
+        Sales:                 {sub_departments: [Floor Sales, Key Accounts]}                          # [PROPOSTA]
+        Regional Operations:   {sub_departments: [Region North, Region Southeast, Region South]}       # [PROPOSTA]
+        Visual Merchandising:  {sub_departments: [Store Design, Merchandising]}                        # [PROPOSTA]
+    Supply Chain:
+      segment: supply
+      departments:
+        Logistics:             {sub_departments: [Transportation, Last Mile, Reverse Logistics]}       # [PROPOSTA]
+        Distribution Centers:  {sub_departments: [Inbound, Outbound, Inventory]}                       # [PROPOSTA]
+        Procurement:           {sub_departments: [Sourcing, Supplier Management]}                      # [PROPOSTA]
+        Planning:              {sub_departments: [Demand Planning, Supply Planning]}                   # [PROPOSTA]
+    Customer:
+      segment: customer
+      departments:
+        Customer Experience:   {sub_departments: [CX Design, Voice of Customer]}                       # [PROPOSTA]
+        Customer Service:      {sub_departments: [Contact Center, Chat, Escalations]}                  # [PROPOSTA]
+        Customer Operations:   {sub_departments: [Order Support, Returns]}                             # [PROPOSTA]
+    Marketplace:
+      segment: digital
+      available_from: 2022-08-01     # criada a partir da aquisicao VivaMarket
+      departments:
+        Marketplace Operations: {sub_departments: [Onboarding, Quality]}                               # [PROPOSTA]
+        Seller Management:      {sub_departments: [Seller Success, Seller Growth]}                     # [PROPOSTA]
+        Marketplace Technology: {sub_departments: [Integrations, Seller Platform]}                     # [PROPOSTA]
+
+  # Locais e centro de custo  [PROPOSTA].
+  # Derivados por regra, nao por lista fixa, para nao inventar centenas de
+  # enderecos. O numero de lojas e de centros de distribuicao escala com o
+  # headcount do pais.
+  locations:
+    rule_by_business_unit:
+      Retail:        {prefix: STORE, per_n_employees: 25}
+      "Supply Chain": {prefix: DC,   per_n_employees: 180}
+      Customer:      {prefix: SITE,  per_n_employees: 300}
+      Corporate:     {prefix: HQ,    per_n_employees: 0}
+      Digital:       {prefix: HQ,    per_n_employees: 0}
+      Marketplace:   {prefix: HQ,    per_n_employees: 0}
+    pattern: "{prefix}-{country}-{index:03d}"
+    min_units: 1
+
+  cost_center:
+    pattern: "CC-{country}-{bu_code}-{dept_index:02d}"
+    bu_codes: {Corporate: COR, Digital: DIG, Retail: RET, "Supply Chain": SUP, Customer: CUS, Marketplace: MKT}
+
+  # Presenca de business unit por pais  [PROPOSTA].
+  # Funcoes corporativas e de tecnologia ficam concentradas na sede (BR) e tem
+  # presenca reduzida nos demais paises, o que e o padrao de uma multinacional
+  # de varejo. Isso tambem evita unidades organizacionais com 2 pessoas quando
+  # o gerador roda no perfil dev.
+  country_bu_presence:
+    BR: {Corporate: 1.00, Digital: 1.00, Retail: 1.00, "Supply Chain": 1.00, Customer: 1.00, Marketplace: 1.00}
+    MX: {Corporate: 0.25, Digital: 0.20, Retail: 1.00, "Supply Chain": 1.00, Customer: 1.00, Marketplace: 0.40}
+    AR: {Corporate: 0.20, Digital: 0.15, Retail: 1.00, "Supply Chain": 1.00, Customer: 1.00, Marketplace: 0.30}
+    CO: {Corporate: 0.15, Digital: 0.10, Retail: 1.00, "Supply Chain": 1.00, Customer: 1.00, Marketplace: 0.20}
+    CL: {Corporate: 0.15, Digital: 0.10, Retail: 1.00, "Supply Chain": 1.00, Customer: 1.00, Marketplace: 0.20}
+
+  # Mapa department -> job families elegiveis  [PROPOSTA].
+  # Sem isto o job_family seria sorteado sem relacao com a area, o que
+  # produziria advogado no centro de distribuicao.
+  job_family_by_department:
+    People: [People]
+    Finance: [Finance]
+    Legal: [Legal]
+    Marketing: [Marketing]
+    Strategy: [Strategy]
+    Procurement: [Procurement]
+    Risk: ["Risk & Compliance"]
+    "Data & Analytics": [Data]
+    Engineering: ["Software Engineering"]
+    Product: ["Product Management"]
+    Data: [Data]
+    UX: [Design]
+    E-commerce: ["Product Management", "Software Engineering"]
+    "Digital Marketing": [Marketing]
+    "Store Operations": ["Store Operations"]
+    Sales: [Sales]
+    "Regional Operations": ["Store Operations", "General Management"]
+    "Visual Merchandising": ["Store Operations", Design]
+    Logistics: [Logistics]
+    "Distribution Centers": [Warehouse]
+    Planning: [Logistics, Data]
+    "Customer Experience": ["Customer Support", Design]
+    "Customer Service": ["Customer Support"]
+    "Customer Operations": ["Customer Support", Logistics]
+    "Marketplace Operations": ["Marketplace Operations"]
+    "Seller Management": [Sales, "Marketplace Operations"]
+    "Marketplace Technology": ["Software Engineering"]
+
+  # Job families  [PROPOSTA]. A especificacao pede job_family na hierarquia mas
+  # nao lista os valores. Esta e a minha proposta minima.
+  job_families:
+    - Software Engineering
+    - Data
+    - Product Management
+    - Design
+    - Store Operations
+    - Sales
+    - Logistics
+    - Warehouse
+    - Customer Support
+    - Marketing
+    - Finance
+    - People
+    - Legal
+    - Procurement
+    - Risk & Compliance
+    - Strategy
+    - Marketplace Operations
+    - General Management
+
+  # Job titles  [PROPOSTA]. Gerados por regra, nao por lista fixa, para nao
+  # inventar centenas de titulos a mao.
+  job_title_rule:
+    pattern: "{seniority} {job_family_singular}"
+    seniority_by_level:
+      IC1: Assistant
+      IC2: Analyst
+      IC3: "Senior Analyst"
+      IC4: Specialist
+      IC5: "Principal Specialist"
+      M1:  Coordinator
+      M2:  Manager
+      M3:  "Senior Manager"
+      M4:  "Head of"
+      M5:  "Senior Head of"
+      D1:  Director
+      D2:  "Senior Director"
+      D3:  "Vice President"
+
+  # Mapa job_level -> job_level_group  [PROPOSTA]
+  # A especificacao lista os 13 niveis e os 7 grupos, mas nao o mapeamento.
+  job_levels:
+    IC1: {group: Entry,               track: IC}
+    IC2: {group: Professional,        track: IC}
+    IC3: {group: Professional,        track: IC}
+    IC4: {group: "Senior Professional",track: IC}
+    IC5: {group: "Senior Professional",track: IC}
+    M1:  {group: Manager,             track: M}
+    M2:  {group: Manager,             track: M}
+    M3:  {group: "Senior Manager",    track: M}
+    M4:  {group: "Senior Manager",    track: M}
+    M5:  {group: "Senior Manager",    track: M}
+    D1:  {group: Director,            track: D}
+    D2:  {group: Director,            track: D}
+    D3:  {group: Executive,           track: D}
+
+  # Piramide por segmento  [SINTETICO]. Varejo e muito mais achatado na base.
+  # As linhas somam entre 1.000 e 1.004 por arredondamento: o gerador normaliza
+  # cada distribuicao para 1.0 antes de usar.
+  level_distribution:
+    retail_ops: {IC1: 0.54, IC2: 0.22, IC3: 0.07, IC4: 0.02, IC5: 0.01, M1: 0.08, M2: 0.04, M3: 0.015, M4: 0.004, M5: 0.001, D1: 0.0008, D2: 0.0002, D3: 0.0000}
+    customer:   {IC1: 0.48, IC2: 0.26, IC3: 0.09, IC4: 0.03, IC5: 0.01, M1: 0.08, M2: 0.035, M3: 0.012, M4: 0.003, M5: 0.001, D1: 0.0008, D2: 0.0002, D3: 0.0000}
+    supply:     {IC1: 0.41, IC2: 0.27, IC3: 0.13, IC4: 0.05, IC5: 0.02, M1: 0.07, M2: 0.035, M3: 0.012, M4: 0.002, M5: 0.001, D1: 0.0008, D2: 0.0002, D3: 0.0000}
+    corporate:  {IC1: 0.10, IC2: 0.24, IC3: 0.24, IC4: 0.14, IC5: 0.06, M1: 0.08, M2: 0.07, M3: 0.04, M4: 0.015, M5: 0.006, D1: 0.004, D2: 0.003, D3: 0.002}
+    digital:    {IC1: 0.08, IC2: 0.24, IC3: 0.27, IC4: 0.16, IC5: 0.07, M1: 0.07, M2: 0.06, M3: 0.03, M4: 0.012, M5: 0.005, D1: 0.004, D2: 0.002, D3: 0.001}
+
+  span_of_control:
+    # quantos reportes diretos por nivel de gestao  [SINTETICO]
+    M1: [6, 18]
+    M2: [4, 12]
+    M3: [3, 8]
+    M4: [3, 7]
+    M5: [3, 6]
+    D1: [3, 6]
+    D2: [3, 5]
+    D3: [4, 8]
+
+employment:
+  types:   # [SINTETICO]
+    - {type: Permanent,   share: 0.86}
+    - {type: Temporary,   share: 0.07}   # sazonal de varejo, pico em nov e dez
+    - {type: Intern,      share: 0.04}
+    - {type: Apprentice,  share: 0.03}
+  statuses: [Active, Terminated, On Leave]
+  fte_values: {full_time: 1.0, part_time: 0.5, reduced: 0.75}
+  part_time_share_by_segment: {retail_ops: 0.22, customer: 0.15, supply: 0.05, corporate: 0.02, digital: 0.01}
+  seasonal_peak_months: [11, 12]
+  seasonal_uplift: 0.08     # +8% de HC temporario no pico de varejo
+
+# -----------------------------------------------------------------------------
+# 7. Demografia  [SINTETICO]
+# -----------------------------------------------------------------------------
+# ATENCAO: os valores abaixo sao parametros de um mundo ficticio, escolhidos
+# para produzir KPIs de DEI com variacao interessante. NAO sao estatisticas
+# reais de nenhum pais nem de nenhuma empresa, e nao devem ser apresentados
+# como tal em nenhum material do projeto.
+demographics:
+  gender:
+    values: [Female, Male, Non-binary, Not informed]
+    base_share: {Female: 0.52, Male: 0.47, Non-binary: 0.006, "Not informed": 0.004}
+    # gradiente por nivel: a representacao feminina cai conforme sobe a
+    # hierarquia. E isso que torna o KPI "Women in Leadership" nao trivial.
+    female_share_by_level_group:
+      Entry: 0.58
+      Professional: 0.53
+      "Senior Professional": 0.44
+      Manager: 0.41
+      "Senior Manager": 0.33
+      Director: 0.26
+      Executive: 0.18
+    # a partir de 2021 a empresa adota metas de diversidade e o gradiente
+    # melhora lentamente
+    leadership_trend_per_year_from_2021: 0.012
+
+  race_ethnicity:
+    # Campo autodeclarado. So existe a partir de jun/2019 (ver defeito D02).
+    available_from: 2019-06-01
+    values_by_country:
+      BR: [Branca, Preta, Parda, Amarela, Indigena, "Nao informado"]
+      AR: [Blanca, "Afrodescendiente", "Indigena", "Otra", "No informado"]
+      CL: [Blanca, "Pueblos originarios", "Otra", "No informado"]
+      CO: [Blanca, Afrocolombiana, Indigena, Otra, "No informado"]
+      MX: [Blanca, "Afrodescendiente", Indigena, Otra, "No informado"]
+    declared_share_BR: {Branca: 0.44, Parda: 0.32, Preta: 0.17, Amarela: 0.05, Indigena: 0.02}
+    # a nao declaracao e alta e varia por pais. Ver defeito D03.
+    not_informed_rate_by_country: {BR: 0.24, AR: 0.31, CL: 0.29, CO: 0.26, MX: 0.35}
+    # gradiente por nivel, para que o KPI de representatividade tenha o que mostrar
+    preta_parda_share_by_level_group_BR:
+      Entry: 0.61
+      Professional: 0.48
+      "Senior Professional": 0.34
+      Manager: 0.29
+      "Senior Manager": 0.21
+      Director: 0.14
+      Executive: 0.09
+
+  disability:
+    available_from: 2019-06-01
+    declared_rate_by_country: {BR: 0.041, AR: 0.022, CL: 0.019, CO: 0.017, MX: 0.015}
+    not_informed_rate: 0.18
+
+  # Nomes  [SINTETICO]. Pool pequeno e proposital: com poucos sobrenomes, a
+  # colisao de homonimos acontece naturalmente, e e ela que torna a resolucao
+  # de identidade da F4 (ADR-0004) um exercicio de verdade em vez de um join.
+  names:
+    first:
+      - Ana, Maria, José, João, Carla, Pedro, Luíza, Rafael, Beatriz, Gabriel
+      - Camila, Lucas, Juliana, Bruno, Fernanda, Thiago, Patrícia, Diego, Letícia, André
+      - Mariana, Felipe, Aline, Rodrigo, Vanessa, Marcelo, Renata, Eduardo, Priscila, Vinícius
+      - Sofía, Mateo, Valentina, Santiago, Isabella, Sebastián, Camilo, Daniela, Nicolás, Paula
+    last:
+      - Silva, Santos, Oliveira, Souza, Lima, Pereira, Costa, Ferreira, Alves, Rodrigues
+      - Gomes, Martins, Araújo, Melo, Barbosa, Ribeiro, Carvalho, Almeida, Nunes, Moreira
+      - García, González, Rodríguez, López, Martínez, Pérez, Sánchez, Ramírez, Torres, Flores
+    email_domain: novaora.com
+    personal_email_domains: [gmail.com, hotmail.com, outlook.com, yahoo.com.br]
+
+  birth_year:
+    # derivado da idade na admissao  [SINTETICO]
+    hire_age_by_level_group:
+      Entry: [18, 28]
+      Professional: [22, 36]
+      "Senior Professional": [27, 45]
+      Manager: [28, 46]
+      "Senior Manager": [32, 52]
+      Director: [36, 56]
+      Executive: [40, 60]
+
+# -----------------------------------------------------------------------------
+# 8. Eventos de carreira  [SINTETICO]
+# -----------------------------------------------------------------------------
+career_events:
+  # Vies de nivel na contratacao externa  [SINTETICO].
+  # A empresa contrata proporcionalmente mais na base do que a piramide alvo, e
+  # parte das posicoes seniores e preenchida por promocao interna. Sem esse
+  # vies a piramide ja nasceria no alvo e nao sobraria vaga para promover.
+  # O `floor` impede que o vies zere a contratacao externa de gestores, que em
+  # varejo e uma pratica real e nao uma excecao.
+  hiring_level_skew: {factor: 0.72, floor: 0.45}
+
+  promotion:
+    # folga permitida sobre a piramide alvo antes de bloquear a promocao
+    vacancy_tolerance: 1.25
+    # Caminhos de promocao com peso  [PROPOSTA].
+    # A carreira nao e uma fila unica: quem esta em IC3 ou IC4 pode seguir na
+    # trilha tecnica ou cruzar para gestao. Modelar como lista linear faria
+    # IC5 ser o unico caminho para M1 e as camadas de gestao ficariam vazias.
+    paths:
+      IC1: {IC2: 1.00}
+      IC2: {IC3: 1.00}
+      IC3: {IC4: 0.70, M1: 0.30}
+      IC4: {IC5: 0.45, M1: 0.30, M2: 0.25}
+      IC5: {M2: 0.50, M3: 0.50}
+      M1:  {M2: 1.00}
+      M2:  {M3: 1.00}
+      M3:  {M4: 1.00}
+      M4:  {M5: 1.00}
+      M5:  {D1: 1.00}
+      D1:  {D2: 1.00}
+      D2:  {D3: 1.00}
+    # Propensao anual a promocao, NAO a taxa realizada. A taxa realizada e
+    # menor porque promocao depende de vaga (ver `vacancy_tolerance`): esse
+    # e o comportamento pretendido, e a diferenca entre propensao e realizado
+    # e reportada em metrics.py.
+    annual_rate_by_segment: {retail_ops: 0.09, customer: 0.08, supply: 0.07, corporate: 0.11, digital: 0.13}
+    min_tenure_months: 12
+    performance_gate: [exceeds_expectations, outstanding, "4", "5"]
+    cycle_months: [3, 9]          # promocoes concentradas em marco e setembro
+  transfer:
+    annual_rate: 0.05
+    cross_country_share: 0.04
+  lateral_move:
+    annual_rate: 0.03
+  demotion:
+    annual_rate: 0.004
+  reorganization:
+    # movimentos em massa disparados por incidents.yaml, nao por taxa
+
+# -----------------------------------------------------------------------------
+# 9. Remuneracao  [SINTETICO]
+# -----------------------------------------------------------------------------
+compensation:
+  salary_period_by_country:
+    # fonte do defeito D13: pratica diferente por pais
+    BR: monthly
+    AR: monthly
+    CL: annual
+    CO: monthly
+    MX: annual
+  currency_by_country: {BR: BRL, AR: ARS, CL: CLP, CO: COP, MX: MXN}
+
+  # Base salarial local  [SINTETICO]. Valor mensal em moeda local para o nivel
+  # IC1. Todos os demais niveis saem daqui pelo level_multiplier. Sao ordens de
+  # grandeza para um mundo ficticio, nao pesquisa salarial.
+  local_base_monthly: {BR: 2200, AR: 400000, CL: 700000, CO: 1400000, MX: 9000}
+
+  bands:
+    # ref_salary_band e gerada a partir destes multiplicadores sobre uma base
+    # local por pais. band_mid e a referencia do compa-ratio.
+    spread: {min: 0.80, max: 1.20}        # min e max como fracao do mid
+    level_multiplier:                      # sobre a base local do pais
+      IC1: 1.00
+      IC2: 1.35
+      IC3: 1.85
+      IC4: 2.55
+      IC5: 3.40
+      M1:  2.20
+      M2:  3.00
+      M3:  4.20
+      M4:  5.80
+      M5:  7.50
+      D1:  9.50
+      D2:  13.00
+      D3:  19.00
+    job_family_premium:                    # ajuste de mercado por familia
+      "Software Engineering": 1.18
+      "Data": 1.15
+      "Product Management": 1.12
+      "Design": 1.05
+      "Store Operations": 0.92
+      "Warehouse": 0.90
+      "Customer Support": 0.88
+      default: 1.00
+    band_revision_months: [1]              # revisao anual de banda em janeiro
+
+  compa_ratio:
+    target_mean: 0.97
+    sigma: 0.11
+    clip: [0.72, 1.34]
+
+  merit_cycle:
+    month: 4
+    eligible_min_tenure_months: 6
+    increase_by_performance:
+      below_expectations: [0.00, 0.00]
+      developing:         [0.00, 0.025]
+      meets_expectations: [0.02, 0.05]
+      exceeds_expectations: [0.04, 0.08]
+      outstanding:        [0.07, 0.13]
+  promotion_increase: [0.08, 0.22]
+  bonus:
+    target_pct_by_level_group:
+      Entry: 0.00
+      Professional: 0.05
+      "Senior Professional": 0.10
+      Manager: 0.15
+      "Senior Manager": 0.20
+      Director: 0.35
+      Executive: 0.50
+    payout_factor_range: [0.0, 1.6]
+    payout_month: 3
+
+  exchange_rates:
+    # ADR-0006. Duas naturezas de taxa, nunca misturadas.
+    types:
+      analysis: "taxa fixa por ano, usada para comparacao entre paises"
+      spot:     "taxa do mes, usada apenas para reconciliacao com a folha"
+    base_currency: USD
+    # os valores concretos ficam em data/reference/exchange_rates.csv,
+    # versionado no Git. Aqui fica apenas a politica.
+    policy: "KPIs de compa-ratio e pay gap sao SEMPRE calculados com recorte de pais e por isso nao dependem de cambio"
+
+# -----------------------------------------------------------------------------
+# 10. Performance  [SPEC para as escalas]
+# -----------------------------------------------------------------------------
+performance:
+  scales:
+    - {valid_from: 2016-01-01, valid_to: 2020-12-31, type: numeric, values: ["1","2","3","4","5"]}
+    - {valid_from: 2021-01-01, valid_to: null, type: textual,
+       values: ["Below Expectations","Developing","Meets Expectations","Exceeds Expectations","Outstanding"]}
+  cycles:
+    - {valid_from: 2016, valid_to: 2020, frequency: annual,     months: [11]}
+    - {valid_from: 2021, valid_to: 2026, frequency: semiannual, months: [5, 11]}
+  eligibility_min_tenure_months: 6
+  rating_distribution:            # [SINTETICO], leve curva forcada
+    below_expectations: 0.05
+    developing: 0.14
+    meets_expectations: 0.55
+    exceeds_expectations: 0.20
+    outstanding: 0.06
+  potential_ratings: [Low, Medium, High]
+  promotion_ready_rate: 0.12
+
+# -----------------------------------------------------------------------------
+# 11. Aprendizagem  [SINTETICO]
+# -----------------------------------------------------------------------------
+learning:
+  available_from: 2018-03-01        # entrada do LMS
+  enrollments_per_employee_year: {mean: 5.0, sigma: 2.2}
+  categories:                       # [SPEC]
+    - {name: Compliance,        mandatory: true,  hours: [1, 4],  annual: true}
+    - {name: Safety,            mandatory: true,  hours: [2, 6],  annual: true, segments: [retail_ops, supply]}
+    - {name: DEI,               mandatory: true,  hours: [1, 3],  from_year: 2021}
+    - {name: Leadership,        mandatory: false, hours: [8, 40], level_groups: [Manager, "Senior Manager", Director, Executive]}
+    - {name: Management,        mandatory: false, hours: [4, 20], level_groups: [Manager, "Senior Manager"]}
+    - {name: Technology,        mandatory: false, hours: [4, 60], segments: [digital, corporate]}
+    - {name: Customer,          mandatory: false, hours: [2, 12], segments: [customer, retail_ops]}
+    - {name: "Functional Skills",mandatory: false,hours: [2, 24]}
+  completion_rate: {mandatory: 0.88, optional: 0.61}
+
+# -----------------------------------------------------------------------------
+# 12. Engajamento  [SINTETICO]
+# -----------------------------------------------------------------------------
+engagement:
+  available_from: 2017-01-01
+  cycles:
+    - {valid_from: 2017, valid_to: 2020, frequency: annual,     months: [9]}
+    - {valid_from: 2021, valid_to: 2026, frequency: semiannual, months: [4, 10]}
+  scale: [1, 5]
+  response_rate_by_segment: {retail_ops: 0.58, customer: 0.66, supply: 0.61, corporate: 0.82, digital: 0.86}
+  scores:
+    engagement_mean: 3.64
+    engagement_sigma: 0.72
+    manager_score_correlation: 0.61     # associacao com engagement, nao causa
+    belonging_correlation: 0.54
+    enps_promoter_threshold: 4.3
+    enps_detractor_threshold: 2.8
+  # Regra critica da especificacao secao 14: response_flag = 0 NAO significa
+  # score = 0. Quem nao respondeu tem score nulo. O defeito D21 quebra isso
+  # de proposito na fonte ENGAGE entre 2017 e 2020.
+  non_respondent_score: null
+  min_group_size: 5                     # ADR-0007
+
+# -----------------------------------------------------------------------------
+# 13. Recrutamento  [SINTETICO]
+# -----------------------------------------------------------------------------
+recruitment:
+  requisitions_per_hire: 1.15           # ~15% das reqs nao viram contratacao
+  applications_per_requisition: {mean: 11, sigma: 6, min: 1}
+  funnel_conversion:
+    application_to_screening: 0.34
+    screening_to_interview: 0.41
+    interview_to_offer: 0.22
+    offer_to_acceptance: 0.79
+  cycle_days:
+    opening_to_approval: [1, 21]
+    approval_to_posting: [0, 14]
+    posting_to_application: [0, 60]
+    application_to_screening: [1, 25]
+    screening_to_interview: [2, 20]
+    interview_to_offer: [1, 18]
+    offer_to_hire: [3, 45]
+  cycle_multiplier_by_level_group:
+    Entry: 0.55
+    Professional: 1.00
+    "Senior Professional": 1.35
+    Manager: 1.50
+    "Senior Manager": 1.85
+    Director: 2.40
+    Executive: 3.10
+  candidate_sources:
+    - {name: "Job Board",        share: 0.31}
+    - {name: Referral,           share: 0.18}
+    - {name: "Career Site",      share: 0.16}
+    - {name: LinkedIn,           share: 0.14}
+    - {name: Agency,             share: 0.07}
+    - {name: "Internal Mobility",share: 0.09}
+    - {name: "Walk-in",          share: 0.05}
+  internal_share_target: 0.09
+  recruiters:
+    count_per_1000_hires: 4
+
+# -----------------------------------------------------------------------------
+# 14. Volumes esperados  [DERIVADO]
+# -----------------------------------------------------------------------------
+# Alvo de validacao da geracao. O manifesto compara o realizado com estes
+# valores e falha se divergir mais que tolerance.
+expected_volumes:
+  tolerance: 0.10
+  historical_individuals: 44900
+  total_hires: 36000
+  total_terminations: 25400
+  fact_headcount_snapshot_per_system: 1311545
+  fact_requisition: 33300
+  fact_application: 366700
+  fact_termination: 25400
+  fact_movement: 36200
+  fact_compensation: 147500
+  fact_performance: 130000
+  fact_learning: 546500
+  fact_engagement: 178000
+  dim_employee_scd2: 213000
+  total_rows_approx: 4300000
+  parquet_size_mb_approx: 170

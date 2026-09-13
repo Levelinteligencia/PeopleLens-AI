@@ -1,0 +1,1001 @@
+movement_id,employee_id,movement_date,movement_type,old_department,new_department,old_sub_department,new_sub_department,old_job_level,new_job_level,old_manager_id,new_manager_id,old_location,new_location,country,business_unit,segment
+MOV00000001,85,2016-01-15,Transfer,Regional Operations,Sales,Region South,Key Accounts,IC1,IC1,35,7,STORE-BR-027,STORE-BR-038,BR,Retail,retail_ops
+MOV00000002,104,2016-01-15,Transfer,Regional Operations,Customer Experience,Region South,CX Design,IC1,IC1,146,90,STORE-BR-003,SITE-BR-004,BR,Customer,customer
+MOV00000003,359,2016-01-15,Lateral Move,Store Operations,Customer Service,Security,Contact Center,IC1,IC1,375,389,STORE-AR-003,SITE-AR-001,AR,Customer,customer
+MOV00000004,2,2016-02-15,Transfer,Distribution Centers,Customer Experience,Inventory,Voice of Customer,IC3,IC3,267,194,DC-BR-005,SITE-BR-002,BR,Customer,customer
+MOV00000005,387,2016-02-15,Lateral Move,Regional Operations,Engineering,Region Southeast,Platform,IC1,IC1,111,283,STORE-BR-027,HQ-BR-001,BR,Digital,digital
+MOV00000006,351,2016-03-15,Promotion,Regional Operations,Regional Operations,Region Southeast,Region Southeast,IC2,IC3,336,343,STORE-AR-001,STORE-AR-001,AR,Retail,retail_ops
+MOV00000007,318,2016-03-15,Promotion,Procurement,Procurement,Supplier Management,Supplier Management,IC1,IC2,302,319,DC-BR-006,DC-BR-006,BR,Supply Chain,supply
+MOV00000008,49,2016-03-15,Promotion,Procurement,Procurement,Sourcing,Sourcing,IC1,IC2,302,319,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000009,121,2016-03-15,Promotion,E-commerce,E-commerce,Catalog,Catalog,M3,M4,212,309,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000010,197,2016-03-15,Promotion,Data,Data,Analytics Engineering,Analytics Engineering,IC3,IC4,153,314,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000011,232,2016-03-15,Promotion,Data & Analytics,Data & Analytics,Business Intelligence,Business Intelligence,IC1,IC2,227,202,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000012,29,2016-03-15,Promotion,Strategy,Strategy,Corporate Strategy,Corporate Strategy,IC4,IC5,193,193,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000013,89,2016-03-15,Promotion,Finance,Finance,Treasury,Treasury,IC2,IC3,27,218,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000014,47,2016-03-15,Promotion,Procurement,Procurement,Contracts,Contracts,IC1,IC2,88,243,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000015,286,2016-03-15,Promotion,Procurement,Procurement,Indirect Procurement,Indirect Procurement,IC3,IC4,45,187,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000016,187,2016-03-15,Promotion,Procurement,Procurement,Contracts,Contracts,IC5,M2,62,62,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000017,189,2016-03-15,Transfer,Store Operations,Customer Service,Cashier,Contact Center,IC2,IC2,136,171,STORE-BR-011,SITE-BR-003,BR,Customer,customer
+MOV00000018,170,2016-03-15,Lateral Move,Visual Merchandising,Strategy,Store Design,Corporate Strategy,IC2,IC2,273,162,STORE-BR-016,HQ-BR-001,BR,Corporate,corporate
+MOV00000019,129,2016-04-15,Transfer,E-commerce,Store Operations,Checkout,Store Management,M1,M1,281,65,HQ-BR-001,STORE-BR-034,BR,Retail,retail_ops
+MOV00000020,270,2016-04-15,Lateral Move,Regional Operations,Visual Merchandising,Region South,Store Design,IC2,IC2,34,273,STORE-BR-006,STORE-BR-037,BR,Retail,retail_ops
+MOV00000021,13,2016-05-15,Transfer,Sales,Regional Operations,Floor Sales,Region South,IC1,IC1,7,174,STORE-BR-005,STORE-BR-010,BR,Retail,retail_ops
+MOV00000022,14,2016-05-15,Transfer,Visual Merchandising,Marketing,Store Design,Performance,M3,M3,212,309,STORE-BR-039,HQ-BR-001,BR,Corporate,corporate
+MOV00000023,243,2016-06-15,Transfer,Procurement,Customer Service,Contracts,Contact Center,IC3,IC3,82,171,HQ-BR-001,SITE-BR-002,BR,Customer,customer
+MOV00000024,281,2016-06-15,Demotion,E-commerce,E-commerce,Catalog,Catalog,M3,M2,212,121,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000025,392,2016-07-15,Transfer,Store Operations,Risk,Cashier,Fraud,IC1,IC1,280,248,STORE-BR-021,HQ-BR-001,BR,Corporate,corporate
+MOV00000026,442,2016-07-15,Transfer,Visual Merchandising,Sales,Merchandising,Key Accounts,IC1,IC1,270,61,STORE-BR-024,STORE-BR-040,BR,Retail,retail_ops
+MOV00000027,322,2016-07-15,Lateral Move,Logistics,Store Operations,Last Mile,Cashier,IC1,IC1,276,280,DC-BR-005,STORE-BR-001,BR,Retail,retail_ops
+MOV00000028,132,2016-08-15,Transfer,Customer Operations,Strategy,Order Support,PMO,IC1,IC1,288,437,SITE-BR-003,HQ-BR-001,BR,Corporate,corporate
+MOV00000029,229,2016-08-15,Lateral Move,Visual Merchandising,Regional Operations,Merchandising,Region Southeast,IC1,IC1,238,174,STORE-BR-012,STORE-BR-038,BR,Retail,retail_ops
+MOV00000030,260,2016-08-15,Lateral Move,Logistics,Store Operations,Reverse Logistics,Cashier,IC3,IC3,303,129,DC-BR-002,STORE-BR-026,BR,Retail,retail_ops
+MOV00000031,308,2016-09-15,Promotion,Store Operations,Store Operations,Cashier,Cashier,IC1,IC2,221,260,STORE-BR-012,STORE-BR-012,BR,Retail,retail_ops
+MOV00000032,372,2016-09-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC1,IC2,362,343,STORE-AR-001,STORE-AR-001,AR,Retail,retail_ops
+MOV00000033,375,2016-09-15,Promotion,Store Operations,Store Operations,Security,Security,IC2,IC3,336,416,STORE-AR-009,STORE-AR-009,AR,Retail,retail_ops
+MOV00000034,56,2016-09-15,Promotion,Regional Operations,Regional Operations,Region North,Region North,IC1,IC2,18,472,STORE-BR-022,STORE-BR-022,BR,Retail,retail_ops
+MOV00000035,18,2016-09-15,Promotion,Regional Operations,Regional Operations,Region Southeast,Region Southeast,IC2,IC3,34,98,STORE-BR-016,STORE-BR-016,BR,Retail,retail_ops
+MOV00000036,357,2016-09-15,Promotion,Distribution Centers,Distribution Centers,Outbound,Outbound,IC2,IC3,339,416,DC-AR-001,DC-AR-001,AR,Supply Chain,supply
+MOV00000037,368,2016-09-15,Promotion,Logistics,Logistics,Last Mile,Last Mile,IC1,IC2,364,357,DC-AR-001,DC-AR-001,AR,Supply Chain,supply
+MOV00000038,48,2016-09-15,Promotion,Distribution Centers,Distribution Centers,Inventory,Inventory,IC2,IC3,305,297,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000039,109,2016-09-15,Promotion,Distribution Centers,Distribution Centers,Inventory,Inventory,IC1,IC2,48,48,DC-BR-001,DC-BR-001,BR,Supply Chain,supply
+MOV00000040,199,2016-09-15,Promotion,E-commerce,E-commerce,Checkout,Checkout,IC2,IC3,310,310,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000041,321,2016-09-15,Promotion,Marketing,Marketing,CRM,CRM,M3,M4,309,309,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000042,183,2016-09-15,Promotion,People,People,Talent Acquisition,Talent Acquisition,IC3,IC4,327,327,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000043,416,2016-09-15,Transfer,Store Operations,Engineering,Security,Frontend,IC5,IC5,363,70,STORE-AR-005,HQ-BR-001,BR,Digital,digital
+MOV00000044,429,2016-09-15,Transfer,Store Operations,Sales,Cashier,Floor Sales,IC1,IC1,77,459,STORE-BR-029,STORE-BR-017,BR,Retail,retail_ops
+MOV00000045,436,2016-09-15,Transfer,Marketing,Visual Merchandising,Content,Store Design,IC2,IC2,60,294,HQ-BR-001,STORE-BR-031,BR,Retail,retail_ops
+MOV00000046,391,2016-09-15,Lateral Move,Customer Service,Sales,Escalations,Floor Sales,IC2,IC2,171,144,SITE-BR-001,STORE-BR-016,BR,Retail,retail_ops
+MOV00000047,195,2016-10-15,Transfer,Visual Merchandising,Procurement,Merchandising,Indirect Procurement,IC1,IC1,71,47,STORE-BR-037,HQ-BR-001,BR,Corporate,corporate
+MOV00000048,316,2016-10-15,Transfer,Store Operations,Store Operations,Store Management,Security,IC2,IC2,129,260,STORE-BR-026,STORE-BR-018,BR,Retail,retail_ops
+MOV00000049,342,2016-10-15,Transfer,Sales,Customer Operations,Key Accounts,Order Support,IC1,IC1,362,288,STORE-AR-003,SITE-BR-004,BR,Customer,customer
+MOV00000050,463,2016-10-15,Transfer,Distribution Centers,Sales,Outbound,Floor Sales,IC1,IC1,357,372,DC-AR-001,STORE-AR-010,AR,Retail,retail_ops
+MOV00000051,162,2016-10-15,Lateral Move,Strategy,Logistics,PMO,Reverse Logistics,IC4,IC4,193,303,HQ-BR-001,DC-BR-006,BR,Supply Chain,supply
+MOV00000052,526,2016-11-15,Transfer,Regional Operations,Planning,Region Southeast,Supply Planning,IC1,IC1,506,355,STORE-AR-008,DC-AR-001,AR,Supply Chain,supply
+MOV00000053,410,2016-11-15,Lateral Move,Regional Operations,Customer Service,Region South,Contact Center,IC1,IC1,251,4,STORE-BR-031,SITE-BR-001,BR,Customer,customer
+MOV00000054,115,2016-12-15,Transfer,UX,Regional Operations,Product Design,Region North,IC2,IC2,205,518,HQ-BR-001,STORE-BR-023,BR,Retail,retail_ops
+MOV00000055,142,2016-12-15,Transfer,Visual Merchandising,Sales,Store Design,Floor Sales,IC2,IC2,294,144,STORE-BR-025,STORE-BR-012,BR,Retail,retail_ops
+MOV00000056,331,2016-12-15,Transfer,Store Operations,Procurement,Store Management,Sourcing,IC1,IC1,313,515,STORE-BR-025,DC-BR-003,BR,Supply Chain,supply
+MOV00000057,463,2016-12-15,Lateral Move,Sales,Regional Operations,Floor Sales,Region Southeast,IC1,IC1,396,506,STORE-AR-010,STORE-AR-009,AR,Retail,retail_ops
+MOV00000058,18,2017-01-15,Transfer,Regional Operations,Regional Operations,Region Southeast,Region South,IC3,IC3,98,98,STORE-BR-016,STORE-BR-029,BR,Retail,retail_ops
+MOV00000059,245,2017-01-15,Transfer,Customer Service,E-commerce,Contact Center,Catalog,IC1,IC1,4,106,SITE-BR-004,HQ-BR-001,BR,Digital,digital
+MOV00000060,513,2017-01-15,Lateral Move,Customer Operations,Data,Returns,Data Science,IC1,IC1,413,465,SITE-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000061,287,2017-03-15,Promotion,Store Operations,Store Operations,Stockroom,Stockroom,IC1,IC2,21,467,STORE-BR-016,STORE-BR-016,BR,Retail,retail_ops
+MOV00000062,224,2017-03-15,Promotion,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,IC1,IC2,170,294,STORE-BR-031,STORE-BR-031,BR,Retail,retail_ops
+MOV00000063,173,2017-03-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC1,IC2,11,294,STORE-BR-037,STORE-BR-037,BR,Retail,retail_ops
+MOV00000064,316,2017-03-15,Promotion,Store Operations,Store Operations,Security,Security,IC2,IC3,467,467,STORE-BR-018,STORE-BR-018,BR,Retail,retail_ops
+MOV00000065,216,2017-03-15,Promotion,Customer Experience,Customer Experience,Voice of Customer,Voice of Customer,IC1,IC2,90,433,SITE-BR-001,SITE-BR-001,BR,Customer,customer
+MOV00000066,70,2017-03-15,Promotion,Data,Data,Data Science,Data Science,M1,M2,8,121,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000067,283,2017-03-15,Promotion,Engineering,Engineering,SRE,SRE,IC2,IC3,210,86,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000068,404,2017-03-15,Promotion,Product,Product,Product Ops,Product Ops,IC3,IC4,192,482,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000069,153,2017-03-15,Promotion,Data,Data,Analytics Engineering,Analytics Engineering,IC4,M1,70,70,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000070,210,2017-03-15,Promotion,Engineering,Engineering,Platform,Platform,IC3,IC4,86,416,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000071,47,2017-03-15,Promotion,Procurement,Procurement,Contracts,Contracts,IC2,IC3,243,45,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000072,232,2017-03-15,Promotion,Data & Analytics,Data & Analytics,Business Intelligence,Business Intelligence,IC2,IC3,202,92,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000073,556,2017-03-15,Lateral Move,Strategy,Planning,Corporate Strategy,Supply Planning,IC2,IC2,494,305,HQ-BR-001,DC-BR-001,BR,Supply Chain,supply
+MOV00000074,121,2017-04-15,Transfer,E-commerce,Sales,Catalog,Key Accounts,M4,M4,309,309,HQ-BR-001,STORE-BR-017,BR,Retail,retail_ops
+MOV00000075,522,2017-04-15,Transfer,Visual Merchandising,Store Operations,Store Design,Store Management,IC2,IC2,273,316,STORE-BR-012,STORE-BR-028,BR,Retail,retail_ops
+MOV00000076,166,2017-04-15,Lateral Move,Procurement,Distribution Centers,Indirect Procurement,Inventory,IC2,IC2,243,517,HQ-BR-001,DC-BR-005,BR,Supply Chain,supply
+MOV00000077,21,2017-05-15,Transfer,Store Operations,Sales,Stockroom,Floor Sales,IC2,IC2,467,585,STORE-BR-006,STORE-BR-008,BR,Retail,retail_ops
+MOV00000078,448,2017-05-15,Transfer,UX,Regional Operations,Design System,Region North,IC3,IC3,205,208,HQ-BR-001,STORE-BR-001,BR,Retail,retail_ops
+MOV00000079,309,2017-05-15,Lateral Move,Marketing,People,Brand,HR Business Partner,M5,M5,62,62,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000080,576,2017-06-15,Transfer,Digital Marketing,Finance,Paid Media,FP&A,IC3,IC3,566,598,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000081,560,2017-06-15,Lateral Move,Planning,Sales,Supply Planning,Key Accounts,IC2,IC2,305,585,DC-BR-004,STORE-BR-027,BR,Retail,retail_ops
+MOV00000082,162,2017-07-15,Transfer,Logistics,Sales,Reverse Logistics,Key Accounts,IC4,IC4,303,79,DC-BR-006,STORE-BR-015,BR,Retail,retail_ops
+MOV00000083,167,2017-07-15,Transfer,Risk,Store Operations,Risk Management,Cashier,IC1,IC1,117,522,HQ-BR-001,STORE-BR-044,BR,Retail,retail_ops
+MOV00000084,313,2017-07-15,Transfer,Store Operations,Procurement,Cashier,Indirect Procurement,IC2,IC2,467,47,STORE-BR-023,HQ-BR-001,BR,Corporate,corporate
+MOV00000085,516,2017-07-15,Transfer,Finance,Data,FP&A,Analytics Engineering,IC3,IC3,82,197,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000086,101,2017-07-15,Lateral Move,Finance,Customer Operations,FP&A,Order Support,IC1,IC1,100,550,HQ-BR-001,SITE-BR-002,BR,Customer,customer
+MOV00000087,481,2017-08-15,Transfer,Customer Operations,Regional Operations,Order Support,Region South,IC1,IC1,428,466,SITE-BR-003,STORE-BR-005,BR,Retail,retail_ops
+MOV00000088,522,2017-08-15,Transfer,Store Operations,Engineering,Store Management,Platform,IC2,IC2,316,283,STORE-BR-028,HQ-BR-001,BR,Digital,digital
+MOV00000089,308,2017-08-15,Lateral Move,Store Operations,Legal,Cashier,Corporate Legal,IC2,IC2,467,441,STORE-BR-012,HQ-BR-001,BR,Corporate,corporate
+MOV00000090,310,2017-08-15,Lateral Move,E-commerce,Customer Service,Storefront,Contact Center,M1,M1,121,578,HQ-BR-001,SITE-BR-004,BR,Customer,customer
+MOV00000091,292,2017-09-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,M1,M2,65,121,STORE-BR-005,STORE-BR-005,BR,Retail,retail_ops
+MOV00000092,208,2017-09-15,Promotion,Regional Operations,Regional Operations,Region North,Region North,M1,M2,65,212,STORE-BR-031,STORE-BR-031,BR,Retail,retail_ops
+MOV00000093,78,2017-09-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC1,IC2,32,586,STORE-BR-022,STORE-BR-022,BR,Retail,retail_ops
+MOV00000094,128,2017-09-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC1,IC2,326,585,STORE-BR-022,STORE-BR-022,BR,Retail,retail_ops
+MOV00000095,12,2017-09-15,Promotion,Regional Operations,Regional Operations,Region South,Region South,IC2,IC3,34,98,STORE-BR-034,STORE-BR-034,BR,Retail,retail_ops
+MOV00000096,10,2017-09-15,Promotion,Procurement,Procurement,Sourcing,Sourcing,M3,M4,212,309,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000097,43,2017-09-15,Promotion,Distribution Centers,Distribution Centers,Inbound,Inbound,IC1,IC2,48,517,DC-BR-001,DC-BR-001,BR,Supply Chain,supply
+MOV00000098,81,2017-09-15,Promotion,Product,Product,Product Ops,Product Ops,IC3,M1,192,281,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000099,245,2017-09-15,Promotion,E-commerce,E-commerce,Catalog,Catalog,IC1,IC2,106,199,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000100,286,2017-09-15,Promotion,Procurement,Procurement,Indirect Procurement,Indirect Procurement,IC4,IC5,187,187,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000101,308,2017-09-15,Promotion,Legal,Legal,Corporate Legal,Corporate Legal,IC2,IC3,441,406,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000102,119,2017-09-15,Promotion,Legal,Legal,Labor Legal,Labor Legal,IC3,IC4,196,196,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000103,28,2017-09-15,Promotion,Finance,Finance,FP&A,FP&A,IC1,IC2,89,630,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000104,196,2017-09-15,Promotion,Legal,Legal,Compliance,Compliance,IC5,M3,307,321,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000105,352,2017-09-15,Promotion,Marketing,Marketing,Brand,Brand,IC3,IC4,363,341,HQ-AR-001,HQ-AR-001,AR,Corporate,corporate
+MOV00000106,316,2017-09-15,Transfer,Store Operations,Store Operations,Security,Security,IC3,IC3,467,467,STORE-BR-018,STORE-BR-037,BR,Retail,retail_ops
+MOV00000107,27,2017-10-15,Transfer,Finance,Regional Operations,FP&A,Region South,IC3,IC3,29,98,HQ-BR-001,STORE-BR-027,BR,Retail,retail_ops
+MOV00000108,647,2017-10-15,Transfer,Store Operations,Regional Operations,Security,Region North,IC1,IC1,633,631,STORE-BR-006,STORE-BR-014,BR,Retail,retail_ops
+MOV00000109,633,2017-10-15,Lateral Move,Store Operations,Store Operations,Security,Security,IC2,IC2,316,316,STORE-BR-023,STORE-BR-007,BR,Retail,retail_ops
+MOV00000110,286,2017-10-15,Demotion,Procurement,Procurement,Indirect Procurement,Indirect Procurement,IC5,IC4,187,187,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000111,307,2017-11-15,Transfer,Legal,Visual Merchandising,Corporate Legal,Merchandising,M2,M2,321,700,HQ-BR-001,STORE-BR-022,BR,Retail,retail_ops
+MOV00000112,49,2017-11-15,Demotion,Procurement,Procurement,Sourcing,Sourcing,IC2,IC1,319,430,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000113,686,2017-11-15,Demotion,Strategy,Strategy,M&A,M&A,IC3,IC2,444,595,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000114,702,2017-11-15,Demotion,Customer Service,Customer Service,Chat,Chat,M1,IC5,673,310,SITE-BR-002,SITE-BR-002,BR,Customer,customer
+MOV00000115,81,2017-12-15,Transfer,Product,Procurement,Product Ops,Indirect Procurement,M1,M1,281,187,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000116,315,2017-12-15,Transfer,Distribution Centers,Logistics,Outbound,Transportation,IC1,IC1,48,28,DC-BR-005,DC-CL-001,CL,Supply Chain,supply
+MOV00000117,70,2018-01-15,Transfer,Data,Customer Operations,Data Science,Order Support,M2,M2,121,673,HQ-BR-001,SITE-BR-003,BR,Customer,customer
+MOV00000118,275,2018-01-15,Transfer,Store Operations,Finance,Security,Accounting,IC1,IC1,308,100,STORE-BR-043,HQ-BR-001,BR,Corporate,corporate
+MOV00000119,541,2018-01-15,Transfer,Planning,Logistics,Demand Planning,Reverse Logistics,IC3,IC3,343,570,DC-AR-001,DC-CL-001,CL,Supply Chain,supply
+MOV00000120,29,2018-01-15,Lateral Move,Strategy,Sales,Corporate Strategy,Floor Sales,IC5,IC5,193,721,HQ-BR-001,STORE-BR-039,BR,Retail,retail_ops
+MOV00000121,296,2018-01-15,Lateral Move,Finance,Customer Service,Controlling,Escalations,IC2,IC2,27,243,HQ-BR-001,SITE-BR-003,BR,Customer,customer
+MOV00000122,214,2018-01-15,Demotion,Engineering,Engineering,SRE,SRE,IC2,IC1,210,657,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000123,173,2018-02-15,Transfer,Visual Merchandising,Regional Operations,Store Design,Region Southeast,IC2,IC2,294,27,STORE-BR-037,STORE-BR-043,BR,Retail,retail_ops
+MOV00000124,194,2018-02-15,Transfer,Customer Experience,UX,CX Design,Design System,M1,M1,246,281,SITE-BR-004,HQ-BR-001,BR,Digital,digital
+MOV00000125,578,2018-02-15,Transfer,Customer Experience,Sales,CX Design,Key Accounts,M3,M3,121,121,SITE-BR-002,STORE-BR-032,BR,Retail,retail_ops
+MOV00000126,45,2018-02-15,Lateral Move,Procurement,Planning,Indirect Procurement,Demand Planning,IC4,IC4,187,335,HQ-BR-001,DC-BR-002,BR,Supply Chain,supply
+MOV00000127,379,2018-03-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC2,IC3,343,341,STORE-AR-001,STORE-AR-001,AR,Retail,retail_ops
+MOV00000128,167,2018-03-15,Promotion,Store Operations,Store Operations,Cashier,Cashier,IC1,IC2,522,691,STORE-BR-044,STORE-BR-044,BR,Retail,retail_ops
+MOV00000129,477,2018-03-15,Promotion,Regional Operations,Regional Operations,Region South,Region South,IC2,IC3,18,98,STORE-BR-041,STORE-BR-041,BR,Retail,retail_ops
+MOV00000130,162,2018-03-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC4,IC5,79,141,STORE-BR-015,STORE-BR-015,BR,Retail,retail_ops
+MOV00000131,280,2018-03-15,Promotion,Store Operations,Store Operations,Security,Security,IC2,IC3,467,467,STORE-BR-006,STORE-BR-006,BR,Retail,retail_ops
+MOV00000132,333,2018-03-15,Promotion,Sales,Sales,Floor Sales,Floor Sales,IC1,IC2,26,29,STORE-BR-030,STORE-BR-030,BR,Retail,retail_ops
+MOV00000133,460,2018-03-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC1,IC2,391,29,STORE-BR-032,STORE-BR-032,BR,Retail,retail_ops
+MOV00000134,34,2018-03-15,Promotion,Regional Operations,Regional Operations,Region Southeast,Region Southeast,IC3,M1,98,208,STORE-BR-002,STORE-BR-002,BR,Retail,retail_ops
+MOV00000135,169,2018-03-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC1,IC2,238,586,STORE-BR-023,STORE-BR-023,BR,Retail,retail_ops
+MOV00000136,264,2018-03-15,Promotion,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,M1,M2,14,700,STORE-BR-030,STORE-BR-030,BR,Retail,retail_ops
+MOV00000137,66,2018-03-15,Promotion,Store Operations,Store Operations,Store Management,Store Management,IC1,IC2,21,691,STORE-BR-041,STORE-BR-041,BR,Retail,retail_ops
+MOV00000138,69,2018-03-15,Promotion,Logistics,Logistics,Transportation,Transportation,IC1,IC2,276,623,DC-BR-006,DC-BR-006,BR,Supply Chain,supply
+MOV00000139,505,2018-03-15,Promotion,Planning,Planning,Demand Planning,Demand Planning,IC1,IC2,474,305,DC-BR-004,DC-BR-004,BR,Supply Chain,supply
+MOV00000140,285,2018-03-15,Promotion,Digital Marketing,Digital Marketing,Lifecycle,Lifecycle,IC2,IC3,420,566,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000141,92,2018-03-15,Promotion,Data & Analytics,Data & Analytics,Business Intelligence,Business Intelligence,IC4,M1,196,509,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000142,57,2018-03-15,Promotion,People,People,People Analytics,People Analytics,IC1,IC2,156,298,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000143,406,2018-03-15,Transfer,Legal,Regional Operations,Compliance,Region Southeast,IC4,IC4,196,98,HQ-BR-001,STORE-BR-026,BR,Retail,retail_ops
+MOV00000144,555,2018-03-15,Transfer,Distribution Centers,Distribution Centers,Outbound,Outbound,IC5,IC5,295,648,DC-BR-006,DC-BR-006,BR,Supply Chain,supply
+MOV00000145,566,2018-04-15,Transfer,Digital Marketing,Finance,Paid Media,Controlling,IC4,IC4,8,761,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000146,630,2018-04-15,Transfer,Finance,Sales,Treasury,Floor Sales,IC3,IC3,82,29,HQ-BR-001,STORE-BR-034,BR,Retail,retail_ops
+MOV00000147,29,2018-04-15,Lateral Move,Sales,Procurement,Floor Sales,Indirect Procurement,IC5,IC5,721,81,STORE-BR-039,HQ-BR-001,BR,Corporate,corporate
+MOV00000148,83,2018-04-15,Lateral Move,Customer Service,Planning,Escalations,Supply Planning,IC1,IC1,242,556,SITE-BR-001,DC-BR-001,BR,Supply Chain,supply
+MOV00000149,200,2018-05-15,Transfer,People,Visual Merchandising,People Analytics,Merchandising,IC2,IC2,298,586,HQ-BR-001,STORE-BR-037,BR,Retail,retail_ops
+MOV00000150,448,2018-05-15,Transfer,Regional Operations,Customer Operations,Region North,Returns,IC3,IC3,208,252,STORE-BR-001,SITE-BR-003,BR,Customer,customer
+MOV00000151,187,2018-06-15,Transfer,Procurement,Sales,Contracts,Key Accounts,M2,M2,62,578,HQ-BR-001,STORE-BR-008,BR,Retail,retail_ops
+MOV00000152,205,2018-06-15,Lateral Move,UX,Visual Merchandising,Design System,Merchandising,IC4,IC4,177,493,HQ-BR-001,STORE-BR-018,BR,Retail,retail_ops
+MOV00000153,773,2018-07-15,Transfer,Planning,Digital Marketing,Demand Planning,SEO,IC3,IC3,45,587,DC-BR-006,HQ-BR-001,BR,Digital,digital
+MOV00000154,139,2018-07-15,Lateral Move,Sales,Sales,Key Accounts,Floor Sales,IC2,IC2,162,630,STORE-BR-014,STORE-BR-042,BR,Retail,retail_ops
+MOV00000155,252,2018-07-15,Lateral Move,Customer Operations,Visual Merchandising,Order Support,Merchandising,M1,M1,303,732,SITE-BR-001,STORE-BR-039,BR,Retail,retail_ops
+MOV00000156,399,2018-07-15,Lateral Move,Sales,Sales,Floor Sales,Key Accounts,IC2,IC2,162,630,STORE-BR-044,STORE-BR-024,BR,Retail,retail_ops
+MOV00000157,754,2018-07-15,Lateral Move,Sales,Product,Key Accounts,Product Management,IC1,IC1,128,116,STORE-BR-038,HQ-BR-001,BR,Digital,digital
+MOV00000158,167,2018-08-15,Transfer,Store Operations,Regional Operations,Cashier,Region South,IC2,IC2,691,477,STORE-BR-044,STORE-BR-021,BR,Retail,retail_ops
+MOV00000159,89,2018-08-15,Lateral Move,Finance,Store Operations,Treasury,Cashier,IC3,IC3,218,467,HQ-BR-001,STORE-BR-005,BR,Retail,retail_ops
+MOV00000160,795,2018-08-15,Lateral Move,Regional Operations,Planning,Region Southeast,Demand Planning,IC1,IC1,778,789,STORE-BR-001,DC-BR-005,BR,Supply Chain,supply
+MOV00000161,181,2018-09-15,Promotion,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,M1,M2,14,700,STORE-BR-022,STORE-BR-022,BR,Retail,retail_ops
+MOV00000162,316,2018-09-15,Promotion,Store Operations,Store Operations,Security,Security,IC3,IC4,467,467,STORE-BR-037,STORE-BR-037,BR,Retail,retail_ops
+MOV00000163,212,2018-09-15,Promotion,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,M4,M5,309,62,STORE-BR-001,STORE-BR-001,BR,Retail,retail_ops
+MOV00000164,614,2018-09-15,Promotion,Regional Operations,Regional Operations,Region Southeast,Region Southeast,IC2,IC3,448,406,STORE-BR-011,STORE-BR-011,BR,Retail,retail_ops
+MOV00000165,452,2018-09-15,Promotion,Planning,Planning,Supply Planning,Supply Planning,IC1,IC2,355,672,DC-AR-001,DC-AR-001,AR,Supply Chain,supply
+MOV00000166,482,2018-09-15,Promotion,Product,Product,Product Ops,Product Ops,IC5,M2,310,687,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000167,522,2018-09-15,Promotion,Engineering,Engineering,Platform,Platform,IC2,IC3,283,210,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000168,8,2018-09-15,Promotion,Digital Marketing,Digital Marketing,SEO,SEO,M2,M3,121,833,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000169,210,2018-09-15,Promotion,Engineering,Engineering,Platform,Platform,IC4,M2,416,8,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000170,516,2018-09-15,Promotion,Data,Data,Analytics Engineering,Analytics Engineering,IC3,IC4,618,750,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000171,308,2018-09-15,Promotion,Legal,Legal,Corporate Legal,Corporate Legal,IC3,IC4,406,748,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000172,73,2018-09-15,Promotion,Risk,Risk,Fraud,Fraud,IC2,IC3,261,261,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000173,547,2018-09-15,Promotion,Strategy,Strategy,PMO,PMO,IC1,IC2,494,725,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000174,171,2018-09-15,Promotion,Customer Service,Customer Service,Chat,Chat,IC4,M2,194,673,SITE-BR-002,SITE-BR-002,BR,Customer,customer
+MOV00000175,521,2018-09-15,Promotion,Customer Service,Customer Service,Contact Center,Contact Center,IC1,IC2,461,243,SITE-BR-002,SITE-BR-002,BR,Customer,customer
+MOV00000176,116,2018-09-15,Transfer,Product,Customer Service,Product Management,Escalations,IC2,IC2,404,243,HQ-BR-001,SITE-BR-003,BR,Customer,customer
+MOV00000177,623,2018-09-15,Transfer,Logistics,Visual Merchandising,Reverse Logistics,Merchandising,IC4,IC4,303,868,DC-BR-003,STORE-BR-028,BR,Retail,retail_ops
+MOV00000178,82,2018-09-15,Lateral Move,Procurement,Data & Analytics,Indirect Procurement,Data Governance,IC4,IC4,187,92,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000179,468,2018-09-15,Lateral Move,Store Operations,Planning,Stockroom,Demand Planning,IC1,IC1,77,843,STORE-BR-017,DC-BR-005,BR,Supply Chain,supply
+MOV00000180,101,2018-10-15,Transfer,Customer Operations,Regional Operations,Order Support,Region Southeast,IC1,IC1,288,395,SITE-BR-002,STORE-BR-029,BR,Retail,retail_ops
+MOV00000181,532,2018-10-15,Transfer,Visual Merchandising,Data,Merchandising,Data Engineering,IC1,IC1,436,740,STORE-BR-044,HQ-BR-001,BR,Digital,digital
+MOV00000182,612,2018-10-15,Transfer,Planning,Marketing,Demand Planning,Content,M2,M2,10,14,DC-BR-003,HQ-BR-001,BR,Corporate,corporate
+MOV00000183,659,2018-10-15,Lateral Move,Marketing,Customer Experience,Performance,Voice of Customer,IC2,IC2,636,433,HQ-BR-001,SITE-BR-001,BR,Customer,customer
+MOV00000184,776,2018-10-15,Lateral Move,Sales,Regional Operations,Key Accounts,Region South,IC1,IC1,128,466,STORE-BR-044,STORE-BR-031,BR,Retail,retail_ops
+MOV00000185,861,2018-10-15,Lateral Move,Strategy,Store Operations,M&A,Security,M1,M1,539,503,HQ-BR-001,STORE-BR-004,BR,Retail,retail_ops
+MOV00000186,8,2018-11-15,Transfer,Digital Marketing,Procurement,SEO,Contracts,M3,M3,833,692,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000187,582,2018-11-15,Transfer,Sales,Customer Experience,Floor Sales,CX Design,IC1,IC1,26,620,STORE-BR-010,SITE-BR-003,BR,Customer,customer
+MOV00000188,905,2018-11-15,Transfer,Store Operations,Logistics,Store Management,Last Mile,M1,M1,503,303,STORE-BR-030,DC-BR-006,BR,Supply Chain,supply
+MOV00000189,802,2018-11-15,Lateral Move,Product,Planning,Product Management,Supply Planning,IC3,IC3,404,45,HQ-BR-001,DC-BR-004,BR,Supply Chain,supply
+MOV00000190,126,2018-12-15,Transfer,Logistics,Visual Merchandising,Last Mile,Store Design,IC1,IC1,568,270,DC-BR-001,STORE-BR-019,BR,Retail,retail_ops
+MOV00000191,516,2018-12-15,Transfer,Data,Customer Experience,Analytics Engineering,Voice of Customer,IC4,IC4,750,552,HQ-BR-001,SITE-BR-002,BR,Customer,customer
+MOV00000192,690,2018-12-15,Transfer,Sales,Logistics,Floor Sales,Reverse Logistics,IC2,IC2,162,837,STORE-BR-020,DC-BR-003,BR,Supply Chain,supply
+MOV00000193,212,2018-12-15,Lateral Move,Visual Merchandising,Strategy,Merchandising,M&A,M5,M5,62,62,STORE-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000194,303,2018-12-15,Lateral Move,Logistics,Sales,Reverse Logistics,Key Accounts,M2,M2,10,121,DC-BR-004,STORE-BR-029,BR,Retail,retail_ops
+MOV00000195,776,2018-12-15,Lateral Move,Regional Operations,Data & Analytics,Region South,Business Intelligence,IC1,IC1,466,557,STORE-BR-031,HQ-BR-001,BR,Corporate,corporate
+MOV00000196,786,2019-01-15,Transfer,Procurement,Sales,Sourcing,Floor Sales,IC2,IC2,551,630,DC-BR-006,STORE-BR-042,BR,Retail,retail_ops
+MOV00000197,818,2019-01-15,Transfer,Data & Analytics,Regional Operations,Business Intelligence,Region South,IC1,IC1,735,466,HQ-BR-001,STORE-BR-027,BR,Retail,retail_ops
+MOV00000198,866,2019-01-15,Lateral Move,Customer Experience,Store Operations,CX Design,Store Management,IC2,IC2,674,375,SITE-AR-001,STORE-AR-003,AR,Retail,retail_ops
+MOV00000199,776,2019-02-15,Transfer,Data & Analytics,Visual Merchandising,Business Intelligence,Store Design,IC1,IC1,557,583,HQ-BR-001,STORE-BR-043,BR,Retail,retail_ops
+MOV00000200,942,2019-02-15,Transfer,Visual Merchandising,Engineering,Merchandising,Mobile,IC2,IC2,901,522,STORE-BR-030,HQ-BR-001,BR,Digital,digital
+MOV00000201,966,2019-02-15,Transfer,Risk,Logistics,Fraud,Reverse Logistics,IC4,IC4,261,874,HQ-BR-001,DC-BR-001,BR,Supply Chain,supply
+MOV00000202,703,2019-02-15,Lateral Move,Sales,Store Operations,Key Accounts,Security,IC1,IC1,690,852,STORE-BR-037,STORE-BR-014,BR,Retail,retail_ops
+MOV00000203,833,2019-02-15,Lateral Move,Data & Analytics,Planning,Business Intelligence,Demand Planning,M4,M4,792,212,HQ-BR-001,DC-BR-004,BR,Supply Chain,supply
+MOV00000204,614,2019-03-15,Promotion,Regional Operations,Regional Operations,Region Southeast,Region Southeast,IC3,IC4,406,34,STORE-BR-011,STORE-BR-011,BR,Retail,retail_ops
+MOV00000205,571,2019-03-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC1,IC2,139,630,STORE-BR-007,STORE-BR-007,BR,Retail,retail_ops
+MOV00000206,488,2019-03-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC1,IC2,473,630,STORE-BR-010,STORE-BR-010,BR,Retail,retail_ops
+MOV00000207,229,2019-03-15,Promotion,Regional Operations,Regional Operations,Region Southeast,Region Southeast,IC1,IC2,174,18,STORE-BR-038,STORE-BR-038,BR,Retail,retail_ops
+MOV00000208,47,2019-03-15,Promotion,Procurement,Procurement,Contracts,Contracts,IC3,M1,45,8,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000209,464,2019-03-15,Promotion,Legal,Legal,Compliance,Compliance,IC2,IC3,403,763,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000210,607,2019-03-15,Promotion,Legal,Legal,Corporate Legal,Corporate Legal,IC3,IC4,406,196,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000211,242,2019-03-15,Promotion,Customer Service,Customer Service,Escalations,Escalations,IC2,IC3,171,702,SITE-BR-001,SITE-BR-001,BR,Customer,customer
+MOV00000212,90,2019-03-15,Promotion,Customer Experience,Customer Experience,CX Design,CX Design,IC2,IC3,194,516,SITE-BR-001,SITE-BR-001,BR,Customer,customer
+MOV00000213,754,2019-03-15,Promotion,Product,Product,Product Management,Product Management,IC1,IC2,116,916,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000214,172,2019-03-15,Promotion,Digital Marketing,Digital Marketing,Paid Media,Paid Media,IC2,IC3,420,909,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000215,189,2019-03-15,Transfer,Customer Service,Visual Merchandising,Contact Center,Merchandising,IC2,IC2,171,901,SITE-BR-003,STORE-BR-006,BR,Retail,retail_ops
+MOV00000216,960,2019-03-15,Transfer,Finance,Visual Merchandising,FP&A,Store Design,IC3,IC3,653,205,HQ-BR-001,STORE-BR-035,BR,Retail,retail_ops
+MOV00000217,327,2019-03-15,Lateral Move,People,Legal,HR Business Partner,Corporate Legal,M1,M1,307,748,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000218,984,2019-03-15,Lateral Move,Visual Merchandising,Planning,Merchandising,Supply Planning,IC2,IC2,950,950,STORE-MX-006,DC-MX-001,MX,Supply Chain,supply
+MOV00000219,11,2019-04-15,Transfer,Visual Merchandising,Customer Operations,Store Design,Returns,IC2,IC2,273,842,STORE-BR-029,SITE-BR-001,BR,Customer,customer
+MOV00000220,196,2019-04-15,Transfer,Legal,Customer Operations,Compliance,Order Support,M3,M3,321,933,HQ-BR-001,SITE-BR-001,BR,Customer,customer
+MOV00000221,517,2019-04-15,Transfer,Distribution Centers,Sales,Inbound,Floor Sales,IC3,IC3,162,162,DC-BR-004,STORE-BR-030,BR,Retail,retail_ops
+MOV00000222,139,2019-05-15,Transfer,Sales,Regional Operations,Floor Sales,Region North,IC2,IC2,630,27,STORE-BR-042,STORE-BR-040,BR,Retail,retail_ops
+MOV00000223,281,2019-05-15,Transfer,E-commerce,Store Operations,Catalog,Security,M2,M2,121,708,HQ-BR-001,STORE-BR-044,BR,Retail,retail_ops
+MOV00000224,876,2019-05-15,Transfer,Finance,UX,Controlling,Design System,M4,M4,792,792,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000225,773,2019-05-15,Lateral Move,Digital Marketing,Regional Operations,SEO,Region Southeast,IC3,IC3,587,406,HQ-BR-001,STORE-BR-031,BR,Retail,retail_ops
+MOV00000226,961,2019-05-15,Lateral Move,Visual Merchandising,Store Operations,Store Design,Security,IC3,IC3,205,316,STORE-BR-034,STORE-BR-014,BR,Retail,retail_ops
+MOV00000227,401,2019-06-15,Transfer,Planning,Sales,Supply Planning,Floor Sales,IC2,IC2,541,379,DC-AR-001,STORE-AR-005,AR,Retail,retail_ops
+MOV00000228,850,2019-06-15,Transfer,Sales,Store Operations,Floor Sales,Stockroom,IC1,IC1,128,1002,STORE-BR-037,STORE-BR-037,BR,Retail,retail_ops
+MOV00000229,592,2019-07-15,Transfer,Customer Service,Customer Service,Chat,Contact Center,IC2,IC2,243,242,SITE-BR-001,SITE-BR-002,BR,Customer,customer
+MOV00000230,335,2019-07-15,Lateral Move,Planning,Procurement,Supply Planning,Supplier Management,M1,M1,246,10,DC-BR-003,DC-BR-001,BR,Supply Chain,supply
+MOV00000231,218,2019-08-15,Transfer,Strategy,E-commerce,PMO,Catalog,IC4,IC4,193,851,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000232,557,2019-08-15,Transfer,Data & Analytics,Customer Experience,Data Governance,CX Design,IC2,IC2,227,90,HQ-BR-001,SITE-BR-002,BR,Customer,customer
+MOV00000233,751,2019-08-15,Transfer,Logistics,Store Operations,Transportation,Stockroom,IC2,IC2,623,950,DC-BR-001,STORE-MX-012,MX,Retail,retail_ops
+MOV00000234,406,2019-09-15,Promotion,Regional Operations,Regional Operations,Region Southeast,Region Southeast,IC4,IC5,34,34,STORE-BR-026,STORE-BR-026,BR,Retail,retail_ops
+MOV00000235,27,2019-09-15,Promotion,Regional Operations,Regional Operations,Region South,Region South,IC3,IC4,406,406,STORE-BR-027,STORE-BR-027,BR,Retail,retail_ops
+MOV00000236,331,2019-09-15,Promotion,Procurement,Procurement,Sourcing,Sourcing,IC1,IC2,302,319,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000237,166,2019-09-15,Promotion,Distribution Centers,Distribution Centers,Inventory,Inventory,IC2,IC3,517,741,DC-BR-005,DC-BR-005,BR,Supply Chain,supply
+MOV00000238,330,2019-09-15,Promotion,Logistics,Logistics,Last Mile,Last Mile,IC1,IC2,277,1001,DC-BR-004,DC-BR-004,BR,Supply Chain,supply
+MOV00000239,148,2019-09-15,Promotion,Planning,Planning,Supply Planning,Supply Planning,IC1,IC2,9,912,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000240,653,2019-09-15,Promotion,Finance,Finance,Accounting,Accounting,IC4,IC5,286,940,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000241,684,2019-09-15,Promotion,Legal,Legal,Labor Legal,Labor Legal,IC4,M2,307,748,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000242,403,2019-09-15,Promotion,Legal,Legal,Corporate Legal,Corporate Legal,IC3,IC4,196,327,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000243,794,2019-09-15,Promotion,Risk,Risk,Internal Audit,Internal Audit,IC2,IC3,261,261,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000244,195,2019-09-15,Promotion,Procurement,Procurement,Indirect Procurement,Indirect Procurement,IC1,IC2,47,953,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000245,592,2019-09-15,Promotion,Customer Service,Customer Service,Contact Center,Contact Center,IC2,IC3,242,702,SITE-BR-002,SITE-BR-002,BR,Customer,customer
+MOV00000246,93,2019-09-15,Promotion,Customer Service,Customer Service,Escalations,Escalations,IC1,IC2,189,242,SITE-BR-003,SITE-BR-003,BR,Customer,customer
+MOV00000247,448,2019-09-15,Promotion,Customer Operations,Customer Operations,Returns,Returns,IC3,IC4,252,70,SITE-BR-003,SITE-BR-003,BR,Customer,customer
+MOV00000248,210,2019-09-15,Promotion,Engineering,Engineering,Platform,Platform,M2,M3,8,873,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000249,760,2019-09-15,Promotion,Digital Marketing,Digital Marketing,Lifecycle,Lifecycle,IC2,IC3,707,909,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000250,570,2019-09-15,Promotion,Product,Product,Product Ops,Product Ops,IC4,IC5,482,856,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000251,218,2019-09-15,Promotion,E-commerce,E-commerce,Catalog,Catalog,IC4,IC5,851,873,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000252,416,2019-09-15,Transfer,Engineering,Data & Analytics,Frontend,Business Intelligence,IC5,IC5,70,904,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000253,788,2019-09-15,Transfer,Risk,Customer Service,Risk Management,Escalations,IC2,IC2,89,1079,HQ-MX-001,SITE-MX-001,MX,Customer,customer
+MOV00000254,1062,2019-09-15,Transfer,Engineering,Logistics,Backend,Reverse Logistics,IC4,IC4,416,874,HQ-BR-001,DC-BR-003,BR,Supply Chain,supply
+MOV00000255,1113,2019-09-15,Transfer,Logistics,Visual Merchandising,Transportation,Store Design,M1,M1,539,782,DC-CL-001,STORE-CL-006,CL,Retail,retail_ops
+MOV00000256,50,2019-09-15,Lateral Move,Data & Analytics,Visual Merchandising,Business Intelligence,Merchandising,IC1,IC1,384,1109,HQ-BR-001,STORE-BR-006,BR,Retail,retail_ops
+MOV00000257,55,2019-09-15,Lateral Move,Legal,Strategy,Corporate Legal,Corporate Strategy,IC2,IC2,119,494,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000258,771,2019-10-15,Transfer,Distribution Centers,Visual Merchandising,Inbound,Merchandising,M1,M1,648,918,DC-BR-006,STORE-BR-044,BR,Retail,retail_ops
+MOV00000259,1024,2019-10-15,Transfer,Visual Merchandising,Regional Operations,Store Design,Region North,IC1,IC1,1013,1142,STORE-BR-041,STORE-BR-031,BR,Retail,retail_ops
+MOV00000260,84,2019-10-15,Lateral Move,Procurement,Procurement,Supplier Management,Indirect Procurement,IC1,IC1,780,195,DC-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000261,1001,2019-10-15,Lateral Move,Logistics,Marketing,Transportation,Content,IC3,IC3,966,1072,DC-BR-003,HQ-BR-001,BR,Corporate,corporate
+MOV00000262,20,2019-11-15,Transfer,Distribution Centers,Customer Experience,Outbound,Voice of Customer,IC1,IC1,48,652,DC-BR-001,SITE-BR-003,BR,Customer,customer
+MOV00000263,102,2019-11-15,Transfer,Customer Experience,Regional Operations,CX Design,Region South,IC1,IC1,90,1141,SITE-BR-004,STORE-MX-001,MX,Retail,retail_ops
+MOV00000264,765,2019-11-15,Transfer,Risk,Customer Operations,Fraud,Order Support,IC2,IC2,261,1174,HQ-BR-001,SITE-BR-002,BR,Customer,customer
+MOV00000265,783,2019-11-15,Transfer,Data & Analytics,Legal,Data Governance,Labor Legal,IC3,IC3,92,970,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000266,868,2019-11-15,Transfer,Visual Merchandising,Finance,Store Design,Treasury,IC5,IC5,493,940,STORE-BR-021,HQ-BR-001,BR,Corporate,corporate
+MOV00000267,1088,2019-11-15,Transfer,Store Operations,Store Operations,Cashier,Security,M1,M1,1006,503,STORE-BR-032,STORE-BR-037,BR,Retail,retail_ops
+MOV00000268,310,2019-11-15,Lateral Move,Customer Service,Store Operations,Contact Center,Security,M1,M1,70,1006,SITE-BR-004,STORE-BR-038,BR,Retail,retail_ops
+MOV00000269,1072,2019-11-15,Lateral Move,Marketing,Visual Merchandising,Performance,Store Design,IC4,IC4,537,771,HQ-BR-001,STORE-BR-012,BR,Retail,retail_ops
+MOV00000270,1085,2019-11-15,Demotion,Sales,Sales,Key Accounts,Key Accounts,M1,IC5,246,1113,STORE-CL-001,STORE-CL-001,CL,Retail,retail_ops
+MOV00000271,128,2019-12-15,Transfer,Sales,Marketing,Key Accounts,Content,IC2,IC2,162,1231,STORE-BR-022,HQ-BR-001,BR,Corporate,corporate
+MOV00000272,1030,2019-12-15,Transfer,Customer Experience,Procurement,Voice of Customer,Sourcing,IC1,IC1,984,984,SITE-MX-001,DC-MX-002,MX,Supply Chain,supply
+MOV00000273,1218,2019-12-15,Transfer,Customer Experience,Distribution Centers,Voice of Customer,Inventory,IC1,IC1,541,541,SITE-CL-001,DC-CL-001,CL,Supply Chain,supply
+MOV00000274,73,2019-12-15,Lateral Move,Risk,Strategy,Fraud,Corporate Strategy,IC3,IC3,261,948,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000275,666,2020-01-15,Transfer,Visual Merchandising,Store Operations,Store Design,Store Management,IC1,IC1,365,866,STORE-AR-010,STORE-AR-005,AR,Retail,retail_ops
+MOV00000276,977,2020-01-15,Transfer,Product,Store Operations,Product Management,Security,IC4,IC4,856,626,HQ-BR-001,STORE-AR-002,AR,Retail,retail_ops
+MOV00000277,1011,2020-01-15,Transfer,E-commerce,Regional Operations,Storefront,Region South,IC4,IC4,851,406,HQ-BR-001,STORE-BR-030,BR,Retail,retail_ops
+MOV00000278,1255,2020-01-15,Transfer,Customer Service,Visual Merchandising,Contact Center,Merchandising,IC1,IC1,1240,1251,SITE-BR-004,STORE-BR-034,BR,Retail,retail_ops
+MOV00000279,1011,2020-02-15,Transfer,Regional Operations,Distribution Centers,Region South,Outbound,IC4,IC4,406,555,STORE-BR-030,DC-BR-001,BR,Supply Chain,supply
+MOV00000280,1234,2020-02-15,Transfer,Visual Merchandising,E-commerce,Store Design,Checkout,IC1,IC1,1013,245,STORE-BR-022,HQ-BR-001,BR,Digital,digital
+MOV00000281,375,2020-02-15,Lateral Move,Store Operations,Sales,Security,Floor Sales,IC3,IC3,416,341,STORE-AR-009,STORE-AR-002,AR,Retail,retail_ops
+MOV00000282,160,2020-03-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC2,IC3,162,1018,STORE-BR-016,STORE-BR-016,BR,Retail,retail_ops
+MOV00000283,477,2020-03-15,Promotion,Regional Operations,Regional Operations,Region South,Region South,IC3,M1,406,782,STORE-BR-041,STORE-BR-041,BR,Retail,retail_ops
+MOV00000284,623,2020-03-15,Promotion,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,IC4,M2,868,700,STORE-BR-028,STORE-BR-028,BR,Retail,retail_ops
+MOV00000285,882,2020-03-15,Promotion,Sales,Sales,Floor Sales,Floor Sales,IC1,IC2,21,1250,STORE-BR-043,STORE-BR-043,BR,Retail,retail_ops
+MOV00000286,971,2020-03-15,Promotion,Sales,Sales,Floor Sales,Floor Sales,IC1,IC2,541,1085,STORE-CL-006,STORE-CL-006,CL,Retail,retail_ops
+MOV00000287,960,2020-03-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC3,M1,205,181,STORE-BR-035,STORE-BR-035,BR,Retail,retail_ops
+MOV00000288,282,2020-03-15,Promotion,Regional Operations,Regional Operations,Region North,Region North,IC2,IC3,34,27,STORE-BR-001,STORE-BR-001,BR,Retail,retail_ops
+MOV00000289,782,2020-03-15,Promotion,Regional Operations,Regional Operations,Region South,Region South,M2,M3,700,700,STORE-BR-023,STORE-BR-023,BR,Retail,retail_ops
+MOV00000290,571,2020-03-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC2,IC3,517,1018,STORE-BR-007,STORE-BR-007,BR,Retail,retail_ops
+MOV00000291,801,2020-03-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC1,IC2,696,1250,STORE-BR-020,STORE-BR-020,BR,Retail,retail_ops
+MOV00000292,85,2020-03-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC1,IC2,391,160,STORE-BR-038,STORE-BR-038,BR,Retail,retail_ops
+MOV00000293,965,2020-03-15,Promotion,Risk,Risk,Fraud,Fraud,IC1,IC2,117,794,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000294,868,2020-03-15,Promotion,Finance,Finance,Treasury,Treasury,IC5,M3,940,933,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000295,906,2020-03-15,Promotion,Finance,Finance,Controlling,Controlling,IC3,M1,653,945,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000296,55,2020-03-15,Promotion,Strategy,Strategy,Corporate Strategy,Corporate Strategy,IC2,IC3,494,444,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000297,447,2020-03-15,Promotion,People,People,Learning & Development,Learning & Development,IC2,IC3,183,1180,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000298,75,2020-03-15,Promotion,Legal,Legal,Compliance,Compliance,IC1,IC2,155,835,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000299,986,2020-03-15,Promotion,Data & Analytics,Data & Analytics,Business Intelligence,Business Intelligence,IC1,IC2,735,1184,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000300,83,2020-03-15,Promotion,Planning,Planning,Supply Planning,Supply Planning,IC1,IC2,556,9,DC-BR-001,DC-BR-001,BR,Supply Chain,supply
+MOV00000301,9,2020-03-15,Promotion,Planning,Planning,Demand Planning,Demand Planning,IC3,M1,335,246,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000302,976,2020-03-15,Promotion,Customer Experience,Customer Experience,Voice of Customer,Voice of Customer,IC1,IC2,557,1245,SITE-BR-002,SITE-BR-002,BR,Customer,customer
+MOV00000303,557,2020-03-15,Promotion,Customer Experience,Customer Experience,CX Design,CX Design,IC2,IC3,90,516,SITE-BR-002,SITE-BR-002,BR,Customer,customer
+MOV00000304,592,2020-03-15,Promotion,Customer Service,Customer Service,Contact Center,Contact Center,IC3,M1,702,70,SITE-BR-002,SITE-BR-002,BR,Customer,customer
+MOV00000305,532,2020-03-15,Promotion,Data,Data,Data Engineering,Data Engineering,IC1,IC2,740,1183,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000306,420,2020-03-15,Promotion,Digital Marketing,Digital Marketing,Paid Media,Paid Media,IC3,IC4,8,587,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000307,118,2020-03-15,Promotion,Product,Product,Product Management,Product Management,IC2,IC3,404,1010,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000308,877,2020-03-15,Promotion,E-commerce,E-commerce,Catalog,Catalog,IC3,IC4,730,851,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000309,150,2020-03-15,Transfer,Customer Service,Sales,Escalations,Key Accounts,IC1,IC1,461,85,SITE-BR-004,STORE-BR-021,BR,Retail,retail_ops
+MOV00000310,433,2020-03-15,Transfer,Customer Experience,Data,CX Design,Data Engineering,M1,M1,303,1163,SITE-BR-002,HQ-BR-001,BR,Digital,digital
+MOV00000311,943,2020-03-15,Transfer,Planning,People,Demand Planning,People Analytics,IC1,IC1,505,113,DC-BR-002,HQ-BR-001,BR,Corporate,corporate
+MOV00000312,1112,2020-03-15,Transfer,Customer Operations,Customer Experience,Returns,Voice of Customer,IC2,IC2,448,1245,SITE-BR-002,SITE-BR-001,BR,Customer,customer
+MOV00000313,657,2020-04-15,Transfer,Engineering,Regional Operations,Frontend,Region South,IC2,IC2,283,518,HQ-BR-001,STORE-BR-013,BR,Retail,retail_ops
+MOV00000314,994,2020-04-15,Transfer,Visual Merchandising,Data,Merchandising,Data Engineering,IC2,IC2,961,1254,STORE-BR-041,HQ-BR-001,BR,Digital,digital
+MOV00000315,1002,2020-04-15,Lateral Move,Store Operations,Marketing,Security,CRM,IC2,IC2,961,1231,STORE-BR-021,HQ-BR-001,BR,Corporate,corporate
+MOV00000316,948,2020-05-15,Transfer,Strategy,Procurement,Corporate Strategy,Contracts,IC4,IC4,193,29,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000317,1026,2020-05-15,Transfer,People,Product,Learning & Development,Product Ops,IC3,IC3,183,1274,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000318,1136,2020-05-15,Transfer,Sales,Planning,Floor Sales,Demand Planning,IC1,IC1,820,373,STORE-AR-005,DC-AR-001,AR,Supply Chain,supply
+MOV00000319,70,2020-05-15,Lateral Move,Customer Operations,Store Operations,Order Support,Store Management,M2,M2,872,782,SITE-BR-003,STORE-BR-022,BR,Retail,retail_ops
+MOV00000320,1229,2020-05-15,Lateral Move,Planning,Visual Merchandising,Demand Planning,Store Design,IC2,IC2,802,273,DC-BR-006,STORE-BR-035,BR,Retail,retail_ops
+MOV00000321,208,2020-06-15,Transfer,Regional Operations,Risk,Region North,Fraud,M2,M2,212,711,STORE-BR-031,HQ-BR-001,BR,Corporate,corporate
+MOV00000322,274,2020-06-15,Transfer,Regional Operations,Finance,Region South,FP&A,IC1,IC1,1009,900,STORE-BR-016,HQ-BR-001,BR,Corporate,corporate
+MOV00000323,786,2020-06-15,Transfer,Sales,Customer Operations,Floor Sales,Order Support,IC2,IC2,517,959,STORE-BR-042,SITE-CO-001,CO,Customer,customer
+MOV00000324,1257,2020-06-15,Transfer,Store Operations,Logistics,Cashier,Last Mile,IC2,IC2,961,1148,STORE-BR-016,DC-BR-006,BR,Supply Chain,supply
+MOV00000325,1039,2020-06-15,Lateral Move,Data & Analytics,Strategy,Data Governance,PMO,IC3,IC3,82,444,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000326,113,2020-07-15,Transfer,People,Customer Experience,HR Business Partner,Voice of Customer,IC2,IC2,183,557,HQ-BR-001,SITE-BR-001,BR,Customer,customer
+MOV00000327,179,2020-07-15,Transfer,Planning,Finance,Demand Planning,Accounting,IC1,IC1,9,1016,DC-BR-003,HQ-BR-001,BR,Corporate,corporate
+MOV00000328,915,2020-07-15,Transfer,Store Operations,Distribution Centers,Stockroom,Inventory,IC2,IC2,89,814,STORE-BR-020,DC-BR-001,BR,Supply Chain,supply
+MOV00000329,138,2020-07-15,Lateral Move,Procurement,Sales,Contracts,Floor Sales,IC3,IC3,45,1018,HQ-BR-001,STORE-BR-023,BR,Retail,retail_ops
+MOV00000330,606,2020-07-15,Lateral Move,Regional Operations,Store Operations,Region Southeast,Store Management,IC1,IC1,395,66,STORE-BR-017,STORE-BR-019,BR,Retail,retail_ops
+MOV00000331,1071,2020-07-15,Demotion,Marketing,Marketing,Content,Content,IC2,IC1,1027,1133,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000332,1139,2020-07-15,Demotion,Distribution Centers,Distribution Centers,Outbound,Outbound,IC3,IC2,1068,357,DC-AR-001,DC-AR-001,AR,Supply Chain,supply
+MOV00000333,750,2020-08-15,Transfer,Data,Customer Service,Analytics Engineering,Chat,M1,M1,8,196,HQ-BR-001,SITE-BR-002,BR,Customer,customer
+MOV00000334,796,2020-08-15,Transfer,Visual Merchandising,Customer Experience,Store Design,CX Design,IC1,IC1,238,659,STORE-BR-017,SITE-BR-004,BR,Customer,customer
+MOV00000335,872,2020-08-15,Transfer,Engineering,People,Mobile,Compensation & Benefits,M3,M3,833,933,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000336,900,2020-08-15,Transfer,Finance,Planning,Treasury,Demand Planning,IC2,IC2,576,305,HQ-BR-001,DC-BR-006,BR,Supply Chain,supply
+MOV00000337,264,2020-08-15,Lateral Move,Visual Merchandising,Customer Experience,Merchandising,CX Design,M2,M2,700,196,STORE-BR-030,SITE-BR-004,BR,Customer,customer
+MOV00000338,849,2020-08-15,Lateral Move,Legal,Logistics,Compliance,Transportation,IC1,IC1,55,931,HQ-BR-001,DC-BR-002,BR,Supply Chain,supply
+MOV00000339,1263,2020-08-15,Lateral Move,Sales,Sales,Key Accounts,Floor Sales,IC1,IC1,820,820,STORE-AR-009,STORE-AR-005,AR,Retail,retail_ops
+MOV00000340,223,2020-09-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC2,IC3,294,205,STORE-BR-026,STORE-BR-026,BR,Retail,retail_ops
+MOV00000341,998,2020-09-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC1,IC2,898,379,STORE-AR-006,STORE-AR-006,AR,Retail,retail_ops
+MOV00000342,924,2020-09-15,Promotion,Store Operations,Store Operations,Cashier,Cashier,IC1,IC2,915,89,STORE-BR-011,STORE-BR-011,BR,Retail,retail_ops
+MOV00000343,503,2020-09-15,Promotion,Store Operations,Store Operations,Stockroom,Stockroom,M2,M3,212,700,STORE-BR-022,STORE-BR-022,BR,Retail,retail_ops
+MOV00000344,282,2020-09-15,Promotion,Regional Operations,Regional Operations,Region North,Region North,IC3,M1,27,1173,STORE-BR-001,STORE-BR-001,BR,Retail,retail_ops
+MOV00000345,945,2020-09-15,Promotion,Finance,Finance,Treasury,Treasury,M2,M3,876,1333,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000346,254,2020-09-15,Promotion,Finance,Finance,Controlling,Controlling,IC3,IC4,60,1122,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000347,735,2020-09-15,Promotion,Data & Analytics,Data & Analytics,Business Intelligence,Business Intelligence,IC2,IC3,227,82,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000348,335,2020-09-15,Promotion,Procurement,Procurement,Supplier Management,Supplier Management,M1,M2,10,10,DC-BR-001,DC-BR-001,BR,Supply Chain,supply
+MOV00000349,1068,2020-09-15,Promotion,Procurement,Procurement,Sourcing,Sourcing,IC4,M2,626,899,DC-AR-001,DC-AR-001,AR,Supply Chain,supply
+MOV00000350,48,2020-09-15,Promotion,Distribution Centers,Distribution Centers,Inventory,Inventory,IC3,M1,297,648,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000351,744,2020-09-15,Promotion,Planning,Planning,Demand Planning,Demand Planning,IC5,M3,335,833,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000352,788,2020-09-15,Promotion,Customer Service,Customer Service,Escalations,Escalations,IC2,IC3,1079,183,SITE-MX-001,SITE-MX-001,MX,Customer,customer
+MOV00000353,839,2020-09-15,Promotion,Customer Operations,Customer Operations,Order Support,Order Support,IC1,IC2,541,541,SITE-CL-001,SITE-CL-001,CL,Customer,customer
+MOV00000354,342,2020-09-15,Promotion,Customer Operations,Customer Operations,Order Support,Order Support,IC1,IC2,288,946,SITE-BR-004,SITE-BR-004,BR,Customer,customer
+MOV00000355,420,2020-09-15,Promotion,Digital Marketing,Digital Marketing,Paid Media,Paid Media,IC4,M2,587,210,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000356,118,2020-09-15,Promotion,Product,Product,Product Management,Product Management,IC3,IC4,1010,570,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000357,730,2020-09-15,Promotion,E-commerce,E-commerce,Catalog,Catalog,IC4,IC5,281,873,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000358,8,2020-09-15,Transfer,Procurement,Store Operations,Contracts,Security,M3,M3,692,700,HQ-BR-001,STORE-BR-040,BR,Retail,retail_ops
+MOV00000359,1069,2020-09-15,Transfer,Customer Service,Customer Operations,Chat,Order Support,IC1,IC1,951,342,SITE-BR-004,SITE-BR-003,BR,Customer,customer
+MOV00000360,1179,2020-09-15,Lateral Move,Visual Merchandising,Customer Operations,Merchandising,Order Support,IC1,IC1,1170,342,STORE-BR-025,SITE-BR-001,BR,Customer,customer
+MOV00000361,1314,2020-09-15,Lateral Move,Marketing,Visual Merchandising,Content,Merchandising,IC4,IC4,343,626,HQ-AR-001,STORE-AR-002,AR,Retail,retail_ops
+MOV00000362,31,2020-10-15,Transfer,Regional Operations,Regional Operations,Region Southeast,Region Southeast,IC2,IC2,34,1049,STORE-BR-016,STORE-BR-016,BR,Retail,retail_ops
+MOV00000363,395,2020-10-15,Transfer,Regional Operations,Store Operations,Region South,Stockroom,IC2,IC2,34,961,STORE-BR-035,STORE-BR-038,BR,Retail,retail_ops
+MOV00000364,699,2020-10-15,Transfer,UX,Legal,Design System,Labor Legal,M1,M1,876,1262,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000365,1077,2020-10-15,Transfer,Visual Merchandising,Visual Merchandising,Merchandising,Store Design,IC1,IC1,1229,1319,STORE-BR-017,STORE-BR-013,BR,Retail,retail_ops
+MOV00000366,530,2020-10-15,Lateral Move,Customer Service,Planning,Escalations,Demand Planning,IC2,IC2,352,674,SITE-AR-001,DC-AR-001,AR,Supply Chain,supply
+MOV00000367,18,2020-11-15,Transfer,Regional Operations,Store Operations,Region South,Cashier,IC3,IC3,406,1152,STORE-BR-029,STORE-BR-038,BR,Retail,retail_ops
+MOV00000368,305,2020-11-15,Transfer,Planning,Logistics,Supply Planning,Reverse Logistics,IC3,IC3,335,837,DC-BR-003,DC-BR-005,BR,Supply Chain,supply
+MOV00000369,346,2020-11-15,Transfer,Sales,Sales,Floor Sales,Floor Sales,IC1,IC1,379,998,STORE-AR-004,STORE-AR-001,AR,Retail,retail_ops
+MOV00000370,440,2020-11-15,Transfer,Marketing,Distribution Centers,CRM,Outbound,M2,M2,14,744,HQ-BR-001,DC-BR-002,BR,Supply Chain,supply
+MOV00000371,698,2020-11-15,Transfer,Logistics,Sales,Last Mile,Floor Sales,IC1,IC1,277,1318,DC-BR-004,STORE-BR-001,BR,Retail,retail_ops
+MOV00000372,730,2020-11-15,Transfer,E-commerce,Sales,Catalog,Key Accounts,IC5,IC5,873,859,HQ-BR-001,STORE-BR-041,BR,Retail,retail_ops
+MOV00000373,900,2020-11-15,Transfer,Planning,Finance,Demand Planning,FP&A,IC2,IC2,305,576,DC-BR-006,HQ-BR-001,BR,Corporate,corporate
+MOV00000374,652,2020-11-15,Lateral Move,Customer Experience,Finance,Voice of Customer,Controlling,IC2,IC2,552,576,SITE-BR-003,HQ-BR-001,BR,Corporate,corporate
+MOV00000375,886,2020-11-15,Lateral Move,Store Operations,Data & Analytics,Cashier,Business Intelligence,IC1,IC1,925,986,STORE-BR-033,HQ-BR-001,BR,Corporate,corporate
+MOV00000376,1086,2020-11-15,Lateral Move,Customer Operations,Sales,Order Support,Floor Sales,IC1,IC1,1050,1323,SITE-BR-003,STORE-BR-023,BR,Retail,retail_ops
+MOV00000377,1392,2020-11-15,Lateral Move,Regional Operations,Distribution Centers,Region North,Inventory,IC1,IC1,229,1222,STORE-BR-011,DC-BR-003,BR,Supply Chain,supply
+MOV00000378,530,2020-11-15,Demotion,Planning,Planning,Demand Planning,Demand Planning,IC2,IC1,674,355,DC-AR-001,DC-AR-001,AR,Supply Chain,supply
+MOV00000379,118,2020-12-15,Transfer,Product,Logistics,Product Management,Reverse Logistics,IC4,IC4,570,874,HQ-BR-001,DC-BR-001,BR,Supply Chain,supply
+MOV00000380,776,2020-12-15,Transfer,Visual Merchandising,Regional Operations,Store Design,Region South,IC1,IC1,1170,1406,STORE-BR-043,STORE-BR-008,BR,Retail,retail_ops
+MOV00000381,1215,2020-12-15,Transfer,Finance,Procurement,Controlling,Sourcing,IC4,IC4,1122,863,HQ-BR-001,DC-BR-006,BR,Supply Chain,supply
+MOV00000382,273,2021-01-15,Transfer,Visual Merchandising,Regional Operations,Merchandising,Region North,IC3,IC3,493,1390,STORE-BR-001,STORE-BR-017,BR,Retail,retail_ops
+MOV00000383,1352,2021-01-15,Lateral Move,Customer Operations,Customer Service,Order Support,Contact Center,IC4,IC4,899,1407,SITE-AR-001,SITE-AR-001,AR,Customer,customer
+MOV00000384,20,2021-02-15,Transfer,Customer Experience,Marketing,Voice of Customer,Performance,IC1,IC1,652,128,SITE-BR-003,HQ-BR-001,BR,Corporate,corporate
+MOV00000385,921,2021-02-15,Lateral Move,Data & Analytics,Procurement,Data Governance,Contracts,IC1,IC1,384,175,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000386,1257,2021-02-15,Lateral Move,Logistics,Customer Operations,Last Mile,Order Support,IC2,IC2,1148,842,DC-BR-006,SITE-BR-004,BR,Customer,customer
+MOV00000387,1285,2021-02-15,Lateral Move,Visual Merchandising,Regional Operations,Merchandising,Region Southeast,IC1,IC1,751,1141,STORE-MX-004,STORE-MX-009,MX,Retail,retail_ops
+MOV00000388,932,2021-03-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC1,IC2,541,1113,STORE-CL-006,STORE-CL-006,CL,Retail,retail_ops
+MOV00000389,850,2021-03-15,Promotion,Store Operations,Store Operations,Stockroom,Stockroom,IC1,IC2,1335,1377,STORE-BR-037,STORE-BR-037,BR,Retail,retail_ops
+MOV00000390,626,2021-03-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,M1,M2,438,899,STORE-AR-007,STORE-AR-007,AR,Retail,retail_ops
+MOV00000391,573,2021-03-15,Promotion,Regional Operations,Regional Operations,Region Southeast,Region Southeast,IC1,IC2,12,12,STORE-BR-023,STORE-BR-023,BR,Retail,retail_ops
+MOV00000392,852,2021-03-15,Promotion,Store Operations,Store Operations,Security,Security,IC2,IC3,691,1152,STORE-BR-029,STORE-BR-029,BR,Retail,retail_ops
+MOV00000393,572,2021-03-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC1,IC2,365,365,STORE-AR-003,STORE-AR-003,AR,Retail,retail_ops
+MOV00000394,101,2021-03-15,Promotion,Regional Operations,Regional Operations,Region Southeast,Region Southeast,IC1,IC2,395,12,STORE-BR-029,STORE-BR-029,BR,Retail,retail_ops
+MOV00000395,1079,2021-03-15,Promotion,Logistics,Logistics,Reverse Logistics,Reverse Logistics,IC3,M1,218,438,DC-MX-001,DC-MX-001,MX,Supply Chain,supply
+MOV00000396,551,2021-03-15,Promotion,Procurement,Procurement,Sourcing,Sourcing,IC3,M1,297,335,DC-BR-006,DC-BR-006,BR,Supply Chain,supply
+MOV00000397,69,2021-03-15,Promotion,Logistics,Logistics,Transportation,Transportation,IC2,IC3,623,966,DC-BR-006,DC-BR-006,BR,Supply Chain,supply
+MOV00000398,739,2021-03-15,Promotion,Distribution Centers,Distribution Centers,Inventory,Inventory,IC1,IC2,109,665,DC-BR-005,DC-BR-005,BR,Supply Chain,supply
+MOV00000399,1021,2021-03-15,Promotion,Legal,Legal,Corporate Legal,Corporate Legal,IC3,IC4,607,699,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000400,1164,2021-03-15,Promotion,Legal,Legal,Corporate Legal,Corporate Legal,IC2,IC3,441,607,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000401,308,2021-03-15,Promotion,Legal,Legal,Corporate Legal,Corporate Legal,IC4,M1,748,684,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000402,1231,2021-03-15,Promotion,Marketing,Marketing,Brand,Brand,IC3,IC4,60,1326,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000403,1199,2021-03-15,Promotion,Risk,Risk,Internal Audit,Internal Audit,IC3,M1,1176,208,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000404,447,2021-03-15,Promotion,People,People,Learning & Development,Learning & Development,IC3,IC4,1180,928,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000405,155,2021-03-15,Promotion,Legal,Legal,Corporate Legal,Corporate Legal,IC2,IC3,119,1065,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000406,274,2021-03-15,Promotion,Finance,Finance,FP&A,FP&A,IC1,IC2,900,576,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000407,909,2021-03-15,Promotion,Digital Marketing,Digital Marketing,Paid Media,Paid Media,IC4,IC5,587,1471,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000408,988,2021-03-15,Promotion,UX,UX,Product Design,Product Design,IC2,IC3,675,177,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000409,238,2021-03-15,Transfer,Visual Merchandising,Regional Operations,Store Design,Region Southeast,IC2,IC2,273,518,STORE-BR-008,STORE-BR-024,BR,Retail,retail_ops
+MOV00000410,1091,2021-03-15,Transfer,Store Operations,Planning,Security,Demand Planning,IC1,IC1,852,505,STORE-BR-034,DC-BR-005,BR,Supply Chain,supply
+MOV00000411,1101,2021-03-15,Transfer,Regional Operations,Logistics,Region South,Reverse Logistics,IC1,IC1,282,276,STORE-BR-018,DC-BR-005,BR,Supply Chain,supply
+MOV00000412,206,2021-03-15,Lateral Move,Logistics,Sales,Reverse Logistics,Floor Sales,IC1,IC1,277,1151,DC-BR-002,STORE-BR-025,BR,Retail,retail_ops
+MOV00000413,274,2021-03-15,Lateral Move,Finance,Visual Merchandising,FP&A,Merchandising,IC2,IC2,576,223,HQ-BR-001,STORE-BR-036,BR,Retail,retail_ops
+MOV00000414,837,2021-04-15,Transfer,Logistics,Customer Experience,Last Mile,Voice of Customer,IC4,IC4,874,552,DC-BR-003,SITE-BR-002,BR,Customer,customer
+MOV00000415,1012,2021-04-15,Transfer,Customer Experience,Regional Operations,CX Design,Region North,IC1,IC1,557,573,SITE-BR-004,STORE-BR-001,BR,Retail,retail_ops
+MOV00000416,1176,2021-04-15,Transfer,Risk,Finance,Fraud,Accounting,IC5,IC5,261,906,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000417,921,2021-04-15,Lateral Move,Procurement,Sales,Contracts,Floor Sales,IC1,IC1,175,1235,HQ-BR-001,STORE-BR-007,BR,Retail,retail_ops
+MOV00000418,1027,2021-04-15,Lateral Move,Marketing,Store Operations,CRM,Store Management,IC3,IC3,636,1152,HQ-BR-001,STORE-BR-005,BR,Retail,retail_ops
+MOV00000419,1369,2021-04-15,Lateral Move,Logistics,Regional Operations,Last Mile,Region North,IC1,IC1,690,1472,DC-BR-004,STORE-BR-040,BR,Retail,retail_ops
+MOV00000420,1374,2021-04-15,Lateral Move,Logistics,Visual Merchandising,Reverse Logistics,Store Design,IC1,IC1,368,572,DC-AR-001,STORE-AR-001,AR,Retail,retail_ops
+MOV00000421,245,2021-05-15,Transfer,E-commerce,Visual Merchandising,Catalog,Store Design,IC2,IC2,787,365,HQ-BR-001,STORE-AR-006,AR,Retail,retail_ops
+MOV00000422,737,2021-05-15,Transfer,Customer Operations,Procurement,Returns,Sourcing,IC1,IC1,1257,1500,SITE-BR-001,DC-BR-004,BR,Supply Chain,supply
+MOV00000423,582,2021-05-15,Lateral Move,Customer Experience,Procurement,CX Design,Sourcing,IC1,IC1,620,1516,SITE-BR-003,DC-BR-006,BR,Supply Chain,supply
+MOV00000424,1512,2021-05-15,Lateral Move,Procurement,Store Operations,Sourcing,Security,IC3,IC3,1382,1463,DC-MX-002,STORE-MX-009,MX,Retail,retail_ops
+MOV00000425,312,2021-06-15,Transfer,Sales,Customer Operations,Key Accounts,Order Support,IC1,IC1,926,1257,STORE-BR-006,SITE-BR-004,BR,Customer,customer
+MOV00000426,386,2021-06-15,Transfer,Visual Merchandising,Customer Service,Store Design,Contact Center,IC1,IC1,11,1305,STORE-BR-013,SITE-BR-001,BR,Customer,customer
+MOV00000427,809,2021-06-15,Transfer,Regional Operations,Store Operations,Region Southeast,Cashier,IC1,IC1,31,850,STORE-BR-040,STORE-BR-012,BR,Retail,retail_ops
+MOV00000428,886,2021-06-15,Transfer,Data & Analytics,Distribution Centers,Business Intelligence,Inbound,IC1,IC1,986,915,HQ-BR-001,DC-BR-002,BR,Supply Chain,supply
+MOV00000429,898,2021-06-15,Transfer,Sales,Store Operations,Key Accounts,Security,IC2,IC2,379,977,STORE-AR-001,STORE-AR-001,AR,Retail,retail_ops
+MOV00000430,899,2021-06-15,Transfer,Customer Experience,Procurement,Voice of Customer,Sourcing,M3,M3,873,833,SITE-AR-001,DC-AR-001,AR,Supply Chain,supply
+MOV00000431,924,2021-06-15,Transfer,Store Operations,Store Operations,Cashier,Cashier,IC2,IC2,89,961,STORE-BR-011,STORE-BR-042,BR,Retail,retail_ops
+MOV00000432,94,2021-06-15,Lateral Move,Store Operations,Risk,Stockroom,Risk Management,IC1,IC1,316,117,STORE-BR-022,HQ-BR-001,BR,Corporate,corporate
+MOV00000433,1014,2021-06-15,Lateral Move,Risk,Store Operations,Risk Management,Cashier,IC3,IC3,261,316,HQ-BR-001,STORE-BR-005,BR,Retail,retail_ops
+MOV00000434,1138,2021-06-15,Lateral Move,Customer Experience,Planning,CX Design,Supply Planning,IC1,IC1,541,541,SITE-CL-001,DC-CL-001,CL,Supply Chain,supply
+MOV00000435,1184,2021-06-15,Lateral Move,Data & Analytics,Visual Merchandising,Data Governance,Merchandising,IC3,IC3,82,1072,HQ-BR-001,STORE-BR-017,BR,Retail,retail_ops
+MOV00000436,1548,2021-07-15,Transfer,Logistics,Visual Merchandising,Reverse Logistics,Merchandising,IC3,IC3,966,1072,DC-BR-001,STORE-BR-018,BR,Retail,retail_ops
+MOV00000437,1580,2021-07-15,Transfer,Regional Operations,Customer Service,Region North,Chat,IC2,IC2,518,1162,STORE-BR-019,SITE-BR-004,BR,Customer,customer
+MOV00000438,960,2021-07-15,Lateral Move,Visual Merchandising,Marketing,Store Design,CRM,M1,M1,1426,1291,STORE-BR-035,HQ-BR-001,BR,Corporate,corporate
+MOV00000439,1577,2021-07-15,Lateral Move,Distribution Centers,Regional Operations,Inventory,Region South,IC1,IC1,739,1455,DC-BR-001,STORE-BR-022,BR,Retail,retail_ops
+MOV00000440,730,2021-08-15,Transfer,Sales,Data,Key Accounts,Analytics Engineering,IC5,IC5,859,153,STORE-BR-041,HQ-BR-001,BR,Digital,digital
+MOV00000441,1094,2021-08-15,Transfer,Logistics,Customer Service,Transportation,Escalations,IC2,IC2,674,1352,DC-AR-001,SITE-AR-001,AR,Customer,customer
+MOV00000442,1167,2021-08-15,Transfer,Regional Operations,E-commerce,Region North,Checkout,IC1,IC1,1493,1464,STORE-BR-039,HQ-MX-001,MX,Digital,digital
+MOV00000443,1255,2021-08-15,Transfer,Visual Merchandising,Store Operations,Merchandising,Store Management,IC1,IC1,1238,924,STORE-BR-034,STORE-BR-002,BR,Retail,retail_ops
+MOV00000444,1270,2021-08-15,Transfer,Customer Service,Procurement,Escalations,Supplier Management,IC2,IC2,1079,1382,SITE-MX-001,DC-MX-001,MX,Supply Chain,supply
+MOV00000445,1455,2021-08-15,Transfer,Regional Operations,Store Operations,Region Southeast,Security,IC2,IC2,773,1014,STORE-BR-020,STORE-BR-019,BR,Retail,retail_ops
+MOV00000446,921,2021-08-15,Lateral Move,Sales,E-commerce,Floor Sales,Catalog,IC1,IC1,1235,1437,STORE-BR-007,HQ-BR-001,BR,Digital,digital
+MOV00000447,251,2021-09-15,Promotion,Regional Operations,Regional Operations,Region North,Region North,IC2,IC3,34,27,STORE-BR-025,STORE-BR-025,BR,Retail,retail_ops
+MOV00000448,1045,2021-09-15,Promotion,Store Operations,Store Operations,Security,Security,IC1,IC2,959,959,STORE-CO-002,STORE-CO-002,CO,Retail,retail_ops
+MOV00000449,1170,2021-09-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC2,IC3,294,1072,STORE-BR-001,STORE-BR-001,BR,Retail,retail_ops
+MOV00000450,809,2021-09-15,Promotion,Store Operations,Store Operations,Cashier,Cashier,IC1,IC2,850,89,STORE-BR-012,STORE-BR-012,BR,Retail,retail_ops
+MOV00000451,13,2021-09-15,Promotion,Regional Operations,Regional Operations,Region South,Region South,IC1,IC2,174,518,STORE-BR-010,STORE-BR-010,BR,Retail,retail_ops
+MOV00000452,864,2021-09-15,Promotion,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,IC1,IC2,270,223,STORE-BR-020,STORE-BR-020,BR,Retail,retail_ops
+MOV00000453,541,2021-09-15,Promotion,Logistics,Logistics,Reverse Logistics,Reverse Logistics,IC3,M1,570,1461,DC-CL-001,DC-CL-001,CL,Supply Chain,supply
+MOV00000454,1237,2021-09-15,Promotion,Logistics,Logistics,Last Mile,Last Mile,M1,M2,246,744,DC-BR-001,DC-BR-001,BR,Supply Chain,supply
+MOV00000455,739,2021-09-15,Promotion,Distribution Centers,Distribution Centers,Inventory,Inventory,IC2,IC3,665,741,DC-BR-005,DC-BR-005,BR,Supply Chain,supply
+MOV00000456,1286,2021-09-15,Promotion,Customer Experience,Customer Experience,Voice of Customer,Voice of Customer,IC1,IC2,976,557,SITE-BR-002,SITE-BR-002,BR,Customer,customer
+MOV00000457,788,2021-09-15,Promotion,Customer Service,Customer Service,Escalations,Escalations,IC3,M1,183,1237,SITE-MX-001,SITE-MX-001,MX,Customer,customer
+MOV00000458,591,2021-09-15,Promotion,Legal,Legal,Labor Legal,Labor Legal,IC1,IC2,75,1164,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000459,687,2021-09-15,Promotion,Data & Analytics,Data & Analytics,Business Intelligence,Business Intelligence,M3,M4,792,792,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000460,227,2021-09-15,Promotion,Data & Analytics,Data & Analytics,Data Governance,Data Governance,IC3,IC4,92,1499,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000461,482,2021-09-15,Promotion,Product,Product,Product Ops,Product Ops,M2,M3,687,1110,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000462,1581,2021-09-15,Transfer,Product,Regional Operations,Product Ops,Region North,IC2,IC2,1042,1512,HQ-BR-001,STORE-MX-004,MX,Retail,retail_ops
+MOV00000463,264,2021-09-15,Lateral Move,Customer Experience,Regional Operations,CX Design,Region South,M2,M2,196,1528,SITE-BR-004,STORE-BR-003,BR,Retail,retail_ops
+MOV00000464,1018,2021-09-15,Lateral Move,Sales,Visual Merchandising,Key Accounts,Merchandising,IC4,IC4,162,252,STORE-BR-011,STORE-BR-043,BR,Retail,retail_ops
+MOV00000465,1584,2021-09-15,Lateral Move,Sales,Regional Operations,Key Accounts,Region Southeast,IC1,IC1,473,13,STORE-BR-016,STORE-BR-034,BR,Retail,retail_ops
+MOV00000466,936,2021-10-15,Transfer,Customer Experience,Data,CX Design,Data Engineering,IC1,IC1,659,740,SITE-BR-002,HQ-BR-001,BR,Digital,digital
+MOV00000467,1706,2021-10-15,Transfer,Data,Data & Analytics,Data Engineering,Business Intelligence,IC1,IC1,532,384,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000468,1048,2021-10-15,Lateral Move,Engineering,Logistics,Platform,Transportation,IC4,IC4,343,899,HQ-AR-001,DC-AR-001,AR,Supply Chain,supply
+MOV00000469,1572,2021-10-15,Lateral Move,Customer Service,Store Operations,Contact Center,Cashier,M1,M1,1462,1535,SITE-CL-001,STORE-CL-003,CL,Retail,retail_ops
+MOV00000470,1658,2021-10-15,Lateral Move,Store Operations,Planning,Store Management,Demand Planning,IC1,IC1,925,1674,STORE-BR-016,DC-BR-002,BR,Supply Chain,supply
+MOV00000471,1663,2021-10-15,Lateral Move,Store Operations,Visual Merchandising,Security,Store Design,IC1,IC1,1158,656,STORE-BR-015,STORE-BR-016,BR,Retail,retail_ops
+MOV00000472,282,2021-11-15,Transfer,Regional Operations,Regional Operations,Region North,Region Southeast,M1,M1,1620,1620,STORE-BR-001,STORE-BR-027,BR,Retail,retail_ops
+MOV00000473,399,2021-11-15,Transfer,Sales,Customer Experience,Key Accounts,Voice of Customer,IC2,IC2,517,1401,STORE-BR-024,SITE-BR-001,BR,Customer,customer
+MOV00000474,1160,2021-11-15,Transfer,Store Operations,Visual Merchandising,Stockroom,Merchandising,IC1,IC1,959,1700,STORE-CO-004,STORE-CO-003,CO,Retail,retail_ops
+MOV00000475,1437,2021-11-15,Transfer,E-commerce,Sales,Catalog,Floor Sales,IC2,IC2,1202,1629,HQ-BR-001,STORE-BR-001,BR,Retail,retail_ops
+MOV00000476,1491,2021-11-15,Transfer,Regional Operations,Customer Operations,Region North,Returns,IC5,IC5,343,1407,STORE-AR-007,SITE-AR-001,AR,Customer,customer
+MOV00000477,1493,2021-11-15,Transfer,Regional Operations,Sales,Region Southeast,Floor Sales,IC2,IC2,12,1652,STORE-BR-035,STORE-BR-042,BR,Retail,retail_ops
+MOV00000478,1591,2021-11-15,Transfer,Customer Experience,Regional Operations,Voice of Customer,Region North,IC1,IC1,1558,1607,SITE-CO-001,STORE-CO-004,CO,Retail,retail_ops
+MOV00000479,34,2021-11-15,Lateral Move,Regional Operations,Legal,Region Southeast,Compliance,M1,M1,208,684,STORE-BR-002,HQ-BR-001,BR,Corporate,corporate
+MOV00000480,1255,2021-11-15,Lateral Move,Store Operations,Regional Operations,Store Management,Region North,IC1,IC1,924,1776,STORE-BR-002,STORE-BR-028,BR,Retail,retail_ops
+MOV00000481,1563,2021-11-15,Demotion,Risk,Risk,Risk Management,Risk Management,D1,M5,711,711,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000482,320,2021-12-15,Transfer,Customer Experience,Visual Merchandising,CX Design,Merchandising,IC1,IC1,620,1830,SITE-BR-001,STORE-BR-038,BR,Retail,retail_ops
+MOV00000483,493,2021-12-15,Transfer,Visual Merchandising,Distribution Centers,Merchandising,Outbound,M1,M1,212,1806,STORE-BR-038,DC-BR-001,BR,Supply Chain,supply
+MOV00000484,886,2021-12-15,Transfer,Distribution Centers,Data & Analytics,Inbound,Business Intelligence,IC1,IC1,915,986,DC-BR-002,HQ-BR-001,BR,Corporate,corporate
+MOV00000485,155,2021-12-15,Lateral Move,Legal,Visual Merchandising,Corporate Legal,Merchandising,IC3,IC3,1065,1018,HQ-BR-001,STORE-BR-033,BR,Retail,retail_ops
+MOV00000486,872,2021-12-15,Lateral Move,People,Sales,Compensation & Benefits,Floor Sales,M3,M3,309,700,HQ-BR-001,STORE-BR-038,BR,Retail,retail_ops
+MOV00000487,1643,2021-12-15,Lateral Move,Store Operations,Store Operations,Cashier,Security,IC1,IC1,925,809,STORE-BR-020,STORE-BR-031,BR,Retail,retail_ops
+MOV00000488,1801,2021-12-15,Lateral Move,Store Operations,Customer Experience,Security,CX Design,IC2,IC2,1512,1421,STORE-MX-008,SITE-MX-001,MX,Customer,customer
+MOV00000489,744,2021-12-15,Demotion,Planning,Planning,Demand Planning,Demand Planning,M3,M2,833,833,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000490,875,2022-01-15,Transfer,Regional Operations,Planning,Region Southeast,Demand Planning,IC1,IC1,1203,373,STORE-AR-004,DC-AR-001,AR,Supply Chain,supply
+MOV00000491,1014,2022-01-15,Transfer,Store Operations,Customer Experience,Cashier,Voice of Customer,IC3,IC3,1152,1046,STORE-BR-005,SITE-BR-003,BR,Customer,customer
+MOV00000492,648,2022-01-15,Lateral Move,Distribution Centers,Sales,Outbound,Key Accounts,M2,M2,10,872,DC-BR-006,STORE-BR-035,BR,Retail,retail_ops
+MOV00000493,765,2022-01-15,Lateral Move,Customer Operations,Finance,Order Support,Treasury,IC2,IC2,1174,576,SITE-BR-002,HQ-BR-001,BR,Corporate,corporate
+MOV00000494,970,2022-01-15,Lateral Move,Legal,Distribution Centers,Compliance,Inventory,IC4,IC4,748,555,HQ-BR-001,DC-BR-006,BR,Supply Chain,supply
+MOV00000495,1268,2022-01-15,Lateral Move,Digital Marketing,Sales,Lifecycle,Key Accounts,IC3,IC3,420,162,HQ-BR-001,STORE-BR-029,BR,Retail,retail_ops
+MOV00000496,1307,2022-01-15,Lateral Move,Visual Merchandising,Planning,Store Design,Supply Planning,IC2,IC2,273,474,STORE-BR-028,DC-BR-005,BR,Supply Chain,supply
+MOV00000497,274,2022-02-15,Transfer,Visual Merchandising,Logistics,Merchandising,Last Mile,IC2,IC2,223,1713,STORE-BR-036,DC-BR-005,BR,Supply Chain,supply
+MOV00000498,744,2022-02-15,Transfer,Planning,Logistics,Demand Planning,Reverse Logistics,M2,M2,833,833,DC-BR-003,DC-BR-006,BR,Supply Chain,supply
+MOV00000499,810,2022-02-15,Transfer,Regional Operations,Finance,Region Southeast,Treasury,IC1,IC1,251,900,STORE-BR-026,HQ-BR-001,BR,Corporate,corporate
+MOV00000500,896,2022-02-15,Lateral Move,Store Operations,Store Operations,Stockroom,Stockroom,IC1,IC1,375,898,STORE-AR-005,STORE-AR-006,AR,Retail,retail_ops
+MOV00000501,1105,2022-03-15,Promotion,Regional Operations,Regional Operations,Region North,Region North,IC1,IC2,466,1049,STORE-BR-020,STORE-BR-020,BR,Retail,retail_ops
+MOV00000502,1280,2022-03-15,Promotion,Regional Operations,Regional Operations,Region Southeast,Region Southeast,IC1,IC2,1493,12,STORE-BR-026,STORE-BR-026,BR,Retail,retail_ops
+MOV00000503,1342,2022-03-15,Promotion,Store Operations,Store Operations,Store Management,Store Management,IC1,IC2,924,1080,STORE-BR-013,STORE-BR-013,BR,Retail,retail_ops
+MOV00000504,1369,2022-03-15,Promotion,Regional Operations,Regional Operations,Region North,Region North,IC1,IC2,1142,251,STORE-BR-040,STORE-BR-040,BR,Retail,retail_ops
+MOV00000505,12,2022-03-15,Promotion,Regional Operations,Regional Operations,Region South,Region South,IC3,M1,406,264,STORE-BR-034,STORE-BR-034,BR,Retail,retail_ops
+MOV00000506,379,2022-03-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC3,M1,1191,438,STORE-AR-001,STORE-AR-001,AR,Retail,retail_ops
+MOV00000507,1434,2022-03-15,Promotion,Procurement,Procurement,Supplier Management,Supplier Management,IC1,IC2,430,319,DC-BR-006,DC-BR-006,BR,Supply Chain,supply
+MOV00000508,1299,2022-03-15,Promotion,Procurement,Procurement,Sourcing,Sourcing,IC4,M1,863,1676,DC-BR-004,DC-BR-004,BR,Supply Chain,supply
+MOV00000509,863,2022-03-15,Promotion,Procurement,Procurement,Sourcing,Sourcing,IC5,M3,295,10,DC-BR-004,DC-BR-004,BR,Supply Chain,supply
+MOV00000510,411,2022-03-15,Promotion,Customer Experience,Customer Experience,Voice of Customer,Voice of Customer,IC1,IC2,645,1638,SITE-BR-001,SITE-BR-001,BR,Customer,customer
+MOV00000511,1332,2022-03-15,Promotion,Customer Service,Customer Service,Escalations,Escalations,IC1,IC2,1580,242,SITE-BR-004,SITE-BR-004,BR,Customer,customer
+MOV00000512,835,2022-03-15,Promotion,Legal,Legal,Compliance,Compliance,IC3,IC4,684,1583,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000513,403,2022-03-15,Promotion,Legal,Legal,Corporate Legal,Corporate Legal,IC4,IC5,327,1699,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000514,1424,2022-03-15,Promotion,Legal,Legal,Labor Legal,Labor Legal,IC2,IC3,155,119,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000515,298,2022-03-15,Promotion,People,People,HR Business Partner,HR Business Partner,IC3,IC4,327,928,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000516,1071,2022-03-15,Promotion,Marketing,Marketing,Content,Content,IC1,IC2,1133,1805,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000517,547,2022-03-15,Promotion,Strategy,Strategy,PMO,PMO,IC2,IC3,494,1476,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000518,994,2022-03-15,Promotion,Data,Data,Data Engineering,Data Engineering,IC2,IC3,1254,1651,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000519,194,2022-03-15,Promotion,UX,UX,Design System,Design System,M1,M2,281,876,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000520,1378,2022-03-15,Promotion,E-commerce,E-commerce,Storefront,Storefront,IC4,M2,218,1489,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000521,1254,2022-03-15,Promotion,Data,Data,Data Science,Data Science,IC3,IC4,618,730,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000522,89,2022-03-15,Transfer,Store Operations,Logistics,Cashier,Transportation,IC3,IC3,1152,1784,STORE-BR-005,DC-BR-001,BR,Supply Chain,supply
+MOV00000523,1265,2022-03-15,Transfer,Sales,Logistics,Floor Sales,Reverse Logistics,M1,M1,539,1378,STORE-CL-003,DC-CL-001,CL,Supply Chain,supply
+MOV00000524,1275,2022-03-15,Transfer,Customer Operations,Sales,Order Support,Floor Sales,IC2,IC2,899,375,SITE-AR-001,STORE-AR-004,AR,Retail,retail_ops
+MOV00000525,1456,2022-03-15,Transfer,Logistics,Customer Operations,Last Mile,Order Support,IC3,IC3,118,448,DC-BR-004,SITE-BR-002,BR,Customer,customer
+MOV00000526,1598,2022-03-15,Transfer,Store Operations,Customer Service,Cashier,Contact Center,IC1,IC1,898,1094,STORE-AR-003,SITE-AR-001,AR,Customer,customer
+MOV00000527,160,2022-04-15,Transfer,Sales,Visual Merchandising,Key Accounts,Merchandising,IC3,IC3,1018,1018,STORE-BR-016,STORE-BR-035,BR,Retail,retail_ops
+MOV00000528,196,2022-04-15,Transfer,Customer Operations,E-commerce,Order Support,Catalog,M3,M3,692,873,SITE-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000529,206,2022-04-15,Transfer,Sales,Finance,Floor Sales,FP&A,IC1,IC1,1151,100,STORE-BR-025,HQ-BR-001,BR,Corporate,corporate
+MOV00000530,276,2022-04-15,Transfer,Logistics,Customer Service,Transportation,Contact Center,IC2,IC2,162,1885,DC-BR-001,SITE-BR-002,BR,Customer,customer
+MOV00000531,1030,2022-04-15,Transfer,Procurement,Customer Service,Sourcing,Contact Center,IC1,IC1,984,788,DC-MX-002,SITE-MX-001,MX,Customer,customer
+MOV00000532,1307,2022-04-15,Transfer,Planning,Planning,Supply Planning,Demand Planning,IC2,IC2,474,474,DC-BR-005,DC-BR-003,BR,Supply Chain,supply
+MOV00000533,794,2022-04-15,Lateral Move,Risk,Product,Internal Audit,Product Management,IC3,IC3,261,1274,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000534,814,2022-04-15,Lateral Move,Distribution Centers,Strategy,Inventory,M&A,IC3,IC3,741,1476,DC-BR-002,HQ-BR-001,BR,Corporate,corporate
+MOV00000535,1847,2022-04-15,Lateral Move,Regional Operations,Marketing,Region North,Performance,IC1,IC1,1842,1071,STORE-BR-006,HQ-BR-001,BR,Corporate,corporate
+MOV00000536,1074,2022-05-15,Transfer,People,People,Learning & Development,Learning & Development,IC4,IC4,928,1890,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000537,1280,2022-05-15,Transfer,Regional Operations,Logistics,Region Southeast,Last Mile,IC2,IC2,12,1148,STORE-BR-026,DC-BR-001,BR,Supply Chain,supply
+MOV00000538,1422,2022-05-15,Transfer,Logistics,Customer Experience,Last Mile,Voice of Customer,IC3,IC3,1062,1918,DC-BR-003,SITE-CO-001,CO,Customer,customer
+MOV00000539,1636,2022-05-15,Transfer,Customer Experience,Sales,Voice of Customer,Key Accounts,IC1,IC1,645,1763,SITE-BR-002,STORE-BR-011,BR,Retail,retail_ops
+MOV00000540,1686,2022-05-15,Transfer,Sales,Store Operations,Key Accounts,Store Management,IC2,IC2,1512,1512,STORE-MX-011,STORE-MX-005,MX,Retail,retail_ops
+MOV00000541,1892,2022-05-15,Demotion,UX,UX,Research,Research,IC3,IC2,177,988,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000542,1379,2022-06-15,Transfer,Data & Analytics,Sales,Data Governance,Floor Sales,IC4,IC4,416,721,HQ-BR-001,STORE-BR-007,BR,Retail,retail_ops
+MOV00000543,9,2022-06-15,Lateral Move,Planning,Regional Operations,Demand Planning,Region North,M1,M1,246,1620,DC-BR-003,STORE-BR-010,BR,Retail,retail_ops
+MOV00000544,312,2022-06-15,Lateral Move,Customer Operations,Store Operations,Order Support,Cashier,IC1,IC1,1257,1956,SITE-BR-004,STORE-BR-010,BR,Retail,retail_ops
+MOV00000545,1148,2022-06-15,Lateral Move,Logistics,Visual Merchandising,Last Mile,Merchandising,IC3,IC3,1062,1018,DC-BR-003,STORE-BR-028,BR,Retail,retail_ops
+MOV00000546,1621,2022-06-15,Lateral Move,Regional Operations,People,Region Southeast,Compensation & Benefits,IC1,IC1,174,57,STORE-BR-013,HQ-BR-001,BR,Corporate,corporate
+MOV00000547,1771,2022-06-15,Lateral Move,Customer Service,Customer Operations,Contact Center,Returns,IC1,IC1,521,1257,SITE-BR-002,SITE-BR-004,BR,Customer,customer
+MOV00000548,373,2022-07-15,Transfer,Planning,Customer Service,Supply Planning,Escalations,IC2,IC2,541,1352,DC-AR-001,SITE-AR-001,AR,Customer,customer
+MOV00000549,1624,2022-07-15,Transfer,Visual Merchandising,Logistics,Store Design,Reverse Logistics,IC1,IC1,932,1265,STORE-CL-006,DC-CL-001,CL,Supply Chain,supply
+MOV00000550,1665,2022-07-15,Transfer,Procurement,Store Operations,Contracts,Stockroom,IC2,IC2,1547,280,HQ-BR-001,STORE-BR-030,BR,Retail,retail_ops
+MOV00000551,1825,2022-07-15,Transfer,Strategy,Data & Analytics,PMO,Data Governance,IC1,IC1,1188,1260,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000552,1834,2022-07-15,Transfer,Store Operations,Planning,Cashier,Demand Planning,IC2,IC2,1572,1265,STORE-CL-006,DC-CL-001,CL,Supply Chain,supply
+MOV00000553,783,2022-07-15,Lateral Move,Legal,Visual Merchandising,Labor Legal,Store Design,IC3,IC3,970,1018,HQ-BR-001,STORE-BR-040,BR,Retail,retail_ops
+MOV00000554,908,2022-07-15,Lateral Move,Planning,Regional Operations,Demand Planning,Region North,IC1,IC1,148,1989,DC-BR-004,STORE-BR-023,BR,Retail,retail_ops
+MOV00000555,29,2022-08-15,Transfer,Procurement,Logistics,Indirect Procurement,Reverse Logistics,IC5,IC5,8,1237,HQ-BR-001,DC-BR-005,BR,Supply Chain,supply
+MOV00000556,206,2022-08-15,Transfer,Finance,Product,FP&A,Product Ops,IC1,IC1,100,1317,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000557,1045,2022-08-15,Transfer,Store Operations,Sales,Security,Floor Sales,IC2,IC2,959,1859,STORE-CO-002,STORE-CO-006,CO,Retail,retail_ops
+MOV00000558,1383,2022-08-15,Transfer,Legal,E-commerce,Compliance,Checkout,IC3,IC3,763,1391,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000559,1552,2022-08-15,Transfer,Customer Operations,Engineering,Returns,Mobile,IC1,IC1,1257,1937,SITE-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000560,2119,2022-08-15,Transfer,Customer Operations,Logistics,Returns,Last Mile,IC1,IC1,2074,729,SITE-BR-002,DC-BR-004,BR,Supply Chain,supply
+MOV00000561,2198,2022-08-15,Transfer,Store Operations,Data & Analytics,Store Management,Data Governance,IC1,IC1,1342,1894,STORE-BR-027,HQ-BR-001,BR,Corporate,corporate
+MOV00000562,2233,2022-08-15,Transfer,Regional Operations,Distribution Centers,Region North,Inventory,IC1,IC1,2206,1990,STORE-AR-007,DC-AR-001,AR,Supply Chain,supply
+MOV00000563,1725,2022-08-15,Lateral Move,Product,Visual Merchandising,Product Management,Merchandising,M1,M1,482,307,HQ-BR-001,STORE-BR-008,BR,Retail,retail_ops
+MOV00000564,2047,2022-08-15,Lateral Move,Store Operations,Customer Experience,Store Management,Voice of Customer,IC1,IC1,898,2082,STORE-AR-001,SITE-AR-001,AR,Customer,customer
+MOV00000565,2222,2022-09-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC1,IC2,2208,365,STORE-AR-002,STORE-AR-002,AR,Retail,retail_ops
+MOV00000566,26,2022-09-15,Promotion,Sales,Sales,Floor Sales,Floor Sales,IC2,IC3,1866,1379,STORE-BR-013,STORE-BR-013,BR,Retail,retail_ops
+MOV00000567,1372,2022-09-15,Promotion,Regional Operations,Regional Operations,Region South,Region South,IC1,IC2,1085,1085,STORE-CL-002,STORE-CL-002,CL,Retail,retail_ops
+MOV00000568,1268,2022-09-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC3,IC4,859,2131,STORE-BR-029,STORE-BR-029,BR,Retail,retail_ops
+MOV00000569,1118,2022-09-15,Promotion,Regional Operations,Regional Operations,Region North,Region North,IC2,IC3,518,1390,STORE-BR-040,STORE-BR-040,BR,Retail,retail_ops
+MOV00000570,1417,2022-09-15,Promotion,Regional Operations,Regional Operations,Region South,Region South,IC1,IC2,751,1982,STORE-MX-004,STORE-MX-004,MX,Retail,retail_ops
+MOV00000571,898,2022-09-15,Promotion,Store Operations,Store Operations,Security,Security,IC2,IC3,977,1191,STORE-AR-001,STORE-AR-001,AR,Retail,retail_ops
+MOV00000572,2076,2022-09-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC1,IC2,1895,2270,STORE-AR-001,STORE-AR-001,AR,Retail,retail_ops
+MOV00000573,2214,2022-09-15,Promotion,Store Operations,Store Operations,Store Management,Store Management,IC1,IC2,2190,2105,STORE-AR-004,STORE-AR-004,AR,Retail,retail_ops
+MOV00000574,1553,2022-09-15,Promotion,Regional Operations,Regional Operations,Region North,Region North,IC1,IC2,101,1118,STORE-BR-035,STORE-BR-035,BR,Retail,retail_ops
+MOV00000575,1103,2022-09-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC1,IC2,270,2176,STORE-BR-010,STORE-BR-010,BR,Retail,retail_ops
+MOV00000576,1508,2022-09-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC1,IC2,751,2370,STORE-MX-007,STORE-MX-007,MX,Retail,retail_ops
+MOV00000577,223,2022-09-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC3,M1,1018,1924,STORE-BR-026,STORE-BR-026,BR,Retail,retail_ops
+MOV00000578,2138,2022-09-15,Promotion,Store Operations,Store Operations,Stockroom,Stockroom,IC1,IC2,898,2105,STORE-AR-001,STORE-AR-001,AR,Retail,retail_ops
+MOV00000579,229,2022-09-15,Promotion,Regional Operations,Regional Operations,Region Southeast,Region Southeast,IC2,IC3,773,27,STORE-BR-038,STORE-BR-038,BR,Retail,retail_ops
+MOV00000580,273,2022-09-15,Promotion,Regional Operations,Regional Operations,Region North,Region North,IC3,M1,1390,264,STORE-BR-017,STORE-BR-017,BR,Retail,retail_ops
+MOV00000581,1437,2022-09-15,Promotion,Sales,Sales,Floor Sales,Floor Sales,IC2,IC3,1629,1379,STORE-BR-001,STORE-BR-001,BR,Retail,retail_ops
+MOV00000582,191,2022-09-15,Promotion,Sales,Sales,Floor Sales,Floor Sales,IC1,IC2,326,1866,STORE-BR-042,STORE-BR-042,BR,Retail,retail_ops
+MOV00000583,294,2022-09-15,Promotion,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,IC3,M1,1018,1426,STORE-BR-036,STORE-BR-036,BR,Retail,retail_ops
+MOV00000584,783,2022-09-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC3,M1,1018,1642,STORE-BR-040,STORE-BR-040,BR,Retail,retail_ops
+MOV00000585,1616,2022-09-15,Promotion,Logistics,Logistics,Last Mile,Last Mile,IC1,IC2,277,2354,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000586,2006,2022-09-15,Promotion,Procurement,Procurement,Supplier Management,Supplier Management,IC3,M1,899,899,DC-AR-001,DC-AR-001,AR,Supply Chain,supply
+MOV00000587,915,2022-09-15,Promotion,Distribution Centers,Distribution Centers,Inventory,Inventory,IC2,IC3,814,970,DC-BR-001,DC-BR-001,BR,Supply Chain,supply
+MOV00000588,448,2022-09-15,Promotion,Customer Operations,Customer Operations,Returns,Returns,IC4,M2,1165,1978,SITE-BR-003,SITE-BR-003,BR,Customer,customer
+MOV00000589,386,2022-09-15,Promotion,Customer Service,Customer Service,Contact Center,Contact Center,IC1,IC2,521,242,SITE-BR-001,SITE-BR-001,BR,Customer,customer
+MOV00000590,1347,2022-09-15,Promotion,Customer Service,Customer Service,Escalations,Escalations,IC1,IC2,530,2200,SITE-AR-001,SITE-AR-001,AR,Customer,customer
+MOV00000591,1352,2022-09-15,Promotion,Customer Service,Customer Service,Contact Center,Contact Center,IC4,M1,1407,2191,SITE-AR-001,SITE-AR-001,AR,Customer,customer
+MOV00000592,486,2022-09-15,Promotion,Customer Service,Customer Service,Contact Center,Contact Center,IC1,IC2,461,243,SITE-BR-003,SITE-BR-003,BR,Customer,customer
+MOV00000593,840,2022-09-15,Promotion,Customer Experience,Customer Experience,CX Design,CX Design,IC1,IC2,620,1741,SITE-BR-003,SITE-BR-003,BR,Customer,customer
+MOV00000594,537,2022-09-15,Promotion,Marketing,Marketing,Performance,Performance,IC5,M2,440,2134,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000595,1524,2022-09-15,Promotion,Data & Analytics,Data & Analytics,Business Intelligence,Business Intelligence,M1,M2,1320,687,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000596,248,2022-09-15,Promotion,Risk,Risk,Fraud,Fraud,IC2,IC3,261,1968,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000597,1326,2022-09-15,Promotion,Marketing,Marketing,Performance,Performance,IC5,M2,1291,2134,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000598,1460,2022-09-15,Promotion,Legal,Legal,Corporate Legal,Corporate Legal,IC3,IC4,403,403,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000599,59,2022-09-15,Promotion,Strategy,Strategy,Corporate Strategy,Corporate Strategy,IC1,IC2,1635,2327,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000600,218,2022-09-15,Promotion,E-commerce,E-commerce,Catalog,Catalog,IC5,M2,873,1489,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000601,1093,2022-09-15,Promotion,Engineering,Engineering,SRE,SRE,IC4,M1,416,210,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000602,433,2022-09-15,Promotion,Data,Data,Data Engineering,Data Engineering,M1,M2,1353,482,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000603,72,2022-09-15,Transfer,Risk,Store Operations,Internal Audit,Stockroom,IC1,IC1,73,1956,HQ-BR-001,STORE-BR-010,BR,Retail,retail_ops
+MOV00000604,153,2022-09-15,Transfer,Data,Planning,Analytics Engineering,Supply Planning,M1,M1,482,1786,HQ-BR-001,DC-BR-004,BR,Supply Chain,supply
+MOV00000605,281,2022-09-15,Transfer,Store Operations,Marketing,Security,Performance,M2,M2,700,2134,STORE-BR-044,HQ-BR-001,BR,Corporate,corporate
+MOV00000606,335,2022-09-15,Transfer,Procurement,Distribution Centers,Supplier Management,Inventory,M2,M2,10,2175,DC-BR-001,DC-BR-003,BR,Supply Chain,supply
+MOV00000607,495,2022-09-15,Transfer,Regional Operations,Sales,Region Southeast,Floor Sales,IC1,IC1,1214,191,STORE-BR-008,STORE-BR-005,BR,Retail,retail_ops
+MOV00000608,1558,2022-09-15,Transfer,Customer Operations,Customer Service,Returns,Escalations,IC2,IC2,959,1422,SITE-CO-001,SITE-CO-001,CO,Customer,customer
+MOV00000609,1682,2022-09-15,Transfer,Regional Operations,Data & Analytics,Region North,Data Governance,M3,M3,700,687,STORE-BR-035,HQ-BR-001,BR,Corporate,corporate
+MOV00000610,1924,2022-09-15,Transfer,Visual Merchandising,Store Operations,Store Design,Store Management,M2,M2,1717,2161,STORE-BR-038,STORE-BR-012,BR,Retail,retail_ops
+MOV00000611,2156,2022-09-15,Transfer,Marketplace Technology,Sales,Seller Platform,Key Accounts,IC2,IC2,2155,2121,HQ-AR-001,STORE-AR-008,AR,Retail,retail_ops
+MOV00000612,1911,2022-09-15,Lateral Move,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,M1,M1,1426,1426,STORE-BR-004,STORE-BR-036,BR,Retail,retail_ops
+MOV00000613,2020,2022-09-15,Lateral Move,Customer Operations,Planning,Returns,Supply Planning,IC2,IC2,1491,1555,SITE-AR-001,DC-AR-001,AR,Supply Chain,supply
+MOV00000614,2027,2022-10-15,Transfer,Regional Operations,Sales,Region Southeast,Key Accounts,IC1,IC1,2011,2076,STORE-AR-008,STORE-AR-003,AR,Retail,retail_ops
+MOV00000615,2291,2022-10-15,Lateral Move,Sales,Sales,Floor Sales,Key Accounts,IC2,IC2,2121,2270,STORE-AR-009,STORE-AR-007,AR,Retail,retail_ops
+MOV00000616,84,2022-11-15,Transfer,Procurement,Strategy,Indirect Procurement,PMO,IC1,IC1,1271,1188,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000617,852,2022-11-15,Transfer,Store Operations,Distribution Centers,Security,Inventory,IC3,IC3,1152,2540,STORE-BR-029,DC-BR-003,BR,Supply Chain,supply
+MOV00000618,1083,2022-11-15,Transfer,Visual Merchandising,Planning,Store Design,Demand Planning,IC1,IC1,1307,2351,STORE-BR-005,DC-BR-006,BR,Supply Chain,supply
+MOV00000619,1740,2022-11-15,Transfer,Logistics,Store Operations,Reverse Logistics,Cashier,IC1,IC1,368,2138,DC-AR-001,STORE-AR-001,AR,Retail,retail_ops
+MOV00000620,1755,2022-11-15,Transfer,Customer Service,Sales,Escalations,Key Accounts,IC1,IC1,116,2480,SITE-BR-001,STORE-BR-029,BR,Retail,retail_ops
+MOV00000621,1975,2022-11-15,Transfer,Sales,Customer Operations,Key Accounts,Order Support,IC1,IC1,820,2372,STORE-AR-006,SITE-AR-001,AR,Customer,customer
+MOV00000622,2341,2022-11-15,Transfer,Sales,Store Operations,Key Accounts,Store Management,IC2,IC2,1629,2232,STORE-BR-043,STORE-BR-028,BR,Retail,retail_ops
+MOV00000623,2146,2022-11-15,Lateral Move,Seller Management,Sales,Seller Success,Key Accounts,IC4,IC4,2108,2131,HQ-BR-001,STORE-BR-007,BR,Retail,retail_ops
+MOV00000624,861,2022-12-15,Transfer,Store Operations,UX,Security,Design System,M1,M1,503,194,STORE-BR-004,HQ-BR-001,BR,Digital,digital
+MOV00000625,914,2022-12-15,Transfer,Customer Experience,Engineering,Voice of Customer,Platform,IC1,IC1,652,1653,SITE-BR-004,HQ-BR-001,BR,Digital,digital
+MOV00000626,1444,2022-12-15,Transfer,People,Procurement,Learning & Development,Sourcing,IC3,IC3,1538,1215,HQ-BR-001,DC-BR-001,BR,Supply Chain,supply
+MOV00000627,1484,2022-12-15,Transfer,Store Operations,Visual Merchandising,Stockroom,Merchandising,IC1,IC1,850,1981,STORE-BR-033,STORE-BR-039,BR,Retail,retail_ops
+MOV00000628,1855,2022-12-15,Transfer,Regional Operations,Customer Operations,Region South,Returns,M3,M3,876,2541,STORE-AR-003,SITE-AR-001,AR,Customer,customer
+MOV00000629,2060,2022-12-15,Transfer,Planning,Product,Supply Planning,Product Management,IC1,IC1,1925,2220,DC-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000630,1557,2022-12-15,Demotion,Data,Data,Data Engineering,Data Engineering,IC4,IC3,153,1651,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000631,1093,2023-01-15,Transfer,Engineering,Sales,SRE,Key Accounts,M1,M1,210,2282,HQ-BR-001,STORE-BR-034,BR,Retail,retail_ops
+MOV00000632,150,2023-01-15,Lateral Move,Sales,Regional Operations,Key Accounts,Region North,IC1,IC1,85,2588,STORE-BR-021,STORE-BR-008,BR,Retail,retail_ops
+MOV00000633,1260,2023-01-15,Lateral Move,Data & Analytics,Customer Service,Data Governance,Chat,IC2,IC2,1039,2488,HQ-BR-001,SITE-BR-004,BR,Customer,customer
+MOV00000634,2023,2023-01-15,Lateral Move,Procurement,Regional Operations,Sourcing,Region South,IC1,IC1,430,2519,DC-BR-003,STORE-BR-042,BR,Retail,retail_ops
+MOV00000635,2202,2023-01-15,Lateral Move,Strategy,Store Operations,M&A,Security,M1,M1,539,1321,HQ-BR-001,STORE-BR-012,BR,Retail,retail_ops
+MOV00000636,2232,2023-01-15,Lateral Move,Store Operations,Store Operations,Store Management,Cashier,IC3,IC3,1152,1152,STORE-BR-007,STORE-BR-028,BR,Retail,retail_ops
+MOV00000637,834,2023-02-15,Transfer,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,IC1,IC1,1307,270,STORE-BR-031,STORE-BR-003,BR,Retail,retail_ops
+MOV00000638,1065,2023-02-15,Transfer,Legal,Marketplace Technology,Corporate Legal,Integrations,IC4,IC4,327,2576,HQ-BR-001,HQ-BR-001,BR,Marketplace,digital
+MOV00000639,1247,2023-02-15,Transfer,Sales,Store Operations,Key Accounts,Cashier,IC1,IC1,2501,2271,STORE-BR-041,STORE-BR-018,BR,Retail,retail_ops
+MOV00000640,1928,2023-02-15,Transfer,Logistics,Finance,Last Mile,Accounting,IC1,IC1,1073,652,DC-BR-004,HQ-BR-001,BR,Corporate,corporate
+MOV00000641,2021,2023-02-15,Transfer,Visual Merchandising,Customer Experience,Merchandising,CX Design,IC1,IC1,245,1716,STORE-AR-008,SITE-AR-001,AR,Customer,customer
+MOV00000642,2053,2023-02-15,Transfer,Planning,Sales,Demand Planning,Floor Sales,IC1,IC1,1674,2501,DC-BR-002,STORE-BR-024,BR,Retail,retail_ops
+MOV00000643,2141,2023-02-15,Transfer,Store Operations,Planning,Security,Supply Planning,IC1,IC1,1991,2496,STORE-AR-005,DC-AR-001,AR,Supply Chain,supply
+MOV00000644,2429,2023-02-15,Transfer,Regional Operations,Regional Operations,Region North,Region South,IC1,IC1,1973,174,STORE-BR-024,STORE-BR-009,BR,Retail,retail_ops
+MOV00000645,10,2023-02-15,Lateral Move,Procurement,Procurement,Sourcing,Supplier Management,M4,M4,309,2175,DC-BR-003,DC-BR-002,BR,Supply Chain,supply
+MOV00000646,264,2023-02-15,Lateral Move,Regional Operations,Planning,Region South,Supply Planning,M2,M2,1528,833,STORE-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000647,541,2023-02-15,Lateral Move,Logistics,Visual Merchandising,Reverse Logistics,Store Design,M1,M1,1461,2326,DC-CL-001,STORE-CL-003,CL,Retail,retail_ops
+MOV00000648,1248,2023-02-15,Lateral Move,Regional Operations,Sales,Region North,Floor Sales,IC1,IC1,251,85,STORE-BR-023,STORE-BR-005,BR,Retail,retail_ops
+MOV00000649,1417,2023-02-15,Lateral Move,Regional Operations,Customer Operations,Region South,Order Support,IC2,IC2,1982,2535,STORE-MX-004,SITE-MX-001,MX,Customer,customer
+MOV00000650,2145,2023-02-15,Lateral Move,Sales,Sales,Floor Sales,Floor Sales,IC1,IC1,1895,2156,STORE-AR-006,STORE-AR-010,AR,Retail,retail_ops
+MOV00000651,2272,2023-02-15,Lateral Move,Customer Experience,Distribution Centers,CX Design,Outbound,IC1,IC1,1985,109,SITE-BR-004,DC-BR-006,BR,Supply Chain,supply
+MOV00000652,2401,2023-02-15,Lateral Move,Marketplace Technology,Customer Service,Integrations,Contact Center,IC4,IC4,2108,1927,HQ-BR-001,SITE-BR-001,BR,Customer,customer
+MOV00000653,2416,2023-02-15,Lateral Move,Planning,Sales,Demand Planning,Key Accounts,IC1,IC1,452,2291,DC-AR-001,STORE-AR-005,AR,Retail,retail_ops
+MOV00000654,2586,2023-02-15,Lateral Move,Legal,Procurement,Labor Legal,Contracts,M3,M3,2022,692,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000655,1856,2023-03-15,Promotion,Sales,Sales,Floor Sales,Floor Sales,IC1,IC2,998,2121,STORE-AR-008,STORE-AR-008,AR,Retail,retail_ops
+MOV00000656,2167,2023-03-15,Promotion,Store Operations,Store Operations,Store Management,Store Management,IC1,IC2,898,2105,STORE-AR-002,STORE-AR-002,AR,Retail,retail_ops
+MOV00000657,1745,2023-03-15,Promotion,Regional Operations,Regional Operations,Region Southeast,Region Southeast,M1,M2,264,2596,STORE-BR-034,STORE-BR-034,BR,Retail,retail_ops
+MOV00000658,1629,2023-03-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC3,IC4,1018,2131,STORE-BR-017,STORE-BR-017,BR,Retail,retail_ops
+MOV00000659,859,2023-03-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,M1,M2,65,872,STORE-BR-019,STORE-BR-019,BR,Retail,retail_ops
+MOV00000660,160,2023-03-15,Promotion,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,IC3,M1,1018,1426,STORE-BR-035,STORE-BR-035,BR,Retail,retail_ops
+MOV00000661,2117,2023-03-15,Promotion,Regional Operations,Regional Operations,Region South,Region South,IC1,IC2,2011,2085,STORE-AR-009,STORE-AR-009,AR,Retail,retail_ops
+MOV00000662,21,2023-03-15,Promotion,Sales,Sales,Floor Sales,Floor Sales,IC2,IC3,1268,1268,STORE-BR-008,STORE-BR-008,BR,Retail,retail_ops
+MOV00000663,1031,2023-03-15,Promotion,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,IC2,IC3,365,1314,STORE-AR-009,STORE-AR-009,AR,Retail,retail_ops
+MOV00000664,1148,2023-03-15,Promotion,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,IC3,M1,1018,1642,STORE-BR-028,STORE-BR-028,BR,Retail,retail_ops
+MOV00000665,2072,2023-03-15,Promotion,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,IC1,IC2,1908,2565,STORE-BR-010,STORE-BR-010,BR,Retail,retail_ops
+MOV00000666,2085,2023-03-15,Promotion,Regional Operations,Regional Operations,Region Southeast,Region Southeast,IC3,M1,2541,2541,STORE-AR-007,STORE-AR-007,AR,Retail,retail_ops
+MOV00000667,1666,2023-03-15,Promotion,Regional Operations,Regional Operations,Region North,Region North,IC2,IC3,518,1390,STORE-BR-019,STORE-BR-019,BR,Retail,retail_ops
+MOV00000668,272,2023-03-15,Promotion,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,IC1,IC2,1926,2594,STORE-BR-003,STORE-BR-003,BR,Retail,retail_ops
+MOV00000669,1322,2023-03-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC3,M1,1018,65,STORE-BR-024,STORE-BR-024,BR,Retail,retail_ops
+MOV00000670,1281,2023-03-15,Promotion,Store Operations,Store Operations,Cashier,Cashier,IC1,IC2,395,2498,STORE-BR-015,STORE-BR-015,BR,Retail,retail_ops
+MOV00000671,2113,2023-03-15,Promotion,Store Operations,Store Operations,Store Management,Store Management,IC3,M1,1152,1564,STORE-BR-025,STORE-BR-025,BR,Retail,retail_ops
+MOV00000672,1027,2023-03-15,Promotion,Store Operations,Store Operations,Store Management,Store Management,IC3,M1,1152,1837,STORE-BR-005,STORE-BR-005,BR,Retail,retail_ops
+MOV00000673,207,2023-03-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC1,IC2,1670,1389,STORE-BR-043,STORE-BR-043,BR,Retail,retail_ops
+MOV00000674,2190,2023-03-15,Promotion,Store Operations,Store Operations,Store Management,Store Management,IC2,IC3,2105,977,STORE-AR-002,STORE-AR-002,AR,Retail,retail_ops
+MOV00000675,2188,2023-03-15,Promotion,Store Operations,Store Operations,Cashier,Cashier,IC1,IC2,925,961,STORE-BR-012,STORE-BR-012,BR,Retail,retail_ops
+MOV00000676,2123,2023-03-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC1,IC2,2092,1031,STORE-AR-007,STORE-AR-007,AR,Retail,retail_ops
+MOV00000677,1238,2023-03-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,IC2,IC3,273,2381,STORE-BR-008,STORE-BR-008,BR,Retail,retail_ops
+MOV00000678,1488,2023-03-15,Promotion,Procurement,Procurement,Sourcing,Sourcing,IC2,IC3,1474,1518,DC-BR-006,DC-BR-006,BR,Supply Chain,supply
+MOV00000679,1612,2023-03-15,Promotion,Procurement,Procurement,Sourcing,Sourcing,IC1,IC2,1500,2473,DC-BR-006,DC-BR-006,BR,Supply Chain,supply
+MOV00000680,1237,2023-03-15,Promotion,Logistics,Logistics,Last Mile,Last Mile,M2,M3,744,10,DC-BR-001,DC-BR-001,BR,Supply Chain,supply
+MOV00000681,763,2023-03-15,Promotion,Legal,Legal,Compliance,Compliance,IC4,IC5,748,699,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000682,2008,2023-03-15,Promotion,People,People,HR Business Partner,HR Business Partner,IC1,IC2,1514,1999,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000683,73,2023-03-15,Promotion,Strategy,Strategy,Corporate Strategy,Corporate Strategy,IC3,IC4,1476,2435,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000684,652,2023-03-15,Promotion,Finance,Finance,Controlling,Controlling,IC2,IC3,576,2420,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000685,986,2023-03-15,Promotion,Data & Analytics,Data & Analytics,Business Intelligence,Business Intelligence,IC2,IC3,735,227,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000686,1818,2023-03-15,Promotion,Risk,Risk,Internal Audit,Internal Audit,IC3,IC4,1199,2211,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000687,1788,2023-03-15,Promotion,Marketing,Marketing,Performance,Performance,IC1,IC2,1503,1907,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000688,76,2023-03-15,Promotion,People,People,People Analytics,People Analytics,IC1,IC2,156,2412,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000689,1387,2023-03-15,Promotion,Data & Analytics,Data & Analytics,Data Governance,Data Governance,IC3,IC4,1379,416,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000690,1514,2023-03-15,Promotion,People,People,Compensation & Benefits,Compensation & Benefits,IC2,IC3,1431,1538,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000691,929,2023-03-15,Promotion,Engineering,Engineering,Frontend,Frontend,M1,M2,210,210,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000692,794,2023-03-15,Promotion,Product,Product,Product Management,Product Management,IC3,IC4,1274,570,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000693,2106,2023-03-15,Promotion,Data,Data,Data Science,Data Science,IC4,IC5,1535,1535,HQ-AR-001,HQ-AR-001,AR,Digital,digital
+MOV00000694,1557,2023-03-15,Promotion,Data,Data,Data Engineering,Data Engineering,IC3,IC4,1651,1353,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000695,1274,2023-03-15,Promotion,Product,Product,Product Ops,Product Ops,IC4,M2,570,482,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000696,988,2023-03-15,Promotion,UX,UX,Product Design,Product Design,IC3,IC4,177,177,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000697,936,2023-03-15,Promotion,Data,Data,Data Engineering,Data Engineering,IC1,IC2,740,1961,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000698,1815,2023-03-15,Promotion,Data,Data,Data Science,Data Science,IC3,IC4,1557,1735,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000699,59,2023-03-15,Transfer,Strategy,People,Corporate Strategy,Learning & Development,IC2,IC2,2327,1431,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000700,208,2023-03-15,Transfer,Risk,Engineering,Fraud,Frontend,M2,M2,711,210,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000701,744,2023-03-15,Transfer,Logistics,E-commerce,Reverse Logistics,Checkout,M2,M2,833,1489,DC-BR-006,HQ-BR-001,BR,Digital,digital
+MOV00000702,1212,2023-03-15,Transfer,Procurement,Logistics,Supplier Management,Transportation,IC2,IC2,319,1713,DC-BR-002,DC-BR-005,BR,Supply Chain,supply
+MOV00000703,2327,2023-03-15,Transfer,Strategy,Store Operations,PMO,Security,IC3,IC3,1476,1152,HQ-BR-001,STORE-BR-037,BR,Retail,retail_ops
+MOV00000704,2456,2023-03-15,Transfer,Store Operations,Store Operations,Security,Stockroom,IC1,IC1,1707,1281,STORE-BR-007,STORE-BR-006,BR,Retail,retail_ops
+MOV00000705,2141,2023-03-15,Lateral Move,Planning,Store Operations,Supply Planning,Security,IC1,IC1,2496,2167,DC-AR-001,STORE-AR-003,AR,Retail,retail_ops
+MOV00000706,576,2023-04-15,Reorganization,Finance,People,FP&A,HR Business Partner,IC3,IC3,566,2486,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000707,2577,2023-04-15,Reorganization,Visual Merchandising,Store Operations,Merchandising,Store Management,IC1,IC1,2402,1686,STORE-MX-010,STORE-MX-010,MX,Retail,retail_ops
+MOV00000708,858,2023-04-15,Reorganization,Customer Operations,Store Operations,Returns,Cashier,IC1,IC1,11,2188,SITE-BR-003,SITE-BR-003,BR,Retail,retail_ops
+MOV00000709,1493,2023-04-15,Reorganization,Sales,Customer Service,Floor Sales,Escalations,IC2,IC2,1629,2377,STORE-BR-042,STORE-BR-042,BR,Customer,customer
+MOV00000710,1919,2023-04-15,Reorganization,Procurement,Customer Experience,Contracts,Voice of Customer,IC1,IC1,215,976,HQ-BR-001,HQ-BR-001,BR,Customer,customer
+MOV00000711,2432,2023-04-15,Reorganization,Regional Operations,Visual Merchandising,Region South,Store Design,IC3,IC3,1390,2381,STORE-BR-003,STORE-BR-003,BR,Retail,retail_ops
+MOV00000712,1658,2023-04-15,Reorganization,Planning,Sales,Demand Planning,Floor Sales,IC1,IC1,1674,2342,DC-BR-002,DC-BR-002,BR,Retail,retail_ops
+MOV00000713,2547,2023-04-15,Reorganization,Customer Experience,Regional Operations,Voice of Customer,Region South,IC1,IC1,840,1369,SITE-BR-001,SITE-BR-001,BR,Retail,retail_ops
+MOV00000714,160,2023-04-15,Reorganization,Visual Merchandising,Distribution Centers,Merchandising,Outbound,M1,M1,1426,335,STORE-BR-035,STORE-BR-035,BR,Supply Chain,supply
+MOV00000715,1682,2023-04-15,Reorganization,Data & Analytics,Finance,Data Governance,Treasury,M3,M3,687,2022,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000716,2548,2023-04-15,Reorganization,Customer Experience,Customer Service,Voice of Customer,Escalations,IC1,IC1,1801,2325,SITE-MX-001,SITE-MX-001,MX,Customer,customer
+MOV00000717,2241,2023-04-15,Reorganization,Sales,Sales,Floor Sales,Floor Sales,IC1,IC1,820,1856,STORE-AR-008,STORE-AR-008,AR,Retail,retail_ops
+MOV00000718,1886,2023-04-15,Reorganization,Procurement,Customer Service,Supplier Management,Chat,IC3,IC3,899,1352,DC-AR-001,DC-AR-001,AR,Customer,customer
+MOV00000719,1986,2023-04-15,Reorganization,Customer Service,Distribution Centers,Contact Center,Inbound,IC1,IC1,1930,2311,SITE-CO-001,SITE-CO-001,CO,Supply Chain,supply
+MOV00000720,1094,2023-04-15,Reorganization,Customer Service,Procurement,Escalations,Supplier Management,IC2,IC2,1352,2493,SITE-AR-001,SITE-AR-001,AR,Supply Chain,supply
+MOV00000721,1502,2023-04-15,Reorganization,Visual Merchandising,Regional Operations,Merchandising,Region South,IC1,IC1,1908,2559,STORE-BR-038,STORE-BR-038,BR,Retail,retail_ops
+MOV00000722,2308,2023-04-15,Reorganization,Distribution Centers,Store Operations,Outbound,Security,IC1,IC1,770,2592,DC-BR-003,DC-BR-003,BR,Retail,retail_ops
+MOV00000723,2505,2023-04-15,Reorganization,Regional Operations,Distribution Centers,Region South,Inbound,IC1,IC1,2413,770,STORE-BR-025,STORE-BR-025,BR,Supply Chain,supply
+MOV00000724,2072,2023-04-15,Reorganization,Visual Merchandising,E-commerce,Merchandising,Checkout,IC2,IC2,2565,2537,STORE-BR-010,STORE-BR-010,BR,Digital,digital
+MOV00000725,1257,2023-04-15,Reorganization,Customer Operations,Procurement,Order Support,Supplier Management,IC2,IC2,946,1444,SITE-BR-004,SITE-BR-004,BR,Supply Chain,supply
+MOV00000726,760,2023-04-15,Reorganization,Digital Marketing,Store Operations,Lifecycle,Stockroom,IC3,IC3,1471,1152,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000727,517,2023-04-15,Reorganization,Sales,Sales,Floor Sales,Key Accounts,IC3,IC3,721,1379,STORE-BR-030,STORE-BR-030,BR,Retail,retail_ops
+MOV00000728,2165,2023-04-15,Reorganization,Procurement,Sales,Sourcing,Key Accounts,IC1,IC1,1993,2604,DC-AR-001,DC-AR-001,AR,Retail,retail_ops
+MOV00000729,1798,2023-04-15,Reorganization,Regional Operations,Procurement,Region South,Supplier Management,IC1,IC1,1372,1834,STORE-CL-006,STORE-CL-006,CL,Supply Chain,supply
+MOV00000730,1179,2023-04-15,Reorganization,Customer Operations,Regional Operations,Order Support,Region Southeast,IC1,IC1,1050,2413,SITE-BR-001,SITE-BR-001,BR,Retail,retail_ops
+MOV00000731,2534,2023-04-15,Reorganization,Store Operations,Customer Experience,Cashier,Voice of Customer,IC1,IC1,2346,839,STORE-CL-001,STORE-CL-001,CL,Customer,customer
+MOV00000732,139,2023-04-15,Reorganization,Regional Operations,Sales,Region North,Floor Sales,IC2,IC2,27,1437,STORE-BR-040,STORE-BR-040,BR,Retail,retail_ops
+MOV00000733,785,2023-04-15,Reorganization,People,Data & Analytics,People Analytics,Data Governance,IC3,IC3,1074,1387,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000734,690,2023-04-15,Reorganization,Logistics,Store Operations,Reverse Logistics,Cashier,IC2,IC2,1172,760,DC-BR-003,DC-BR-003,BR,Retail,retail_ops
+MOV00000735,2391,2023-04-15,Reorganization,Procurement,Customer Service,Indirect Procurement,Escalations,IC3,IC3,1168,1927,HQ-BR-001,HQ-BR-001,BR,Customer,customer
+MOV00000736,701,2023-04-15,Reorganization,Sales,Visual Merchandising,Key Accounts,Store Design,IC1,IC1,128,207,STORE-BR-023,STORE-BR-023,BR,Retail,retail_ops
+MOV00000737,183,2023-04-15,Reorganization,People,Regional Operations,Talent Acquisition,Region Southeast,IC4,IC4,327,406,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000738,94,2023-04-15,Reorganization,Risk,Visual Merchandising,Risk Management,Merchandising,IC1,IC1,117,272,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000739,898,2023-04-15,Reorganization,Store Operations,Procurement,Security,Supplier Management,IC3,IC3,1191,2493,STORE-AR-001,STORE-AR-001,AR,Supply Chain,supply
+MOV00000740,433,2023-04-15,Reorganization,Data,Planning,Data Engineering,Supply Planning,M2,M2,482,833,HQ-BR-001,HQ-BR-001,BR,Supply Chain,supply
+MOV00000741,281,2023-04-15,Reorganization,Marketing,Regional Operations,Performance,Region North,M2,M2,2134,2596,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000742,1083,2023-04-15,Reorganization,Planning,Marketplace Operations,Demand Planning,Quality,IC1,IC1,2351,2136,DC-BR-006,DC-BR-006,BR,Marketplace,digital
+MOV00000743,214,2023-04-15,Reorganization,Engineering,Distribution Centers,SRE,Inbound,IC1,IC1,1368,1743,HQ-BR-001,HQ-BR-001,BR,Supply Chain,supply
+MOV00000744,1051,2023-04-15,Reorganization,Visual Merchandising,Customer Operations,Merchandising,Order Support,IC1,IC1,959,786,STORE-CO-006,STORE-CO-006,CO,Customer,customer
+MOV00000745,2605,2023-04-15,Reorganization,Logistics,Regional Operations,Reverse Logistics,Region North,IC1,IC1,1073,2588,DC-BR-006,DC-BR-006,BR,Retail,retail_ops
+MOV00000746,2127,2023-04-15,Reorganization,Store Operations,Visual Merchandising,Cashier,Merchandising,IC1,IC1,898,2123,STORE-AR-008,STORE-AR-008,AR,Retail,retail_ops
+MOV00000747,1274,2023-04-15,Reorganization,Product,Risk,Product Ops,Fraud,M2,M2,482,1510,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000748,1513,2023-04-15,Reorganization,Engineering,Product,Mobile,Product Ops,IC4,IC4,929,570,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000749,2508,2023-04-15,Reorganization,Regional Operations,Procurement,Region Southeast,Sourcing,IC1,IC1,101,1612,STORE-BR-006,STORE-BR-006,BR,Supply Chain,supply
+MOV00000750,2122,2023-04-15,Reorganization,Visual Merchandising,Visual Merchandising,Store Design,Merchandising,IC5,IC5,2055,2137,STORE-AR-010,STORE-AR-010,AR,Retail,retail_ops
+MOV00000751,2138,2023-04-15,Reorganization,Store Operations,Procurement,Stockroom,Sourcing,IC2,IC2,2105,898,STORE-AR-001,STORE-AR-001,AR,Supply Chain,supply
+MOV00000752,411,2023-04-15,Reorganization,Customer Experience,Store Operations,Voice of Customer,Store Management,IC2,IC2,1638,2327,SITE-BR-001,SITE-BR-001,BR,Retail,retail_ops
+MOV00000753,1644,2023-04-15,Reorganization,Planning,Visual Merchandising,Supply Planning,Merchandising,M1,M1,246,1426,DC-BR-002,DC-BR-002,BR,Retail,retail_ops
+MOV00000754,2425,2023-04-15,Reorganization,E-commerce,Visual Merchandising,Catalog,Merchandising,IC4,IC4,851,1644,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000755,2315,2023-04-15,Reorganization,Store Operations,Logistics,Stockroom,Reverse Logistics,IC1,IC1,1956,1073,STORE-BR-006,STORE-BR-006,BR,Supply Chain,supply
+MOV00000756,1761,2023-04-15,Reorganization,Store Operations,People,Store Management,HR Business Partner,IC1,IC1,1742,76,STORE-BR-036,STORE-BR-036,BR,Corporate,corporate
+MOV00000757,2153,2023-04-15,Reorganization,Seller Management,Regional Operations,Seller Growth,Region South,IC2,IC2,2004,2258,HQ-AR-001,HQ-AR-001,AR,Retail,retail_ops
+MOV00000758,580,2023-04-15,Reorganization,Store Operations,Sales,Store Management,Key Accounts,IC1,IC1,375,1856,STORE-AR-006,STORE-AR-006,AR,Retail,retail_ops
+MOV00000759,2299,2023-04-15,Reorganization,Risk,E-commerce,Fraud,Checkout,IC1,IC1,957,2072,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000760,1050,2023-04-15,Reorganization,Customer Operations,Planning,Order Support,Supply Planning,IC2,IC2,448,2470,SITE-BR-003,SITE-BR-003,BR,Supply Chain,supply
+MOV00000761,1785,2023-04-15,Reorganization,Visual Merchandising,Regional Operations,Store Design,Region North,IC1,IC1,1238,101,STORE-BR-044,STORE-BR-044,BR,Retail,retail_ops
+MOV00000762,430,2023-04-15,Reorganization,Procurement,Sales,Supplier Management,Key Accounts,IC2,IC2,319,21,DC-BR-005,DC-BR-005,BR,Retail,retail_ops
+MOV00000763,2268,2023-04-15,Reorganization,E-commerce,Visual Merchandising,Storefront,Store Design,IC2,IC2,787,2565,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000764,592,2023-04-15,Reorganization,Customer Service,Customer Operations,Contact Center,Returns,M1,M1,196,448,SITE-BR-002,SITE-BR-002,BR,Customer,customer
+MOV00000765,882,2023-04-15,Reorganization,Sales,Digital Marketing,Floor Sales,Lifecycle,IC2,IC2,138,1941,STORE-BR-043,STORE-BR-043,BR,Digital,digital
+MOV00000766,2330,2023-04-15,Reorganization,Visual Merchandising,Customer Experience,Merchandising,Voice of Customer,IC1,IC1,2402,1801,STORE-MX-011,STORE-MX-011,MX,Customer,customer
+MOV00000767,1182,2023-04-15,Reorganization,Visual Merchandising,Marketplace Operations,Merchandising,Onboarding,IC2,IC2,960,2194,STORE-BR-027,STORE-BR-027,BR,Marketplace,digital
+MOV00000768,2130,2023-04-15,Reorganization,Distribution Centers,Regional Operations,Inventory,Region Southeast,IC1,IC1,1743,101,DC-BR-006,DC-BR-006,BR,Retail,retail_ops
+MOV00000769,2144,2023-04-15,Reorganization,Distribution Centers,Regional Operations,Outbound,Region North,IC1,IC1,1952,2117,DC-AR-001,DC-AR-001,AR,Retail,retail_ops
+MOV00000770,2110,2023-04-15,Reorganization,Store Operations,Store Operations,Security,Store Management,IC1,IC1,898,2167,STORE-AR-004,STORE-AR-004,AR,Retail,retail_ops
+MOV00000771,2113,2023-04-15,Reorganization,Store Operations,Strategy,Store Management,M&A,M1,M1,1564,539,STORE-BR-025,STORE-BR-025,BR,Corporate,corporate
+MOV00000772,1520,2023-04-15,Reorganization,Store Operations,Visual Merchandising,Store Management,Merchandising,IC2,IC2,1085,1113,STORE-CL-004,STORE-CL-004,CL,Retail,retail_ops
+MOV00000773,2265,2023-04-15,Reorganization,Visual Merchandising,Sales,Store Design,Key Accounts,IC2,IC2,365,375,STORE-AR-005,STORE-AR-005,AR,Retail,retail_ops
+MOV00000774,904,2023-04-15,Reorganization,Data & Analytics,Visual Merchandising,Business Intelligence,Store Design,M1,M1,687,1426,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000775,2456,2023-04-15,Reorganization,Store Operations,Digital Marketing,Stockroom,SEO,IC1,IC1,1281,588,STORE-BR-006,STORE-BR-006,BR,Digital,digital
+MOV00000776,863,2023-04-15,Reorganization,Procurement,Store Operations,Sourcing,Store Management,M3,M3,10,700,DC-BR-004,DC-BR-004,BR,Retail,retail_ops
+MOV00000777,2486,2023-04-15,Reorganization,People,Logistics,Talent Acquisition,Last Mile,IC4,IC4,1890,29,HQ-BR-001,HQ-BR-001,BR,Supply Chain,supply
+MOV00000778,1422,2023-04-15,Reorganization,Customer Experience,Procurement,Voice of Customer,Sourcing,IC3,IC3,1918,1918,SITE-CO-001,SITE-CO-001,CO,Supply Chain,supply
+MOV00000779,2064,2023-04-15,Reorganization,Customer Service,Digital Marketing,Escalations,Paid Media,IC1,IC1,1332,1876,SITE-BR-002,SITE-BR-002,BR,Digital,digital
+MOV00000780,1418,2023-04-15,Reorganization,Logistics,People,Reverse Logistics,Talent Acquisition,IC1,IC1,69,156,DC-BR-004,DC-BR-004,BR,Corporate,corporate
+MOV00000781,920,2023-04-15,Reorganization,E-commerce,Visual Merchandising,Checkout,Merchandising,IC1,IC1,245,2606,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000782,1772,2023-04-15,Reorganization,Sales,Visual Merchandising,Floor Sales,Merchandising,IC1,IC1,1763,207,STORE-BR-043,STORE-BR-043,BR,Retail,retail_ops
+MOV00000783,1999,2023-04-15,Reorganization,People,Visual Merchandising,Talent Acquisition,Store Design,IC3,IC3,183,2425,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000784,1567,2023-04-15,Reorganization,Regional Operations,Distribution Centers,Region North,Inbound,IC1,IC1,1203,1952,STORE-AR-010,STORE-AR-010,AR,Supply Chain,supply
+MOV00000785,2531,2023-04-15,Reorganization,Customer Service,Sales,Chat,Key Accounts,M2,M2,1429,872,SITE-BR-001,SITE-BR-001,BR,Retail,retail_ops
+MOV00000786,2217,2023-04-15,Reorganization,Regional Operations,Marketplace Operations,Region South,Onboarding,M1,M1,1620,2521,STORE-BR-019,STORE-BR-019,BR,Marketplace,digital
+MOV00000787,2492,2023-04-15,Reorganization,Visual Merchandising,Store Operations,Store Design,Stockroom,IC1,IC1,1670,1281,STORE-BR-009,STORE-BR-009,BR,Retail,retail_ops
+MOV00000788,1325,2023-04-15,Reorganization,Regional Operations,Strategy,Region South,M&A,IC2,IC2,773,55,STORE-BR-018,STORE-BR-018,BR,Corporate,corporate
+MOV00000789,899,2023-04-15,Reorganization,Procurement,Store Operations,Sourcing,Store Management,M3,M3,833,2541,DC-AR-001,DC-AR-001,AR,Retail,retail_ops
+MOV00000790,272,2023-04-15,Reorganization,Visual Merchandising,Product,Merchandising,Product Ops,IC2,IC2,2594,1042,STORE-BR-003,STORE-BR-003,BR,Digital,digital
+MOV00000791,1073,2023-04-15,Reorganization,Logistics,Planning,Transportation,Demand Planning,IC2,IC2,1001,2470,DC-BR-005,DC-BR-005,BR,Supply Chain,supply
+MOV00000792,1306,2023-04-15,Reorganization,Legal,Planning,Compliance,Supply Planning,IC2,IC2,1164,1929,HQ-BR-001,HQ-BR-001,BR,Supply Chain,supply
+MOV00000793,2101,2023-04-15,Reorganization,Data,Sales,Analytics Engineering,Key Accounts,IC2,IC2,1815,138,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000794,2382,2023-04-15,Reorganization,Distribution Centers,Procurement,Inbound,Supplier Management,IC1,IC1,1906,1434,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000795,1550,2023-04-15,Reorganization,Procurement,Regional Operations,Supplier Management,Region South,IC1,IC1,804,174,DC-BR-004,DC-BR-004,BR,Retail,retail_ops
+MOV00000796,1275,2023-04-15,Reorganization,Sales,Customer Operations,Floor Sales,Order Support,IC2,IC2,375,2437,STORE-AR-004,STORE-AR-004,AR,Customer,customer
+MOV00000797,2462,2023-04-15,Reorganization,Regional Operations,Visual Merchandising,Region South,Merchandising,IC2,IC2,1085,1113,STORE-CL-003,STORE-CL-003,CL,Retail,retail_ops
+MOV00000798,1885,2023-04-15,Reorganization,Customer Service,Sales,Escalations,Floor Sales,IC3,IC3,702,1629,SITE-BR-001,SITE-BR-001,BR,Retail,retail_ops
+MOV00000799,174,2023-04-15,Reorganization,Regional Operations,Distribution Centers,Region South,Inbound,IC2,IC2,34,915,STORE-BR-007,STORE-BR-007,BR,Supply Chain,supply
+MOV00000800,273,2023-04-15,Reorganization,Regional Operations,Product,Region North,Product Management,M1,M1,264,482,STORE-BR-017,STORE-BR-017,BR,Digital,digital
+MOV00000801,1212,2023-04-15,Reorganization,Logistics,Customer Experience,Transportation,CX Design,IC2,IC2,1713,1638,DC-BR-005,DC-BR-005,BR,Customer,customer
+MOV00000802,872,2023-04-15,Reorganization,Sales,Procurement,Floor Sales,Supplier Management,M3,M3,700,10,STORE-BR-038,STORE-BR-038,BR,Supply Chain,supply
+MOV00000803,2519,2023-04-15,Reorganization,Regional Operations,Store Operations,Region North,Store Management,IC2,IC2,2432,760,STORE-BR-013,STORE-BR-013,BR,Retail,retail_ops
+MOV00000804,929,2023-04-15,Reorganization,Engineering,Finance,Frontend,Treasury,M2,M2,210,1682,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000805,2496,2023-04-15,Reorganization,Planning,Visual Merchandising,Supply Planning,Store Design,IC2,IC2,2004,1031,DC-AR-001,DC-AR-001,AR,Retail,retail_ops
+MOV00000806,1317,2023-04-15,Reorganization,Product,People,Product Ops,People Analytics,IC2,IC2,1042,1514,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000807,1218,2023-04-15,Reorganization,Distribution Centers,Sales,Inventory,Floor Sales,IC1,IC1,541,2566,DC-CL-001,DC-CL-001,CL,Retail,retail_ops
+MOV00000808,102,2023-04-15,Reorganization,Regional Operations,Customer Service,Region South,Chat,IC1,IC1,1936,2325,STORE-MX-001,STORE-MX-001,MX,Customer,customer
+MOV00000809,72,2023-04-15,Reorganization,Store Operations,Visual Merchandising,Stockroom,Merchandising,IC1,IC1,1956,1670,STORE-BR-010,STORE-BR-010,BR,Retail,retail_ops
+MOV00000810,1951,2023-04-15,Reorganization,Store Operations,Store Operations,Stockroom,Cashier,IC1,IC1,1889,1281,STORE-BR-041,STORE-BR-041,BR,Retail,retail_ops
+MOV00000811,1924,2023-04-15,Reorganization,Store Operations,Logistics,Store Management,Last Mile,M2,M2,503,1237,STORE-BR-012,STORE-BR-012,BR,Supply Chain,supply
+MOV00000812,2482,2023-04-15,Reorganization,Sales,Sales,Floor Sales,Floor Sales,IC1,IC1,1085,2566,STORE-CL-005,STORE-CL-005,CL,Retail,retail_ops
+MOV00000813,1162,2023-04-15,Reorganization,Customer Service,Distribution Centers,Chat,Inbound,IC3,IC3,702,741,SITE-BR-002,SITE-BR-002,BR,Supply Chain,supply
+MOV00000814,2424,2023-04-15,Reorganization,Sales,Visual Merchandising,Floor Sales,Merchandising,IC1,IC1,2043,1908,STORE-BR-016,STORE-BR-016,BR,Retail,retail_ops
+MOV00000815,2033,2023-04-15,Reorganization,Visual Merchandising,Logistics,Merchandising,Reverse Logistics,IC1,IC1,2385,2140,STORE-AR-004,STORE-AR-004,AR,Supply Chain,supply
+MOV00000816,2206,2023-04-15,Reorganization,Regional Operations,Visual Merchandising,Region Southeast,Merchandising,IC2,IC2,2085,1031,STORE-AR-003,STORE-AR-003,AR,Retail,retail_ops
+MOV00000817,1891,2023-04-15,Reorganization,Sales,Sales,Key Accounts,Floor Sales,IC1,IC1,1803,2043,STORE-BR-024,STORE-BR-024,BR,Retail,retail_ops
+MOV00000818,529,2023-04-15,Reorganization,Logistics,Engineering,Transportation,Frontend,IC1,IC1,276,1368,DC-BR-004,DC-BR-004,BR,Digital,digital
+MOV00000819,1694,2023-04-15,Reorganization,Distribution Centers,Visual Merchandising,Outbound,Merchandising,IC1,IC1,541,2564,DC-CL-001,DC-CL-001,CL,Retail,retail_ops
+MOV00000820,2258,2023-04-15,Reorganization,Regional Operations,Procurement,Region South,Supplier Management,IC3,IC3,2541,2493,STORE-AR-009,STORE-AR-009,AR,Supply Chain,supply
+MOV00000821,2398,2023-04-15,Reorganization,Sales,Store Operations,Key Accounts,Store Management,IC1,IC1,473,2188,STORE-BR-025,STORE-BR-025,BR,Retail,retail_ops
+MOV00000822,2024,2023-04-15,Reorganization,Legal,Sales,Compliance,Floor Sales,M3,M3,2022,700,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000823,1503,2023-04-15,Reorganization,Marketing,Regional Operations,Performance,Region South,IC2,IC2,1027,773,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000824,840,2023-04-15,Reorganization,Customer Experience,Sales,CX Design,Key Accounts,IC2,IC2,1412,26,SITE-BR-003,SITE-BR-003,BR,Retail,retail_ops
+MOV00000825,2123,2023-04-15,Reorganization,Visual Merchandising,Visual Merchandising,Store Design,Merchandising,IC2,IC2,1031,1031,STORE-AR-007,STORE-AR-007,AR,Retail,retail_ops
+MOV00000826,2294,2023-04-15,Reorganization,Sales,Data & Analytics,Key Accounts,Business Intelligence,IC1,IC1,2291,2088,STORE-AR-008,STORE-AR-008,AR,Corporate,corporate
+MOV00000827,1720,2023-04-15,Reorganization,Customer Service,Visual Merchandising,Chat,Store Design,IC1,IC1,486,2268,SITE-BR-003,SITE-BR-003,BR,Retail,retail_ops
+MOV00000828,1803,2023-04-15,Reorganization,Sales,Finance,Floor Sales,Accounting,IC2,IC2,1866,652,STORE-BR-003,STORE-BR-003,BR,Corporate,corporate
+MOV00000829,2282,2023-04-15,Reorganization,Sales,Engineering,Floor Sales,Platform,M2,M2,872,210,STORE-BR-029,STORE-BR-029,BR,Digital,digital
+MOV00000830,208,2023-04-15,Reorganization,Engineering,Procurement,Frontend,Supplier Management,M2,M2,210,872,HQ-BR-001,HQ-BR-001,BR,Supply Chain,supply
+MOV00000831,1800,2023-04-15,Reorganization,Customer Operations,Regional Operations,Order Support,Region South,IC1,IC1,1275,2153,SITE-AR-001,SITE-AR-001,AR,Retail,retail_ops
+MOV00000832,2353,2023-04-15,Reorganization,Regional Operations,Sales,Region South,Key Accounts,IC1,IC1,1936,1508,STORE-MX-004,STORE-MX-004,MX,Retail,retail_ops
+MOV00000833,1870,2023-04-15,Reorganization,Procurement,Customer Experience,Sourcing,Voice of Customer,IC2,IC2,1669,2535,DC-MX-002,DC-MX-002,MX,Customer,customer
+MOV00000834,438,2023-04-15,Reorganization,Visual Merchandising,Visual Merchandising,Store Design,Store Design,M2,M2,281,899,STORE-AR-005,STORE-AR-005,AR,Retail,retail_ops
+MOV00000835,380,2023-04-15,Reorganization,Store Operations,Sales,Cashier,Key Accounts,IC1,IC1,375,2265,STORE-AR-008,STORE-AR-008,AR,Retail,retail_ops
+MOV00000836,93,2023-04-15,Reorganization,Customer Service,Regional Operations,Escalations,Region South,IC2,IC2,242,518,SITE-BR-003,SITE-BR-003,BR,Retail,retail_ops
+MOV00000837,1783,2023-04-15,Reorganization,Product,Data,Product Management,Analytics Engineering,M4,M4,1110,1110,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000838,2132,2023-04-15,Reorganization,Store Operations,Customer Operations,Stockroom,Returns,IC1,IC1,1991,2461,STORE-AR-008,STORE-AR-008,AR,Customer,customer
+MOV00000839,2459,2023-04-15,Reorganization,Data & Analytics,Customer Experience,Business Intelligence,CX Design,IC2,IC2,2338,1412,HQ-BR-001,HQ-BR-001,BR,Customer,customer
+MOV00000840,1987,2023-04-15,Reorganization,Visual Merchandising,Sales,Store Design,Floor Sales,IC3,IC3,1018,1268,STORE-BR-013,STORE-BR-013,BR,Retail,retail_ops
+MOV00000841,196,2023-04-15,Reorganization,E-commerce,Store Operations,Catalog,Store Management,M3,M3,873,700,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000842,2157,2023-04-15,Reorganization,Digital Marketing,Logistics,SEO,Transportation,M4,M4,1110,2175,HQ-BR-001,HQ-BR-001,BR,Supply Chain,supply
+MOV00000843,2512,2023-04-15,Reorganization,Visual Merchandising,Sales,Merchandising,Key Accounts,IC2,IC2,2046,1866,STORE-BR-032,STORE-BR-032,BR,Retail,retail_ops
+MOV00000844,2344,2023-04-15,Reorganization,Store Operations,Marketing,Security,Content,IC1,IC1,1889,1788,STORE-BR-020,STORE-BR-020,BR,Corporate,corporate
+MOV00000845,1746,2023-04-15,Reorganization,Distribution Centers,Regional Operations,Outbound,Region South,IC1,IC1,770,1503,DC-BR-002,DC-BR-002,BR,Retail,retail_ops
+MOV00000846,1342,2023-04-15,Reorganization,Store Operations,Visual Merchandising,Store Management,Store Design,IC2,IC2,1080,2046,STORE-BR-013,STORE-BR-013,BR,Retail,retail_ops
+MOV00000847,809,2023-04-15,Reorganization,Store Operations,UX,Cashier,Research,IC2,IC2,89,675,STORE-BR-012,STORE-BR-012,BR,Digital,digital
+MOV00000848,1311,2023-04-15,Reorganization,Customer Operations,Logistics,Order Support,Reverse Logistics,IC1,IC1,11,1280,SITE-BR-004,SITE-BR-004,BR,Supply Chain,supply
+MOV00000849,1082,2023-04-15,Reorganization,Procurement,Sales,Indirect Procurement,Key Accounts,IC3,IC3,719,1379,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000850,1920,2023-04-15,Reorganization,Visual Merchandising,Marketing,Merchandising,Brand,IC1,IC1,2222,2062,STORE-AR-005,STORE-AR-005,AR,Corporate,corporate
+MOV00000851,368,2023-04-15,Reorganization,Logistics,Procurement,Last Mile,Supplier Management,IC2,IC2,357,898,DC-AR-001,DC-AR-001,AR,Supply Chain,supply
+MOV00000852,322,2023-04-15,Reorganization,Store Operations,Store Operations,Cashier,Stockroom,IC1,IC1,280,2592,STORE-BR-001,STORE-BR-001,BR,Retail,retail_ops
+MOV00000853,557,2023-04-15,Reorganization,Customer Experience,Customer Experience,CX Design,Voice of Customer,IC3,IC3,516,2582,SITE-BR-002,SITE-BR-002,BR,Customer,customer
+MOV00000854,1914,2023-04-15,Reorganization,Engineering,Distribution Centers,SRE,Inbound,IC1,IC1,1873,1906,HQ-BR-001,HQ-BR-001,BR,Supply Chain,supply
+MOV00000855,2560,2023-04-15,Reorganization,Planning,Customer Operations,Demand Planning,Returns,IC1,IC1,2351,2478,DC-BR-001,DC-BR-001,BR,Customer,customer
+MOV00000856,1737,2023-04-15,Reorganization,Engineering,Customer Operations,SRE,Order Support,IC4,IC4,1731,1165,HQ-BR-001,HQ-BR-001,BR,Customer,customer
+MOV00000857,1584,2023-04-15,Reorganization,Regional Operations,Regional Operations,Region Southeast,Region North,IC1,IC1,174,1503,STORE-BR-034,STORE-BR-034,BR,Retail,retail_ops
+MOV00000858,1133,2023-04-15,Reorganization,Marketing,Data & Analytics,CRM,Data Governance,IC2,IC2,1027,2338,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000859,2584,2023-04-15,Reorganization,Sales,Procurement,Key Accounts,Supplier Management,IC1,IC1,1508,2421,STORE-MX-002,STORE-MX-002,MX,Supply Chain,supply
+MOV00000860,1952,2023-04-15,Reorganization,Distribution Centers,Sales,Inbound,Floor Sales,IC2,IC2,357,375,DC-AR-001,DC-AR-001,AR,Retail,retail_ops
+MOV00000861,820,2023-04-15,Reorganization,Sales,Store Operations,Floor Sales,Store Management,IC2,IC2,379,2105,STORE-AR-009,STORE-AR-009,AR,Retail,retail_ops
+MOV00000862,246,2023-04-15,Reorganization,Planning,Regional Operations,Demand Planning,Region South,M2,M2,10,1528,DC-BR-005,DC-BR-005,BR,Retail,retail_ops
+MOV00000863,1390,2023-04-15,Reorganization,Regional Operations,Visual Merchandising,Region Southeast,Merchandising,IC4,IC4,406,1725,STORE-BR-037,STORE-BR-037,BR,Retail,retail_ops
+MOV00000864,1936,2023-04-15,Reorganization,Regional Operations,Regional Operations,Region Southeast,Region North,IC2,IC2,1982,1982,STORE-MX-011,STORE-MX-011,MX,Retail,retail_ops
+MOV00000865,1460,2023-04-15,Reorganization,Legal,Visual Merchandising,Corporate Legal,Store Design,IC4,IC4,403,1726,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000866,2598,2023-04-15,Reorganization,Procurement,Regional Operations,Sourcing,Region South,IC1,IC1,430,93,DC-BR-004,DC-BR-004,BR,Retail,retail_ops
+MOV00000867,1912,2023-04-15,Reorganization,Distribution Centers,Product,Inbound,Product Management,IC3,IC3,970,1513,DC-BR-003,DC-BR-003,BR,Digital,digital
+MOV00000868,59,2023-04-15,Reorganization,People,Risk,Learning & Development,Fraud,IC2,IC2,1431,1611,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000869,2074,2023-04-15,Reorganization,Customer Operations,Customer Service,Returns,Contact Center,IC2,IC2,1174,2391,SITE-BR-002,SITE-BR-002,BR,Customer,customer
+MOV00000870,851,2023-04-15,Reorganization,E-commerce,Sales,Catalog,Key Accounts,IC5,IC5,281,1093,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000871,461,2023-04-15,Reorganization,Customer Service,Sales,Contact Center,Floor Sales,IC2,IC2,243,1082,SITE-BR-002,SITE-BR-002,BR,Retail,retail_ops
+MOV00000872,1533,2023-04-15,Reorganization,Visual Merchandising,Visual Merchandising,Store Design,Merchandising,IC1,IC1,1238,2606,STORE-BR-007,STORE-BR-007,BR,Retail,retail_ops
+MOV00000873,2126,2023-04-15,Reorganization,Regional Operations,Planning,Region Southeast,Supply Planning,IC1,IC1,1325,1306,STORE-BR-003,STORE-BR-003,BR,Supply Chain,supply
+MOV00000874,1349,2023-04-15,Reorganization,Sales,Visual Merchandising,Key Accounts,Store Design,IC1,IC1,998,2385,STORE-AR-002,STORE-AR-002,AR,Retail,retail_ops
+MOV00000875,2093,2023-04-15,Reorganization,Visual Merchandising,Store Operations,Merchandising,Stockroom,IC2,IC2,365,2105,STORE-AR-009,STORE-AR-009,AR,Retail,retail_ops
+MOV00000876,2255,2023-04-15,Reorganization,Customer Service,Regional Operations,Contact Center,Region Southeast,IC1,IC1,2223,2117,SITE-AR-001,SITE-AR-001,AR,Retail,retail_ops
+MOV00000877,2109,2023-04-15,Reorganization,Regional Operations,Engineering,Region Southeast,Backend,M1,M1,264,2282,STORE-BR-013,STORE-BR-013,BR,Digital,digital
+MOV00000878,1863,2023-04-15,Reorganization,Sales,Customer Experience,Key Accounts,Voice of Customer,IC1,IC1,26,2459,STORE-BR-016,STORE-BR-016,BR,Customer,customer
+MOV00000879,2221,2023-04-15,Reorganization,Strategy,Customer Service,PMO,Contact Center,IC2,IC2,2129,2488,HQ-BR-001,HQ-BR-001,BR,Customer,customer
+MOV00000880,2263,2023-04-15,Reorganization,Regional Operations,Customer Service,Region North,Escalations,IC2,IC2,2258,1886,STORE-AR-008,STORE-AR-008,AR,Customer,customer
+MOV00000881,739,2023-04-15,Reorganization,Distribution Centers,Regional Operations,Inventory,Region Southeast,IC3,IC3,741,183,DC-BR-005,DC-BR-005,BR,Retail,retail_ops
+MOV00000882,555,2023-04-15,Reorganization,Distribution Centers,Customer Experience,Outbound,Voice of Customer,IC5,IC5,493,552,DC-BR-006,DC-BR-006,BR,Customer,customer
+MOV00000883,1677,2023-04-15,Reorganization,Visual Merchandising,Marketplace Technology,Merchandising,Seller Platform,IC1,IC1,1667,2155,STORE-AR-001,STORE-AR-001,AR,Marketplace,digital
+MOV00000884,243,2023-04-15,Reorganization,Customer Service,Marketplace Technology,Contact Center,Seller Platform,IC3,IC3,702,2590,SITE-BR-002,SITE-BR-002,BR,Marketplace,digital
+MOV00000885,2209,2023-04-15,Reorganization,Sales,Marketing,Key Accounts,Brand,IC1,IC1,975,1995,STORE-BR-019,STORE-BR-019,BR,Corporate,corporate
+MOV00000886,1183,2023-04-15,Reorganization,Data,Store Operations,Data Science,Security,IC3,IC3,618,1152,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000887,1915,2023-04-15,Reorganization,Store Operations,Sales,Stockroom,Key Accounts,M1,M1,1321,2531,STORE-BR-033,STORE-BR-033,BR,Retail,retail_ops
+MOV00000888,2403,2023-04-15,Reorganization,Distribution Centers,Store Operations,Outbound,Cashier,IC2,IC2,1938,1982,DC-MX-001,DC-MX-001,MX,Retail,retail_ops
+MOV00000889,323,2023-04-15,Reorganization,Customer Operations,Risk,Returns,Risk Management,IC1,IC1,765,957,SITE-BR-001,SITE-BR-001,BR,Corporate,corporate
+MOV00000890,2318,2023-04-15,Reorganization,Regional Operations,Customer Experience,Region North,CX Design,IC1,IC1,2011,2575,STORE-AR-008,STORE-AR-008,AR,Customer,customer
+MOV00000891,2205,2023-04-15,Reorganization,Customer Service,Sales,Contact Center,Key Accounts,IC1,IC1,2135,1952,SITE-AR-001,SITE-AR-001,AR,Retail,retail_ops
+MOV00000892,1824,2023-04-15,Reorganization,Customer Experience,Visual Merchandising,Voice of Customer,Store Design,IC1,IC1,1795,2402,SITE-MX-001,SITE-MX-001,MX,Retail,retail_ops
+MOV00000893,1180,2023-04-15,Reorganization,People,Visual Merchandising,People Analytics,Merchandising,IC4,IC4,928,1911,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000894,740,2023-04-15,Reorganization,Data,Regional Operations,Analytics Engineering,Region South,IC2,IC2,1183,739,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000895,2271,2023-04-15,Reorganization,Store Operations,Procurement,Store Management,Indirect Procurement,IC2,IC2,2113,953,STORE-BR-028,STORE-BR-028,BR,Corporate,corporate
+MOV00000896,1821,2023-04-15,Reorganization,Procurement,Regional Operations,Contracts,Region Southeast,IC2,IC2,1082,773,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000897,1093,2023-04-15,Reorganization,Sales,UX,Key Accounts,Design System,M1,M1,2282,194,STORE-BR-034,STORE-BR-034,BR,Digital,digital
+MOV00000898,2261,2023-04-15,Reorganization,Sales,Sales,Floor Sales,Key Accounts,IC1,IC1,998,2604,STORE-AR-001,STORE-AR-001,AR,Retail,retail_ops
+MOV00000899,618,2023-04-15,Reorganization,Data,Store Operations,Data Engineering,Stockroom,IC4,IC4,153,1027,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000900,2370,2023-04-15,Reorganization,Sales,Marketing,Floor Sales,Content,M2,M2,1810,1810,STORE-MX-004,STORE-MX-004,MX,Corporate,corporate
+MOV00000901,2274,2023-04-15,Reorganization,Marketing,Customer Service,Brand,Contact Center,IC3,IC3,1846,702,HQ-BR-001,HQ-BR-001,BR,Customer,customer
+MOV00000902,2022,2023-04-15,Reorganization,People,Visual Merchandising,HR Business Partner,Store Design,M4,M4,309,1563,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000903,1531,2023-04-15,Reorganization,Sales,Store Operations,Floor Sales,Store Management,IC1,IC1,1493,690,STORE-BR-006,STORE-BR-006,BR,Retail,retail_ops
+MOV00000904,2447,2023-04-15,Reorganization,Visual Merchandising,Store Operations,Merchandising,Stockroom,IC2,IC2,1987,280,STORE-BR-013,STORE-BR-013,BR,Retail,retail_ops
+MOV00000905,137,2023-04-15,Reorganization,Procurement,Logistics,Contracts,Reverse Logistics,IC1,IC1,175,1616,HQ-BR-001,HQ-BR-001,BR,Supply Chain,supply
+MOV00000906,100,2023-04-15,Transfer,Finance,Marketplace Operations,Treasury,Quality,IC2,IC2,254,2427,HQ-BR-001,HQ-BR-001,BR,Marketplace,digital
+MOV00000907,1492,2023-04-15,Transfer,Customer Experience,Legal,CX Design,Labor Legal,IC1,IC1,411,591,SITE-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000908,1686,2023-04-15,Transfer,Store Operations,Logistics,Store Management,Last Mile,IC2,IC2,1982,2638,STORE-MX-005,DC-MX-002,MX,Supply Chain,supply
+MOV00000909,1691,2023-04-15,Transfer,Strategy,Store Operations,M&A,Cashier,IC3,IC3,959,2611,HQ-CO-001,STORE-CO-003,CO,Retail,retail_ops
+MOV00000910,1742,2023-04-15,Transfer,Store Operations,Customer Operations,Security,Returns,IC2,IC2,1014,1174,STORE-BR-029,SITE-BR-002,BR,Customer,customer
+MOV00000911,1878,2023-04-15,Transfer,Distribution Centers,Sales,Inventory,Floor Sales,IC2,IC2,1669,1085,DC-MX-001,STORE-CL-003,CL,Retail,retail_ops
+MOV00000912,2247,2023-04-15,Transfer,Customer Service,Marketplace Technology,Contact Center,Seller Platform,M1,M1,1429,2323,SITE-BR-001,HQ-BR-001,BR,Marketplace,digital
+MOV00000913,2302,2023-04-15,Transfer,Customer Service,Regional Operations,Chat,Region South,IC1,IC1,1595,1203,SITE-AR-001,STORE-AR-008,AR,Retail,retail_ops
+MOV00000914,522,2023-04-15,Lateral Move,Engineering,Marketing,Platform,Brand,IC3,IC3,210,1846,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000915,592,2023-04-15,Lateral Move,Customer Operations,Finance,Returns,Controlling,M1,M1,448,929,SITE-BR-002,HQ-BR-001,BR,Corporate,corporate
+MOV00000916,1865,2023-04-15,Lateral Move,Customer Operations,Finance,Order Support,FP&A,IC1,IC1,1050,765,SITE-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000917,1957,2023-04-15,Lateral Move,Logistics,Sales,Transportation,Key Accounts,IC1,IC1,690,840,DC-BR-005,STORE-BR-041,BR,Retail,retail_ops
+MOV00000918,2478,2023-04-15,Demotion,Customer Operations,Customer Operations,Returns,Returns,IC2,IC1,1562,1742,SITE-BR-004,SITE-BR-004,BR,Customer,customer
+MOV00000919,858,2023-05-15,Transfer,Store Operations,Customer Experience,Cashier,CX Design,IC1,IC1,2188,1985,SITE-BR-003,SITE-BR-002,BR,Customer,customer
+MOV00000920,936,2023-05-15,Transfer,Data,Customer Operations,Data Engineering,Returns,IC2,IC2,1961,1562,HQ-BR-001,SITE-BR-001,BR,Customer,customer
+MOV00000921,1846,2023-06-15,Transfer,Marketing,Store Operations,Content,Cashier,IC4,IC4,1326,1108,HQ-BR-001,STORE-BR-044,BR,Retail,retail_ops
+MOV00000922,2022,2023-06-15,Transfer,Visual Merchandising,Sales,Store Design,Key Accounts,M4,M4,1563,212,HQ-BR-001,STORE-BR-002,BR,Retail,retail_ops
+MOV00000923,2075,2023-06-15,Transfer,Legal,Distribution Centers,Compliance,Inventory,IC1,IC1,75,2708,HQ-BR-001,DC-BR-004,BR,Supply Chain,supply
+MOV00000924,2105,2023-06-15,Transfer,Store Operations,Risk,Security,Internal Audit,IC3,IC3,1191,2696,STORE-AR-002,HQ-AR-001,AR,Corporate,corporate
+MOV00000925,2268,2023-06-15,Transfer,Visual Merchandising,Data,Store Design,Data Engineering,IC2,IC2,2565,1961,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000926,2572,2023-06-15,Transfer,Sales,Sales,Floor Sales,Floor Sales,M2,M2,872,2024,STORE-BR-033,STORE-BR-010,BR,Retail,retail_ops
+MOV00000927,532,2023-06-15,Lateral Move,Data,Regional Operations,Data Engineering,Region Southeast,IC2,IC2,1183,229,HQ-BR-001,STORE-BR-002,BR,Retail,retail_ops
+MOV00000928,1007,2023-06-15,Lateral Move,Visual Merchandising,Visual Merchandising,Store Design,Merchandising,IC1,IC1,994,2612,STORE-BR-003,STORE-BR-005,BR,Retail,retail_ops
+MOV00000929,2446,2023-06-15,Lateral Move,Legal,UX,Labor Legal,Design System,M2,M2,2024,876,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000930,690,2023-07-15,Transfer,Store Operations,Risk,Cashier,Risk Management,IC2,IC2,760,248,DC-BR-003,HQ-BR-001,BR,Corporate,corporate
+MOV00000931,1897,2023-07-15,Transfer,Regional Operations,Regional Operations,Region North,Region South,IC1,IC1,1105,1214,STORE-BR-029,STORE-BR-015,BR,Retail,retail_ops
+MOV00000932,2136,2023-07-15,Transfer,Marketplace Operations,Distribution Centers,Quality,Outbound,IC2,IC2,2045,665,HQ-BR-001,DC-BR-003,BR,Supply Chain,supply
+MOV00000933,1474,2023-07-15,Lateral Move,Procurement,Product,Sourcing,Product Ops,IC3,IC3,1215,404,DC-BR-005,HQ-BR-001,BR,Digital,digital
+MOV00000934,1927,2023-07-15,Lateral Move,Customer Service,Customer Service,Contact Center,Escalations,IC5,IC5,592,2464,SITE-BR-003,SITE-BR-001,BR,Customer,customer
+MOV00000935,2005,2023-07-15,Lateral Move,Store Operations,Store Operations,Cashier,Cashier,IC1,IC1,1991,2752,STORE-AR-003,STORE-AR-003,AR,Retail,retail_ops
+MOV00000936,2521,2023-07-15,Lateral Move,Marketplace Operations,Visual Merchandising,Quality,Store Design,M2,M2,1814,1814,HQ-BR-001,STORE-BR-006,BR,Retail,retail_ops
+MOV00000937,2593,2023-07-15,Lateral Move,Risk,Finance,Fraud,Controlling,IC2,IC2,2166,2647,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000938,2684,2023-07-15,Lateral Move,Planning,Customer Operations,Supply Planning,Returns,IC1,IC1,1306,936,DC-BR-002,SITE-BR-002,BR,Customer,customer
+MOV00000939,2501,2023-07-15,Demotion,Sales,Sales,Key Accounts,Key Accounts,IC2,IC1,2386,1763,STORE-BR-041,STORE-BR-041,BR,Retail,retail_ops
+MOV00000940,2747,2023-07-15,Demotion,People,People,HR Business Partner,HR Business Partner,M1,IC5,1654,2406,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000941,1085,2023-08-15,Transfer,Sales,Regional Operations,Key Accounts,Region South,IC5,IC5,2326,1572,STORE-CL-001,STORE-CL-002,CL,Retail,retail_ops
+MOV00000942,1371,2023-08-15,Transfer,Customer Operations,Marketing,Returns,Brand,IC1,IC1,765,2366,SITE-BR-002,HQ-BR-001,BR,Corporate,corporate
+MOV00000943,1758,2023-08-15,Transfer,Customer Operations,Customer Service,Returns,Chat,IC1,IC1,1050,2640,SITE-BR-002,SITE-BR-001,BR,Customer,customer
+MOV00000944,2555,2023-08-15,Transfer,E-commerce,Marketing,Checkout,CRM,IC1,IC1,2363,2533,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000945,2733,2023-08-15,Transfer,Regional Operations,Store Operations,Region Southeast,Stockroom,IC1,IC1,2664,2188,STORE-BR-008,STORE-BR-021,BR,Retail,retail_ops
+MOV00000946,2753,2023-08-15,Transfer,Store Operations,Regional Operations,Store Management,Region Southeast,IC1,IC1,850,1821,STORE-BR-043,STORE-BR-042,BR,Retail,retail_ops
+MOV00000947,511,2023-08-15,Lateral Move,Procurement,Data,Supplier Management,Data Science,IC1,IC1,786,1403,DC-BR-002,HQ-BR-001,BR,Digital,digital
+MOV00000948,1118,2023-08-15,Lateral Move,Regional Operations,Distribution Centers,Region North,Inbound,IC3,IC3,1390,741,STORE-BR-040,DC-BR-002,BR,Supply Chain,supply
+MOV00000949,1919,2023-08-15,Lateral Move,Customer Experience,Regional Operations,Voice of Customer,Region North,IC1,IC1,976,1842,HQ-BR-001,STORE-BR-026,BR,Retail,retail_ops
+MOV00000950,2323,2023-08-15,Lateral Move,Seller Management,Planning,Seller Growth,Demand Planning,M2,M2,1510,833,HQ-BR-001,DC-BR-002,BR,Supply Chain,supply
+MOV00000951,1281,2023-08-15,Demotion,Store Operations,Store Operations,Cashier,Cashier,IC2,IC1,2498,850,STORE-BR-015,STORE-BR-015,BR,Retail,retail_ops
+MOV00000952,2030,2023-09-15,Promotion,Visual Merchandising,Visual Merchandising,Merchandising,Merchandising,IC1,IC2,1667,1031,STORE-AR-003,STORE-AR-003,AR,Retail,retail_ops
+MOV00000953,2131,2023-09-15,Promotion,Sales,Sales,Floor Sales,Floor Sales,IC5,M2,859,2024,STORE-BR-008,STORE-BR-008,BR,Retail,retail_ops
+MOV00000954,851,2023-09-15,Promotion,Sales,Sales,Key Accounts,Key Accounts,IC5,M2,1093,2024,HQ-BR-001,HQ-BR-001,BR,Retail,retail_ops
+MOV00000955,1125,2023-09-15,Promotion,Store Operations,Store Operations,Security,Security,IC1,IC2,925,1183,STORE-BR-025,STORE-BR-025,BR,Retail,retail_ops
+MOV00000956,1977,2023-09-15,Promotion,Visual Merchandising,Visual Merchandising,Store Design,Store Design,M1,M2,1924,700,STORE-BR-025,STORE-BR-025,BR,Retail,retail_ops
+MOV00000957,1287,2023-09-15,Promotion,Regional Operations,Regional Operations,Region South,Region South,IC1,IC2,1118,2849,STORE-BR-022,STORE-BR-022,BR,Retail,retail_ops
+MOV00000958,1101,2023-09-15,Promotion,Logistics,Logistics,Reverse Logistics,Reverse Logistics,IC1,IC2,276,2354,DC-BR-005,DC-BR-005,BR,Supply Chain,supply
+MOV00000959,1798,2023-09-15,Promotion,Procurement,Procurement,Supplier Management,Supplier Management,IC1,IC2,1834,2507,STORE-CL-006,STORE-CL-006,CL,Supply Chain,supply
+MOV00000960,526,2023-09-15,Promotion,Planning,Planning,Supply Planning,Supply Planning,IC1,IC2,452,2004,DC-AR-001,DC-AR-001,AR,Supply Chain,supply
+MOV00000961,2001,2023-09-15,Promotion,Procurement,Procurement,Supplier Management,Supplier Management,IC2,IC3,319,1215,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000962,2136,2023-09-15,Promotion,Distribution Centers,Distribution Centers,Outbound,Outbound,IC2,IC3,665,2540,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000963,2033,2023-09-15,Promotion,Logistics,Logistics,Reverse Logistics,Reverse Logistics,IC1,IC2,2140,1883,STORE-AR-004,STORE-AR-004,AR,Supply Chain,supply
+MOV00000964,335,2023-09-15,Promotion,Distribution Centers,Distribution Centers,Inventory,Inventory,M2,M3,2175,2175,DC-BR-003,DC-BR-003,BR,Supply Chain,supply
+MOV00000965,1931,2023-09-15,Promotion,Customer Operations,Customer Operations,Order Support,Order Support,IC1,IC2,1050,946,SITE-BR-003,SITE-BR-003,BR,Customer,customer
+MOV00000966,313,2023-09-15,Promotion,Procurement,Procurement,Indirect Procurement,Indirect Procurement,IC2,IC3,47,286,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000967,1848,2023-09-15,Promotion,Procurement,Procurement,Indirect Procurement,Indirect Procurement,M1,M2,692,2586,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000968,2037,2023-09-15,Promotion,Legal,Legal,Corporate Legal,Corporate Legal,M2,M3,1934,692,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000969,522,2023-09-15,Promotion,Marketing,Marketing,Brand,Brand,IC3,IC4,1846,1851,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000970,2338,2023-09-15,Promotion,Data & Analytics,Data & Analytics,Data Governance,Data Governance,IC3,IC4,82,416,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000971,28,2023-09-15,Promotion,Finance,Finance,FP&A,FP&A,IC2,IC3,906,566,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000972,2366,2023-09-15,Promotion,Marketing,Marketing,Content,Content,IC2,IC3,1805,1966,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000973,814,2023-09-15,Promotion,Strategy,Strategy,M&A,M&A,IC3,IC4,1476,193,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000974,1001,2023-09-15,Promotion,Marketing,Marketing,Content,Content,IC3,IC4,60,960,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate
+MOV00000975,1815,2023-09-15,Promotion,Data,Data,Data Science,Data Science,IC4,IC5,1735,1353,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000976,100,2023-09-15,Promotion,Marketplace Operations,Marketplace Operations,Quality,Quality,IC2,IC3,2427,2625,HQ-BR-001,HQ-BR-001,BR,Marketplace,digital
+MOV00000977,1912,2023-09-15,Promotion,Product,Product,Product Management,Product Management,IC3,IC4,1513,570,DC-BR-003,DC-BR-003,BR,Digital,digital
+MOV00000978,2203,2023-09-15,Promotion,UX,UX,Design System,Design System,IC2,IC3,2013,2013,HQ-AR-001,HQ-AR-001,AR,Digital,digital
+MOV00000979,2363,2023-09-15,Promotion,E-commerce,E-commerce,Storefront,Storefront,IC2,IC3,1228,2632,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000980,1513,2023-09-15,Promotion,Product,Product,Product Ops,Product Ops,IC4,M1,570,482,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000981,1673,2023-09-15,Promotion,Data,Data,Analytics Engineering,Analytics Engineering,IC1,IC2,1403,994,HQ-BR-001,HQ-BR-001,BR,Digital,digital
+MOV00000982,327,2023-09-15,Transfer,Legal,Customer Experience,Corporate Legal,CX Design,M1,M1,748,1978,HQ-BR-001,SITE-BR-003,BR,Customer,customer
+MOV00000983,839,2023-09-15,Transfer,Customer Operations,Procurement,Order Support,Sourcing,IC2,IC2,541,2507,SITE-CL-001,DC-CL-001,CL,Supply Chain,supply
+MOV00000984,1080,2023-09-15,Transfer,Store Operations,Store Operations,Stockroom,Cashier,IC3,IC3,1152,1846,STORE-BR-020,STORE-BR-002,BR,Retail,retail_ops
+MOV00000985,1152,2023-09-15,Transfer,Store Operations,Risk,Store Management,Fraud,IC4,IC4,861,1199,STORE-BR-005,HQ-BR-001,BR,Corporate,corporate
+MOV00000986,2010,2023-09-15,Transfer,Customer Operations,Regional Operations,Returns,Region Southeast,IC1,IC1,1491,1203,SITE-AR-001,STORE-AR-003,AR,Retail,retail_ops
+MOV00000987,2766,2023-09-15,Transfer,Customer Service,Store Operations,Chat,Store Management,IC2,IC2,242,2498,SITE-BR-004,STORE-BR-006,BR,Retail,retail_ops
+MOV00000988,2772,2023-09-15,Transfer,Logistics,UX,Transportation,Research,IC1,IC1,2672,2451,DC-BR-005,HQ-BR-001,BR,Digital,digital
+MOV00000989,2827,2023-09-15,Transfer,Sales,Store Operations,Floor Sales,Store Management,IC1,IC1,2101,1125,STORE-BR-015,STORE-BR-032,BR,Retail,retail_ops
+MOV00000990,591,2023-09-15,Lateral Move,Legal,Customer Operations,Labor Legal,Order Support,IC2,IC2,1164,1174,HQ-BR-001,SITE-BR-002,BR,Customer,customer
+MOV00000991,1441,2023-09-15,Lateral Move,Store Operations,Store Operations,Cashier,Stockroom,IC1,IC1,959,2762,STORE-CO-004,STORE-CO-002,CO,Retail,retail_ops
+MOV00000992,1851,2023-09-15,Lateral Move,Marketing,Visual Merchandising,Performance,Merchandising,M1,M1,1462,1977,HQ-BR-001,STORE-BR-016,BR,Retail,retail_ops
+MOV00000993,2521,2023-09-15,Lateral Move,Visual Merchandising,Visual Merchandising,Store Design,Merchandising,M2,M2,700,700,STORE-BR-006,STORE-BR-002,BR,Retail,retail_ops
+MOV00000994,72,2023-10-15,Transfer,Visual Merchandising,Procurement,Merchandising,Sourcing,IC1,IC1,1670,2817,STORE-BR-010,DC-BR-001,BR,Supply Chain,supply
+MOV00000995,516,2023-10-15,Transfer,Customer Experience,Marketplace Technology,Voice of Customer,Seller Platform,IC4,IC4,552,2247,SITE-BR-002,HQ-BR-001,BR,Marketplace,digital
+MOV00000996,1488,2023-10-15,Transfer,Procurement,Customer Operations,Sourcing,Returns,IC3,IC3,1518,2803,DC-BR-006,SITE-BR-004,BR,Customer,customer
+MOV00000997,1708,2023-10-15,Transfer,Procurement,Risk,Supplier Management,Fraud,IC1,IC1,1212,2695,DC-BR-006,HQ-BR-001,BR,Corporate,corporate
+MOV00000998,2226,2023-10-15,Transfer,Regional Operations,Visual Merchandising,Region Southeast,Store Design,IC1,IC1,2206,1700,STORE-AR-008,STORE-CO-002,CO,Retail,retail_ops
+MOV00000999,2484,2023-10-15,Lateral Move,Finance,Planning,Accounting,Supply Planning,M1,M1,945,264,HQ-BR-001,DC-BR-003,BR,Supply Chain,supply
+MOV00001000,2653,2023-10-15,Lateral Move,Marketplace Operations,Data & Analytics,Onboarding,Data Governance,IC2,IC2,2194,735,HQ-BR-001,HQ-BR-001,BR,Corporate,corporate

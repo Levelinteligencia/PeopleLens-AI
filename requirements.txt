@@ -1,7 +1,20 @@
-# PeopleLens - dependências do projeto
+# PeopleLens - dependencias
 #
-# Ainda não definidas. As bibliotecas serão adicionadas conforme a
-# especificação detalhada do dataset, das regras de qualidade, do modelo
-# analítico, do MCP e da interface for fechada.
-#
-# Nada foi fixado aqui de propósito, para não antecipar decisões técnicas.
+# F1: geracao do ground truth. A lista cresce por fase, e cada entrada existe
+# por um motivo declarado em ADR.
+
+polars>=1.0        # dataframes do gerador (ADR-0012)
+numpy>=1.26        # sorteios deterministas por seed derivado (ADR-0001)
+PyYAML>=6.0        # leitura da configuracao declarativa (R8)
+openpyxl>=3.1      # xlsx do sistema legado da VivaMarket (F2)
+duckdb>=1.0        # camada de consulta da Semantic Layer (ADR-0009, F7)
+openai>=3.0        # SDK do provedor do LLM Interpreter (P-03, candidato de
+                   # avaliacao). Import tardio: a suite roda sem ele, e sem
+                   # credencial o interpretador cai no RuleInterpreter (D-05)
+
+# desenvolvimento
+pytest>=8.0        # tests/truth mede a verdade, nao so a forma
+
+# Ainda NAO incluidos, por fase:
+#   onda 2: leitura de largura fixa (COMPRAFACIL_ERP)
+#   F5  nenhuma: o runner de data quality e proprio (ADR-0013)

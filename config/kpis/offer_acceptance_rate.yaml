@@ -1,0 +1,68 @@
+# Contrato do KPI `offer_acceptance_rate` (ADR-0011).
+#
+# `depends_on_checks` NAO e digitado: e derivado de `consumed_by_kpis` no
+# catalogo de checks, e o teste test_contrato_de_kpi_bate_com_o_catalogo
+# reprova se as duas pontas divergirem.
+#
+# `minimum_n` e a supressao do ADR-0007: abaixo dele o recorte nao responde,
+# e a recusa e por privacidade, nao por qualidade.
+#
+# --- F7 ---------------------------------------------------------------------
+# `status` e `certification` NAO sao calculaveis a partir do trust score
+# (ADR-0029). CERTIFIED e aprovacao humana registrada, com dono e data.
+# Promover porque o dado melhorou e o mesmo erro que a F4 proibe na promocao
+# automatica de mapeamento.
+#
+# `interpretation_rules` vazio significa INTERPRETACAO BLOQUEADA. Nao preencher
+# para destravar o nivel: sem banda ou meta assinada, nao ha o que interpretar.
+kpi_id: offer_acceptance_rate
+name: Aceite de proposta
+description: Propostas aceitas sobre propostas feitas.
+business_definition: Ofertas aceitas sobre ofertas feitas no periodo.
+formula: candidaturas com aceite verdadeiro sobre candidaturas com proposta
+grain: trimestre x business unit
+population: candidaturas que receberam oferta
+period_grain: trimestre
+period_rollup: soma
+period_coverage:
+  from: 2020-Q4
+  to: 2026-Q2
+allowed_dimensions:
+- business_unit
+- departamento
+- nivel
+filters: []
+exclusions: []
+source_tables:
+- dim_calendar
+- dim_job_level
+- dim_organization
+- fact_application
+- fact_requisition
+coverage: null
+owner: people-analytics
+version: 1.0.0
+status: DECLARED
+certification:
+  approved_by: null
+  approved_at: null
+  blockers:
+  - motivo: fora do escopo de certificacao da v1.0
+    resolvido_por: decisao de People Analytics
+depends_on_checks:
+- DQ_COMP_013
+- DQ_CONS_011
+- DQ_REF_004
+- DQ_REF_010
+- DQ_UNIQ_008
+- DQ_VALID_014
+depends_on_mappings:
+- ref_department_mapping
+minimum_n: 20
+response_levels:
+  FATO: liberado
+  CONTEXTO: liberado; associacao e sempre nomeada como associacao
+  INTERPRETACAO: bloqueado ate haver regra registrada no contrato, com dono
+  CAUSALIDADE: negado por padrao (ADR-0015); sem estudo registrado nao ha resposta causal
+interpretation_rules: []
+causal_studies: []

@@ -1,0 +1,149 @@
+# Vocabulario semantico governado (F7, Parte III, secao 11).
+#
+# Mapeia TERMO DE NEGOCIO -> membro de dimensao. E a unica porta pela qual um
+# filtro entra numa consulta. Termo que nao esta aqui e RECUSA, nunca palpite.
+#
+# A regra e a mesma do DE/PARA da F4, pelo mesmo motivo (ADR-0020, achado 3 da
+# F4): um termo mapeado errado por similaridade e invisivel; um termo nao
+# mapeado e visivel. Sinonimo entra por decisao registrada, com responsavel e
+# data, nunca por score de similaridade.
+#
+# O consumidor nunca ve `dim_organization.country`. Ele ve "Brasil".
+
+meta:
+  version: "1.0.0"
+  owner: people-analytics
+  approved_at: "2026-09-12"
+  language: pt-BR
+  # Termo desconhecido nao vira sugestao. A recusa lista os termos validos
+  # daquela dimensao, que e informacao, e nao um chute.
+  unknown_term: refuse
+
+# --------------------------------------------------------------------------- #
+# Dimensoes expostas ao consumidor
+# --------------------------------------------------------------------------- #
+# `physical` e o unico lugar do projeto onde o nome de negocio encontra o nome
+# fisico. Nada acima desta camada conhece `dim_organization`.
+dimensions:
+
+  pais:
+    physical: {table: dim_organization, column: country}
+    label: Pais
+    members:
+      BR: {terms: ["BR", "Brasil", "Brazil"]}
+      AR: {terms: ["AR", "Argentina"]}
+      CL: {terms: ["CL", "Chile"]}
+      CO: {terms: ["CO", "Colombia"]}
+      MX: {terms: ["MX", "Mexico"]}
+
+  business_unit:
+    physical: {table: dim_organization, column: business_unit}
+    label: Business unit
+    members:
+      Corporate:     {terms: ["Corporate", "Corporativo"]}
+      Customer:      {terms: ["Customer", "Atendimento"]}
+      Digital:       {terms: ["Digital"]}
+      Marketplace:   {terms: ["Marketplace"]}
+      Retail:        {terms: ["Retail", "Varejo", "Lojas"]}
+      Supply Chain:  {terms: ["Supply Chain", "Logistica", "Cadeia de suprimentos"]}
+
+  departamento:
+    physical: {table: dim_organization, column: department}
+    label: Departamento
+    # Sem lista de sinonimos: os 28 departamentos entram pelo proprio nome,
+    # validados contra a dimensao em tempo de carga. `UNMAPPED` NAO e termo
+    # consultavel: e membro reservado (ADR-0025), e aparece em exclusoes.
+    members_from_dimension: true
+    reserved_terms_blocked: ["UNMAPPED"]
+
+  nivel:
+    physical: {table: dim_job_level, column: code}
+    label: Nivel
+    members_from_dimension: true
+    reserved_terms_blocked: ["UNMAPPED", "DECISAO_PENDENTE"]
+    groups:
+      lideranca:
+        terms: ["lideranca", "liderança", "gestores", "gestao", "leadership"]
+        resolves_to: {table: dim_job_level, column: is_leadership, equals: true}
+      ic:
+        terms: ["individual contributor", "ic", "sem equipe"]
+        resolves_to: {table: dim_job_level, column: is_leadership, equals: false}
+
+  genero:
+    physical: {table: dim_employee, column: gender}
+    label: Genero
+    members:
+      Female:       {terms: ["mulheres", "mulher", "feminino", "Female"]}
+      Male:         {terms: ["homens", "homem", "masculino", "Male"]}
+      Non-binary:   {terms: ["nao binario", "não binário", "Non-binary"]}
+      # `Not informed` e nao declaracao, e NAO e um genero. Fica consultavel
+      # para que a taxa de nao declaracao seja reportavel (ADR-0022), e nunca
+      # entra em numerador nem denominador de KPI de representatividade.
+      Not informed: {terms: ["nao informado", "não informado", "nao declarado"],
+                     is_non_declaration: true}
+
+  origem:
+    physical: {table: dim_origin, column: code}
+    label: Origem da pessoa
+    members:
+      CONTRATACAO:           {terms: ["contratacao", "contratação", "contratacoes",
+                                      "contratações", "crescimento organico"]}
+      AQUISICAO_VIVAMARKET:  {terms: ["VivaMarket", "aquisicao VivaMarket",
+                                      "gente que veio da VivaMarket"]}
+      AQUISICAO_COMPRAFACIL: {terms: ["CompraFacil", "CompraFácil",
+                                      "aquisicao CompraFacil"]}
+      POPULACAO_INICIAL:     {terms: ["populacao inicial", "população inicial",
+                                      "quem ja estava no inicio da serie"]}
+      # INDETERMINADA e estado legitimo (ADR-0027), e consultavel como recorte.
+      # O que e proibido e conta-la como contratacao: isso e FC-09, e quem
+      # garante e `is_hire`, nunca o termo.
+      INDETERMINADA:         {terms: ["origem indeterminada", "indeterminada",
+                                      "sem origem determinada"]}
+
+  sistema_fonte:
+    physical: {table: dim_source_system, column: code}
+    label: Sistema de origem do registro
+    members_from_dimension: true
+
+# --------------------------------------------------------------------------- #
+# Predicados de negocio
+# --------------------------------------------------------------------------- #
+# Termos que nao sao membro de dimensao, e sim uma condicao declarada. Existem
+# porque "contratacoes" precisa resolver para `is_hire = true` e nao para um
+# codigo de origem: sao criterios diferentes, e confundir os dois e FC-09.
+predicates:
+  contratacoes:
+    terms: ["contratacoes", "contratações", "quem foi contratado", "admissoes"]
+    resolves_to: {table: dim_origin, column: is_hire, equals: true}
+  vindos_de_aquisicao:
+    terms: ["vindos de aquisicao", "aquisicoes", "gente de aquisicao"]
+    resolves_to: {table: dim_origin, column: is_acquisition, equals: true}
+
+# --------------------------------------------------------------------------- #
+# Gramatica de periodo
+# --------------------------------------------------------------------------- #
+periods:
+  grains: [mes, trimestre, ano, ciclo]
+  formats:
+    mes: "YYYY-MM"
+    trimestre: "YYYY-Qn"
+    ano: "YYYY"
+    ciclo: "YYYY ou YYYY-Hn"
+  relative_terms:
+    # Termos relativos resolvem contra a cobertura declarada do KPI, nunca
+    # contra a data de hoje: "ultimo mes" num KPI cuja carga vai ate 2026-06
+    # e 2026-06, e nao o mes corrente do relogio. Sem isso a mesma pergunta
+    # devolveria resposta diferente conforme o dia em que foi feita.
+    ultimo_mes:      {resolves_to: coverage_end, grain: mes}
+    ultimo_trimestre: {resolves_to: coverage_end, grain: trimestre}
+    ultimo_ano:      {resolves_to: coverage_end, grain: ano}
+
+# --------------------------------------------------------------------------- #
+# Comparacoes permitidas
+# --------------------------------------------------------------------------- #
+# CONTEXT exige uma base de comparacao que seja ela propria respondivel
+# (F7, secao 15). Estas sao as bases declaradas.
+comparisons:
+  periodo_anterior:   {label: "periodo imediatamente anterior"}
+  mesmo_periodo_ano_anterior: {label: "mesmo periodo do ano anterior"}
+  media_da_populacao: {label: "media da populacao no mesmo periodo"}

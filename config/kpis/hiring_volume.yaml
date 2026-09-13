@@ -1,0 +1,81 @@
+# Contrato do KPI `hiring_volume` (ADR-0011).
+#
+# `depends_on_checks` NAO e digitado: e derivado de `consumed_by_kpis` no
+# catalogo de checks, e o teste test_contrato_de_kpi_bate_com_o_catalogo
+# reprova se as duas pontas divergirem.
+#
+# `minimum_n` e a supressao do ADR-0007: abaixo dele o recorte nao responde,
+# e a recusa e por privacidade, nao por qualidade.
+#
+# --- F7 ---------------------------------------------------------------------
+# `status` e `certification` NAO sao calculaveis a partir do trust score
+# (ADR-0029). CERTIFIED e aprovacao humana registrada, com dono e data.
+# Promover porque o dado melhorou e o mesmo erro que a F4 proibe na promocao
+# automatica de mapeamento.
+#
+# `interpretation_rules` vazio significa INTERPRETACAO BLOQUEADA. Nao preencher
+# para destravar o nivel: sem banda ou meta assinada, nao ha o que interpretar.
+kpi_id: hiring_volume
+name: Volume de contratacao
+description: Admissoes no periodo.
+business_definition: Pessoas que entraram na empresa POR CONTRATACAO no periodo. Aquisicao
+  nao e contratacao.
+formula: contagem de admissoes no periodo
+grain: mes x pais x business unit
+population: entradas com origem determinada como contratacao
+period_grain: mes
+period_rollup: soma
+period_coverage:
+  from: 2021-03
+  to: 2026-06
+allowed_dimensions:
+- pais
+- business_unit
+- departamento
+- nivel
+- origem
+- sistema_fonte
+filters:
+- regra: dim_origin.is_hire = true
+  porque: unico criterio de contratacao; contar INDETERMINADA ou AQUISICAO_* aqui e FC-09
+    (ADR-0027)
+exclusions:
+- o_que: AQUISICAO_VIVAMARKET, AQUISICAO_COMPRAFACIL, POPULACAO_INICIAL e INDETERMINADA
+  porque: nenhuma delas e contratacao
+source_tables:
+- dim_calendar
+- dim_employee
+- dim_job_level
+- dim_organization
+- dim_origin
+- dim_source_system
+- fact_workforce_entry
+coverage:
+  population_covered: 0.298
+  nota: 1.499 de 5.030 entradas com origem determinada como contratacao; a cobertura sobe
+    conforme a fila de identidade do ATS for trabalhada
+owner: people-analytics
+version: 1.0.0
+status: CERTIFIED
+certification:
+  approved_by: people-analytics
+  approved_at: '2026-09-12'
+  blockers: []
+depends_on_checks:
+- DQ_CONS_013
+- DQ_RECON_003
+- DQ_RECON_007
+- DQ_TIME_006
+- DQ_UNIQ_005
+- DQ_UNIQ_008
+depends_on_mappings:
+- ref_country_mapping
+- ref_department_mapping
+minimum_n: 5
+response_levels:
+  FATO: liberado
+  CONTEXTO: liberado; associacao e sempre nomeada como associacao
+  INTERPRETACAO: bloqueado ate haver regra registrada no contrato, com dono
+  CAUSALIDADE: negado por padrao (ADR-0015); sem estudo registrado nao ha resposta causal
+interpretation_rules: []
+causal_studies: []
