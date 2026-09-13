@@ -56,6 +56,17 @@ def chip(texto: str, cor: str, fundo: str) -> str:
             f'{texto}</span>')
 
 
+def usar_exemplo(exemplo: str) -> None:
+    """Preenche o campo a partir de um exemplo clicado.
+
+    Precisa ser um `on_click`, e não código no corpo do script: o
+    `st.session_state` de uma chave de widget não pode ser escrito depois que
+    o widget já foi instanciado nesta execução. O callback roda **antes** do
+    rerun, que é o único momento do ciclo em que essa escrita é legítima.
+    """
+    st.session_state.pergunta = exemplo
+
+
 def rotulo(nome: str, valor: str) -> None:
     st.markdown(f'<div class="pl-rot">{nome}</div>'
                 f'<div class="pl-val">{valor}</div>', unsafe_allow_html=True)
@@ -90,9 +101,8 @@ pergunta = st.text_input("q", key="pergunta", label_visibility="collapsed",
 st.caption(t("exemplos", idioma))
 for linha in (EXEMPLOS[idioma][:2], EXEMPLOS[idioma][2:]):
     for col, exemplo in zip(st.columns(len(linha)), linha):
-        if col.button(exemplo, key=exemplo, width="stretch"):
-            st.session_state.pergunta = exemplo
-            st.rerun()
+        col.button(exemplo, key=exemplo, width="stretch",
+                   on_click=usar_exemplo, args=(exemplo,))
 
 if not pergunta:
     st.markdown(f'<div class="pl-rodape">{t("rodape", idioma)}</div>',
