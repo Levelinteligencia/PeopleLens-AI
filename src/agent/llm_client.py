@@ -17,6 +17,7 @@ from __future__ import annotations
 
 import json
 import os
+import re
 import time
 from dataclasses import dataclass
 from typing import Protocol
@@ -36,6 +37,20 @@ TEMPERATURA = 0.0
 TIMEOUT_S = 10.0
 
 VARIAVEL_DA_CHAVE = "OPENAI_API_KEY"
+
+# A API exige `^[a-zA-Z0-9_-]+$` no nome do structured output. `SCHEMA_VERSION`
+# e identificador interno do contrato ("intent/1.0"), e nao muda por causa
+# disso: quem se adapta ao provedor e o adapter, que existe para isso.
+_CARACTERE_INVALIDO = re.compile(r"[^a-zA-Z0-9_-]")
+
+
+def nome_do_schema(versao: str = SCHEMA_VERSION) -> str:
+    """Nome tecnico do schema, na forma que a API aceita.
+
+    "intent/1.0" -> "intent_1_0". A barra e o ponto sao ambos invalidos, e
+    trocar so a barra deixava o ponto passar: era o defeito.
+    """
+    return _CARACTERE_INVALIDO.sub("_", versao)
 
 
 class SemCredencial(RuntimeError):
@@ -118,7 +133,7 @@ class ClienteOpenAI:
                 response_format={
                     "type": "json_schema",
                     "json_schema": {
-                        "name": SCHEMA_VERSION.replace("/", "_"),
+                        "name": nome_do_schema(),
                         "strict": True,
                         "schema": json_schema(),
                     },

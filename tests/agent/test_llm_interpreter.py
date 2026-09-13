@@ -470,6 +470,46 @@ def test_o_registro_nao_carrega_pergunta_nem_credencial(contexto):
         assert proibido not in registro, proibido
 
 
+def test_nome_do_structured_output_e_aceito_pela_api():
+    """HTTP 400: Invalid 'response_format.json_schema.name'.
+
+    A API exige `^[a-zA-Z0-9_-]+$`. O adapter trocava so a barra, e o ponto de
+    "intent/1.0" passava. O contrato interno nao muda por causa do provedor:
+    quem se adapta e o adapter.
+    """
+    import re as _re
+
+    assert llm_schema.SCHEMA_VERSION == "intent/1.0"
+    assert cli.nome_do_schema() == "intent_1_0"
+    assert "." not in cli.nome_do_schema() and "/" not in cli.nome_do_schema()
+    assert _re.fullmatch(r"[a-zA-Z0-9_-]+", cli.nome_do_schema())
+
+    # e o que de fato sai na chamada, nao so o helper
+    capturado = {}
+
+    class _FakeCompletions:
+        def create(self, **kw):
+            capturado.update(kw)
+            raise RuntimeError("parar depois de capturar o payload")
+
+    class _FakeSDK:
+        chat = type("_C", (), {"completions": _FakeCompletions()})()
+
+    c = cli.ClienteOpenAI()
+    c._sdk = _FakeSDK()
+    with pytest.raises(cli.FalhaDoProvedor):
+        c.completar([{"role": "user", "content": "x"}])
+
+    nome = capturado["response_format"]["json_schema"]["name"]
+    assert nome == "intent_1_0"
+    assert _re.fullmatch(r"[a-zA-Z0-9_-]+", nome)
+    # schema e strict permanecem intactos
+    assert capturado["response_format"]["json_schema"]["strict"] is True
+    assert capturado["response_format"]["json_schema"]["schema"] == \
+        llm_schema.json_schema()
+    assert capturado["temperature"] == 0.0
+
+
 def test_o_interpretador_implementa_o_mesmo_protocolo(contexto):
     """Substituivel: mesma assinatura, mesmo contrato de saida."""
     li = interpretador([payload()])
