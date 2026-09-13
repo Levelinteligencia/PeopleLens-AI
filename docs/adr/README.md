@@ -69,11 +69,11 @@ ninguém consegue avaliar a decisão seis meses depois.
 | F7 | Semantic Layer, KPI Catalog e Trust Layer (L4): contrato semântico entre People Analytics, dados e IA | `docs/F7_semantic_layer.md` (SPEC v1.0), `docs/f7_semantic_layer_report.md` |
 | MCP v0.1 | fronteira controlada entre o futuro Agent e a Semantic Layer: seis capacidades read-only | `docs/MCP_SPEC_v0.1.md`, `docs/mcp_v0.1_report.md` |
 | Agent v0.1 | PeopleLens Analyst Agent: Harness, Loop e políticas sobre o MCP | `docs/AGENT_HARNESS_SPEC_v0.1.md` |
-| LLM Interpreter v0.1 | o componente que substituirá o `RuleInterpreter` no passo UNDERSTAND | `docs/LLM_INTERPRETER_SPEC_v0.1.md` (SPEC aprovada em 2026-09-13, com D-01 a D-10, P-01, P-02, P-04 e P-05). Adapter implementado em `src/agent/llm_*.py`, com GPT-5.6 Luna como **candidato de avaliação**; P-03 segue pendente, e a avaliação com API real não foi executada |
+| LLM Interpreter v0.1 | o componente que substituirá o `RuleInterpreter` no passo UNDERSTAND | `docs/LLM_INTERPRETER_SPEC_v0.1.md` (SPEC aprovada em 2026-09-13, com D-01 a D-10 e P-01 a P-05), `docs/llm_interpreter_p03_report.md` (avaliação empírica de P-03: `gpt-5.6-luna`, 16 de 17 casos, **aprovado com lacuna conhecida**) |
 
 Documentos transversais:
 
 - `docs/technical_design_v0.4_delta.md`, o que as fases F4 e F5 mudaram na linha de base v0.3
 - `docs/demographics.md`, natureza e coerência dos parâmetros demográficos
 - `docs/f5_completeness_gaps.md`, lacunas de completude conhecidas e o que elas impedem
-- `docs/requisitos_de_produto_futuros.md`, requisitos registrados e ainda não implementados
+- `docs/requisitos_de_produto_futuros.md`, requisitos registrados e ainda não implementados (RF-01 interface bilíngue, RF-02 comparação entre períodos arbitrários)
