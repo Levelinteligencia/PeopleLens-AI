@@ -1,0 +1,7 @@
+# Dependencias da interface de demonstracao (app/).
+#
+# Separadas de `requirements.txt` de proposito: quem clona para ler o core, ou
+# para rodar a suite, nao precisa do Streamlit. A suite nao importa nada daqui.
+-r requirements.txt
+
+streamlit>=1.40    # UI da demo; consome exclusivamente Harness/MCP existentes

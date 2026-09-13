@@ -1,0 +1,14 @@
+# Tema do PeopleLens AI. Sobrio, alto contraste, sem aparencia de chatbot.
+[theme]
+base = "light"
+primaryColor = "#0f7b3f"           # verde do CERTIFIED; o unico acento
+backgroundColor = "#ffffff"
+secondaryBackgroundColor = "#f7f8fa"
+textColor = "#111827"
+font = "sans serif"
+
+[server]
+headless = true
+
+[browser]
+gatherUsageStats = false
