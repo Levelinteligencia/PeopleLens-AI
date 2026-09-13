@@ -32,8 +32,17 @@ PROVEDOR = "openai"
 # Configurável por ambiente justamente para que confirmar não exija editar código.
 MODELO_PADRAO = os.environ.get("PEOPLELENS_LLM_MODEL", "gpt-5.6-luna")
 
-# SPEC, seção 15. Reprodutibilidade do `Intent` é critério de aceite.
-TEMPERATURA = 0.0
+# A SPEC, seção 15, fixou `temperature = 0` por reprodutibilidade do `Intent`.
+# **O parâmetro não é enviado**, porque o modelo o recusa:
+#
+#   Unsupported value: 'temperature' does not support 0.0 with this model.
+#   Only the default (1) value is supported.
+#
+# Consequência, e ela não é de implementação: a reprodutibilidade do `Intent`
+# passa a depender do padrão do provedor, e AA-11 continua verificável pelo
+# plano e pela sequência de chamadas, que é o que aquele critério de fato exige
+# (ADR-0034). Enviar `temperature=1` explicitamente seria dizer que escolhemos
+# o valor, quando não escolhemos: o provedor é que não dá alternativa.
 TIMEOUT_S = 10.0
 
 VARIAVEL_DA_CHAVE = "OPENAI_API_KEY"
@@ -128,7 +137,6 @@ class ClienteOpenAI:
             r = cliente.chat.completions.create(
                 model=self._modelo,
                 messages=mensagens,
-                temperature=TEMPERATURA,
                 timeout=self._timeout,
                 response_format={
                     "type": "json_schema",

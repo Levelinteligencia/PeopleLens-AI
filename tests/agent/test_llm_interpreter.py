@@ -25,8 +25,9 @@ from agent import limits as alim
 from agent import llm_client as cli
 from agent import llm_eval, llm_prompt, llm_schema
 from agent.harness import Harness
-from agent.intent import Intent, resolve
-from agent.interpreter import RuleInterpreter
+from agent.intent import TIPOS, Intent, resolve
+from agent.interpreter import DIMENSOES_DE_FILTRO, RuleInterpreter
+from analytics.semantic.catalog import NIVEIS
 from agent.llm_interpreter import (LLM, ORCAMENTO_ESGOTADO, RULE_FALLBACK,
                                    LLMInterpreter, Orcamento)
 from generator import config
@@ -443,6 +444,106 @@ def test_o_schema_e_derivado_do_intent(contexto):
     assert set(llm_schema.json_schema()["properties"]) == set(llm_schema.CAMPOS_DA_SAIDA)
 
 
+def _percorrer(no, caminho="$"):
+    """Cada esquema de propriedade e de item, com o caminho onde ele esta."""
+    if not isinstance(no, dict):
+        return
+    if "properties" in no:
+        yield ("OBJETO", caminho, no)
+        for k, v in no["properties"].items():
+            yield ("CAMPO", f"{caminho}.{k}", v)
+            yield from _percorrer(v, f"{caminho}.{k}")
+    if isinstance(no.get("items"), dict):
+        yield ("CAMPO", f"{caminho}[]", no["items"])
+        yield from _percorrer(no["items"], f"{caminho}[]")
+
+
+def test_json_schema_obedece_o_modo_estrito_do_provedor():
+    """As tres regras do strict, verificadas no schema inteiro.
+
+    Nao e um teste de `schema_version`: e a regra geral. O defeito original era
+    sistemico — sete propriedades com `enum` ou `const` e sem `type`, e dois
+    objetos com `required` incompleto. A API para no primeiro e so nomeia
+    aquele, entao verificar campo a campo custaria uma rodada por campo.
+    """
+    s = llm_schema.json_schema()
+    sem_type, required_incompleto, sem_fechamento = [], [], []
+
+    for especie, caminho, no in _percorrer(s):
+        if especie == "CAMPO" and "type" not in no:
+            sem_type.append((caminho, sorted(no)))
+        if especie == "OBJETO":
+            if no.get("additionalProperties") is not False:
+                sem_fechamento.append(caminho)
+            faltando = sorted(set(no["properties"]) - set(no.get("required") or []))
+            if faltando:
+                required_incompleto.append((caminho, faltando))
+
+    assert sem_type == [], f"propriedades sem 'type': {sem_type}"
+    assert required_incompleto == [], \
+        f"'required' incompleto (o strict exige todas as chaves): {required_incompleto}"
+    assert sem_fechamento == [], f"objetos sem additionalProperties=false: {sem_fechamento}"
+
+    # `const` nao e aceito pelo modo estrito, em nenhum lugar do schema
+    assert "const" not in json.dumps(s)
+
+
+def test_json_schema_preserva_o_contrato():
+    """A correcao do strict nao pode ter mudado campo, enum nem semantica."""
+    s = llm_schema.json_schema()
+    props = s["properties"]
+
+    # campos: os mesmos, nem mais nem menos
+    assert set(props) == set(llm_schema.CAMPOS_DA_SAIDA)
+    assert set(s["required"]) == set(llm_schema.CAMPOS_DA_SAIDA)
+
+    # enums: os mesmos valores, agora com o tipo declarado ao lado
+    assert props["schema_version"] == {"type": "string",
+                                       "enum": [llm_schema.SCHEMA_VERSION]}
+    assert props["question_type"]["enum"] == list(TIPOS)
+    assert props["requested_level"]["enum"] == list(NIVEIS)
+    assert props["dimensions"]["items"]["enum"] == list(DIMENSOES_DE_FILTRO)
+    assert props["compare_to"]["enum"] == [*llm_schema.COMPARACOES, None]
+    assert props["premissa"]["enum"] == [*llm_schema.PREMISSAS, None]
+
+    filtro = props["filters"]["items"]
+    assert filtro["properties"]["dimension"]["enum"] == list(DIMENSOES_DE_FILTRO)
+    termo = filtro["properties"]["terms"]["items"]
+    assert termo["properties"]["base"]["enum"] == list(llm_schema.BASES)
+    assert set(termo["required"]) == {"literal", "governado", "base"}
+
+    # opcionalidade preservada pelo tipo nulavel, nao pela ausencia em required
+    periodo = props["period"]
+    assert periodo["type"] == ["object", "null"]
+    assert periodo["properties"]["grain"]["enum"] == list(llm_schema.GRAINS)
+    for campo in ("from", "to", "relativo"):
+        assert periodo["properties"][campo]["type"] == ["string", "null"], campo
+        assert campo in periodo["required"], campo
+    assert props["referencia_anterior"]["type"] == "boolean"
+
+
+def test_o_validador_local_aceita_as_duas_formas_do_opcional(contexto):
+    """A chave ausente e a chave presente e nula validam igual.
+
+    O schema do provedor agora exige a chave; a validacao local nunca exigiu.
+    As duas formas precisam continuar produzindo o mesmo `Intent`, senao a
+    mudanca no schema teria mexido em semantica.
+    """
+    ausente = payload(period={"grain": "ano", "from": "2025", "to": "2025"})
+    presente = payload(period={"grain": "ano", "from": "2025", "to": "2025",
+                               "relativo": None})
+    llm_schema.validar(ausente)
+    llm_schema.validar(presente)
+    assert llm_schema.para_intent(ausente).period == \
+        llm_schema.para_intent(presente).period
+
+    sem_opcoes = payload(ambiguity=[{"campo": "period", "motivo": "x"}])
+    com_opcoes = payload(ambiguity=[{"campo": "period", "motivo": "x",
+                                     "opcoes": []}])
+    llm_schema.validar(sem_opcoes)
+    llm_schema.validar(com_opcoes)
+
+
 def test_comparacoes_vem_do_vocabulario_governado():
     doc = yaml.safe_load(
         (ROOT / "config" / "semantic" / "vocabulary.yaml").read_text(encoding="utf-8"))
@@ -507,7 +608,9 @@ def test_nome_do_structured_output_e_aceito_pela_api():
     assert capturado["response_format"]["json_schema"]["strict"] is True
     assert capturado["response_format"]["json_schema"]["schema"] == \
         llm_schema.json_schema()
-    assert capturado["temperature"] == 0.0
+    # `temperature` NAO e enviado: o modelo so aceita o default, e mandar o
+    # valor explicito devolvia 400 unsupported_value
+    assert "temperature" not in capturado
 
 
 def test_o_interpretador_implementa_o_mesmo_protocolo(contexto):

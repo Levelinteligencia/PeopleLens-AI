@@ -78,6 +78,17 @@ def json_schema() -> dict:
     Fechado em todo nível: `additionalProperties: false` em cada objeto. A
     validação local roda de qualquer jeito (ADR-0035, decisão 2); isto aqui é
     conveniência do provedor, não a fronteira.
+
+    Três regras do modo estrito, e nenhuma delas é opcional para o provedor:
+
+    1. **todo esquema de propriedade declara `type`.** `enum` e `const` sozinhos
+       são rejeitados, com "schema must have a 'type' key";
+    2. **toda chave de `properties` aparece em `required`.** Campo opcional se
+       expressa pelo tipo nulável, nunca pela ausência em `required`;
+    3. **`additionalProperties: false` em cada objeto.**
+
+    Nada disso muda o contrato: os campos, os enums e a semântica de nulo são
+    os mesmos, e a validação local continua sendo a fronteira.
     """
     termo = {
         "type": "object",
@@ -86,7 +97,7 @@ def json_schema() -> dict:
         "properties": {
             "literal": {"type": "string"},
             "governado": {"type": ["string", "null"]},
-            "base": {"enum": list(BASES)},
+            "base": {"type": "string", "enum": list(BASES)},
         },
     }
     filtro = {
@@ -94,16 +105,21 @@ def json_schema() -> dict:
         "additionalProperties": False,
         "required": ["dimension", "terms"],
         "properties": {
-            "dimension": {"enum": list(DIMENSOES_DE_FILTRO)},
+            "dimension": {"type": "string", "enum": list(DIMENSOES_DE_FILTRO)},
             "terms": {"type": "array", "items": termo},
         },
     }
     periodo = {
         "type": ["object", "null"],
         "additionalProperties": False,
-        "required": ["grain"],
+        # Todas as chaves entram em `required`: o modo estrito do provedor não
+        # aceita propriedade opcional, e a opcionalidade se expressa pelo tipo
+        # nulável. A semântica não muda — `from`, `to` e `relativo` continuam
+        # podendo vir vazios — e a validação local segue aceitando as duas
+        # formas, com a chave ausente ou presente e nula.
+        "required": ["grain", "from", "to", "relativo"],
         "properties": {
-            "grain": {"enum": list(GRAINS)},
+            "grain": {"type": "string", "enum": list(GRAINS)},
             "from": {"type": ["string", "null"]},
             "to": {"type": ["string", "null"]},
             # Termo relativo é **marcado**, nunca resolvido pelo LLM (P-02).
@@ -113,7 +129,7 @@ def json_schema() -> dict:
     ambiguidade = {
         "type": "object",
         "additionalProperties": False,
-        "required": ["campo", "motivo"],
+        "required": ["campo", "motivo", "opcoes"],
         "properties": {
             "campo": {"type": "string"},
             "motivo": {"type": "string"},
@@ -125,14 +141,17 @@ def json_schema() -> dict:
         "additionalProperties": False,
         "required": list(CAMPOS_DA_SAIDA),
         "properties": {
-            "schema_version": {"const": SCHEMA_VERSION},
-            "question_type": {"enum": list(TIPOS)},
+            # `const` não é aceito pelo modo estrito: o valor fixo se expressa
+            # como enum de um elemento, com o tipo declarado.
+            "schema_version": {"type": "string", "enum": [SCHEMA_VERSION]},
+            "question_type": {"type": "string", "enum": list(TIPOS)},
             "kpi_candidates": {"type": "array", "items": {"type": "string"}},
             "period": periodo,
             "filters": {"type": "array", "items": filtro},
             "dimensions": {"type": "array",
-                           "items": {"enum": list(DIMENSOES_DE_FILTRO)}},
-            "requested_level": {"enum": list(NIVEIS)},
+                           "items": {"type": "string",
+                                     "enum": list(DIMENSOES_DE_FILTRO)}},
+            "requested_level": {"type": "string", "enum": list(NIVEIS)},
             "compare_to": {"type": ["string", "null"], "enum": [*COMPARACOES, None]},
             "ambiguity": {"type": "array", "items": ambiguidade},
             "premissa": {"type": ["string", "null"], "enum": [*PREMISSAS, None]},
